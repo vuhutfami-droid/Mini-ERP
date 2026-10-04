@@ -440,6 +440,39 @@ Nguồn còn nêu ngói Âm Dương, ngói cuối mái Luxury, ngói rìa trái 
 
 **Trạng thái:** Hoàn thành tổng hợp nguồn do anh cung cấp và dự thảo năm đáp án; chờ anh chỉnh sửa. Không khẳng định đã thu thập tất cả thông tin Nasaki, truy cập trực tiếp website thành công hoặc chạy build/test.
 
+### 04/10/2026 — Danh sách câu hỏi còn cần làm rõ
+
+**Anh:**
+
+> list những câu hỏi chưa rõ, cần làm rõ ra đây để anh trả lời
+
+**Em — hướng dẫn trả lời:**
+
+Anh có thể trả lời theo số. Nếu chưa biết thực tế Nasaki, ghi "chưa rõ" hoặc "em đề xuất mô hình demo"; em sẽ phân biệt dữ kiện thực tế với giả định. Sáu câu đầu ưu tiên để định hướng khảo sát; các câu còn lại giúp đi sâu nghiệp vụ, không yêu cầu anh biết kỹ thuật. Chưa cần xác định framework, cơ sở dữ liệu hoặc tự thực hiện thao tác kỹ thuật.
+
+1. **Người xem và mục tiêu demo:** Anh sẽ trình diễn cho ai: chủ doanh nghiệp, quản lý sản xuất, kế toán hay nhiều bộ phận? Sau buổi demo, anh muốn họ thấy rõ giá trị nào nhất?
+2. **Vấn đề ưu tiên:** Ba vấn đề cần tập trung giải quyết là gì? Đó là khó khăn anh biết Nasaki đang gặp hay tình huống giả định phục vụ tư vấn?
+3. **Phạm vi lần đầu:** Những phần nào phải chạy được ngay: kinh doanh, mua hàng, kho, sản xuất, chất lượng, tài chính, nhân sự? Phần nào có thể làm ở đợt sau?
+4. **Quy mô mô phỏng:** Demo cần bao nhiêu công ty/xưởng/kho, khoảng bao nhiêu nhân sự và những bộ phận nào? Có thể dùng đề xuất một đơn vị, một xưởng, kho vật tư và kho thành phẩm nếu chưa có dữ kiện thực tế.
+5. **Sản phẩm ưu tiên:** Đợt đầu cần ngói, Terrazzo hay cả hai? Có những mẫu/màu/kích thước nào cần thể hiện; hàng được mua bán và quản lý theo viên, m², hộp hay pallet? Các mã khác nhau như FV-02/PV-02, FD-02/FĐ-02, AD 0211/AD 02 là cùng hay khác sản phẩm; nếu chưa biết, ghi chưa rõ, không tự hợp nhất.
+6. **Cách sản xuất:** Sản xuất sẵn để tồn kho, nhận đơn rồi sản xuất, hay kết hợp? Có nhận màu hoặc quy cách riêng cho từng khách không?
+7. **Khách hàng và bán hàng:** Cần mô phỏng đại lý, nhà thầu/dự án, khách lẻ, xuất khẩu hay những nhóm nào? Giá, chiết khấu hoặc điều kiện bán có khác giữa các nhóm không?
+8. **Quy trình sản xuất:** Với một sản phẩm điển hình, từ vật liệu đầu vào đến thành phẩm trải qua những công đoạn nào? Có công đoạn thuê ngoài không? Nếu chưa biết, em sẽ đề xuất quy trình giả lập để anh xem.
+9. **Vật tư và định mức:** Có danh sách nguyên vật liệu và lượng cần cho một viên/m²/mẻ không? Cần theo dõi vật tư thiếu, lượng thực dùng và hao hụt ở mức nào?
+10. **Chất lượng và hàng lỗi:** Cần kiểm tra ở những bước nào, theo tiêu chí gì? Hàng không đạt được làm lại, hạ loại, bán riêng hay loại bỏ? Có cần tìm lại lô sản xuất khi khách phản ánh không?
+11. **Mua hàng:** Ai đề nghị và duyệt mua vật tư? Có cần so sánh nhà cung cấp, theo dõi giao nhiều đợt hoặc trả lại hàng mua không?
+12. **Giao hàng và thanh toán:** Đơn có được giao nhiều lần, nhận cọc, thu từng phần hoặc bán chịu không? Có cần xử lý hủy đơn, khách trả hàng và phí vận chuyển không?
+13. **Mức độ tài chính:** Chỉ cần thu/chi, công nợ và giá thành/lợi nhuận, hay cần thêm nghiệp vụ kế toán đầy đủ? Có cần thể hiện thuế, hóa đơn hoặc ngoại tệ trong demo lần đầu không?
+14. **Nhân sự:** Phần nhân sự cần những gì: hồ sơ, ca làm, chấm công, nghỉ phép, lương theo thời gian hoặc sản lượng? Nếu tính lương, cần mô phỏng cách tính nào?
+15. **Quyền và phê duyệt:** Ai được xem giá vốn, lương, sửa giá, duyệt mua, duyệt sản xuất hoặc sửa chứng từ đã xác nhận? Anh có thể trả lời theo chức danh, không cần tên người.
+16. **Báo cáo quan trọng:** Anh muốn người quản lý nhìn thấy ngay những số liệu nào? Ví dụ tồn kho, đơn sắp trễ, vật tư thiếu, sản lượng đạt/lỗi, công nợ đến hạn hoặc lãi theo đơn.
+17. **Nguồn dữ liệu và công cụ hiện tại:** Có thông tin Nasaki đang dùng Excel, phần mềm kế toán hay công cụ khác không? Anh có sẵn danh mục, bảng giá, đơn mẫu hoặc định mức để làm cơ sở, hay cần em tạo bộ dữ liệu giả lập nhất quán?
+18. **Cách sử dụng và mốc trình diễn:** Demo chỉ do anh thao tác hay cho đối tác tự dùng? Cần mở trên máy tính, điện thoại và có bao nhiêu người cùng dùng? Buổi trình diễn đầu dự kiến khi nào; có giới hạn chi phí vận hành không?
+
+Các câu hỏi này chưa bao quát mọi chi tiết triển khai. Sau câu trả lời, em sẽ tổng hợp điều đã xác nhận, giả định và điểm cần hỏi tiếp, rồi mới đề xuất phạm vi phiên bản đầu và các tình huống nghiệm thu. Không mặc định mọi chức năng được nêu trong câu hỏi đều phải xây ngay.
+
+**Trạng thái:** Đã lập danh sách 18 câu hỏi, đang chờ anh trả lời; chưa chốt thêm nghiệp vụ hoặc triển khai ứng dụng.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
