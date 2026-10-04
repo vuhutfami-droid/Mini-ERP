@@ -290,6 +290,21 @@ Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ t�
 
 **Trạng thái:** Đã lưu website, nghiên cứu nguồn công khai vẫn chưa hoàn thành. Chưa xác minh ngành nghề, sản phẩm, quy mô hoặc nghiệp vụ thực tế của Nasaki.
 
+### 04/10/2026 — Xác nhận Parallel Search đã được cài
+
+**Anh:**
+
+> anh cài parallel rồi đấy
+
+**Em — kiểm tra và kết quả:**
+
+- Đã kiểm tra danh mục plugin: Parallel Search có trạng thái `installed: true` và `ENABLED`. Không yêu cầu anh cài lại.
+- Danh sách công cụ khả dụng trong lượt này chưa cung cấp công cụ tìm kiếm hoặc trích xuất nội dung của Parallel Search; cũng không có công cụ nạp thêm công cụ được cung cấp. Việc đã cài plugin chưa đồng nghĩa công cụ của plugin đã khả dụng trong cuộc trò chuyện này.
+- Kiểm tra lại truy cập trực tiếp https://nasaki.com.vn/: vẫn bị proxy từ chối bằng HTTP 403. Không đọc được nội dung website và không khẳng định đã nghiên cứu.
+- Cần kích hoạt/chọn Parallel Search cho cuộc trò chuyện hoặc làm mới kết nối để công cụ được cung cấp. Khi khả dụng, tiếp tục yêu cầu nghiên cứu Nasaki và trả lời năm câu hỏi đã lưu; không hỏi lại website hoặc mục đích demo.
+
+**Trạng thái:** Đã xác minh cài đặt plugin và lưu tiến độ; nghiên cứu nguồn công khai chưa hoàn thành do công cụ chưa khả dụng trong lượt này. Chưa xây dựng ứng dụng hoặc chạy build/test.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
