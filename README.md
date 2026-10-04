@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Anh đã xác nhận sáu nhóm thông tin nền; đang đào sâu nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng. Chưa khảo sát độc lập Nasaki hoặc chốt quy trình chi tiết.
+- Trạng thái: Đã xác nhận thông tin nền và bổ sung khảo sát bán hàng; có đề xuất xử lý đổi/hủy đơn đặt riêng đang chờ anh xem xét. Tiếp tục đào sâu nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng. Chưa khảo sát độc lập Nasaki hoặc chốt quy trình chi tiết.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -510,6 +510,36 @@ Các câu hỏi này chưa bao quát mọi chi tiết triển khai. Sau câu tr�
 6. Màu/quy cách đặt riêng được duyệt thế nào; khi khách đổi hoặc hủy sau chuẩn bị/sản xuất thì ai xử lý và chịu chi phí?
 
 **Trạng thái:** Đã lưu câu trả lời và hồ sơ để dùng về sau, đang chờ vòng hỏi sâu. Chưa thiết kế tính năng, chọn công nghệ, xây dựng ứng dụng hoặc chạy build/test.
+
+### 04/10/2026 — Khảo sát bán hàng và đề xuất đổi/hủy đơn đặt riêng
+
+**Anh — trả lời vòng khảo sát bán hàng:**
+
+1. Khách hàng gồm tất cả: đại lý, nhà thầu, chủ công trình, khách lẻ và xuất khẩu. Người đặt, người trả tiền và người nhận có thể khác nhau.
+2. Tiếp nhận qua nhiều kênh: email, điện thoại, website và liên hệ cá nhân. Khách có thể đưa sẵn mẫu/màu/kích thước/số lượng hoặc đưa diện tích mái/sàn để được tư vấn tính số viên.
+3. Chiết khấu cụ thể tùy đơn, tùy trường hợp; chính sách có thể thay đổi theo tham số. Giám đốc quyết định giá và giảm giá. Chưa chốt tham số hoặc công thức giá.
+4. Chốt đơn: "thường sẽ là giám đốc quyết". Chưa trả lời điều kiện cọc/ký/xác nhận hay người bàn giao.
+5. Quản lý sản xuất kiểm tra hàng có sẵn và khả năng sản xuất trước khi cam kết giao. Quản lý sản xuất và CEO quyết định ưu tiên khi không đủ hàng; tiêu chí chưa rõ.
+6. Có làm mẫu để khách duyệt trước khi sản xuất hàng loạt. Về đổi/hủy sau khi chuẩn bị hoặc sản xuất: "phần này chưa rõ quy trình thực tế, tự đề xuất cho anh".
+
+**Em — phân tích và đề xuất:**
+
+- Đã cập nhật B11–B17 trong [hồ sơ nghiệp vụ](docs/business-context.md), giữ riêng dữ kiện xác nhận và điểm còn mở. Chưa mặc định CEO và giám đốc là cùng người, chưa đặt mức cọc hoặc điều kiện khởi động sản xuất.
+- Đề xuất lưu bản yêu cầu/mẫu đã duyệt và lịch sử thay đổi; kinh doanh tiếp nhận, sản xuất đánh giá tiến độ, kho/mua hàng đánh giá khả năng thu hồi, kế toán tổng hợp chi phí, giám đốc duyệt phương án và khách xác nhận trước khi thực hiện thay đổi.
+- Đề xuất xử lý theo năm thời điểm: trước duyệt mẫu; đã chuẩn bị vật tư; đang sản xuất; hoàn thành chưa giao; đã giao. Chỉ tạm dừng an toàn phần bị ảnh hưởng khi cần; không tự dừng mọi đơn.
+- Không mặc định mất cọc hoặc thu toàn bộ giá bán. Phân biệt chi phí thực tế, cam kết không hủy được, giá trị thu hồi và khoản hai bên thống nhất; tránh tính trùng. Lỗi sản xuất không đúng mẫu tách khỏi việc khách đổi ý, không tự quy trách nhiệm cho khách.
+- Quy trình, trách nhiệm và nguyên tắc chi phí trên là đề xuất theo yêu cầu của anh, chưa được duyệt và chưa phải hiện trạng Nasaki. Chi tiết bàn giao, dữ liệu cần lưu và các điểm còn mở nằm trong hồ sơ nghiệp vụ.
+
+**Em — sáu câu khảo sát tiếp theo:**
+
+1. Ngói và Terrazzo có những công đoạn nào từ vật liệu đến thành phẩm; có thuê ngoài không?
+2. Vật liệu chính, đơn vị đo và công thức mỗi mẻ/số lượng viên; màu/quy cách riêng có đổi công thức không?
+3. Quy mô mẻ/lô, một mẻ cho nhiều đơn và việc đổi mẫu/màu/khuôn, vệ sinh, dừng máy?
+4. Ai đề nghị/duyệt làm hàng sẵn, dựa vào gì; quản lý sản xuất và CEO ưu tiên đơn theo tiêu chí nào?
+5. Thời gian chờ khô/dưỡng hộ nếu có, số ca, năng suất ước lượng và công đoạn gây chờ?
+6. Điểm kiểm tra chất lượng, người xác nhận thành phẩm, cách xử lý/ghi nhận hàng đạt và lỗi?
+
+**Trạng thái:** Đã hệ thống hóa câu trả lời và đề xuất để anh xem xét; tiếp tục khảo sát nghiệp vụ, chưa thiết kế tính năng hoặc triển khai ứng dụng. Không phát sinh build/test trong vòng này.
 
 ## Các nội dung chưa được thống nhất
 

@@ -32,10 +32,17 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B06 | Có cả ngói và Terrazzo. Đơn vị quản lý sản phẩm là viên. | Anh trả lời câu 5; chưa quy định đơn vị nguyên vật liệu, quy đổi đóng gói hoặc bán hàng theo diện tích. |
 | B07 | Các mã khác nhau trên các trang website được hỏi là cùng sản phẩm. | Anh xác nhận; không áp dụng cho mọi sản phẩm hoặc mọi biến thể màu/kích thước chưa khảo sát. |
 | B08 | Sản xuất kết hợp: làm sẵn để tồn kho và sản xuất theo đơn. | Anh trả lời câu 6; chưa có quy tắc quyết định sản xuất, ưu tiên hoặc giữ hàng. |
-| B09 | Có nhận màu hoặc quy cách riêng cho khách. | Anh trả lời câu 6; chưa rõ duyệt mẫu, số lượng tối thiểu, giá và thời gian thực hiện. |
+| B09 | Có nhận màu hoặc quy cách riêng cho khách. | Anh trả lời câu 6; duyệt mẫu đã được xác nhận tại B17, số lượng tối thiểu, giá và thời gian còn mở. |
 | B10 | Tiếp tục đào sâu nghiệp vụ trước khi đi vào tính năng; dữ liệu nghiệp vụ phải được hệ thống hóa và lưu để dùng khi phát triển. | Yêu cầu mới nhất của anh. |
+| B11 | Có khách đại lý, nhà thầu, chủ công trình, khách lẻ và xuất khẩu; bên đặt, bên trả tiền và bên nhận hàng có thể khác nhau. | Anh trả lời vòng khảo sát bán hàng; chưa chốt trách nhiệm pháp lý, xuất hóa đơn và phân bổ thanh toán. |
+| B12 | Tiếp nhận qua email, điện thoại, website và liên hệ cá nhân; khách có thể đưa quy cách/số lượng hoặc diện tích cần tư vấn tính số viên. | Anh xác nhận; người tiếp nhận, công thức tính và người xác nhận kết quả chưa rõ. |
+| B13 | Chiết khấu tùy đơn và trường hợp; chính sách có thể thay đổi theo tham số. Giám đốc quyết định giá và giảm giá. | Chưa xác nhận bảng giá gốc, tham số cụ thể, công thức, ngưỡng hoặc thời hạn báo giá. |
+| B14 | Giám đốc thường quyết định việc chốt đơn. | Không suy ra mọi đơn đều phải duyệt hoặc đã xác định điều kiện cọc/ký và người bàn giao. |
+| B15 | Quản lý sản xuất kiểm tra hàng có sẵn và khả năng sản xuất trước khi cam kết ngày giao. | Anh xác nhận; cách kiểm tra, thời gian vận chuyển và cách xác nhận ngày giao còn mở. |
+| B16 | Quản lý sản xuất và CEO quyết định ưu tiên khi nhiều đơn cùng cần hàng mà không đủ. | Chưa chốt tiêu chí ưu tiên hoặc xác nhận CEO và giám đốc là cùng người. |
+| B17 | Có làm mẫu cho khách duyệt trước khi sản xuất hàng loạt đối với màu/quy cách riêng. | Anh xác nhận; hình thức duyệt và tiêu chuẩn so sánh với mẫu chưa rõ. |
 
-Các mã B01–B10 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B17 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -88,23 +95,70 @@ Phân biệt cách làm hiện tại với cách làm mong muốn. Khi anh chưa
 
 Đây là thứ tự khảo sát đề xuất, không phải thứ tự triển khai hoặc thay đổi phạm vi B04. Các điểm giao giữa nhóm sẽ được làm rõ cùng nhau, không khảo sát từng bộ phận tách rời.
 
-## Câu hỏi vòng tiếp theo về tiếp nhận nhu cầu và chốt đơn
+## Tiếp nhận nhu cầu và chốt đơn — kết quả khảo sát
 
-Nhóm này đào sâu quyết định nghiệp vụ. Anh có thể mô tả cách làm hiện tại và cách mong muốn; nếu chưa có thông tin, ghi "chưa rõ" để em đề xuất mô hình demo.
+Nguồn: sáu câu trả lời của anh ngày 04/10/2026, được lưu trong README. Đây là mô tả anh cung cấp, chưa được khảo sát độc lập tại Nasaki.
 
-1. **Khách hàng:** Khách thường là đại lý, nhà thầu/chủ dự án, khách lẻ hay khách xuất khẩu? Ai là người đặt, ai thanh toán và ai nhận hàng; có trường hợp ba bên khác nhau không?
-2. **Tiếp nhận yêu cầu:** Khách liên hệ qua ai/kênh nào? Để tư vấn và báo giá, người bán cần biết những thông tin gì về sản phẩm, màu, kích thước, số lượng, nơi giao và thời điểm cần hàng? Có trường hợp khách chỉ đưa diện tích mái/sàn để mình tính số viên không?
-3. **Xác định giá:** Giá lấy từ bảng giá hay tính riêng theo đơn? Những yếu tố nào làm giá thay đổi như số lượng, loại khách, màu/quy cách riêng hoặc vận chuyển? Ai có quyền quyết định giá và giảm giá?
-4. **Chốt đơn:** Khi nào doanh nghiệp coi đơn đã được chấp nhận: khách đồng ý báo giá, ký xác nhận, đặt cọc hay sau người quản lý duyệt? Ai xác nhận và bàn giao đơn cho bộ phận tiếp theo?
-5. **Cam kết giao hàng:** Trước khi hứa ngày giao, ai kiểm tra hàng có sẵn, hàng đã dành cho đơn khác, vật tư và khả năng sản xuất? Khi nhiều đơn cùng cần hàng mà không đủ, ưu tiên theo quy tắc nào và ai quyết định?
-6. **Đơn đặt riêng:** Màu/quy cách riêng được xác nhận bằng mẫu hay mô tả? Có làm mẫu và duyệt trước khi sản xuất số lượng lớn không? Nếu khách đổi yêu cầu hoặc hủy sau khi đã chuẩn bị/sản xuất, ai quyết định và chi phí xử lý thế nào?
+Đã xác nhận nhóm khách, các bên có thể khác nhau, kênh tiếp nhận, hai kiểu đầu vào tư vấn, thẩm quyền về giá/chốt đơn, kiểm tra khả năng giao, quyết định ưu tiên và việc duyệt mẫu (B11–B17). Chưa đủ căn cứ để coi luồng bán hàng đã hoàn chỉnh.
 
-Chưa có câu trả lời cho nhóm này. Các tình huống trong câu hỏi là hướng khảo sát, không phải nghiệp vụ Nasaki đã được xác nhận.
+Các điểm bàn giao còn cần làm rõ:
+
+- Người tiếp nhận và chịu trách nhiệm theo đơn; người có quyền đại diện khách xác nhận mẫu hoặc yêu cầu đổi/hủy. Người trả tiền hay nhận hàng không tự động có quyền thay đổi đơn.
+- Khi tính số viên từ diện tích, cần thông số sản phẩm, điều kiện công trình, phụ kiện và phần dự phòng nào; ai kiểm tra, ai xác nhận kết quả.
+- Bảng giá gốc và tham số điều chỉnh; thuế, vận chuyển, thời hạn báo giá và cách giữ giá đã được khách chấp nhận khi chính sách mới thay đổi.
+- Điều kiện để đơn được chấp nhận và được phép mua vật tư/sản xuất: xác nhận khách, duyệt giám đốc, cọc hoặc điều kiện tín dụng; chưa tự đặt mức cọc hay yêu cầu chữ ký.
+- Người bàn giao đơn; nội dung bàn giao; tiêu chí ưu tiên và cách xử lý thay đổi ngày giao. CEO và giám đốc có phải cùng một người không.
+- Hình thức duyệt mẫu, dung sai/tiêu chuẩn đối chiếu và cách xử lý khi sản phẩm không đúng mẫu đã duyệt.
+
+## Đề xuất xử lý đổi hoặc hủy đơn đặt riêng
+
+**Trạng thái: Đề xuất của Codex theo yêu cầu của anh; chưa được anh duyệt và không phải quy trình thực tế Nasaki đã được xác nhận.** Áp dụng khi khách đổi mẫu, màu, quy cách, số lượng hoặc hủy toàn bộ/một phần. Trường hợp doanh nghiệp làm sai mẫu hoặc giao hàng lỗi phải được tách khỏi việc khách đổi ý.
+
+### Nguyên tắc và bàn giao đề xuất
+
+1. Trước sản xuất hàng loạt, giữ bản yêu cầu và mẫu khách đã duyệt, kèm người duyệt, ngày duyệt và tiêu chuẩn đối chiếu được hai bên thống nhất. Đây là cơ sở xác định thay đổi; không sửa đè mất bản cũ.
+2. Người phụ trách kinh doanh tiếp nhận yêu cầu đổi/hủy, xác minh người yêu cầu có quyền đại diện khách, ghi lý do và phần số lượng bị ảnh hưởng. Quản lý sản xuất đánh giá và quyết định cách tạm dừng an toàn phần bị ảnh hưởng nếu cần; không tự dừng toàn bộ các đơn khác.
+3. Sản xuất xác định số lượng chưa làm, đang làm, đã hoàn thành và đã giao; kho/mua hàng đánh giá vật tư đã cam kết, khả năng trả, tái sử dụng hoặc bán lại. Kế toán tổng hợp chi phí có chứng cứ và khoản đã thu.
+4. Giám đốc duyệt phương án thương mại: tiếp tục theo yêu cầu mới, làm lại, giảm/hủy số lượng hoặc phương án khác; thống nhất với khách chi phí, xử lý hàng/vật tư, tiền đã thu và ngày giao mới. Vai trò này là đề xuất, không suy ra từ B14 rằng thẩm quyền đổi/hủy thực tế đã được xác nhận.
+5. Chỉ triển khai phương án thay đổi sau khi có phê duyệt nội bộ và xác nhận của khách. Nếu chưa thống nhất, giữ lịch sử đơn và trạng thái chờ xử lý đối với phần bị ảnh hưởng; không tự coi đơn đã hủy, tự khấu trừ tiền hoặc tự tiếp tục sản xuất phần đang tranh chấp.
+6. Nếu màu/quy cách thay đổi ảnh hưởng mẫu, làm và duyệt mẫu mới trước khi sản xuất hàng loạt phần thay đổi. Cập nhật kế hoạch vật tư, sản xuất, giao hàng và thông báo các bên bị ảnh hưởng.
+
+### Xử lý theo thời điểm đề xuất
+
+| Thời điểm nhận yêu cầu | Hướng xử lý | Chi phí và hàng cần xem xét |
+| --- | --- | --- |
+| Chưa duyệt mẫu, chưa cam kết vật tư riêng | Điều chỉnh yêu cầu, báo giá/ngày giao; làm mẫu mới nếu cần. | Chi phí mẫu/tư vấn chỉ thu theo thỏa thuận; không tự đặt phí hủy. |
+| Đã duyệt mẫu, đã chuẩn bị hoặc đặt vật tư, chưa sản xuất hàng loạt | Kiểm tra khả năng dừng mua, trả hoặc dùng lại vật tư; xác nhận yêu cầu mới. | Chi phí thực tế không thu hồi được sau khi xét trả, tái sử dụng và các nghĩa vụ đã cam kết. |
+| Đang sản xuất | Dừng an toàn phần bị ảnh hưởng nếu phù hợp; tách phần chưa làm, đang làm và đã làm; đánh giá khả năng sửa hoặc tiếp tục. | Vật tư và công đã dùng, chi phí sửa, hàng có thể thu hồi; cập nhật tiến độ sau khi duyệt. |
+| Đã hoàn thành, chưa giao | Giữ riêng để đánh giá chất lượng và phương án sửa, bán lại hoặc xử lý khác; không tự đưa hàng riêng thành hàng chuẩn. | Chi phí hoàn thành, giá trị có thể thu hồi và chi phí xử lý thêm; phân loại hàng cần được chấp thuận. |
+| Đã giao một phần hoặc toàn bộ | Xử lý riêng phần chưa giao; phần đã giao theo quy trình trả hàng/khiếu nại và thỏa thuận. | Không xóa giao dịch giao hàng hoặc khoản đã thu; kiểm tra hàng trả và đối chiếu nghĩa vụ thanh toán. |
+
+### Nguyên tắc chi phí đề xuất
+
+Không mặc định mất toàn bộ cọc, thu toàn bộ giá bán hoặc áp dụng một tỷ lệ phạt cho mọi trường hợp. Phân biệt chi phí đã phát sinh, cam kết không hủy được, giá trị có thể thu hồi và khoản cuối cùng hai bên thỏa thuận; tránh tính cùng một chi phí hai lần. Cách xử lý tiền cọc, hoàn tiền hoặc công nợ phải dựa trên điều khoản đã thống nhất và kết quả được phê duyệt, không coi bảng chi phí là quyền tự động khấu trừ.
+
+Nếu doanh nghiệp làm sai mẫu đã duyệt, phải xem xét trách nhiệm khắc phục của doanh nghiệp; không tự chuyển chi phí lỗi đó sang khách dưới tên phí đổi/hủy. Nếu khách thay đổi yêu cầu với hàng đang đúng mẫu, thương lượng phần chi phí bị ảnh hưởng theo thời điểm và khả năng thu hồi. Mức cọc, phí mẫu, thời hạn phản hồi, điều kiện hủy và dung sai vẫn cần được thống nhất.
+
+### Thông tin nghiệp vụ cần lưu
+
+Yêu cầu/mẫu và từng lần duyệt; các bên đặt/trả tiền/nhận hàng và người có quyền xác nhận; thời điểm, lý do và lượng thay đổi; tiến độ thực tế; vật tư, chi phí và giá trị thu hồi; phương án xử lý, người duyệt và xác nhận khách; tiền đã thu và cách quyết toán; cam kết giao cũ/mới; kết quả thực hiện. Đây là nội dung hồ sơ nghiệp vụ, chưa phải thiết kế cơ sở dữ liệu hoặc màn hình.
+
+## Câu hỏi vòng tiếp theo về kế hoạch và sản xuất
+
+Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế anh biết. Nếu chưa biết, ghi "chưa rõ, em đề xuất"; ví dụ trong câu hỏi không phải xác nhận về quy trình Nasaki.
+
+1. **Công đoạn:** Từ vật liệu đến thành phẩm, ngói và Terrazzo lần lượt trải qua những bước nào? Có công đoạn thuê ngoài không?
+2. **Vật liệu và công thức:** Mỗi nhóm dùng những vật liệu chính nào, đo bằng đơn vị gì? Có công thức cho một mẻ hoặc một số lượng viên không; mẫu/màu riêng có làm đổi công thức không?
+3. **Mẻ/lô sản xuất:** Thường làm bao nhiêu viên mỗi mẻ/lô? Một mẻ có phục vụ nhiều đơn không? Khi đổi mẫu hoặc màu, phải đổi khuôn, vệ sinh hay dừng máy bao lâu?
+4. **Quyết định làm hàng và ưu tiên:** Ai đề nghị/duyệt sản xuất hàng sẵn, dựa vào tồn tối thiểu hay dự báo nào? Khi thiếu năng lực, quản lý sản xuất và CEO ưu tiên theo ngày đã hứa, mức khẩn, giá trị đơn hay nguyên tắc khác?
+5. **Thời gian và năng lực:** Có bước chờ khô/dưỡng hộ hoặc chờ khác trước khi giao không? Xưởng làm mấy ca, năng suất ước lượng thế nào; máy hoặc công đoạn nào thường khiến cả luồng phải chờ?
+6. **Chất lượng và hoàn tất:** Kiểm tra ở bước nào, ai xác nhận hàng được nhập thành phẩm/giao khách? Hàng không đạt được làm lại, hạ loại hay bỏ; lượng đạt/lỗi được ghi thế nào?
 
 ## Các điểm còn mở
 
 - Mẫu, màu, kích thước và quan hệ biến thể; mã chuẩn của sản phẩm có nhiều cách viết.
-- Nhóm khách hàng và quy tắc nhận đơn, giá, cam kết giao, đặt riêng, thay đổi và hủy.
+- Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên; quan hệ CEO/giám đốc.
+- Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
 - Công đoạn, định mức và đơn vị vật tư; cách tính nhu cầu, hao hụt, năng lực và ưu tiên sản xuất.
 - Chất lượng, xử lý hàng lỗi, truy lô; quy tắc giữ hàng và bố trí một kho.
 - Mua, nhận/trả hàng; giao nhiều đợt, thanh toán và công nợ.
