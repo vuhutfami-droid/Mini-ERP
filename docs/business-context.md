@@ -44,8 +44,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B18 | “CEO” và “giám đốc” không kèm chức năng là cùng một người. Khi ghi “giám đốc” kèm chức năng, như “giám đốc sản xuất”, đó là người khác. | Anh xác nhận quy ước cách gọi; không tự suy ra các chức danh chức năng đều đã tồn tại hoặc có quyền cụ thể. |
 | B19 | Anh không có đủ thông tin chuyên môn sản xuất của Nasaki và giao Codex đề xuất mô hình cho mục đích minh họa. | Yêu cầu ngày 04/10/2026; các phương án/số liệu bên dưới là giả lập, không phải dữ kiện thực tế hay yêu cầu triển khai ngay. Demo vẫn phải chạy thật và tạo kết quả theo B01. |
 | B20 | Anh đồng ý cụ thể hóa chín nhóm nghiệp vụ kho đã rà soát trước khi chuyển sang phần khác. | “đồng ý, cụ thể hóa đi”; phê duyệt việc xây dựng phương án chi tiết, không tự coi là đã duyệt từng tham số mới hoặc yêu cầu lập trình ngay. |
+| B21 | Tiếp tục nghiệp vụ tiếp theo; các nội dung kế toán chưa cần đào sâu ở thời điểm này. | Yêu cầu ngày 04/10/2026; tạm hoãn đào sâu, không loại tài chính khỏi phạm vi hoặc coi các đề xuất đã được duyệt toàn bộ. |
 
-Các mã B01–B20 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B21 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -55,7 +56,7 @@ Quy mô demo một kho thay thế đề xuất trước đây về kho vật tư
 
 **Đề xuất của Codex:** Trong cùng một kho, có thể phân biệt vật tư, thành phẩm, hàng chờ kiểm tra và hàng lỗi bằng khu vực hoặc trạng thái hàng. Đề xuất này giữ nguyên một kho; cách bố trí và quy tắc sử dụng còn cần anh xác nhận qua nghiệp vụ.
 
-**Đề xuất của Codex:** Khảo sát trách nhiệm theo vai trò quản lý, kinh doanh, mua hàng, kho, kế hoạch/sản xuất, chất lượng, tài chính/kế toán và nhân sự. Một người có thể kiêm nhiệm nhiều vai trò trong mô hình tinh gọn. Chưa chốt số phòng ban, phân bổ 50 nhân sự, quyền truy cập hoặc người duyệt.
+**Đề xuất của Codex:** Khảo sát trách nhiệm theo vai trò quản lý, kinh doanh, mua hàng, kho, kế hoạch/sản xuất, chất lượng, tài chính/kế toán và nhân sự. Một người có thể kiêm nhiệm nhiều vai trò trong mô hình tinh gọn. Đã có phương án phân bổ 50 người tại [nghiệp vụ nhân sự](hr-workflows.md), chưa phải cơ cấu thật hoặc quyết định duyệt từng chi tiết. Quyền truy cập và thẩm quyền cụ thể vẫn cần hoàn thiện.
 
 Năng lực sản xuất ngói 5,5 triệu viên/năm là thông tin website công bố trong nội dung anh gửi. Không dùng công suất này để suy ra năng suất ca, sản lượng thực tế hoặc năng lực của mô hình demo khi chưa có lịch làm việc và quy trình sản xuất.
 
@@ -327,6 +328,16 @@ Ví dụ đơn 10.000 viên, giá 18.000 đồng/viên, cọc 60 triệu: giao/g
 
 Thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay/ngân sách và kế toán đầy đủ chưa hoàn tất phân tích; không tự loại khỏi phạm vi bảy nhóm hoặc nhóm khách xuất khẩu. Cần tiếp tục đề xuất và liên thông nguồn lương/giờ công từ nhân sự; chưa xây ứng dụng.
 
+## Nhân sự và quản trị đề xuất
+
+Theo B21, tiếp tục [nhân sự, ca làm, chấm công và lương](hr-workflows.md), không đào sâu kế toán trong vòng này. Tài liệu là nguồn chi tiết đề xuất, Codex phải đọc trước khi thao tác nhân sự hoặc liên thông giờ/chi phí nhân công. Cơ cấu giả lập: giám đốc 1, kinh doanh 5, mua hàng 2, kho/giao 4, sản xuất 28, chất lượng 3, tài chính 3, nhân sự/hành chính 4; tổng 50 người, kiêm nhiệm không tăng đầu người.
+
+Đề xuất quản lý từ tuyển/tiếp nhận tới điều chuyển/nghỉ việc; lịch và kỹ năng, công thực tế, phép giữ/đã dùng, chốt công/lương, ứng và thực trả, phân quyền dữ liệu cá nhân. Một ca có 8 giờ làm không tính nghỉ trưa; số ngày chuẩn theo lịch kỳ, không mặc định 26 mọi tháng. Nghỉ có lương không là giờ trực tiếp cho lệnh; giờ người khác giờ máy hoặc thời gian dưỡng hộ.
+
+Ví dụ giả lập 26 ngày/208 giờ: đi làm 192 giờ, nghỉ có lương 8, không lương 8; lương cơ sở 7,8 triệu cho thu nhập thời gian 7,5 triệu, cộng phụ cấp cố định 0,5 triệu thành 8 triệu trước khấu trừ. Ứng thực nhận 1 triệu còn cần chi 7 triệu trước các khoản bắt buộc chưa mô phỏng, không gọi là thực lĩnh pháp lý. Ví dụ riêng nối P06: 240 giờ trực tiếp × 50.000 đồng chi phí/giờ = 12 triệu nhân công đã nằm trong giá thành trước, không cộng lại hoặc suy ra từ người trong ví dụ lương.
+
+Các quy tắc/số liệu trên chưa được duyệt từng chi tiết, chưa có bộ chứng từ hoặc kiểm chứng ứng dụng. Chính sách lao động, phép, bảo hiểm/thuế và điều kiện làm thêm cần căn cứ trước vận hành thật; dữ liệu cá nhân thật không lưu Git. Tiếp tục quản trị trách nhiệm/phê duyệt và rà soát chất lượng/toàn luồng trước tính năng.
+
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
 ### Trọng tâm phân tích của vòng này
@@ -362,8 +373,8 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 - Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
 - Xem xét/chỉnh [quy trình kho chi tiết](warehouse-workflows.md) và mô hình mua hàng M01–M03; hoàn thiện danh mục/bộ dữ liệu demo, đối chiếu giao hàng/tài chính và quy tắc giá trị. Chín nhóm RK01–RK09 đã có phương án cụ thể, chưa có kiểm chứng phần mềm.
 - Xem xét/chỉnh [giao hàng và tài chính cơ sở](delivery-finance-workflows.md), gồm giao từng đợt, cọc/thu/phân bổ/công nợ, trả/hoàn tiền, giá thành/giá vốn và báo cáo quản trị; chưa được kiểm chứng phần mềm.
-- Hoàn thiện tài chính chi tiết: nguồn lương/giờ công và phân bổ, kế toán, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay và ngân sách. Các nội dung chưa rõ không tự trở thành phạm vi đã loại bỏ.
-- Phân bổ nhân sự, ca/chấm công/nghỉ phép/lương; kiêm nhiệm và quyền/phê duyệt.
+- Tài chính chi tiết, kế toán, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay và ngân sách giữ để phân tích sau theo B21, không tự loại khỏi phạm vi. Nguồn giờ/chi phí nhân công đã có phương án cơ sở trong nhân sự, cần bộ dữ liệu để đối chiếu.
+- Xem xét/chỉnh [nghiệp vụ nhân sự](hr-workflows.md), cụ thể hóa chính sách và dữ liệu mẫu, kiêm nhiệm, quyền/phê duyệt và bàn giao xuyên bộ phận; chưa có kiểm chứng ứng dụng.
 - Tình huống thực tế và số liệu thể hiện mức độ ảnh hưởng của khó khăn; các chỉ số để đánh giá chuyển đổi số.
 - Bộ dữ liệu demo, mức sử dụng đồng thời, cách đối tác dùng thử, mốc trình diễn và chi phí vận hành.
 

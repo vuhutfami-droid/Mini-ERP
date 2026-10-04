@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng giả lập theo yêu cầu của anh. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -17,6 +17,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 [Quy trình kho cho demo ERP Nasaki](docs/warehouse-workflows.md) cụ thể hóa chín nhóm nghiệp vụ kho, gồm trách nhiệm, điều kiện, biến động tồn, ngoại lệ và tình huống kiểm chứng. Đây là nguồn chi tiết cho phần kho, phải đọc trước khi thao tác phần này; không phải mô tả hiện trạng Nasaki đã được khảo sát.
 
 [Giao hàng và tài chính cho demo ERP Nasaki](docs/delivery-finance-workflows.md) lưu mô hình giao từng đợt, thu/cọc/phân bổ, công nợ, thu chi, giá thành/giá vốn và trả/hoàn tiền. Các lựa chọn mới là đề xuất quản trị giả lập, chưa là đặc tả đầy đủ kế toán pháp định; đọc cùng hồ sơ nghiệp vụ và quy trình kho khi thao tác phần liên quan.
+
+[Nhân sự, ca làm, chấm công và lương cho demo ERP Nasaki](docs/hr-workflows.md) lưu cơ cấu 50 người đề xuất, hồ sơ/vòng đời, lịch, công, phép, lương/ứng/thực trả và giờ công nối với sản xuất. Đọc khi thao tác nhân sự hoặc nguồn nhân công; chưa đào sâu kế toán theo yêu cầu mới của anh, không coi chính sách giả lập là chính sách pháp lý thật.
 
 ## Cách duy trì nhật ký
 
@@ -661,6 +663,22 @@ Các sự kiện được tách: duyệt đơn, nhận cọc, xuất kho/đang g
 **Giới hạn còn lại:** Đây là nền nghiệp vụ quản trị; chưa hoàn thiện kế toán đầy đủ, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay/ngân sách hoặc nguồn lương/giờ công. Không tự loại các nội dung đó khỏi phạm vi bảy nhóm hoặc nhóm khách xuất khẩu. Demo không thực chuyển tiền hoặc phát hành hóa đơn thật.
 
 **Trạng thái:** Đã lưu quy trình và kiểm tra phép tính/tính nhất quán với kho; chưa xây dựng hoặc chạy build/test ứng dụng. Bước tiếp theo hợp lý là nhân sự, ca/giờ công và lương để bổ sung nguồn chi phí và trách nhiệm.
+
+### 04/10/2026 — Tiếp tục nhân sự và chưa đào sâu kế toán
+
+**Anh:**
+
+> tiếp tục nghiệp vụ tiếp theo đi, các nội dung kế toán chưa cần đào sâu đâu
+
+**Điều đã xác nhận:** Tiếp tục phân tích; chưa đào sâu kế toán ở thời điểm này. Không diễn giải thành bỏ tài chính hoặc yêu cầu lập trình ngay. Bổ sung B21 trong hồ sơ nghiệp vụ.
+
+**Em — đề xuất đã lưu:** Tạo [nghiệp vụ nhân sự](docs/hr-workflows.md) theo hướng dẫn viết tài liệu trong Git, tách đề xuất khỏi dữ kiện. Cơ cấu giả lập đủ 50: giám đốc 1, kinh doanh 5, mua 2, kho/giao 4, sản xuất 28, chất lượng 3, tài chính 3, nhân sự/hành chính 4. CEO/giám đốc cùng người; kiêm nhiệm không tăng đầu người; không suy ra 50 người dùng đồng thời.
+
+Luồng đề xuất gồm tuyển/tiếp nhận, hồ sơ/hợp đồng/kỹ năng/an toàn, điều chuyển/nghỉ việc, lịch/ca, công thực tế, phép và ngoại lệ, chốt công → lập/kiểm tra/duyệt lương → thực trả. Thiếu giờ không tự coi đủ ca hoặc không phép; nghỉ trưa không tính giờ làm. Phép duyệt giữ lượng rồi chuyển sang đã dùng khi chốt nghỉ, không trừ hai lần. Không tự phạt tiền hoặc trừ lương do hàng lỗi. Duyệt lương chưa là đã chi; giữ lịch sử điều chỉnh và quyền xem lương riêng.
+
+Ví dụ giả lập 208 giờ lịch, đi làm 192, nghỉ hưởng lương 8, không lương 8; lương 7,8 triệu quy đổi theo 200 giờ hưởng lương thành 7,5 triệu, phụ cấp 0,5 thành 8 triệu trước khấu trừ; ứng 1 còn cần chi 7 triệu trước khoản bắt buộc chưa mô phỏng. Không gọi là thực lĩnh pháp lý. Giờ cho lệnh đối chiếu giờ thực làm, không lấy giờ nghỉ hoặc dưỡng hộ. Nguồn riêng 240 giờ × 50.000 = 12 triệu nhân công nối P06, không cộng lại vào giá thành trước hoặc coi đã có chứng từ đầy đủ.
+
+**Trạng thái và giới hạn:** Chỉ tài liệu nghiệp vụ và kiểm tra phép tính/tính nhất quán; chưa có ứng dụng hoặc lịch sử build/test. Chính sách lao động, làm thêm, phép, bảo hiểm/thuế còn cần căn cứ trước vận hành thật; mọi người/chứng từ trong demo phải giả lập, không lưu hồ sơ hoặc lương thật vào Git. Bước tiếp theo đề xuất: trách nhiệm, phê duyệt và bàn giao xuyên bộ phận, rà soát chất lượng/toàn luồng trước tính năng.
 
 ## Các nội dung chưa được thống nhất
 
