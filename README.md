@@ -130,6 +130,39 @@ Các nguyên tắc để giữ kho gọn:
 
 **Ghi nhận hiện tại:** Kho đang ở giai đoạn tài liệu; chưa có kết quả build/test được lưu trong kho. Chỉ tạo `docs/build-history.md` khi có lần build/test thực tế cần ghi nhận.
 
+### 04/10/2026 — Đánh giá mức độ sẵn sàng phân tích và xây dựng
+
+**Anh:**
+
+> với góc nhìn của một lập trình viên chuyên nghiệp, các ràng buộc từ đầu tới giờ đã sẵn sàng để tới bước chuẩn bị phân tích yêu cầu và build hệ thống chưa?
+
+**Em — đánh giá:**
+
+Đã đủ cơ sở để bắt đầu phân tích yêu cầu. Chưa đủ cơ sở để lập trình ERP phục vụ vận hành thực tế. Các trao đổi hiện tại xác lập mục tiêu và cách giữ ngữ cảnh, nhưng chưa xác lập hành vi nghiệp vụ có thể triển khai và nghiệm thu.
+
+Đối chiếu kho hiện tại:
+
+- Đã có `README.md` làm nhật ký và `AGENTS.md` yêu cầu đọc ngữ cảnh, lịch sử thay đổi và build/test trước khi thao tác.
+- Cấu trúc monorepo và tổ chức theo module vẫn là đề xuất, chưa được chốt hay triển khai.
+- Kho hiện chỉ có hai file tài liệu; chưa có mã ứng dụng, cấu hình build, CI hoặc lịch sử build/test được ghi nhận trong kho. Đây là trạng thái bình thường ở giai đoạn chuẩn bị, không cản trở phân tích yêu cầu.
+
+Đầu ra tối thiểu cần làm rõ trước khi xây dựng phiên bản đầu tiên:
+
+1. Bối cảnh doanh nghiệp: loại hình sản xuất, làm theo đơn hay sản xuất để tồn kho, số công ty/xưởng/kho và quy mô người dùng.
+2. Phạm vi phiên bản đầu: quy trình ưu tiên, chức năng có trong phiên bản đầu và phần để sau. Mục tiêu dài hạn "tất cả chức năng cơ bản" cần được chia thành các đợt triển khai.
+3. Quy trình nghiệp vụ ưu tiên: ai thao tác, dữ liệu vào/ra, trạng thái chứng từ, phê duyệt và xử lý ngoại lệ như sửa, hủy, trả hàng, thiếu vật tư.
+4. Dữ liệu và quyền: dữ liệu danh mục, đơn vị tính, BOM/định mức nếu áp dụng, nguyên tắc tồn kho, quyền truy cập và lịch sử thao tác. Làm rõ tài chính là quản lý thu/chi, công nợ hay cả kế toán theo chế độ áp dụng.
+5. Điều kiện vận hành: nơi triển khai, kết nối mạng, khối lượng sử dụng dự kiến, sao lưu/khôi phục và hệ thống cần tích hợp.
+6. Tiêu chí nghiệm thu: một số tình huống đầu-cuối với dữ liệu mẫu và kết quả mong đợi, có người chịu trách nhiệm xác nhận nghiệp vụ.
+
+Sau khi có yêu cầu tối thiểu cho quy trình ưu tiên, mới chốt công nghệ và cấu trúc repo phù hợp, tạo bộ khung chạy được và thiết lập kiểm tra build/test cơ bản. Không cần đặc tả hết mọi phân hệ mới bắt đầu; cần đủ rõ cho phần được chọn triển khai trước.
+
+Đề xuất bước kế tiếp là khảo sát doanh nghiệp và chọn một luồng nghiệp vụ đầu-cuối làm trọng tâm. Luồng bán hàng → kiểm tra kho → sản xuất/mua bổ sung → giao hàng → công nợ chỉ là ví dụ, chưa phải phạm vi đã chốt.
+
+Để giữ tài liệu hữu ích khi nhật ký dài lên, tiếp tục giữ lịch sử trong README theo yêu cầu của anh; khi cần, dùng tài liệu trong `docs/` làm bản mô tả yêu cầu hiện hành, có mã yêu cầu và tiêu chí nghiệm thu, rồi liên kết từ README. Đây là đề xuất bổ sung, chưa tạo tài liệu hoặc thay đổi quy tắc đọc README hiện tại.
+
+**Trạng thái:** Đã đánh giá trên tài liệu và lịch sử Git hiện có; chưa khởi tạo ứng dụng, chưa chạy build/test và chưa chốt thêm yêu cầu nghiệp vụ.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
