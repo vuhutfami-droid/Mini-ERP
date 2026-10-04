@@ -43,8 +43,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B17 | Có làm mẫu cho khách duyệt trước khi sản xuất hàng loạt đối với màu/quy cách riêng. | Anh xác nhận; hình thức duyệt và tiêu chuẩn so sánh với mẫu chưa rõ. |
 | B18 | “CEO” và “giám đốc” không kèm chức năng là cùng một người. Khi ghi “giám đốc” kèm chức năng, như “giám đốc sản xuất”, đó là người khác. | Anh xác nhận quy ước cách gọi; không tự suy ra các chức danh chức năng đều đã tồn tại hoặc có quyền cụ thể. |
 | B19 | Anh không có đủ thông tin chuyên môn sản xuất của Nasaki và giao Codex đề xuất mô hình cho mục đích minh họa. | Yêu cầu ngày 04/10/2026; các phương án/số liệu bên dưới là giả lập, không phải dữ kiện thực tế hay yêu cầu triển khai ngay. Demo vẫn phải chạy thật và tạo kết quả theo B01. |
+| B20 | Anh đồng ý cụ thể hóa chín nhóm nghiệp vụ kho đã rà soát trước khi chuyển sang phần khác. | “đồng ý, cụ thể hóa đi”; phê duyệt việc xây dựng phương án chi tiết, không tự coi là đã duyệt từng tham số mới hoặc yêu cầu lập trình ngay. |
 
-Các mã B01–B19 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B20 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -279,7 +280,7 @@ Hàng lỗi/chờ kiểm tra không nằm trong tồn đạt; không trừ lần
 5. Hai người cùng muốn giữ 300 viên trong khi khả dụng chỉ 400: tổng giữ mới không vượt 400, phần chưa đủ phải được báo rõ; nhấn xác nhận lại không tạo lần xuất thứ hai.
 6. Khóa lô đã phân bổ, kiểm kê thiếu hoặc đảo chứng từ có giao dịch sau phải chỉ ra đơn/lệnh chịu ảnh hưởng và cách xử lý; không chỉ làm báo cáo tồn nhìn có vẻ đúng.
 
-Chưa coi chín nhóm đề xuất này là đã hoàn thiện đặc tả kho. Chúng là danh sách thiếu sót có hướng xử lý để tiếp tục chốt mô hình demo; không có bằng chứng build/test ứng dụng trong kho hiện tại.
+Theo B20, đã cụ thể hóa cả chín nhóm trong [Quy trình kho cho demo ERP Nasaki](warehouse-workflows.md): trách nhiệm, đầu vào, điều kiện, bước thực hiện, thời điểm ảnh hưởng tồn, ngoại lệ, điểm bàn giao và tình huống kiểm chứng. Tài liệu đó là nguồn chi tiết hiện hành của kho; phần rà soát trên giữ căn cứ nhận diện khoảng trống, không phải kết luận còn chưa được cụ thể hóa. Các tham số mới vẫn là đề xuất demo; chưa hoàn tất đối chiếu tài chính/giao hàng hoặc kiểm chứng ứng dụng. Codex phải đọc tài liệu này trước khi thao tác phần kho.
 
 ### M01 — Luồng mua hàng và bàn giao đề xuất
 
@@ -349,7 +350,7 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 - Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên.
 - Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
 - Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
-- Xem xét/chỉnh mô hình kho K01–K03 và mua hàng M01–M03; chi tiết dữ liệu demo, ngoại lệ chất lượng và quy tắc giá trị tài chính sẽ được bổ sung tiếp.
+- Xem xét/chỉnh [quy trình kho chi tiết](warehouse-workflows.md) và mô hình mua hàng M01–M03; hoàn thiện danh mục/bộ dữ liệu demo, đối chiếu giao hàng/tài chính và quy tắc giá trị. Chín nhóm RK01–RK09 đã có phương án cụ thể, chưa có kiểm chứng phần mềm.
 - Giao khách nhiều đợt, trả hàng bán; thanh toán và công nợ khách hàng. Mua/nhận/trả vật tư và nghĩa vụ nhà cung cấp đã có đề xuất cơ sở M01–M03, chưa là hiện trạng xác nhận.
 - Giá thành, kế toán, thuế, ngoại tệ và phạm vi tài chính cụ thể.
 - Phân bổ nhân sự, ca/chấm công/nghỉ phép/lương; kiêm nhiệm và quyền/phê duyệt.

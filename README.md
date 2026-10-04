@@ -14,6 +14,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Hồ sơ nghiệp vụ demo ERP Nasaki](docs/business-context.md) lưu quyết định đã xác nhận, hiện trạng theo mô tả của anh, đề xuất, điểm còn mở và câu hỏi đào sâu. README tiếp tục giữ lịch sử trao đổi. Codex cần đọc hồ sơ này cùng README trước khi phân tích, thiết kế hoặc phát triển các phần liên quan.
 
+[Quy trình kho cho demo ERP Nasaki](docs/warehouse-workflows.md) cụ thể hóa chín nhóm nghiệp vụ kho, gồm trách nhiệm, điều kiện, biến động tồn, ngoại lệ và tình huống kiểm chứng. Đây là nguồn chi tiết cho phần kho, phải đọc trước khi thao tác phần này; không phải mô tả hiện trạng Nasaki đã được khảo sát.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -625,6 +627,22 @@ Hướng bổ sung được ghi là đề xuất, không tự biến thành quy�
 Đề xuất để sau các phần kho chuyên sâu như QR, pallet, tự tối ưu vị trí, nhiều kho/ký gửi/tích hợp thiết bị; giữ nguyên mô hình một kho và phạm vi bảy nhóm đã xác nhận. Sáu tình huống nghiệm thu được bổ sung làm cơ sở kiểm tra phần mềm về sau, chưa phải kết quả ứng dụng đã chạy.
 
 **Trạng thái:** Hoàn thành rà soát tài liệu và ghi nhận khoảng trống; chưa hoàn thành đặc tả kho, chưa triển khai hoặc chạy build/test ứng dụng. Vòng này không chuyển sang phân hệ tiếp theo.
+
+### 04/10/2026 — Cụ thể hóa chín nhóm nghiệp vụ kho
+
+**Anh:**
+
+> đồng ý, cụ thể hóa đi
+
+**Điều đã xác nhận:** Anh đồng ý giao Codex cụ thể hóa chín nhóm đã rà soát. Bổ sung B20; không diễn giải thành phê duyệt trước mọi tham số mới hoặc yêu cầu xây dựng phần mềm ngay.
+
+**Em — kết quả:** Đã tạo [quy trình kho chi tiết](docs/warehouse-workflows.md) trong Git theo cách lưu tài liệu của dự án, áp dụng hướng dẫn viết tài liệu để tách giả định khỏi dữ kiện. Không tạo Page/Space ngoài dự án. Hồ sơ tổng quan dẫn tới tài liệu này thay vì sao chép toàn bộ quy trình vào nhiều nơi.
+
+Phương án cụ thể gồm danh mục/biến thể/vị trí/quy đổi; xác lập tồn đầu; nhận/soạn/xuất/đang giao; giữ/giải phóng/chuyển ưu tiên; xuất mẫu/vỡ/mất/tiêu hủy; ba loại nhận trả/trả nhà cung cấp; khóa lô/truy nguồn/thu hồi; chứng từ/quyền/kiểm kê/điều chỉnh; báo cáo/cảnh báo/bàn giao. Quy định rõ người thực hiện, nguồn, điều kiện hoàn tất và thời điểm làm thay đổi tồn; duyệt phiếu chưa đồng nghĩa đã thực hiện. Khóa chất lượng ngay khi nghi vấn, không tự bỏ khóa để kịp giao; phân bổ thiếu phải được báo về đúng đơn/lệnh.
+
+**Ví dụ giả lập liên hoàn:** Tồn đầu 1.000 đạt; giữ 600, soạn 200 chưa giảm tồn, thực xuất 200 còn 800. Hủy phần chưa giao giải phóng 400, không cộng tồn. Chuyển 50 vỡ sang lỗi vẫn tổng 800; thực tiêu hủy còn 750. Nhận trả 20 có tổng 770 nhưng chờ kiểm tra; kết quả 15 đạt/5 lỗi; kiểm kê thiếu 2 viên đạt đã duyệt thì tổng cuối 768, gồm 763 được dùng và 5 lỗi. Đối chiếu: 1.000 + 20 - 200 - 50 - 2 = 768. Quyết toán tiền và giao bù là quyết định riêng, chưa suy ra từ bảng tồn.
+
+**Trạng thái:** Đã cụ thể hóa mô hình kho trên tài liệu và kiểm tra tính nhất quán ví dụ; chưa lập trình/chạy build/test, chưa nghiệm thu toàn bộ ERP. Còn cần đối chiếu giao hàng/tài chính, chốt danh mục/bộ dữ liệu demo và chuyển thành yêu cầu phát triển khi đến bước đó. Không chuyển sang phân hệ khác trong vòng này.
 
 ## Các nội dung chưa được thống nhất
 
