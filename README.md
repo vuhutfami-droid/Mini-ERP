@@ -553,6 +553,31 @@ Các câu hỏi này chưa bao quát mọi chi tiết triển khai. Sau câu tr�
 
 **Trạng thái:** Chỉ cập nhật tài liệu nghiệp vụ; kho chưa có lịch sử build/test, vòng này không chạy build/test ứng dụng.
 
+### 04/10/2026 — Tiếp tục khảo sát kế hoạch và sản xuất
+
+**Anh:**
+
+> tiếp tục cho phần phân tích doanh nghiệp đi
+
+**Em — hướng phân tích:** Tiếp tục nhóm kế hoạch và sản xuất cho cả ngói và Terrazzo, chưa chuyển sang tính năng. Giữ quy ước CEO/giám đốc là cùng người và chưa coi đề xuất đổi/hủy là đã được duyệt. Kho chưa có lịch sử build/test; không chạy build/test ứng dụng ở vòng tài liệu này.
+
+Ba trọng tâm cần làm rõ: hàng trong kho so với hàng có thể giao cho đúng đơn; lượng thành phẩm đạt cần bổ sung so với lượng bắt đầu sản xuất; ngày giao so với nguồn lực và thời gian chờ. Chưa có dữ kiện để xác định công đoạn, tỷ lệ hao hụt, năng suất hoặc công thức thực tế.
+
+**Tình huống giả lập để anh kể quy trình:** Khách cần 10.000 viên; nếu 3.000 viên sẵn có đúng loại, đạt, được phép giao và chưa dành cho đơn khác thì cần bổ sung 7.000 viên đạt. Không suy ra bắt đầu sản xuất đúng 7.000 viên hoặc tự cam kết ngày giao.
+
+**Nhóm câu hỏi tiếp tục, đang chờ anh trả lời:**
+
+1. Công đoạn của ngói và Terrazzo, có thuê ngoài không?
+2. Vật liệu, đơn vị và công thức sản xuất; khác biệt theo mẫu/màu?
+3. Số viên mỗi mẻ/lô, gộp nhiều đơn và thời gian đổi mẫu/màu?
+4. Người đề nghị/duyệt làm hàng sẵn; điều kiện bắt đầu hàng theo đơn; tiêu chí ưu tiên khi thiếu năng lực?
+5. Thời gian làm/chờ, số ca, năng suất ước lượng và công đoạn gây chậm?
+6. Người kiểm tra/xác nhận thành phẩm, cách xử lý và ghi nhận lượng lỗi?
+
+Anh có thể trả lời riêng hai nhóm hoặc kể một đơn điển hình. Phần chưa biết có thể ghi “chưa rõ, em đề xuất”; đề xuất vẫn được tách khỏi hiện trạng. Chi tiết nằm trong [hồ sơ nghiệp vụ](docs/business-context.md).
+
+**Trạng thái:** Đã bổ sung trọng tâm phân tích và câu hỏi; chưa nhận dữ kiện sản xuất mới, chưa hoàn thành khảo sát hoặc triển khai mã nguồn.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.

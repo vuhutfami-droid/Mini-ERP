@@ -148,12 +148,28 @@ Yêu cầu/mẫu và từng lần duyệt; các bên đặt/trả tiền/nhận 
 
 ## Câu hỏi vòng tiếp theo về kế hoạch và sản xuất
 
+### Trọng tâm phân tích của vòng này
+
+Chưa có câu trả lời về công đoạn, vật liệu và năng lực. Tiếp tục khảo sát, không đánh dấu nhóm sản xuất đã hoàn tất hoặc tự chọn quy trình công nghệ cho Nasaki.
+
+Từ mô hình sản xuất kết hợp và nhận màu/quy cách riêng đã xác nhận, cần làm rõ ba quan hệ nghiệp vụ:
+
+- **Đơn hàng với hàng có thể giao:** Có hàng trong kho chưa chắc có thể dùng cho đơn nếu sai màu/quy cách, chưa đạt chất lượng hoặc đã dành cho khách khác. Cách giữ hàng và điều kiện hàng được giao còn cần anh xác nhận, chưa phải quy tắc đã chốt.
+- **Số lượng cần giao với số lượng cần sản xuất:** Cần phân biệt lượng thành phẩm đạt cần bổ sung với lượng bắt đầu sản xuất; hàng lỗi, làm lại và hao hụt có thể làm hai lượng khác nhau. Chưa tự đặt tỷ lệ hao hụt.
+- **Ngày giao với nguồn lực và thời gian chờ:** Cần khảo sát riêng ngói và Terrazzo, cả thời gian làm, thời gian chờ, chuyển mẫu/màu và nguồn lực dùng chung nếu có. Một xưởng không đồng nghĩa chỉ có một dây chuyền hoặc hai nhóm dùng cùng quy trình.
+
+**Tình huống giả lập để trao đổi, chưa được chốt:** Khách cần 10.000 viên một mẫu/màu/quy cách, trong kho có 3.000 viên cùng loại. Nếu cả 3.000 viên đều đạt, được phép giao và chưa dành cho đơn khác thì còn cần bổ sung 7.000 viên đạt. Chưa thể kết luận phải bắt đầu sản xuất đúng 7.000 viên hoặc giao được ngày nào khi chưa biết hao hụt, công đoạn và năng lực. Dùng tình huống này để anh kể ai làm gì từ nhận nhu cầu đến thành phẩm; không coi số liệu là thực tế Nasaki.
+
+Kết quả cần có sau vòng trả lời: mô tả riêng quy trình hai nhóm; điều kiện bắt đầu, người đề nghị/duyệt và bàn giao; vật liệu/công thức; mẻ/lô và quan hệ với đơn; thời gian/năng lực; điều kiện hoàn tất và xử lý lỗi. Chỉ những phần có câu trả lời mới chuyển sang dữ kiện xác nhận.
+
+### Câu hỏi đang chờ trả lời
+
 Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế anh biết. Nếu chưa biết, ghi "chưa rõ, em đề xuất"; ví dụ trong câu hỏi không phải xác nhận về quy trình Nasaki.
 
 1. **Công đoạn:** Từ vật liệu đến thành phẩm, ngói và Terrazzo lần lượt trải qua những bước nào? Có công đoạn thuê ngoài không?
 2. **Vật liệu và công thức:** Mỗi nhóm dùng những vật liệu chính nào, đo bằng đơn vị gì? Có công thức cho một mẻ hoặc một số lượng viên không; mẫu/màu riêng có làm đổi công thức không?
 3. **Mẻ/lô sản xuất:** Thường làm bao nhiêu viên mỗi mẻ/lô? Một mẻ có phục vụ nhiều đơn không? Khi đổi mẫu hoặc màu, phải đổi khuôn, vệ sinh hay dừng máy bao lâu?
-4. **Quyết định làm hàng và ưu tiên:** Ai đề nghị/duyệt sản xuất hàng sẵn, dựa vào tồn tối thiểu hay dự báo nào? Khi thiếu năng lực, quản lý sản xuất và CEO ưu tiên theo ngày đã hứa, mức khẩn, giá trị đơn hay nguyên tắc khác?
+4. **Quyết định làm hàng và ưu tiên:** Ai đề nghị/duyệt sản xuất hàng sẵn, dựa vào tồn tối thiểu hay dự báo nào? Với hàng theo đơn, điều kiện nào cho phép bắt đầu: đơn đã được duyệt, mẫu đã duyệt, nhận cọc hoặc điều kiện khác? Khi thiếu năng lực, quản lý sản xuất và CEO ưu tiên theo ngày đã hứa, mức khẩn, giá trị đơn hay nguyên tắc khác?
 5. **Thời gian và năng lực:** Có bước chờ khô/dưỡng hộ hoặc chờ khác trước khi giao không? Xưởng làm mấy ca, năng suất ước lượng thế nào; máy hoặc công đoạn nào thường khiến cả luồng phải chờ?
 6. **Chất lượng và hoàn tất:** Kiểm tra ở bước nào, ai xác nhận hàng được nhập thành phẩm/giao khách? Hàng không đạt được làm lại, hạ loại hay bỏ; lượng đạt/lỗi được ghi thế nào?
 
