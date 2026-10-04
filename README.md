@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền và bổ sung khảo sát bán hàng; có đề xuất xử lý đổi/hủy đơn đặt riêng đang chờ anh xem xét. Tiếp tục đào sâu nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng. Chưa khảo sát độc lập Nasaki hoặc chốt quy trình chi tiết.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất giả lập theo yêu cầu của anh. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -577,6 +577,24 @@ Ba trọng tâm cần làm rõ: hàng trong kho so với hàng có thể giao ch
 Anh có thể trả lời riêng hai nhóm hoặc kể một đơn điển hình. Phần chưa biết có thể ghi “chưa rõ, em đề xuất”; đề xuất vẫn được tách khỏi hiện trạng. Chi tiết nằm trong [hồ sơ nghiệp vụ](docs/business-context.md).
 
 **Trạng thái:** Đã bổ sung trọng tâm phân tích và câu hỏi; chưa nhận dữ kiện sản xuất mới, chưa hoàn thành khảo sát hoặc triển khai mã nguồn.
+
+### 04/10/2026 — Giao Codex đề xuất nghiệp vụ sản xuất cho demo
+
+**Anh:**
+
+> các câu hỏi trên chuyên sâu vào chuyên môn của nasaki rồi, anh không có đủ thông tin, em đề xuất nhé vì đây sẽ để phục vụ cho việc minh họa thôi
+
+**Điều đã xác nhận:** Anh không có đủ thông tin chuyên môn và yêu cầu Codex đề xuất mô hình minh họa. Không coi việc thiếu dữ liệu sản xuất thật là điều kiện chặn demo; mục tiêu chạy thật, lưu giao dịch và tạo kết quả vẫn giữ nguyên. Việc giao đề xuất không đồng nghĩa mọi con số/quy tắc mới đã được anh duyệt hoặc anh đã yêu cầu lập trình.
+
+**Em — phương án đã lưu trong [hồ sơ nghiệp vụ](docs/business-context.md):**
+
+- Bổ sung B19, chuyển sáu câu hỏi sản xuất cũ thành câu hỏi tham chiếu khi có khảo sát thực tế, không yêu cầu anh trả lời lại.
+- P01: Ngói giả lập chuẩn bị → trộn/tạo hình → dưỡng hộ → phủ màu → kiểm tra → đóng gói/nhập kho. Terrazzo giả lập chuẩn bị → trộn/ép → dưỡng hộ → mài/hoàn thiện → kiểm tra → đóng gói/nhập kho.
+- P02–P03: Đề xuất vật tư và hệ số định mức giả lập, lô ngói 1.000 viên/lô Terrazzo 500 viên, một ca 8 giờ, năng lực tạo hình hai lô mỗi luồng/ca, một ngày chuẩn bị/tạo hình + ba ngày chờ + một ngày hoàn thiện/kiểm tra cho lô cơ sở. Đổi mẫu/màu nửa ca; nhiều lô vẫn phải xét xếp hàng và nguồn lực. Không dùng các số này làm hướng dẫn sản xuất thật.
+- P04–P05: Đề xuất cách làm bù hàng sẵn/theo đơn, duyệt lệnh, kiểm tra điều kiện mẫu/cọc theo đơn, ưu tiên ngày đã cam kết; theo dõi hàng đạt/chờ xử lý/lỗi trong một kho. Lỗi dự kiến 2% ngói, 3% Terrazzo; kết quả thực tế do bản ghi kiểm tra quyết định, không tự tính thành phẩm đạt từ tỷ lệ dự kiến.
+- P06: Ví dụ đơn 10.000 ngói, có 3.000 viên khả dụng, cần bổ sung 7.000 đạt; tám lô bắt đầu 8.000, ghi kết quả 7.840 đạt và 160 loại bỏ, giao 10.000, còn 840 viên đạt. Vật tư kế hoạch tính theo lượng bắt đầu, không cộng tỷ lệ lỗi lần nữa.
+
+**Trạng thái:** Đã đề xuất nghiệp vụ sản xuất đủ để tiếp tục phân tích demo, chưa kiểm chứng vận hành thực tế Nasaki, chưa hoàn thành phân tích toàn bộ ERP hoặc triển khai ứng dụng. Kho chưa có lịch sử build/test; vòng này chỉ kiểm tra tài liệu và tính nhất quán các phép tính minh họa.
 
 ## Các nội dung chưa được thống nhất
 

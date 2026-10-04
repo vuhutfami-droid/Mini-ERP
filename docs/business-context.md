@@ -42,8 +42,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B16 | Quản lý sản xuất và CEO (giám đốc) quyết định ưu tiên khi nhiều đơn cùng cần hàng mà không đủ. | Chưa chốt tiêu chí ưu tiên; cách gọi CEO/giám đốc đã xác nhận tại B18. |
 | B17 | Có làm mẫu cho khách duyệt trước khi sản xuất hàng loạt đối với màu/quy cách riêng. | Anh xác nhận; hình thức duyệt và tiêu chuẩn so sánh với mẫu chưa rõ. |
 | B18 | “CEO” và “giám đốc” không kèm chức năng là cùng một người. Khi ghi “giám đốc” kèm chức năng, như “giám đốc sản xuất”, đó là người khác. | Anh xác nhận quy ước cách gọi; không tự suy ra các chức danh chức năng đều đã tồn tại hoặc có quyền cụ thể. |
+| B19 | Anh không có đủ thông tin chuyên môn sản xuất của Nasaki và giao Codex đề xuất mô hình cho mục đích minh họa. | Yêu cầu ngày 04/10/2026; các phương án/số liệu bên dưới là giả lập, không phải dữ kiện thực tế hay yêu cầu triển khai ngay. Demo vẫn phải chạy thật và tạo kết quả theo B01. |
 
-Các mã B01–B18 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B19 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -146,11 +147,79 @@ Nếu doanh nghiệp làm sai mẫu đã duyệt, phải xem xét trách nhiệm
 
 Yêu cầu/mẫu và từng lần duyệt; các bên đặt/trả tiền/nhận hàng và người có quyền xác nhận; thời điểm, lý do và lượng thay đổi; tiến độ thực tế; vật tư, chi phí và giá trị thu hồi; phương án xử lý, người duyệt và xác nhận khách; tiền đã thu và cách quyết toán; cam kết giao cũ/mới; kết quả thực hiện. Đây là nội dung hồ sơ nghiệp vụ, chưa phải thiết kế cơ sở dữ liệu hoặc màn hình.
 
-## Câu hỏi vòng tiếp theo về kế hoạch và sản xuất
+## Kế hoạch và sản xuất — mô hình demo đề xuất
+
+**Nguồn và trạng thái:** Anh giao Codex đề xuất vì thiếu thông tin chuyên môn (B19). Toàn bộ công đoạn, định mức, năng lực, thời gian, tỷ lệ và trách nhiệm được bổ sung trong mục này là mô hình giả lập cho ERP, chưa được anh duyệt từng chi tiết; không phải quy trình, công thức, tiêu chuẩn hay năng lực thực tế của Nasaki. Không sử dụng làm hướng dẫn sản xuất vật lý. Không yêu cầu anh trả lời lại sáu câu chuyên môn cũ để tiếp tục phân tích demo.
+
+### P01 — Công đoạn và kết quả bàn giao
+
+| Bước | Ngói — giả lập | Terrazzo — giả lập | Kết quả cần ghi nhận |
+| --- | --- | --- | --- |
+| 1 | Chuẩn bị vật tư, khuôn và mẫu/màu | Chuẩn bị vật tư, khuôn và phối màu | Phiên bản yêu cầu, vật tư sẵn sàng và người phụ trách. |
+| 2 | Phối trộn, tạo hình | Phối trộn, ép tạo hình | Lô sản xuất, lượng bắt đầu và lượng vật tư thực dùng. |
+| 3 | Chờ dưỡng hộ | Chờ dưỡng hộ | Lượng đang làm và thời điểm đủ điều kiện sang bước sau; chưa là hàng được giao. |
+| 4 | Sơn/phủ bề mặt | Mài, hoàn thiện bề mặt | Lượng hoàn thiện, thời gian/công và vật tư dùng thêm. |
+| 5 | Kiểm tra hình dạng, màu, ngoại quan | Kiểm tra kích thước, màu, ngoại quan/bề mặt | Lượng đạt, chờ xử lý, loại bỏ và lý do. Không giả lập chứng nhận chất lượng thật. |
+| 6 | Đóng gói, nhập thành phẩm đạt | Đóng gói, nhập thành phẩm đạt | Phiếu nhập và lô nguồn, lượng được phép phân bổ/giao. |
+
+Không mô phỏng thuê ngoài trong tình huống sản xuất cơ sở này. Đây chỉ là giả định của luồng minh họa, không loại bỏ khả năng bổ sung tình huống thuê ngoài hoặc giảm phạm vi bảy nhóm B04.
+
+### P02 — Vật liệu và định mức minh họa
+
+Nhóm vật tư giả lập: ngói dùng xi măng, cát/cốt liệu, nước và vật liệu phủ màu; Terrazzo dùng xi măng, cát, hạt đá trang trí, bột màu và nước. Vật tư khô/phủ quản lý kg, nước quản lý lít, sản phẩm và bán thành phẩm quản lý viên. Khi mua bằng bao/tấn, lưu quy đổi cụ thể theo vật tư; không cộng trực tiếp kg với lít hoặc coi một bao luôn cùng khối lượng.
+
+**Các hệ số sau chỉ là dữ liệu tính toán giả lập, không phải công thức sản xuất:**
+
+| Vật tư | Một lô ngói bắt đầu 1.000 viên | Một lô Terrazzo bắt đầu 500 viên |
+| --- | ---: | ---: |
+| Xi măng | 300 kg | 150 kg |
+| Cát/cốt liệu | 900 kg | 200 kg |
+| Hạt đá trang trí | Không dùng trong công thức giả lập này | 400 kg |
+| Vật liệu phủ màu | 15 kg | Không dùng trong công thức giả lập này |
+| Bột màu | Không dùng trong công thức giả lập này | 5 kg |
+| Nước | 120 lít | 100 lít |
+
+Giữ phiên bản định mức theo sản phẩm/màu/quy cách; kế hoạch dùng bản được chọn tại lúc duyệt, không đổi ngược lô cũ khi sửa định mức. So sánh lượng kế hoạch với lượng cấp/thực dùng/hoàn trả. Hệ số định mức trên tính theo lượng bắt đầu: nếu đã tăng lượng bắt đầu để dự phòng hàng lỗi thì không cộng tỷ lệ lỗi lần nữa vào cùng nhu cầu vật tư. Hao hụt vật tư và tỷ lệ thành phẩm lỗi là hai khái niệm khác nhau.
+
+### P03 — Lô, năng lực và thời gian minh họa
+
+Đề xuất một ca 8 giờ, hai luồng công việc trong cùng một xưởng; không tạo thêm công ty, xưởng hoặc kho. Lô cơ sở ngói 1.000 viên, Terrazzo 500 viên. Một lô chỉ có một mẫu/màu/quy cách và có thể phân bổ cho nhiều đơn phù hợp; lưu lượng phân bổ cho từng đơn để tránh tính hai lần. Cho phép một lô cuối nhỏ hơn nếu cần, nhưng ví dụ bên dưới dùng lô đầy.
+
+Thông số lập kế hoạch giả lập: mỗi luồng tạo hình tối đa hai lô đầy/ca; một lô có một ngày làm việc chuẩn bị/tạo hình, ba ngày làm việc chờ, một ngày làm việc hoàn thiện/kiểm tra. Đây là thời gian rút gọn của mô hình ERP, không phải hướng dẫn dưỡng hộ vật liệu. Không suy ra công suất từ con số website công bố. Có thể dùng các ngày làm việc mô phỏng để trình diễn, nhưng mỗi thay đổi trạng thái phải có bản ghi và thời điểm, không tự làm biến mất thời gian chờ.
+
+Đổi mẫu/màu giả lập cần nửa ca chuẩn bị, làm giảm năng lực khả dụng của ca đó. Thời gian năm ngày trên chỉ là thời gian cơ sở cho một lô khi không phải xếp hàng; nhiều lô, thiếu vật tư hoặc đổi mẫu/màu có thể làm đơn lâu hơn. Kế hoạch phải xét lịch công đoạn và tránh xếp trùng máy/nhân sự dùng chung; thông số từng nguồn lực sẽ được cụ thể hóa khi lập dữ liệu demo, không hứa ngày giao chỉ bằng phép cộng năm ngày.
+
+### P04 — Quyết định sản xuất và ưu tiên đề xuất
+
+- Hàng tiêu chuẩn: quản lý sản xuất đề nghị làm bù khi tồn đạt chưa dành cho khách cộng lượng dự kiến đạt từ lô đang làm xuống dưới mức tối thiểu theo sản phẩm; làm bù tới mức mục tiêu. Hai ngưỡng là tham số demo, không áp dụng chung một số cho mọi mặt hàng.
+- Hàng theo đơn: kinh doanh bàn giao yêu cầu đã được giám đốc duyệt; hàng đặt riêng phải có mẫu khách duyệt theo B17. Đề xuất demo cơ sở không bắt buộc cọc cho mọi đơn; điều kiện cọc/tín dụng được ghi theo thỏa thuận từng đơn và phải đủ nếu đơn có điều kiện này.
+- Quản lý sản xuất kiểm tra vật tư, khuôn, nguồn lực và thời gian; lập kế hoạch/lệnh, giám đốc duyệt trước khi khởi động trong mô hình demo đề xuất. Thiếu vật tư chuyển nhu cầu sang mua hàng, không ghi nhận xuất kho âm để giả lập đã đủ.
+- Ưu tiên đề xuất: đơn có ngày giao đã cam kết sớm hơn trước; trường hợp ngang nhau xét thứ tự xác nhận. Quản lý sản xuất phối hợp giám đốc điều chỉnh khi cần, ghi lý do và tác động tới các đơn khác. Gom mẫu/màu để tiết kiệm thời gian chỉ khi không phá cam kết hoặc đã có quyết định xử lý.
+
+### P05 — Chất lượng, hàng lỗi và chi phí đề xuất
+
+Tỷ lệ lỗi dùng để dự kiến: ngói 2%, Terrazzo 3%; tỷ lệ đạt tương ứng 98% và 97%. Đây là tham số giả lập, không phải tỷ lệ lỗi Nasaki hoặc kết quả chắc chắn. Lượng thực tế phải nhập từ kết quả sản xuất/kiểm tra, không tự sinh thành phẩm đạt theo tỷ lệ kế hoạch.
+
+Người kiểm tra chất lượng ghi kết quả; quản lý sản xuất quyết định phương án làm lại hoặc loại bỏ dựa trên đánh giá chất lượng; kho chỉ nhập lượng được xác nhận đạt. Hàng chờ xử lý/hàng lỗi nằm ở trạng thái hoặc khu vực riêng trong cùng một kho. Làm lại tạo bản ghi riêng, tiêu thụ thêm vật tư/công nếu có và kiểm tra lại; không cộng hàng làm lại hai lần. Đề xuất chưa bán hạ loại trong tình huống cơ sở, nhưng giữ tình huống đó trong danh sách có thể bổ sung.
+
+Giá thành demo sẽ tập hợp vật tư thực dùng, nhân công và chi phí chung được phân bổ theo quy tắc riêng. Với tình huống lỗi thông thường không thu hồi, đề xuất phân bổ chi phí lô cho lượng đạt; chi phí làm lại bổ sung có chứng cứ, không cộng cùng một chi phí hai lần. Các trường hợp lỗi bất thường, giá trị phế liệu hoặc bán hạ loại cần quy tắc riêng khi phân tích tài chính; không dùng mô hình này làm kết luận kế toán pháp định.
+
+### P06 — Tình huống xuyên quy trình và kết quả mong đợi
+
+**Toàn bộ số liệu giả lập; đây là ví dụ có hàng lỗi, không thay thế ví dụ cơ sở không hao hụt trong nhật ký cũ.** Đơn 10.000 viên ngói tiêu chuẩn, cùng mẫu/màu/quy cách; có 3.000 viên đạt chưa dành cho khách khác. Còn cần 7.000 viên đạt.
+
+- Với tỷ lệ đạt dự kiến 98%, lượng bắt đầu tối thiểu là làm tròn lên 7.000 / 0,98 = 7.143 viên. Nếu chọn lô đầy 1.000 viên, lập tám lô, tổng bắt đầu 8.000 viên; quản lý và giám đốc cần nhìn thấy lượng dư dự kiến thay vì coi đó là nhu cầu khách.
+- Nhu cầu vật tư theo tám lô: 2.400 kg xi măng, 7.200 kg cát/cốt liệu, 120 kg vật liệu phủ và 960 lít nước. Đối chiếu tồn chưa dành cho việc khác và vật tư về đúng thời điểm; phần thiếu mới chuyển nhu cầu mua.
+- Kịch bản giả lập nhập kết quả thực tế: 7.840 viên đạt, 160 viên loại bỏ, không có lượng còn đang làm hoặc chờ xử lý; 7.840 + 160 = 8.000. Phân bổ 7.000 viên mới và 3.000 viên ban đầu cho đơn; 840 viên đạt dư còn trong kho, không tự giao thêm cho khách.
+- Giao đủ 10.000 viên: tồn đạt cuối 3.000 + 7.840 - 10.000 = 840 viên. Lượng lỗi 160 không được cộng vào tồn có thể bán. Nếu kết quả thực tế đạt thấp hơn nhu cầu thì phải lập phương án bổ sung hoặc đổi lịch, không báo đủ theo số dự kiến.
+
+Giá trị demo là thấy được nhu cầu vật tư, tiến độ/lượng đang làm, hàng đạt/lỗi, lượng phân bổ cho đơn và tồn cuối từ các giao dịch đã lưu; không dùng số hiển thị cố định. Chưa triển khai hoặc chạy kiểm thử ứng dụng; các phép tính trên là kết quả mong đợi để phát triển và kiểm chứng về sau.
+
+## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
 ### Trọng tâm phân tích của vòng này
 
-Chưa có câu trả lời về công đoạn, vật liệu và năng lực. Tiếp tục khảo sát, không đánh dấu nhóm sản xuất đã hoàn tất hoặc tự chọn quy trình công nghệ cho Nasaki.
+Chưa có dữ kiện thực tế về công đoạn, vật liệu và năng lực. Theo B19, Codex đã đề xuất P01–P06 ở trên để phân tích demo, không chờ anh cung cấp chuyên môn Nasaki. Không đánh dấu khảo sát thực tế đã hoàn tất; các câu hỏi dưới đây được giữ để tham chiếu khi có thông tin mới, không phải câu hỏi đang chặn dự án.
 
 Từ mô hình sản xuất kết hợp và nhận màu/quy cách riêng đã xác nhận, cần làm rõ ba quan hệ nghiệp vụ:
 
@@ -162,7 +231,7 @@ Từ mô hình sản xuất kết hợp và nhận màu/quy cách riêng đã x�
 
 Kết quả cần có sau vòng trả lời: mô tả riêng quy trình hai nhóm; điều kiện bắt đầu, người đề nghị/duyệt và bàn giao; vật liệu/công thức; mẻ/lô và quan hệ với đơn; thời gian/năng lực; điều kiện hoàn tất và xử lý lỗi. Chỉ những phần có câu trả lời mới chuyển sang dữ kiện xác nhận.
 
-### Câu hỏi đang chờ trả lời
+### Câu hỏi tham chiếu nếu sau này khảo sát thực tế
 
 Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế anh biết. Nếu chưa biết, ghi "chưa rõ, em đề xuất"; ví dụ trong câu hỏi không phải xác nhận về quy trình Nasaki.
 
@@ -178,7 +247,7 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 - Mẫu, màu, kích thước và quan hệ biến thể; mã chuẩn của sản phẩm có nhiều cách viết.
 - Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên.
 - Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
-- Công đoạn, định mức và đơn vị vật tư; cách tính nhu cầu, hao hụt, năng lực và ưu tiên sản xuất.
+- Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
 - Chất lượng, xử lý hàng lỗi, truy lô; quy tắc giữ hàng và bố trí một kho.
 - Mua, nhận/trả hàng; giao nhiều đợt, thanh toán và công nợ.
 - Giá thành, kế toán, thuế, ngoại tệ và phạm vi tài chính cụ thể.
