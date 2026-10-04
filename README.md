@@ -6,7 +6,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đang bắt đầu bước 1 — khảo sát doanh nghiệp với vai trò BA; chờ thông tin bối cảnh từ anh, chưa chốt chức năng chi tiết, công nghệ hoặc kế hoạch triển khai.
+- Trạng thái: Đang khảo sát với vai trò BA cho demo ERP phục vụ tư vấn, lấy Nasaki làm trường hợp tham chiếu. Demo phải chạy nghiệp vụ và tạo kết quả kiểm chứng được; đang chờ xác định đúng doanh nghiệp và khả năng tra cứu nguồn công khai.
+- Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
 ## Cách duy trì nhật ký
@@ -237,9 +238,44 @@ Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ t�
 
 **Trạng thái:** Đã bắt đầu khảo sát bằng nhóm câu hỏi đầu tiên, đang chờ câu trả lời. Chưa có dữ kiện mới về hoạt động thực tế, chưa đưa ra kết luận nghiệp vụ, chưa lập trình hoặc chạy build/test.
 
+### 04/10/2026 — Chọn Nasaki làm trường hợp tham chiếu cho demo ERP
+
+**Anh:**
+
+> anh đang xây dựng một hệ thống demo, phục vụ cho việc tư vấn, nhưng hệ thống này không chỉ là hệ thống minh họa mà phải thực sự chạy được và tạo ra kết quả, đôi tác lần này anh chọn để dựng hệ thống là Nasaki, hãy nghiên cứu cho anh tất cả các thông tin của Nasaki sau đó trả lời giúp anh 5 câu hỏi bên trên, anh sẽ chỉnh sửa sau khi có đáp án
+
+**Thông tin anh đã xác nhận:**
+
+- Mục đích hệ thống là demo phục vụ tư vấn.
+- Demo phải thực sự chạy và tạo ra kết quả, không chỉ trình bày màn hình minh họa.
+- Nasaki là đối tác/trường hợp tham chiếu được anh chọn.
+- Codex cần nghiên cứu thông tin công khai, dự thảo đáp án năm câu hỏi khảo sát rồi để anh chỉnh sửa.
+
+**Tình trạng nghiên cứu và giới hạn:**
+
+- Chưa xác định được pháp nhân, website hoặc ngành nghề của Nasaki từ nguồn đã đọc. Đã hỏi anh tên công ty đầy đủ hoặc website để tránh nhầm doanh nghiệp.
+- Công cụ hiện có chưa có khả năng tìm kiếm web trực tiếp. Truy cập thử web tìm kiếm và một tên miền ứng viên bị proxy của môi trường từ chối bằng HTTP 403; tên miền ứng viên không được coi là website chính thức hay nguồn xác nhận của Nasaki.
+- Đã kiểm tra công cụ bổ sung và đề xuất Parallel Search để tra cứu web. Chưa có xác nhận công cụ đã được cài/kết nối, nên chưa thể sử dụng hoặc báo đã nghiên cứu Nasaki.
+- Thông tin nội bộ như nhân sự, số kho, phần mềm đang dùng, luồng phê duyệt và vấn đề thực tế chỉ được khẳng định khi có nguồn hoặc anh xác nhận. Nguồn công khai không bảo đảm cung cấp được tất cả thông tin này.
+
+**Bản nháp tạm thời cho năm câu hỏi — chưa phải kết quả nghiên cứu Nasaki:**
+
+1. **Doanh nghiệp/mục đích:** Dựng demo ERP hoạt động được để tư vấn, dùng Nasaki làm trường hợp tham chiếu. Sản phẩm và khách hàng của Nasaki chưa được xác minh.
+2. **Quy mô:** Chưa biết quy mô thực tế. Có thể dùng mô hình demo một đơn vị, một xưởng và hai kho nguyên vật liệu/thành phẩm, với các vai trò kinh doanh, mua hàng, kho, sản xuất, nhân sự, tài chính và quản lý. Đây là đề xuất giả định, không phải thông tin về Nasaki; số nhân sự và sơ đồ tổ chức chưa chốt.
+3. **Luồng đơn hàng:** Chưa xác minh quy trình Nasaki. Một kịch bản demo đề xuất là nhận đơn → kiểm tra thành phẩm → lập nhu cầu sản xuất nếu thiếu → kiểm tra/mua vật tư → cấp vật tư → ghi nhận sản xuất và kiểm tra chất lượng → nhập thành phẩm → giao hàng → ghi nhận công nợ/thu tiền. Mô hình sản xuất theo đơn, để tồn kho hoặc kết hợp cần xác nhận trước khi chốt.
+4. **Công cụ hiện tại:** Chưa xác minh Nasaki dùng Excel, sổ giấy, Zalo hay phần mềm nào. Không đưa nhận định về công cụ hiện tại vào hồ sơ sự thật nếu chưa có nguồn. Demo có thể dùng dữ liệu giả lập để thể hiện việc chia sẻ dữ liệu giữa các bộ phận.
+5. **Khó khăn và kết quả mong muốn:** Chưa có bằng chứng về khó khăn thực tế của Nasaki. Ba giả thuyết tư vấn để anh xem xét: thông tin đơn hàng/kho/sản xuất chưa liên thông; khó xác định tiến độ và thiếu vật tư; khó đối chiếu chi phí, doanh thu và công nợ. Kết quả demo đề xuất cần kiểm chứng bằng số liệu: giao dịch làm thay đổi tồn kho đúng, ghi nhận vật tư/chi phí theo nguyên tắc đã chọn, cập nhật công nợ và báo cáo khớp chứng từ. Không coi các giả thuyết này là vấn đề đã được Nasaki xác nhận.
+
+**Em — phản hồi:**
+
+Đã lưu yêu cầu demo hoạt động thực tế. Nghiên cứu Nasaki đang bị giới hạn bởi truy cập web; cần công cụ tra cứu được kết nối hoặc nguồn do anh cung cấp. Khi có nguồn, em sẽ xác minh danh tính, ngành nghề, sản phẩm, thị trường, cơ sở hoạt động và các thông tin công khai liên quan, dẫn nguồn rồi thay thế các chỗ chưa rõ trong bản nháp. Anh không cần tự thực hiện nghiên cứu kỹ thuật.
+
+**Trạng thái:** Hoàn thành ghi nhận yêu cầu và bản nháp có đánh dấu giả định; chưa hoàn thành nghiên cứu Nasaki hoặc năm đáp án dựa trên nguồn. Chưa xây dựng ứng dụng hoặc chạy build/test.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
+- Danh tính/pháp nhân, ngành nghề và thông tin công khai được xác minh của Nasaki; các giả định demo cần anh chỉnh sửa.
 - Cấu trúc kho Git chính thức (đã có đề xuất ban đầu).
 - Các phân hệ, chức năng và phạm vi phiên bản đầu tiên.
 - Công nghệ, dữ liệu, phân quyền và tích hợp.
