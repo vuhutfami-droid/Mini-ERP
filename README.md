@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất giả lập theo yêu cầu của anh. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng giả lập theo yêu cầu của anh. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -595,6 +595,22 @@ Anh có thể trả lời riêng hai nhóm hoặc kể một đơn điển hình
 - P06: Ví dụ đơn 10.000 ngói, có 3.000 viên khả dụng, cần bổ sung 7.000 đạt; tám lô bắt đầu 8.000, ghi kết quả 7.840 đạt và 160 loại bỏ, giao 10.000, còn 840 viên đạt. Vật tư kế hoạch tính theo lượng bắt đầu, không cộng tỷ lệ lỗi lần nữa.
 
 **Trạng thái:** Đã đề xuất nghiệp vụ sản xuất đủ để tiếp tục phân tích demo, chưa kiểm chứng vận hành thực tế Nasaki, chưa hoàn thành phân tích toàn bộ ERP hoặc triển khai ứng dụng. Kho chưa có lịch sử build/test; vòng này chỉ kiểm tra tài liệu và tính nhất quán các phép tính minh họa.
+
+### 04/10/2026 — Đề xuất nghiệp vụ kho và mua hàng cho demo
+
+**Anh:**
+
+> tiếp tục
+
+**Em — tiếp nối phân tích:** Tiếp tục phần kho và mua hàng đã nêu ở cuối vòng trước, giữ cách đề xuất giả lập và không yêu cầu anh cung cấp chuyên môn Nasaki. Mô hình vẫn một kho; chưa triển khai ứng dụng hoặc giảm phạm vi bảy nhóm nghiệp vụ.
+
+Đã lưu K01–K03 và M01–M03 trong [hồ sơ nghiệp vụ](docs/business-context.md): phân biệt tồn thực tế/đạt/đã dành/khả dụng/đang về, truy lô, nhập/xuất/hoàn trả, kiểm kê và điều chỉnh có duyệt. Luồng mua đề xuất: xác định thiếu → đề nghị → chọn nhà cung cấp → giám đốc duyệt/đặt mua → nhận từng đợt/kiểm tra → đối chiếu chứng từ → thanh toán. CEO/giám đốc là một người; nhận hàng không tự coi là đã trả tiền hoặc tự xác nhận mọi nghĩa vụ hóa đơn.
+
+**Ví dụ giả lập:** Tám lô ngói cần 2.400 kg xi măng; tồn 1.500 kg đạt, 300 kg dành cho lệnh khác, cần mua 1.200 kg. Loại giả lập 50 kg/bao, mua 24 bao giá 100.000 đồng/bao; nhận 14 rồi 10 bao đạt, cấp 2.400 kg, kho còn 300 kg đã dành. Sau xác nhận chứng từ 2,4 triệu và trả/phân bổ 1 triệu, còn phải trả nhà cung cấp 1,4 triệu. Chưa xét thuế/phí/chiết khấu, không coi giá hoặc quy đổi là thực tế Nasaki.
+
+Ngoại lệ đã đề xuất: nhận thiếu/chậm/thừa, vật tư không đạt hoặc thay thế, trả/hủy mua, không xuất hàng chưa đạt, không bán/cấp trùng hàng đã dành và không xóa giao dịch cũ. Quy tắc giá vốn và kế toán chi tiết cần phân tích ở phần tài chính, không nhầm thứ tự lấy lô với phương pháp tính giá vốn.
+
+**Trạng thái:** Đã bổ sung mô hình nghiệp vụ và kiểm tra tính nhất quán phép tính minh họa; chưa hoàn tất phân tích ERP, chưa chạy ứng dụng/build/test. Kho chưa có lịch sử build/test ứng dụng.
 
 ## Các nội dung chưa được thống nhất
 

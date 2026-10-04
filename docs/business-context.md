@@ -215,6 +215,74 @@ Giá thành demo sẽ tập hợp vật tư thực dùng, nhân công và chi ph
 
 Giá trị demo là thấy được nhu cầu vật tư, tiến độ/lượng đang làm, hàng đạt/lỗi, lượng phân bổ cho đơn và tồn cuối từ các giao dịch đã lưu; không dùng số hiển thị cố định. Chưa triển khai hoặc chạy kiểm thử ứng dụng; các phép tính trên là kết quả mong đợi để phát triển và kiểm chứng về sau.
 
+## Kho và mua hàng — mô hình demo đề xuất
+
+**Trạng thái:** Codex đề xuất tiếp nối P01–P06 theo yêu cầu tiếp tục của anh. Các vai trò, quy tắc, giá và ví dụ dưới đây là giả lập để phân tích demo, không phải hiện trạng Nasaki hoặc quyết định đã được anh duyệt từng chi tiết. Giữ nguyên 1 công ty, 1 xưởng, 1 kho; chưa thiết kế màn hình, cơ sở dữ liệu hoặc triển khai ứng dụng.
+
+### K01 — Một kho, phân biệt vị trí và trạng thái
+
+Trong một kho, đề xuất các khu vực vật tư, thành phẩm, chờ kiểm tra/chờ xử lý và hàng lỗi/chờ trả. Khu vực không phải kho mới; trạng thái chất lượng không phải một lượng tồn cộng thêm. Bán thành phẩm đang trên công đoạn thuộc lượng đang sản xuất, không đồng thời cộng vào tồn thành phẩm của kho.
+
+| Khái niệm | Ý nghĩa trong demo |
+| --- | --- |
+| Tồn thực tế | Hàng đang nằm trong kho, gồm cả hàng chưa được phép dùng/giao. |
+| Tồn đạt | Phần tồn thực tế đã được xác nhận chất lượng, không bị khóa xử lý. |
+| Đã dành | Phần tồn đạt đã phân bổ cho đơn hoặc lệnh sản xuất; giữ hàng không làm giảm tồn thực tế. |
+| Khả dụng | Tồn đạt trừ phần đã dành; đây là phần có thể phân bổ thêm. |
+| Đang về | Phần đơn mua chưa nhận đạt, có ngày dự kiến; không phải tồn thực tế hay hàng chắc chắn có thể xuất. |
+
+Hàng lỗi/chờ kiểm tra không nằm trong tồn đạt; không trừ lần nữa khỏi tồn đạt khi tính khả dụng. Một lượng hàng chỉ được giữ cho một nhu cầu tại một thời điểm; khi xuất lượng đã dành, vừa giảm tồn thực tế/đạt vừa giải phóng đúng lượng giữ tương ứng. Khi chỉ hủy phân bổ, tồn thực tế không thay đổi.
+
+### K02 — Giao dịch kho và truy nguồn
+
+- Nhập vật tư từ nhà cung cấp: kho ghi lượng thực nhận theo đơn mua, giữ trạng thái chờ kiểm tra nếu chưa chấp nhận; kiểm tra xác nhận đạt mới cho phép cấp sản xuất.
+- Cấp vật tư: xuất theo lệnh sản xuất, vật tư/lô và lượng thực cấp; không cho phép xuất vượt lượng đạt được quyền dùng. Vật tư dư hoàn trả có kiểm tra và phiếu nhập liên kết lệnh; vật tư thực dùng được đối chiếu cấp trừ hoàn trả và các xử lý hao hụt có căn cứ.
+- Nhập thành phẩm: liên kết lô sản xuất và kết quả chất lượng; nhập đúng lượng được xác nhận đạt. Hàng làm lại được theo dõi riêng, không nhập cùng một lượng hai lần.
+- Xuất giao khách: liên kết đơn, lô và đợt giao; không xuất vượt số còn phải giao hoặc lượng được quyền dùng. Đổi lô được kiểm tra lại mẫu/màu/quy cách, không mặc định hai lô thay thế được nhau.
+- Chuyển khu vực/trạng thái trong cùng kho: không làm tăng tổng tồn. Hàng trả từ khách phải qua kiểm tra trước khi trở lại lượng khả dụng.
+- Mỗi lần nhập/xuất/giữ/chuyển/điều chỉnh lưu ngày, người thực hiện, chứng từ nguồn, vật tư/sản phẩm, đơn vị, lô, lượng và lý do. Chứng từ đã xác nhận không sửa đè/xóa mất lịch sử; điều chỉnh bằng bản ghi liên kết được duyệt.
+
+Đề xuất xuất lô được nhập trước trong số các lô đủ điều kiện và đúng yêu cầu. Hàng có hạn dùng ưu tiên hạn gần hơn; không tự cấp hàng hết hạn. Quy tắc này là thứ tự lấy hàng vật lý, chưa quyết định phương pháp tính giá vốn kế toán.
+
+### K03 — Kiểm kê và chênh lệch
+
+Đề xuất kiểm kê định kỳ hàng tháng và kiểm kê riêng khi có nghi vấn. Kho chốt phạm vi/thời điểm, đếm theo vật tư/sản phẩm, lô, khu vực và trạng thái; trong lúc đếm tạm ngừng giao dịch phần đó hoặc đối chiếu mọi giao dịch phát sinh theo cùng mốc. Người kiểm tra đối chiếu sổ với thực đếm; giám đốc duyệt chênh lệch và lý do trước khi điều chỉnh. Không sửa tồn về con số mong muốn để che mất chênh lệch; kế toán xử lý giá trị theo quy tắc tài chính sẽ phân tích sau.
+
+### M01 — Luồng mua hàng và bàn giao đề xuất
+
+| Bước | Người phụ trách đề xuất | Kết quả/điều kiện bàn giao |
+| --- | --- | --- |
+| Xác định thiếu vật tư | Quản lý sản xuất phối hợp kho | Nhu cầu theo lệnh, lượng đạt được quyền dùng, đơn mua đang về đã phân bổ đúng thời điểm, phần thiếu. Không trừ cùng lượng đang về cho nhiều nhu cầu. |
+| Đề nghị mua | Quản lý sản xuất hoặc kho | Vật tư/quy cách, đơn vị, số lượng, ngày cần và nhu cầu nguồn; kho có thể đề nghị bổ sung tới mức tồn mục tiêu. |
+| Chọn nhà cung cấp | Người phụ trách mua hàng | So sánh giá, chất lượng, lịch giao, vận chuyển và điều kiện thanh toán; ưu tiên đủ/đúng hạn thay vì chỉ chọn rẻ nhất. |
+| Duyệt và đặt mua | Giám đốc duyệt, mua hàng gửi đơn | Đơn mua ghi lượng, giá, đơn vị/quy đổi, lịch giao và điều kiện; thay đổi quan trọng cần duyệt lại. |
+| Nhận và kiểm tra | Kho đếm, người kiểm tra chất lượng xác nhận | Phiếu nhận từng đợt, lượng đạt/chờ xử lý/không đạt, lô nhà cung cấp nếu có; lượng được chấp nhận mới đáp ứng nhu cầu sản xuất. |
+| Đối chiếu nghĩa vụ thanh toán | Kế toán | Đối chiếu đơn mua, lượng nhận được chấp nhận và hóa đơn/chứng từ yêu cầu thanh toán; ghi nghĩa vụ được xác nhận và hạn trả. |
+| Thanh toán | Kế toán lập đề nghị, giám đốc duyệt | Khoản trả có chứng từ và phân bổ rõ; còn phải trả tính từ nghĩa vụ xác nhận trừ khoản đã phân bổ và điều chỉnh được chấp thuận. |
+
+Đề xuất một vòng duyệt giám đốc cho đơn mua, không tách CEO thành người duyệt thứ hai. Không bắt buộc ba báo giá cho mọi lần mua; nếu mua gấp hoặc chỉ có một nguồn, ghi lý do lựa chọn. Đơn mua có thể giao nhiều đợt và thanh toán nhiều lần; trạng thái nhận hàng và trạng thái trả tiền độc lập.
+
+### M02 — Ngoại lệ và kiểm soát đề xuất
+
+- Thiếu hoặc chậm: đơn mua vẫn còn phần chưa nhận; mua hàng cập nhật dự kiến, sản xuất đánh giá ảnh hưởng ngày giao. Đơn mua đang về không cho phép xuất kho trước khi nhận đạt.
+- Sai quy cách/hàng lỗi: tách lượng không đạt, không cấp sản xuất; mua hàng thống nhất đổi, trả hoặc giảm giá với nhà cung cấp, có phê duyệt. Trả hàng không tự xóa hóa đơn hoặc khoản đã trả; kế toán theo dõi điều chỉnh/hoàn tiền riêng.
+- Giao thừa: ghi lượng thực tế nhận và giữ chờ xử lý phần vượt; giám đốc quyết nhận bổ sung hay trả lại trước khi đưa vào lượng khả dụng và nghĩa vụ thanh toán.
+- Thay vật tư khác: cần đánh giá ảnh hưởng tới mẫu, định mức và chất lượng; không tự coi vật tư có cùng tên là tương đương. Khi ảnh hưởng mẫu khách đã duyệt, quay lại quy trình xác nhận thay đổi.
+- Hủy/sửa đơn mua: giữ lịch sử, xét phần đã nhận/đã trả và cam kết còn lại; giải phóng phân bổ và tính lại thiếu hụt. Không coi đơn đã nhận là chưa từng xảy ra.
+- Không cộng tồn lần nữa khi kế toán ghi hóa đơn cho lần nhận đã có. Khoản trả trước nhà cung cấp là khoản ứng trước cần đối chiếu, không tự coi là chi phí vật tư đã tiêu hao.
+
+### M03 — Ví dụ liên thông với tám lô ngói P06
+
+**Toàn bộ số liệu và giá giả lập; tình huống cơ sở chưa xét thuế, phí vận chuyển hoặc chiết khấu.** Tám lô cần 2.400 kg xi măng. Kho có 1.500 kg đạt, trong đó 300 kg đã dành cho lệnh khác; không có đơn mua xi măng đang về. Các vật tư khác trong P06 giả sử đủ để tập trung minh họa xi măng.
+
+1. Khả dụng ban đầu: 1.500 - 300 = 1.200 kg. Phần cần mua: 2.400 - 1.200 = 1.200 kg; không dùng 300 kg đã dành cho lệnh khác.
+2. Giả lập loại xi măng này mua bằng bao 50 kg: 1.200 / 50 = 24 bao. Đơn giá 100.000 đồng/bao, giá trị đơn mua 2.400.000 đồng. Quy đổi và giá không áp dụng cho mọi loại xi măng/Nasaki.
+3. Nhà cung cấp giao hai đợt, 14 bao và 10 bao, đều được kiểm tra chấp nhận: nhận lần lượt 700 và 500 kg. Sau đợt đầu, có 1.900 kg dành được cho tám lô, còn thiếu 500 kg; chưa coi toàn bộ lệnh đã đủ vật tư. Có thể lập phương án làm trước các lô đủ điều kiện nếu các vật tư và nguồn lực khác sẵn sàng.
+4. Sau nhận đủ và trước cấp sản xuất, tồn đạt là 2.700 kg; dành 2.400 kg cho tám lô và 300 kg cho lệnh khác, khả dụng thêm bằng 0. Khi cấp đủ 2.400 kg, tồn đạt còn 300 kg, vẫn dành cho lệnh khác. Tồn cuối: 1.500 + 700 + 500 - 2.400 = 300 kg. Không có vật tư hoàn trả hoặc hao hụt thêm trong ví dụ này.
+5. Giả sử chứng từ thanh toán cho cả 24 bao đã được đối chiếu và ghi nhận nghĩa vụ 2.400.000 đồng; đã trả và phân bổ 1.000.000 đồng thì còn phải trả 1.400.000 đồng. Không suy ra nghĩa vụ đã xác nhận chỉ từ việc đặt mua hoặc nhận hàng.
+
+Kết quả mong đợi khi xây demo: tính đúng phần thiếu, quy đổi bao/kg, nhận nhiều đợt, bảo toàn hàng đã dành, xuất đúng lượng và đối chiếu còn phải trả. Đây là kiểm tra phép tính nghiệp vụ trên tài liệu, chưa phải kết quả chạy phần mềm.
+
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
 ### Trọng tâm phân tích của vòng này
@@ -248,8 +316,8 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 - Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên.
 - Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
 - Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
-- Chất lượng, xử lý hàng lỗi, truy lô; quy tắc giữ hàng và bố trí một kho.
-- Mua, nhận/trả hàng; giao nhiều đợt, thanh toán và công nợ.
+- Xem xét/chỉnh mô hình kho K01–K03 và mua hàng M01–M03; chi tiết dữ liệu demo, ngoại lệ chất lượng và quy tắc giá trị tài chính sẽ được bổ sung tiếp.
+- Giao khách nhiều đợt, trả hàng bán; thanh toán và công nợ khách hàng. Mua/nhận/trả vật tư và nghĩa vụ nhà cung cấp đã có đề xuất cơ sở M01–M03, chưa là hiện trạng xác nhận.
 - Giá thành, kế toán, thuế, ngoại tệ và phạm vi tài chính cụ thể.
 - Phân bổ nhân sự, ca/chấm công/nghỉ phép/lương; kiêm nhiệm và quyền/phê duyệt.
 - Tình huống thực tế và số liệu thể hiện mức độ ảnh hưởng của khó khăn; các chỉ số để đánh giá chuyển đổi số.
