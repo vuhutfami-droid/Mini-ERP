@@ -317,6 +317,29 @@ Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ t�
 
 **Trạng thái:** Nghiên cứu Nasaki vẫn chưa hoàn thành; chưa đọc được nguồn công khai để trả lời năm câu hỏi có dẫn chứng. Có thể tiếp tục dựa trên nội dung trang giới thiệu/sản phẩm hoặc hồ sơ doanh nghiệp do anh cung cấp nếu công cụ vẫn chưa khả dụng. Không biến các giả định demo đã lưu thành sự thật về Nasaki.
 
+### 04/10/2026 — Kiểm tra lại sau khởi động ứng dụng và truy cập trình duyệt
+
+**Anh:**
+
+> anh vừa khởi động lại chatgpt, em xem được chưa
+
+**Em:**
+
+Đã kiểm tra: Parallel Search vẫn được cài và bật, nhưng công cụ của plugin chưa được cung cấp trong chat. Khởi động lại chưa có kết quả khắc phục được xác minh.
+
+**Anh:**
+
+> sử dụng quyền truy cập trình duyệt, em truy cập thẳng vào website nasaki và lấy ra thông tin cho anh
+
+**Em — thao tác và bằng chứng:**
+
+- Đã kiểm tra khả năng trình duyệt và khởi chạy Chromium để mở trực tiếp https://nasaki.com.vn/ qua proxy được cấu hình; lần chạy không trả về nội dung trang và hết thời gian chờ.
+- Kiểm tra HTTPS trực tiếp cùng website: proxy từ chối kết nối với HTTP 403. Cấu hình mạng hiện có chế độ restricted, chỉ bật nhóm tên miền phục vụ công cụ phát triển, chưa cho phép Nasaki.
+- Đã gửi yêu cầu mở website trong bảng trình duyệt Codex; công cụ trả về `queued`, chưa xác nhận trang đã mở hoặc đọc được. Công cụ mở bảng chỉ hiển thị giao diện, không cung cấp khả năng đọc nội dung trang cho Codex.
+- Anh đã cho phép truy cập website; điểm chặn hiện tại là khả năng công cụ và cấu hình mạng của môi trường, không phải thiếu sự đồng ý của anh. Cần cho phép tên miền `nasaki.com.vn` (và `www.nasaki.com.vn` nếu dùng) trong cấu hình mạng bằng luồng cấu hình được hỗ trợ. Không thay đổi tệp policy hoặc bỏ proxy để vượt giới hạn.
+
+**Trạng thái:** Đã thử truy cập bằng trình duyệt và HTTPS, chưa thu được thông tin Nasaki. Yêu cầu nghiên cứu và trả lời năm câu hỏi vẫn chưa hoàn thành. Chưa chạy build/test ứng dụng.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
