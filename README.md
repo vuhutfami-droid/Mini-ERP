@@ -21,6 +21,8 @@ Nhật ký ban đầu chỉ bao gồm các trao đổi về dự án đang có t
 
 ## Quy tắc làm việc của Codex
 
+Anh chia sẻ ý tưởng và yêu cầu bằng ngôn ngữ nghiệp vụ, không có kiến thức lập trình hoặc kỹ thuật. Codex đóng vai trò trợ lý kỹ thuật: chủ động làm rõ yêu cầu, lường trước vấn đề, tư vấn giải pháp, thực hiện công việc kỹ thuật được giao và kiểm tra kết quả để sản phẩm đạt chất lượng phù hợp nhất trong điều kiện thực tế. Codex tự xử lý các lựa chọn kỹ thuật thông thường; những quyết định về nghiệp vụ, phạm vi, chi phí hoặc quyền thực hiện cần được trình bày dễ hiểu để anh quyết định. Chi tiết trách nhiệm nằm trong [AGENTS.md](AGENTS.md).
+
 Trước khi chỉnh sửa, chạy build/test hoặc thực hiện thao tác làm thay đổi dự án, Codex phải đọc README này và tham khảo lịch sử thay đổi, lịch sử build/test hiện có để hiểu logic nghiệp vụ, quyết định đã thống nhất và ngữ cảnh công việc. Hướng dẫn thực hiện nằm trong [AGENTS.md](AGENTS.md).
 
 Lịch sử commit không thay thế lịch sử build: một commit không chứng minh mã đã build hoặc test thành công. Hiện kho chỉ có tài liệu, chưa có kết quả build/test được ghi nhận trong kho. Khi có build/test thực tế, ghi kết quả tóm tắt trong `docs/build-history.md`, kèm phiên bản mã được kiểm tra, lệnh chạy và liên kết CI nếu có; không lưu tệp build hoặc log thô vào Git.
@@ -162,6 +164,20 @@ Sau khi có yêu cầu tối thiểu cho quy trình ưu tiên, mới chốt côn
 Để giữ tài liệu hữu ích khi nhật ký dài lên, tiếp tục giữ lịch sử trong README theo yêu cầu của anh; khi cần, dùng tài liệu trong `docs/` làm bản mô tả yêu cầu hiện hành, có mã yêu cầu và tiêu chí nghiệm thu, rồi liên kết từ README. Đây là đề xuất bổ sung, chưa tạo tài liệu hoặc thay đổi quy tắc đọc README hiện tại.
 
 **Trạng thái:** Đã đánh giá trên tài liệu và lịch sử Git hiện có; chưa khởi tạo ứng dụng, chưa chạy build/test và chưa chốt thêm yêu cầu nghiệp vụ.
+
+### 04/10/2026 — Xác lập vai trò trợ lý kỹ thuật của Codex
+
+**Anh:**
+
+> nhớ lưu lại: anh chỉ có thể giao tiếp với codex để chia sẻ về ý tưởng, yêu cầu, anh không hề biết về code hay kỹ thuật, nên tất cả các vấn đề anh chia sẻ từ giờ về sau, hãy trở thành một trợ lý kỹ thuật giúp anh để lường trước, tư vấn, dự báo, thực hiện các yêu cầu kỹ thuật để đảm bảo sản phẩm là tốt nhất có thể
+
+**Em:**
+
+Đã lưu nguyên tắc phối hợp vào README và AGENTS.md. Anh chia sẻ ý tưởng, nhu cầu và quyết định nghiệp vụ; em chịu trách nhiệm chuyển thành giải pháp kỹ thuật, chủ động tư vấn, dự báo vấn đề, thực hiện và kiểm tra kết quả. Em sẽ giải thích bằng ngôn ngữ dễ hiểu, tự xử lý lựa chọn kỹ thuật thông thường và chỉ hỏi những quyết định cần thông tin hoặc thẩm quyền từ anh.
+
+**Quyết định đã thống nhất:** Từ đây, Codex làm trợ lý kỹ thuật chủ động cho dự án, không đòi hỏi anh có kiến thức lập trình. Đánh giá chất lượng dựa trên tính đúng đắn, dễ sử dụng, bảo mật, độ ổn định, khả năng bảo trì và chi phí phù hợp; báo rõ kết quả đã kiểm tra và giới hạn còn lại.
+
+**Phạm vi cập nhật:** Lưu nguyên tắc làm việc; chưa chọn công nghệ, thay đổi phạm vi nghiệp vụ hoặc khởi tạo ứng dụng. Kho chưa có lịch sử build/test được ghi nhận.
 
 ## Các nội dung chưa được thống nhất
 
