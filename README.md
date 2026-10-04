@@ -19,6 +19,12 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 Nhật ký ban đầu chỉ bao gồm các trao đổi về dự án đang có trong ngữ cảnh cuộc trò chuyện này. Các trao đổi trước đó chưa được cung cấp không được suy đoán hoặc dựng lại.
 
+## Quy tắc làm việc của Codex
+
+Trước khi chỉnh sửa, chạy build/test hoặc thực hiện thao tác làm thay đổi dự án, Codex phải đọc README này và tham khảo lịch sử thay đổi, lịch sử build/test hiện có để hiểu logic nghiệp vụ, quyết định đã thống nhất và ngữ cảnh công việc. Hướng dẫn thực hiện nằm trong [AGENTS.md](AGENTS.md).
+
+Lịch sử commit không thay thế lịch sử build: một commit không chứng minh mã đã build hoặc test thành công. Hiện kho chỉ có tài liệu, chưa có kết quả build/test được ghi nhận trong kho. Khi có build/test thực tế, ghi kết quả tóm tắt trong `docs/build-history.md`, kèm phiên bản mã được kiểm tra, lệnh chạy và liên kết CI nếu có; không lưu tệp build hoặc log thô vào Git.
+
 ## Nhật ký trao đổi
 
 ### 04/10/2026 — Xác định đường dẫn dự án
@@ -109,6 +115,20 @@ Các nguyên tắc để giữ kho gọn:
 **Phạm vi đã xác định:** ERP dành cho doanh nghiệp sản xuất nhỏ, bao quát các chức năng quản trị doanh nghiệp cơ bản, gồm kinh doanh, nhân sự, tài chính và các nghiệp vụ sản xuất liên quan.
 
 **Trạng thái:** Chỉ đề xuất cấu trúc để thảo luận. Chưa tạo các thư mục trong cây trên, chưa chọn công nghệ và chưa coi đề xuất này là đã được anh phê duyệt.
+
+### 04/10/2026 — Codex phải đọc ngữ cảnh trước khi thao tác
+
+**Anh:**
+
+> thêm một lưu ý, codex cần tham khảo file readme cũng như lịch sử build trước khi thao tác để hiểu được logic cũng như ngữ cảnh
+
+**Em:**
+
+Đã bổ sung quy tắc vào README và tạo `AGENTS.md` ở gốc kho để Codex tham chiếu khi làm việc. Trước khi thay đổi dự án, Codex cần đọc README, xem trạng thái Git, lịch sử commit liên quan và kết quả build/test hiện có. Nếu lịch sử build chưa tồn tại hoặc không truy cập được, phải nêu rõ giới hạn đó, không suy đoán kết quả.
+
+**Quyết định đã thống nhất:** Codex phải tham khảo README và lịch sử build trước khi thao tác để hiểu logic và ngữ cảnh dự án.
+
+**Ghi nhận hiện tại:** Kho đang ở giai đoạn tài liệu; chưa có kết quả build/test được lưu trong kho. Chỉ tạo `docs/build-history.md` khi có lần build/test thực tế cần ghi nhận.
 
 ## Các nội dung chưa được thống nhất
 
