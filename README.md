@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đang khảo sát với vai trò BA cho demo ERP phục vụ tư vấn, lấy Nasaki làm trường hợp tham chiếu. Demo phải chạy nghiệp vụ và tạo kết quả kiểm chứng được; đang chờ xác định đúng doanh nghiệp và khả năng tra cứu nguồn công khai.
+- Trạng thái: Đang khảo sát với vai trò BA cho demo ERP phục vụ tư vấn, lấy Nasaki (website anh cung cấp: https://nasaki.com.vn/) làm trường hợp tham chiếu. Demo phải chạy nghiệp vụ và tạo kết quả kiểm chứng được; đang chờ khả năng tra cứu nguồn công khai.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -271,6 +271,24 @@ Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ t�
 Đã lưu yêu cầu demo hoạt động thực tế. Nghiên cứu Nasaki đang bị giới hạn bởi truy cập web; cần công cụ tra cứu được kết nối hoặc nguồn do anh cung cấp. Khi có nguồn, em sẽ xác minh danh tính, ngành nghề, sản phẩm, thị trường, cơ sở hoạt động và các thông tin công khai liên quan, dẫn nguồn rồi thay thế các chỗ chưa rõ trong bản nháp. Anh không cần tự thực hiện nghiên cứu kỹ thuật.
 
 **Trạng thái:** Hoàn thành ghi nhận yêu cầu và bản nháp có đánh dấu giả định; chưa hoàn thành nghiên cứu Nasaki hoặc năm đáp án dựa trên nguồn. Chưa xây dựng ứng dụng hoặc chạy build/test.
+
+### 04/10/2026 — Anh cung cấp website Nasaki
+
+**Em — câu hỏi xác định doanh nghiệp:**
+
+> Nasaki anh chọn có website hoặc tên công ty đầy đủ là gì? Thông tin này giúp em xác định đúng doanh nghiệp trước khi nghiên cứu.
+
+**Anh:**
+
+> https://nasaki.com.vn/
+
+**Thông tin đã xác nhận từ anh:** Website dùng để nghiên cứu đối tác Nasaki là https://nasaki.com.vn/.
+
+**Em:**
+
+Đã xác định địa chỉ tham chiếu; không cần hỏi lại anh website. Nội dung website chưa được đọc vì truy cập bị môi trường từ chối. Công cụ tra cứu web được đề xuất chưa có xác nhận kết nối. Bản nháp năm đáp án ở trên vẫn là thông tin anh đã cung cấp và giả định demo, chưa phải kết quả nghiên cứu công khai về Nasaki.
+
+**Trạng thái:** Đã lưu website, nghiên cứu nguồn công khai vẫn chưa hoàn thành. Chưa xác minh ngành nghề, sản phẩm, quy mô hoặc nghiệp vụ thực tế của Nasaki.
 
 ## Các nội dung chưa được thống nhất
 
