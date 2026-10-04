@@ -305,6 +305,18 @@ Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ t�
 
 **Trạng thái:** Đã xác minh cài đặt plugin và lưu tiến độ; nghiên cứu nguồn công khai chưa hoàn thành do công cụ chưa khả dụng trong lượt này. Chưa xây dựng ứng dụng hoặc chạy build/test.
 
+### 04/10/2026 — Anh gọi trực tiếp Parallel Search để tiếp tục nghiên cứu
+
+**Anh:**
+
+> [@Parallel Search](plugin://app-69fb9378663481919a68e8a2109644e5@openai-curated-remote) tiếp tục nghiên cứu Nasaki
+
+**Em — kiểm tra:**
+
+Đã kiểm tra lại danh mục: Parallel Search vẫn được cài và bật. Tuy nhiên, danh sách công cụ khả dụng vẫn không có công cụ tìm kiếm hoặc trích xuất của plugin, cũng không có công cụ nạp thêm. Anh đã thực hiện hướng dẫn gọi plugin; không yêu cầu anh cài hoặc gắn lại. Hướng dẫn trước đó chưa có hiệu quả được xác minh và không được coi là giải pháp chắc chắn.
+
+**Trạng thái:** Nghiên cứu Nasaki vẫn chưa hoàn thành; chưa đọc được nguồn công khai để trả lời năm câu hỏi có dẫn chứng. Có thể tiếp tục dựa trên nội dung trang giới thiệu/sản phẩm hoặc hồ sơ doanh nghiệp do anh cung cấp nếu công cụ vẫn chưa khả dụng. Không biến các giả định demo đã lưu thành sự thật về Nasaki.
+
 ## Các nội dung chưa được thống nhất
 
 - Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
