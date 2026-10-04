@@ -680,6 +680,24 @@ Ví dụ giả lập 208 giờ lịch, đi làm 192, nghỉ hưởng lương 8, 
 
 **Trạng thái và giới hạn:** Chỉ tài liệu nghiệp vụ và kiểm tra phép tính/tính nhất quán; chưa có ứng dụng hoặc lịch sử build/test. Chính sách lao động, làm thêm, phép, bảo hiểm/thuế còn cần căn cứ trước vận hành thật; mọi người/chứng từ trong demo phải giả lập, không lưu hồ sơ hoặc lương thật vào Git. Bước tiếp theo đề xuất: trách nhiệm, phê duyệt và bàn giao xuyên bộ phận, rà soát chất lượng/toàn luồng trước tính năng.
 
+### 04/10/2026 — Rà soát nhân sự theo quy mô Nasaki
+
+**Anh:**
+
+> duyệt một lần nữa nghiệp vụ nhân sự xem còn gì không? nhớ phải phù hợp với nasaki, đừng vì câu hỏi này mà áp dụng hết các nghiệp vụ của doanh nghiệp lớn
+
+**Ràng buộc đã xác nhận:** Rà lại mức đầy đủ và phù hợp, không tăng nghiệp vụ/cấp quản trị chỉ để liệt kê đầy đủ. Ghi B22; không coi “duyệt một lần nữa” là anh đã phê duyệt mọi tham số hoặc yêu cầu lập trình.
+
+**Em — kết quả rà soát:** Đã lưu mục rà soát trong [tài liệu nhân sự](docs/hr-workflows.md), giữ nguyên khung và bảng 50 người. Cơ sở đánh giá là mô hình một xưởng sản xuất ngói/Terrazzo và thông tin anh cung cấp, không phải khảo sát nhân sự nội bộ Nasaki. Có sáu điểm cần làm rõ ở mức cơ sở: người không có tài khoản ERP; ghi công theo tổ và người thay; ngừng việc; chính sách/lịch/số dư mẫu đủ chạy; bàn giao đồ bảo hộ; người duyệt thay và đối chiếu công/lương.
+
+Đề xuất tổ trưởng nhập cho tổ, xác nhận theo người và ngoại lệ; ca 5 người làm 4 giờ nhưng một người chỉ làm 2 giờ thì tổng trực tiếp 18, không 20. Chờ máy không tự là nghỉ không lương. Bộ chính sách mẫu cần hiệu lực/căn cứ, không tự gọi thu nhập đơn giản là thực lĩnh pháp lý. Đồ bảo hộ liên kết xuất nội bộ kho, không xuất trùng; quyền ủy nhiệm không tự mở lương hoặc duyệt khoản của mình.
+
+Các phần nên giữ gọn: một đầu mối hồ sơ/công, vai trò hành chính kiêm nhiệm; không diễn giải bốn người nhóm hành chính thành bốn HR chuyên trách, không tự đổi định biên; tuyển/thử việc chỉ giữ hồ sơ/quyết định; kỹ năng đủ phân công; công theo ca/khoảng và ngoại lệ, không ghi từng phút; phép thường không mặc định lên giám đốc. Chưa có căn cứ thêm lao động ngoài mô hình, lương khoán/hoa hồng hoặc đổi phụ cấp cố định ví dụ trước.
+
+Khuyến nghị chưa bổ sung HR chuyên sâu như 360 độ, KPI/OKR nhiều tầng, kế nhiệm, lộ trình chức danh, cổng tuyển dụng, đào tạo trực tuyến, phúc lợi phức tạp hoặc tối ưu ca/sinh trắc học. Không bỏ nghĩa vụ an toàn/quyền lợi lao động vì quy mô nhỏ. Chưa đào sâu kế toán như yêu cầu trước. Hướng dẫn viết tài liệu giúp tách rõ phát hiện rà soát, đề xuất và quyết định đã xác nhận.
+
+**Trạng thái:** Đã rà soát, lưu kết quả và kiểm tra tính nhất quán ví dụ trên tài liệu; chưa triển khai hoặc chạy build/test, chưa xác minh chính sách HR thực tế của Nasaki. Các điểm mới chưa được duyệt từng chi tiết; không chuyển sang nghiệp vụ khác trong vòng này.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.

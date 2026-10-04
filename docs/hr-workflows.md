@@ -99,6 +99,48 @@ Chỉ dùng mã/tên và tài liệu giả lập khi dựng demo. Không đưa c
 
 Báo cáo đề xuất: số người theo trạng thái/bộ phận tại mốc, lịch thiếu/trùng người, hợp đồng sắp hết hạn, đào tạo chưa đủ, công chờ xác minh, phép còn/đã giữ/đã dùng, lương tạm tính/đã duyệt/đã trả/còn trả và giờ/chi phí nhân công theo lệnh. Không xem 50 người là 50 người đang đi làm hôm nay; không dùng số viên mỗi người để kết luận năng suất khi thiếu giờ công và vai trò tương ứng.
 
+## Rà soát mức phù hợp với mô hình Nasaki
+
+Ngày 04/10/2026, anh yêu cầu duyệt lại nhân sự, phải phù hợp Nasaki và không áp dụng toàn bộ nghiệp vụ doanh nghiệp lớn. **Kết luận rà soát:** Hồ sơ, lịch, công, phép, lương/ứng và giờ công sản xuất đã có khung cơ sở. Cần làm rõ sáu điểm dưới đây để sử dụng được ở mô hình xưởng nhỏ; không cần mở thêm phân hệ nhân sự chuyên sâu. Đây là nhận xét và đề xuất sau rà soát, chưa phải quy trình mới được anh duyệt hoặc yêu cầu triển khai.
+
+Sự phù hợp được đánh giá theo ngành ngói/Terrazzo từ nguồn anh cung cấp và mô hình demo 50 người, một xưởng, sản xuất kết hợp đã xác nhận. Chưa có khảo sát nhân sự nội bộ Nasaki; không khẳng định công ty thật có các tổ, phụ cấp hoặc cách trả lương này.
+
+### Những điểm cần làm rõ ở mức cơ sở
+
+| Điểm rà soát | Vì sao cần cho mô hình xưởng | Đề xuất tinh gọn |
+| --- | --- | --- |
+| Người lao động không có tài khoản ERP | Chấm công và nhận phiếu lương không nên buộc mọi công nhân dùng phần mềm. Khung trước có tổ trưởng ghi thay nhưng chưa rõ cách đối chiếu. | Tổ trưởng ghi cho người thuộc tổ; quản lý xác nhận, nhân sự tổng hợp. Người lao động xem/đối chiếu bảng hoặc phiếu cá nhân qua người phụ trách nếu không có tài khoản; yêu cầu sửa vẫn lưu nguồn/người đề nghị. Không gửi bảng lương cả tổ cho mọi người. |
+| Công theo tổ và người thay thế | Hai luồng ngói/Terrazzo có thể cần điều động, nhưng không mặc định mọi người làm được mọi công đoạn. Khung đã xét kỹ năng/trùng lịch, chưa có cách ghi theo tổ thuận tiện. | Dùng danh sách tổ theo ngày, công đoạn người được phép làm và người thay khi vắng. Tổ trưởng ghi chung khoảng làm/lệnh cho thành viên, tách ngoại lệ người đến muộn, về sớm hoặc đổi việc. Không tự nhân số người dự kiến × ca thành công thực tế. |
+| Ngừng việc và hỗ trợ xưởng | Thiếu vật tư, máy hỏng hoặc đổi mẫu có thể khiến người có mặt nhưng chưa trực tiếp làm lệnh. “Chờ việc” đã có nhưng cách xử lý công/lương còn mở. | Ghi số giờ và lý do ngừng/chờ, người xác nhận và việc thay thế nếu có. Tách ngừng việc khỏi nghỉ cá nhân; quyền hưởng lương theo chính sách/căn cứ hợp lệ, không tự coi không lương. Thời gian chờ của sản phẩm chỉ tính công khi thực có người làm việc. |
+| Bộ chính sách đủ để chạy ví dụ | Đã có công thức một nhân viên nhưng chưa có chính sách và số dư nhất quán cho cả 50 người. Điều này chặn tính lương demo đáng tin hơn việc thiếu nghiệp vụ mới. | Lập bộ giả lập nhỏ có ngày hiệu lực: lịch kỳ, mức lương, loại nghỉ/quyền phép, phụ cấp/thưởng áp dụng, ngày chốt/trả và người chịu trách nhiệm. Chỉ đưa loại phụ cấp thực dùng trong kịch bản; phân biệt cố định với theo ngày đủ điều kiện. Có làm thêm trong kịch bản mới phải xác định đầy đủ cách tính/giới hạn; không gán hệ số tùy ý. Khoản bắt buộc chưa mô phỏng phải ghi rõ giới hạn, không báo thực lĩnh hoàn chỉnh. |
+| An toàn và đồ bảo hộ | Xưởng vật liệu xây dựng cần biết người đã được hướng dẫn và được cấp đồ cần thiết; hồ sơ kỹ năng/an toàn đã có, phần bàn giao đồ chưa rõ. | Chỉ giữ danh sách hướng dẫn an toàn, điều kiện làm công đoạn và cấp/đổi/trả đồ bảo hộ hoặc dụng cụ cần bàn giao. Nếu vật tư nằm trong kho, liên kết xuất dùng nội bộ theo quy trình kho, không ghi xuất hai lần hoặc cộng chi phí lương. Chưa dựng phân hệ y tế, đào tạo trực tuyến hay tài sản đầy đủ. |
+| Người duyệt vắng và phản hồi công/lương | Mô hình ít người dễ chờ vì một người giữ việc; đã có đề nghị sửa nhưng chưa rõ người tiếp nhận và thay thế. | Ghi người tiếp nhận phản hồi và người được ủy quyền theo loại việc/thời hạn. Quyền thay thế không tự bao gồm xem lương hoặc sửa kỳ đã chốt; không tự duyệt khoản của mình. Đề nghị chỉ cần nội dung/căn cứ, kết quả và người xử lý, không thêm quy trình khiếu nại nhiều cấp. |
+
+### Những phần nên giữ gọn
+
+- Bảng 50 người ở trên là phân bổ minh họa, không phải yêu cầu lập tám phòng độc lập hoặc tuyển bốn cán bộ HR. Đề xuất nhóm nhân sự/hành chính có một đầu mối phụ trách hồ sơ/công, các vai trò còn lại có thể hỗ trợ hành chính; tài chính kiểm tra lương theo trách nhiệm sẵn có. Chưa đổi các số trong bảng hoặc chốt lại định biên khi chỉ rà soát.
+- Tuyển dụng chỉ cần nhu cầu, quyết định nhận và hồ sơ vào làm; thử việc chỉ cần ngày kết thúc, nhận xét và quyết định, không mở hệ thống tuyển dụng nhiều vòng/đánh giá ứng viên tự động.
+- Kỹ năng chỉ ghi những công đoạn cần để phân người trong demo, không dựng bộ khung năng lực toàn doanh nghiệp. Công theo phút là độ chính xác tính toán, không yêu cầu ghi từng phút hoặc từng động tác. Ghi theo ca/khoảng công việc và ngoại lệ đã đủ.
+- Phép thông thường đề xuất một người có thẩm quyền quyết định sau kiểm tra của nhân sự, không mặc định tất cả phải lên giám đốc. Lương giữ lập/kiểm tra/duyệt/thực trả vì cần kiểm soát tiền, không thêm ban/hội đồng hoặc nhiều cấp giám đốc.
+- Lương thời gian là đề xuất cơ sở, không chứng minh Nasaki trả theo thời gian. Chưa có căn cứ bắt buộc thêm lương khoán, hoa hồng, bảng thưởng năng suất hoặc nhiều công thức cho demo hiện tại. Ví dụ phụ cấp cố định 500.000 trước đó vẫn giữ nguyên, không tự chuyển thành tiền ăn theo ngày.
+
+### Những phần chưa cần bổ sung
+
+Đề xuất chưa đưa vào demo hiện tại: đánh giá 360 độ, hệ thống KPI/OKR nhiều tầng, lộ trình chức danh/thăng tiến, quy hoạch kế nhiệm, ngân sách tuyển dụng chuyên sâu, cổng tuyển dụng, quản lý đào tạo trực tuyến, phúc lợi tùy chọn phức tạp, tối ưu ca bằng thuật toán hoặc bắt buộc máy chấm công/sinh trắc học. Đây là khuyến nghị giữ độ sâu phù hợp, không bỏ nhóm nhân sự khỏi phạm vi bảy nhóm đã xác nhận.
+
+Lao động thời vụ/thuê ngoài chưa có dữ kiện xác nhận nên không tự tạo thêm người hoặc luồng thanh toán trong mô hình 50 người. Nếu có tình huống đó sau này, cần phân biệt người do công ty quản lý với dịch vụ bên ngoài, không tự đưa hóa đơn dịch vụ vào lương nhân viên.
+
+An toàn, bảo hiểm và quyền lợi lao động không phải những nghĩa vụ chỉ doanh nghiệp lớn mới cần. Giữ điểm kiểm tra và giới hạn của demo, chưa đào sâu kế toán theo B21; trước vận hành thật phải đối chiếu căn cứ phù hợp.
+
+### Tình huống rà soát bổ sung để dùng khi phát triển
+
+1. Một công nhân không có tài khoản vẫn có công/phiếu cá nhân và đề nghị đối chiếu được; người nhập thay được ghi rõ, không cấp quyền xem lương cả tổ.
+2. Ví dụ giả lập tổ 5 người, 08:00–12:00 làm lệnh A; 4 người làm đủ 4 giờ, người thứ năm vào 10:00 làm 2 giờ: công trực tiếp là 4 × 4 + 2 = 18 giờ, không 20. Công hai giờ còn thiếu của người thứ năm cần phân loại/căn cứ riêng, không tự phạt. Không dùng số 18 này thay tổng 240 giờ ở P06.
+3. Ví dụ độc lập một người làm 6 giờ cho lệnh, chờ máy có xác nhận 2 giờ: tổng có mặt/làm và chờ là 8 giờ, trực tiếp lệnh chỉ 6. Chế độ tiền cho phần chờ chưa đủ căn cứ thì lương còn tạm tính, không tự tính mất 2 giờ lương.
+4. Cấp đồ bảo hộ có liên kết kho không tạo hai lần xuất; đổi người duyệt chỉ có hiệu lực đúng thời hạn/phạm vi, không mở quyền xem lương ngoài nhiệm vụ.
+
+Đã rà soát trên tài liệu và kiểm tra phép tính ví dụ, chưa kiểm chứng phần mềm hoặc kết luận khảo sát nhân sự thật hoàn tất. Ưu tiên tiếp theo là cụ thể hóa các điểm cơ sở và bộ dữ liệu nhất quán khi được giao; không cần mở rộng thêm nghiệp vụ doanh nghiệp lớn để hoàn thành demo.
+
 ## Tình huống cần kiểm chứng khi phát triển
 
 1. Tổng cơ cấu có 50 người riêng biệt; kiêm nhiệm không tăng tổng, điều chuyển đổi cơ cấu theo ngày mà giữ lịch sử.

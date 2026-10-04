@@ -45,8 +45,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B19 | Anh không có đủ thông tin chuyên môn sản xuất của Nasaki và giao Codex đề xuất mô hình cho mục đích minh họa. | Yêu cầu ngày 04/10/2026; các phương án/số liệu bên dưới là giả lập, không phải dữ kiện thực tế hay yêu cầu triển khai ngay. Demo vẫn phải chạy thật và tạo kết quả theo B01. |
 | B20 | Anh đồng ý cụ thể hóa chín nhóm nghiệp vụ kho đã rà soát trước khi chuyển sang phần khác. | “đồng ý, cụ thể hóa đi”; phê duyệt việc xây dựng phương án chi tiết, không tự coi là đã duyệt từng tham số mới hoặc yêu cầu lập trình ngay. |
 | B21 | Tiếp tục nghiệp vụ tiếp theo; các nội dung kế toán chưa cần đào sâu ở thời điểm này. | Yêu cầu ngày 04/10/2026; tạm hoãn đào sâu, không loại tài chính khỏi phạm vi hoặc coi các đề xuất đã được duyệt toàn bộ. |
+| B22 | Rà soát lại nhân sự cho phù hợp Nasaki, không áp dụng toàn bộ nghiệp vụ doanh nghiệp lớn chỉ vì yêu cầu kiểm tra còn thiếu. | Yêu cầu ngày 04/10/2026; giữ tổ chức tinh gọn và mô hình demo, không xác nhận cơ cấu nhân sự thực tế hoặc phê duyệt mọi đề xuất bổ sung. |
 
-Các mã B01–B21 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B22 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -337,6 +338,8 @@ Theo B21, tiếp tục [nhân sự, ca làm, chấm công và lương](hr-workfl
 Ví dụ giả lập 26 ngày/208 giờ: đi làm 192 giờ, nghỉ có lương 8, không lương 8; lương cơ sở 7,8 triệu cho thu nhập thời gian 7,5 triệu, cộng phụ cấp cố định 0,5 triệu thành 8 triệu trước khấu trừ. Ứng thực nhận 1 triệu còn cần chi 7 triệu trước các khoản bắt buộc chưa mô phỏng, không gọi là thực lĩnh pháp lý. Ví dụ riêng nối P06: 240 giờ trực tiếp × 50.000 đồng chi phí/giờ = 12 triệu nhân công đã nằm trong giá thành trước, không cộng lại hoặc suy ra từ người trong ví dụ lương.
 
 Các quy tắc/số liệu trên chưa được duyệt từng chi tiết, chưa có bộ chứng từ hoặc kiểm chứng ứng dụng. Chính sách lao động, phép, bảo hiểm/thuế và điều kiện làm thêm cần căn cứ trước vận hành thật; dữ liệu cá nhân thật không lưu Git. Tiếp tục quản trị trách nhiệm/phê duyệt và rà soát chất lượng/toàn luồng trước tính năng.
+
+Theo B22, đã [rà soát mức phù hợp của nhân sự](hr-workflows.md#rà-soát-mức-phù-hợp-với-mô-hình-nasaki). Khung cơ sở đã có; cần làm rõ công nhân không có tài khoản, công theo tổ/người thay, ngừng việc, bộ chính sách mẫu, bàn giao bảo hộ và người duyệt thay/đối chiếu công lương. Các bổ sung là đề xuất, không tự triển khai. Khuyến nghị không tạo phòng ban/cấp duyệt mới, không yêu cầu ghi từng phút, không thêm HR chuyên sâu; bảng 50 người chưa bị thay đổi. Nghĩa vụ an toàn/quyền lợi lao động vẫn giữ điểm kiểm tra, chưa đào sâu kế toán. Chưa có khảo sát nhân sự Nasaki độc lập hoặc kiểm chứng phần mềm.
 
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
