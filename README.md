@@ -6,9 +6,13 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã lập khảo sát sơ bộ và dự thảo năm đáp án dựa trên nội dung website Nasaki do anh cung cấp; chờ anh chỉnh sửa/xác nhận. Chưa kiểm chứng độc lập hoặc khảo sát nội bộ Nasaki. Demo phải chạy nghiệp vụ và tạo kết quả kiểm chứng được.
+- Trạng thái: Anh đã xác nhận sáu nhóm thông tin nền; đang đào sâu nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng. Chưa khảo sát độc lập Nasaki hoặc chốt quy trình chi tiết.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
+
+## Hồ sơ nghiệp vụ hiện hành
+
+[Hồ sơ nghiệp vụ demo ERP Nasaki](docs/business-context.md) lưu quyết định đã xác nhận, hiện trạng theo mô tả của anh, đề xuất, điểm còn mở và câu hỏi đào sâu. README tiếp tục giữ lịch sử trao đổi. Codex cần đọc hồ sơ này cùng README trước khi phân tích, thiết kế hoặc phát triển các phần liên quan.
 
 ## Cách duy trì nhật ký
 
@@ -473,11 +477,45 @@ Các câu hỏi này chưa bao quát mọi chi tiết triển khai. Sau câu tr�
 
 **Trạng thái:** Đã lập danh sách 18 câu hỏi, đang chờ anh trả lời; chưa chốt thêm nghiệp vụ hoặc triển khai ứng dụng.
 
+### 04/10/2026 — Anh xác nhận thông tin nền và yêu cầu đào sâu nghiệp vụ
+
+**Anh — câu trả lời theo nội dung sáu câu hỏi đầu:**
+
+1. Người xem demo: "Tất cả". Giá trị muốn thể hiện: "số hóa, chuyển đổi số tất cả công việc có thể".
+2. Vấn đề hiện tại: "quản lý thủ công, gần như toàn bộ vẫn đang quản lý theo kinh nghiệm, các quy trình sơ sài và chưa chuyển đổi hoặc có thì cũng ít, chủ yếu dùng excel".
+3. Phạm vi phiên bản đầu: "Kinh doanh, mua hàng, kho, sản xuất, chất lượng, tài chính, nhân sự".
+4. Quy mô mô phỏng: "1 công ty duy nhất, 1 xưởng duy nhất, 1 kho duy nhất, 50 nhân sự, ... sử dụng mô hình đề xuất tinh gọn".
+5. Sản phẩm: cả ngói và Terrazzo; quản lý "theo viên"; các mã khác nhau được hỏi giữa các trang là cùng sản phẩm ("có").
+6. Sản xuất: "kết hợp" làm sẵn và theo đơn; có nhận màu hoặc quy cách riêng cho khách ("có").
+
+**Anh — yêu cầu tiếp theo:**
+
+> tiếp tục đào sâu nghiệp vụ trước khi đi vào tính năng, các dữ liệu về nghiệp vụ cần được hệ thống và lưu trữ lại để phục vụ cho phần phát triển sau này
+
+**Em — hệ thống hóa và cập nhật:**
+
+- Đã tạo [hồ sơ nghiệp vụ hiện hành](docs/business-context.md), phân biệt thông tin anh xác nhận cho demo, hiện trạng theo anh cung cấp, nội dung website, đề xuất và điểm chưa rõ.
+- Mô hình 1 kho thay thế đề xuất 2 kho trước đây. 50 nhân sự là quy mô mô phỏng, chưa đồng nghĩa 50 người dùng đồng thời hoặc số nhân sự thực tế của Nasaki.
+- Ghi nhận phạm vi đủ bảy nhóm nghiệp vụ ngay ở phiên bản đầu; chưa tự giảm phạm vi hoặc xác định tính năng/độ sâu từng nhóm.
+- Ghi nhận mã khác cách viết là cùng sản phẩm theo anh xác nhận; còn cần chuẩn hóa mã tham chiếu, màu và quy cách. Đơn vị viên áp dụng cho sản phẩm, chưa có quy tắc đơn vị nguyên vật liệu.
+- Chọn cách khảo sát theo luồng công việc và điểm bàn giao giữa các bộ phận. Mỗi quy trình sẽ lưu người thực hiện, đầu vào, các bước, quyết định, đầu ra, ngoại lệ, cách làm hiện tại/mong muốn và nguồn xác nhận.
+
+**Em — nhóm đào sâu tiếp theo:**
+
+1. Khách hàng là những nhóm nào; bên đặt, trả tiền và nhận hàng có khác nhau không?
+2. Ai tiếp nhận yêu cầu, qua kênh nào; cần thông tin gì để tư vấn/báo giá, có tính số viên từ diện tích không?
+3. Giá và giảm giá được quyết định thế nào, bởi ai; màu/quy cách riêng hoặc vận chuyển ảnh hưởng ra sao?
+4. Khi nào đơn được coi là chấp nhận, ai xác nhận và bàn giao; có cần cọc, ký hoặc duyệt không?
+5. Ai kiểm tra và quyết định ngày giao; khi thiếu hàng/vật tư/năng lực hoặc nhiều đơn cạnh tranh thì ưu tiên thế nào?
+6. Màu/quy cách đặt riêng được duyệt thế nào; khi khách đổi hoặc hủy sau chuẩn bị/sản xuất thì ai xử lý và chịu chi phí?
+
+**Trạng thái:** Đã lưu câu trả lời và hồ sơ để dùng về sau, đang chờ vòng hỏi sâu. Chưa thiết kế tính năng, chọn công nghệ, xây dựng ứng dụng hoặc chạy build/test.
+
 ## Các nội dung chưa được thống nhất
 
-- Mục tiêu chi tiết, nhóm người dùng và quy mô sử dụng Mini-ERP.
+- Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.
 - Mã số doanh nghiệp và thông tin Nasaki được kiểm chứng độc lập; quy mô, công cụ và quy trình nội bộ; các giả định demo cần anh chỉnh sửa. Tên, ngành nghề, sản phẩm và công suất công bố đã có từ nội dung website anh cung cấp.
 - Cấu trúc kho Git chính thức (đã có đề xuất ban đầu).
-- Các phân hệ, chức năng và phạm vi phiên bản đầu tiên.
+- Quy trình và mức độ chi tiết của bảy nhóm nghiệp vụ đã chọn cho phiên bản đầu; mẫu/màu/quy cách, định mức, nhân sự, tài chính và tiêu chí nghiệm thu.
 - Công nghệ, dữ liệu, phân quyền và tích hợp.
 - Kế hoạch thực hiện, tiêu chí nghiệm thu và môi trường triển khai.
