@@ -248,6 +248,39 @@ Hàng lỗi/chờ kiểm tra không nằm trong tồn đạt; không trừ lần
 
 Đề xuất kiểm kê định kỳ hàng tháng và kiểm kê riêng khi có nghi vấn. Kho chốt phạm vi/thời điểm, đếm theo vật tư/sản phẩm, lô, khu vực và trạng thái; trong lúc đếm tạm ngừng giao dịch phần đó hoặc đối chiếu mọi giao dịch phát sinh theo cùng mốc. Người kiểm tra đối chiếu sổ với thực đếm; giám đốc duyệt chênh lệch và lý do trước khi điều chỉnh. Không sửa tồn về con số mong muốn để che mất chênh lệch; kế toán xử lý giá trị theo quy tắc tài chính sẽ phân tích sau.
 
+### Rà soát kho trước khi chuyển sang phân hệ khác
+
+**Yêu cầu:** Anh hỏi nghiệp vụ kho còn thiếu gì trước khi sang phần khác. Đây là kết quả rà soát tài liệu K01–K03 và các điểm nối P01–P06/M01–M03, không phải kiểm tra một ứng dụng đã xây. Các hướng bổ sung là đề xuất, chưa tự trở thành quy tắc được phê duyệt hoặc công việc lập trình được giao.
+
+**Kết luận:** Khung nhập, xuất, giữ hàng, chất lượng, truy lô và kiểm kê đã có; còn thiếu hoặc mới mô tả sơ lược chín nhóm dưới đây. Nên hoàn thiện quy tắc cơ sở cho demo trước khi coi nghiệp vụ kho đủ để triển khai, không cần biến demo thành hệ thống quản lý kho chuyên sâu.
+
+| Mã rà soát | Điểm thiếu/chưa đủ rõ | Hướng bổ sung đề xuất |
+| --- | --- | --- |
+| RK01 | Danh mục mẫu/màu/quy cách, vị trí và quy đổi mới có định hướng. | Phân biệt biến thể có thể xuất giao, lưu mã tham chiếu thống nhất; địa điểm/khu vực trong một kho; quy đổi bao/hộp/pallet theo từng hàng và phiên bản. Viên là số nguyên; vật tư có độ chính xác theo đơn vị. Không gộp lô hoặc biến thể chỉ vì cùng tên. |
+| RK02 | Tồn đầu kỳ mới được giả sử trong ví dụ, chưa có quy trình xác lập. | Ghi nhận một lần tại mốc bắt đầu theo hàng/lô/khu vực/trạng thái, có kiểm tra và duyệt; giữ căn cứ giá trị để bàn giao tài chính. Tồn đầu không giả làm mua mới hoặc nhập sản xuất mới, không chạy lại dữ liệu khởi tạo làm nhân đôi tồn. |
+| RK03 | Điểm hàng rời kho, đang vận chuyển, nhận trả và quyền sở hữu chưa rõ. | Tách soạn hàng/chờ xuất với xác nhận hàng thực rời kho; đề xuất ghi giảm tồn tại lúc rời kho, theo dõi đang giao riêng, không coi là khách đã nhận hoặc tự ghi doanh thu. Trả hàng chỉ tăng tồn vật lý khi thực nhận. Hàng bên khác gửi không tự trở thành hàng doanh nghiệp được phép bán; chưa đề xuất thêm kho/ký gửi cho demo cơ sở. |
+| RK04 | Có giữ/giải phóng hàng, nhưng chưa đủ vòng đời khi đơn hủy/giảm, lô bị khóa hoặc kiểm kê thiếu. | Liên kết lượng giữ với đúng đơn/lệnh, giải phóng phần không còn cần sau quyết định được duyệt; chuyển phân bổ có lý do và quyền phù hợp. Khi hàng đã dành không còn đạt/không còn đủ, xác định đơn bị ảnh hưởng, gỡ phần không hợp lệ và lập nhu cầu bổ sung; không duy trì phân bổ vượt tồn đạt hoặc âm thầm chuyển sang hàng khác. |
+| RK05 | Chưa tách xuất mẫu, kiểm tra tiêu hao, dùng nội bộ, vỡ/mất và tiêu hủy khỏi xuất bán/cấp sản xuất. | Có mục đích, lượng, người nhận, lý do và phê duyệt theo loại; phân biệt chuyển hàng đạt sang hàng lỗi với thực sự tiêu hủy/ra khỏi kho. Hàng vỡ còn nằm trong kho chỉ giảm tồn đạt, chưa giảm tổng tồn vật lý; tiêu hủy thực tế giảm tổng tồn bằng chứng từ riêng. Kho lập, người kiểm tra đánh giá chất lượng khi cần, giám đốc duyệt xử lý. |
+| RK06 | Nhận trả khách/nhà cung cấp và hoàn trả vật tư có nhắc, nhưng chưa đủ điều kiện và liên kết. | Liên kết lần giao/cấp gốc, lượng còn được trả và phần đã trả trước đó; nhận trả về chờ kiểm tra, phân loại đạt/làm lại/lỗi. Trả nhà cung cấp cần xác nhận lượng thực xuất và đối chiếu điều chỉnh tài chính riêng; không tự hoàn tiền chỉ vì kho nhận hàng trả. |
+| RK07 | Có trạng thái chất lượng và truy lô, chưa có khóa lô/thu hồi khi phát hiện lỗi sau nhập. | Khóa phần còn trong kho, loại khỏi lượng khả dụng, xử lý phân bổ bị ảnh hưởng; truy vật tư nguồn, lệnh, thành phẩm và các đợt đã giao để xác định đối tượng cần thông báo/thu hồi. Kinh doanh/chất lượng phối hợp phương án; chưa sửa lịch sử xuất hoặc tự giả lập hàng đã thu hồi về. |
+| RK08 | Có lịch sử và duyệt điều chỉnh, nhưng chưa rõ nháp, xác nhận, ghi lùi ngày, đảo chứng từ và nhiều người thao tác. | Chứng từ nháp chưa thay đổi tồn; xác nhận một lần mới ghi biến động. Bấm lại không tạo giao dịch thứ hai; hai người không cùng giữ/xuất vượt lượng. Sửa chứng từ đã ghi bằng điều chỉnh/đảo có kiểm tra giao dịch liên quan; không đảo nhập nếu hàng đã dùng mà chưa xử lý phụ thuộc. Phân quyền người lập/xác nhận/duyệt; giao dịch lùi ngày phải được kiểm tra, liên kết khóa kỳ tài chính về sau. |
+| RK09 | Chưa hệ thống hóa báo cáo, cảnh báo và đối chiếu toàn luồng. | Báo nhập–xuất–tồn theo mốc và từng hàng/lô; tồn đạt/đã dành/khả dụng, hàng chờ/lỗi, tồn lâu ngày, dưới ngưỡng hoặc gần/hết hạn nếu có. Đối chiếu lượng cấp–hoàn–thực dùng, nhận–trả mua, xuất–nhận trả bán và lượng giữ. Giá trị tồn/giá vốn tiếp tục ở tài chính, không khẳng định đã thiết kế phương pháp định giá. |
+
+**Các điểm giao cần giữ để phân tích sau:** Hàng đang vận chuyển và xác nhận khách nhận thuộc giao hàng; hoàn tiền/công nợ, giá trị tồn và khóa kỳ thuộc tài chính; kiểm tra/thu hồi thuộc chất lượng. Kho phải có dữ liệu và điểm bàn giao tương ứng, không tự quyết thay các phân hệ này. Quyền sở hữu không thể suy ra chỉ từ vị trí vật lý.
+
+**Có thể để sau — khuyến nghị, không phải quyết định giảm phạm vi:** Quét mã vạch/QR, quản lý pallet chuyên sâu, tự tối ưu vị trí/xếp xe, nhiều kho, ký gửi, kho thuê ngoài hoặc tích hợp cân/máy. Chỉ đưa vào khi có giá trị minh họa rõ hoặc anh yêu cầu. Không cần mã riêng cho từng viên; quản lý theo sản phẩm/biến thể và lô đủ cho mô hình hiện tại.
+
+**Tình huống nghiệm thu kho cần bổ sung khi phát triển, chưa chạy phần mềm:**
+
+1. Khởi tạo tồn một lần, mở lại vẫn đúng; không nhân đôi khi nạp lại dữ liệu demo.
+2. Tồn đạt 1.000 viên, dành 600: khả dụng 400; xuất 200 từ phần đã dành thì còn đạt 800, dành 400, khả dụng vẫn 400. Hủy phần còn lại chỉ giải phóng 400, không cộng thêm tồn vật lý.
+3. Chuyển 50 viên từ đạt sang lỗi khi vẫn ở kho giữ nguyên tổng tồn vật lý nhưng giảm lượng được dùng; chỉ khi tiêu hủy mới giảm tổng tồn.
+4. Nhận trả 20 viên tăng tồn vật lý 20 nhưng chưa tăng khả dụng; sau kiểm tra, chỉ lượng đạt mới được phép phân bổ lại, không nhận cùng lần trả hai lần.
+5. Hai người cùng muốn giữ 300 viên trong khi khả dụng chỉ 400: tổng giữ mới không vượt 400, phần chưa đủ phải được báo rõ; nhấn xác nhận lại không tạo lần xuất thứ hai.
+6. Khóa lô đã phân bổ, kiểm kê thiếu hoặc đảo chứng từ có giao dịch sau phải chỉ ra đơn/lệnh chịu ảnh hưởng và cách xử lý; không chỉ làm báo cáo tồn nhìn có vẻ đúng.
+
+Chưa coi chín nhóm đề xuất này là đã hoàn thiện đặc tả kho. Chúng là danh sách thiếu sót có hướng xử lý để tiếp tục chốt mô hình demo; không có bằng chứng build/test ứng dụng trong kho hiện tại.
+
 ### M01 — Luồng mua hàng và bàn giao đề xuất
 
 | Bước | Người phụ trách đề xuất | Kết quả/điều kiện bàn giao |

@@ -612,6 +612,20 @@ Ngoại lệ đã đề xuất: nhận thiếu/chậm/thừa, vật tư không �
 
 **Trạng thái:** Đã bổ sung mô hình nghiệp vụ và kiểm tra tính nhất quán phép tính minh họa; chưa hoàn tất phân tích ERP, chưa chạy ứng dụng/build/test. Kho chưa có lịch sử build/test ứng dụng.
 
+### 04/10/2026 — Rà soát mức đầy đủ của nghiệp vụ kho
+
+**Anh:**
+
+> trước khi sang phần khác, kiểm tra lại xem nghiệp vụ kho còn gì nữa không?
+
+**Em — kết quả rà soát:** K01–K03 có khung nhập/xuất, giữ hàng, chất lượng, truy lô và kiểm kê, nhưng chưa đủ chi tiết để coi kho đã sẵn sàng triển khai. Đã ghi chín nhóm thiếu/chưa rõ RK01–RK09 trong [hồ sơ nghiệp vụ](docs/business-context.md): danh mục/vị trí/quy đổi; tồn đầu kỳ; thời điểm ra/vào kho và sở hữu; vòng đời giữ hàng; xuất khác mục đích/vỡ/mất/tiêu hủy; hoàn trả; khóa lô/thu hồi; chứng từ/phân quyền/thao tác đồng thời; báo cáo/cảnh báo/đối chiếu.
+
+Hướng bổ sung được ghi là đề xuất, không tự biến thành quyết định đã duyệt hoặc yêu cầu lập trình. Điểm cần chú ý: giữ hàng không làm giảm tồn thực tế; hàng lỗi còn trong kho không đồng nghĩa đã tiêu hủy; hàng đã xuất không đồng nghĩa khách đã nhận; hàng nhận trả chưa kiểm tra không được bán lại; đảo chứng từ phải xét giao dịch sau. Giao hàng, tài chính và chất lượng cần nhận bàn giao các dữ liệu liên quan, không coi kho tự xử lý xong toàn bộ các phần đó.
+
+Đề xuất để sau các phần kho chuyên sâu như QR, pallet, tự tối ưu vị trí, nhiều kho/ký gửi/tích hợp thiết bị; giữ nguyên mô hình một kho và phạm vi bảy nhóm đã xác nhận. Sáu tình huống nghiệm thu được bổ sung làm cơ sở kiểm tra phần mềm về sau, chưa phải kết quả ứng dụng đã chạy.
+
+**Trạng thái:** Hoàn thành rà soát tài liệu và ghi nhận khoảng trống; chưa hoàn thành đặc tả kho, chưa triển khai hoặc chạy build/test ứng dụng. Vòng này không chuyển sang phân hệ tiếp theo.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.
