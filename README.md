@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Chuẩn bị bắt đầu phân tích yêu cầu ERP cho doanh nghiệp sản xuất nhỏ; đã thiết lập nguyên tắc phối hợp, chưa chốt chức năng chi tiết, công nghệ hoặc kế hoạch triển khai.
+- Trạng thái: Đang bắt đầu bước 1 — khảo sát doanh nghiệp với vai trò BA; chờ thông tin bối cảnh từ anh, chưa chốt chức năng chi tiết, công nghệ hoặc kế hoạch triển khai.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
 ## Cách duy trì nhật ký
@@ -210,6 +210,32 @@ Kiểm thử, bảo mật và bảo vệ dữ liệu phải được xem xét t�
 Hiện mình đã chuẩn bị cách làm việc và nhật ký, đang ở đầu bước 1. Tiếp theo sẽ tìm hiểu doanh nghiệp đang sản xuất gì, vận hành thế nào và vấn đề nào cần giải quyết trước. Chưa nên cam kết thời gian hoặc chi phí chính xác trước khi có thông tin về phạm vi và điều kiện vận hành.
 
 **Trạng thái:** Đã giải thích lộ trình để anh nắm trước khi phân tích. Đây là quy trình đề xuất; chưa khảo sát chi tiết, chưa chốt kế hoạch, chưa khởi tạo mã nguồn hoặc chạy build/test.
+
+### 04/10/2026 — Bắt đầu khảo sát doanh nghiệp với vai trò BA
+
+**Anh:**
+
+> bây giờ, hãy trở thành một BA (Business Analysis) chuyên nghiệp, bắt đầu bước 1: khảo sát doanh nghiệp cho anh
+
+**Em — cách thực hiện khảo sát:**
+
+Em sẽ dẫn dắt khảo sát theo từng nhóm nhỏ: bối cảnh và mục tiêu → người tham gia, trách nhiệm → quy trình thực tế và ngoại lệ → dữ liệu, công cụ, báo cáo → tổng hợp vấn đề, mức ưu tiên và mục tiêu cải thiện. Thứ tự và câu hỏi sẽ điều chỉnh theo câu trả lời, không áp một mô hình nghiệp vụ chưa được xác nhận.
+
+Sau mỗi nhóm, em tóm tắt điều đã hiểu để anh sửa hoặc xác nhận; phân biệt thông tin anh cung cấp, nhận định của em và điểm còn chưa rõ. Khi đủ thông tin, kết quả bước 1 sẽ gồm bức tranh doanh nghiệp, các luồng công việc chính, người phụ trách, công cụ đang dùng và vấn đề cần cải thiện. Chưa coi kết quả khảo sát là đặc tả hoặc phạm vi phiên bản đầu đã chốt.
+
+**Em — nhóm câu hỏi đầu tiên: bối cảnh và khó khăn hiện tại**
+
+Anh cứ kể bằng ngôn ngữ hằng ngày, không cần thuật ngữ hoặc số liệu chính xác. Nếu chưa có doanh nghiệp cụ thể, nói rõ để mình phân biệt mô hình dự kiến với hoạt động thực tế.
+
+1. **Doanh nghiệp sẽ sử dụng đầu tiên làm gì?** Sản xuất sản phẩm nào và bán cho ai? Mình đang khảo sát doanh nghiệp thực tế của anh hay xây mô hình dự kiến để phục vụ nhiều doanh nghiệp?
+2. **Quy mô hiện tại ra sao?** Khoảng bao nhiêu nhân sự, xưởng, kho; có những bộ phận nào? Số ước lượng là đủ.
+3. **Một đơn hàng thường được thực hiện thế nào?** Anh kể một ví dụ từ lúc khách đặt đến lúc giao hàng và nhận tiền. Doanh nghiệp sản xuất sau khi nhận đơn, sản xuất sẵn để bán, hay kết hợp?
+4. **Hiện đang quản lý bằng gì?** Excel, sổ giấy, Zalo hay phần mềm nào? Thông tin có phải nhập lại hoặc gửi qua lại giữa các bộ phận không?
+5. **Ba khó khăn lớn nhất anh muốn giải quyết là gì?** Với vấn đề cấp bách nhất, anh kể một tình huống gần đây: xảy ra thế nào, ảnh hưởng gì và anh mong sau khi có ERP sẽ khác ra sao. Nếu có số liệu về thời gian, sai sót hoặc chi phí thì cung cấp ước lượng; chưa có cũng được.
+
+Anh có thể trả lời theo số hoặc kể liền một đoạn; em sẽ tự hệ thống hóa rồi hỏi tiếp những điểm còn thiếu.
+
+**Trạng thái:** Đã bắt đầu khảo sát bằng nhóm câu hỏi đầu tiên, đang chờ câu trả lời. Chưa có dữ kiện mới về hoạt động thực tế, chưa đưa ra kết luận nghiệp vụ, chưa lập trình hoặc chạy build/test.
 
 ## Các nội dung chưa được thống nhất
 
