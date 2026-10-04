@@ -16,6 +16,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Quy trình kho cho demo ERP Nasaki](docs/warehouse-workflows.md) cụ thể hóa chín nhóm nghiệp vụ kho, gồm trách nhiệm, điều kiện, biến động tồn, ngoại lệ và tình huống kiểm chứng. Đây là nguồn chi tiết cho phần kho, phải đọc trước khi thao tác phần này; không phải mô tả hiện trạng Nasaki đã được khảo sát.
 
+[Giao hàng và tài chính cho demo ERP Nasaki](docs/delivery-finance-workflows.md) lưu mô hình giao từng đợt, thu/cọc/phân bổ, công nợ, thu chi, giá thành/giá vốn và trả/hoàn tiền. Các lựa chọn mới là đề xuất quản trị giả lập, chưa là đặc tả đầy đủ kế toán pháp định; đọc cùng hồ sơ nghiệp vụ và quy trình kho khi thao tác phần liên quan.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -643,6 +645,22 @@ Phương án cụ thể gồm danh mục/biến thể/vị trí/quy đổi; xác
 **Ví dụ giả lập liên hoàn:** Tồn đầu 1.000 đạt; giữ 600, soạn 200 chưa giảm tồn, thực xuất 200 còn 800. Hủy phần chưa giao giải phóng 400, không cộng tồn. Chuyển 50 vỡ sang lỗi vẫn tổng 800; thực tiêu hủy còn 750. Nhận trả 20 có tổng 770 nhưng chờ kiểm tra; kết quả 15 đạt/5 lỗi; kiểm kê thiếu 2 viên đạt đã duyệt thì tổng cuối 768, gồm 763 được dùng và 5 lỗi. Đối chiếu: 1.000 + 20 - 200 - 50 - 2 = 768. Quyết toán tiền và giao bù là quyết định riêng, chưa suy ra từ bảng tồn.
 
 **Trạng thái:** Đã cụ thể hóa mô hình kho trên tài liệu và kiểm tra tính nhất quán ví dụ; chưa lập trình/chạy build/test, chưa nghiệm thu toàn bộ ERP. Còn cần đối chiếu giao hàng/tài chính, chốt danh mục/bộ dữ liệu demo và chuyển thành yêu cầu phát triển khi đến bước đó. Không chuyển sang phân hệ khác trong vòng này.
+
+### 04/10/2026 — Chuyển sang giao hàng và tài chính quản trị
+
+**Anh:**
+
+> chuyển sang nghiệp vụ tiếp theo
+
+**Em — phương án đã lưu:** Tiếp tục giao hàng và tài chính để nối kín đơn–sản xuất–kho–giao–tiền. Đã tạo [tài liệu chi tiết](docs/delivery-finance-workflows.md) theo hướng dẫn viết tài liệu và cách lưu trong Git của dự án; không tạo Page bên ngoài. Không yêu cầu anh cung cấp chuyên môn Nasaki và không coi các quy tắc mới là hiện trạng thật.
+
+Các sự kiện được tách: duyệt đơn, nhận cọc, xuất kho/đang giao, khách chấp nhận, kế toán ghi bán, thực thu/phân bổ. Cọc chưa là doanh thu; phần đơn chưa giao chưa tự thành phải thu. Bên trả khác bên mua được lưu căn cứ trả thay; tiền thừa/chưa rõ nguồn để chưa phân bổ, không tự bù chéo khách. Đơn giao đủ và đơn đã trả đủ có trạng thái riêng. Phương án trả/giảm/giao bù có duyệt, kho nhận trả không tự sinh hoàn tiền.
+
+Đề xuất bình quân sau nhập để tính giá trị demo, theo dõi giá trị đang giao trước ghi giá vốn, giá thành tập hợp vật tư/nhân công/chi phí chung và không cộng trùng lương. Ví dụ giả lập đơn 10.000 viên x 18.000 đồng, cọc 60 triệu; giao/ghi bán 6.000 → phải thu 48 triệu; thu 30 → còn 18; giao/ghi bán 4.000 → còn 90; thu 90 → hết nợ. Chi phí giả lập 47,04 triệu cho 7.840 đạt cho giá thành 6.000/viên; đầu kho 3.000 cùng giá, bán 10.000 có giá vốn 60 triệu, tồn 840 giá trị 5,04 triệu, lãi gộp 120 triệu trước chi phí khác. Ví dụ thêm trả 500 đạt và chấp nhận giảm bán/hoàn 9 triệu: doanh thu thuần 171 triệu, giá vốn thuần 57 triệu, tồn 1.340 giá trị 8,04 triệu, lãi gộp 114 triệu trước chi phí khác.
+
+**Giới hạn còn lại:** Đây là nền nghiệp vụ quản trị; chưa hoàn thiện kế toán đầy đủ, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay/ngân sách hoặc nguồn lương/giờ công. Không tự loại các nội dung đó khỏi phạm vi bảy nhóm hoặc nhóm khách xuất khẩu. Demo không thực chuyển tiền hoặc phát hành hóa đơn thật.
+
+**Trạng thái:** Đã lưu quy trình và kiểm tra phép tính/tính nhất quán với kho; chưa xây dựng hoặc chạy build/test ứng dụng. Bước tiếp theo hợp lý là nhân sự, ca/giờ công và lương để bổ sung nguồn chi phí và trách nhiệm.
 
 ## Các nội dung chưa được thống nhất
 

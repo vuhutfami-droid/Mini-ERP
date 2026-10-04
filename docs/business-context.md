@@ -317,6 +317,16 @@ Theo B20, đã cụ thể hóa cả chín nhóm trong [Quy trình kho cho demo E
 
 Kết quả mong đợi khi xây demo: tính đúng phần thiếu, quy đổi bao/kg, nhận nhiều đợt, bảo toàn hàng đã dành, xuất đúng lượng và đối chiếu còn phải trả. Đây là kiểm tra phép tính nghiệp vụ trên tài liệu, chưa phải kết quả chạy phần mềm.
 
+## Giao hàng và tài chính quản trị đề xuất
+
+Theo yêu cầu chuyển sang nghiệp vụ tiếp theo, đã lưu [Giao hàng và tài chính cho demo ERP Nasaki](delivery-finance-workflows.md) làm nguồn chi tiết cho đợt giao, xác nhận khách nhận, thu/cọc/phân bổ, công nợ hai chiều, thu chi, giá thành, giá vốn và trả/hoàn tiền. Codex cần đọc cùng quy trình kho trước khi thao tác các luồng liên quan.
+
+**Trạng thái:** Các quy tắc và số liệu mới là đề xuất giả lập, không phải kế toán pháp định hoặc hiện trạng Nasaki. Tình huống cơ sở dùng khách chấp nhận hàng và kế toán xác nhận bán làm điều kiện ghi doanh thu, không ghi bán chỉ vì duyệt đơn/cọc/xuất kho. Vật tư/giá trị hàng đang giao được theo dõi riêng; phương pháp bình quân sau nhập đề xuất để tính giá trị, không nhầm với thứ tự lấy lô vật lý.
+
+Ví dụ đơn 10.000 viên, giá 18.000 đồng/viên, cọc 60 triệu: giao/ghi bán 6.000 có doanh thu 108 triệu và phải thu 48 triệu; thu thêm 30 còn phải thu 18; giao/ghi bán 4.000 còn phải thu 90; thu 90 thì hết nợ. Ví dụ giá thành giả lập 47,04 triệu cho 7.840 đạt, giá 6.000/viên; đầu kho 3.000 cùng giá; bán 10.000 có giá vốn 60 triệu, tồn 840 giá trị 5,04 triệu, lãi gộp 120 triệu trước chi phí khác. Không coi đây là giá bán, giá thành hoặc lợi nhuận thực tế Nasaki.
+
+Thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay/ngân sách và kế toán đầy đủ chưa hoàn tất phân tích; không tự loại khỏi phạm vi bảy nhóm hoặc nhóm khách xuất khẩu. Cần tiếp tục đề xuất và liên thông nguồn lương/giờ công từ nhân sự; chưa xây ứng dụng.
+
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
 ### Trọng tâm phân tích của vòng này
@@ -351,8 +361,8 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 - Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
 - Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
 - Xem xét/chỉnh [quy trình kho chi tiết](warehouse-workflows.md) và mô hình mua hàng M01–M03; hoàn thiện danh mục/bộ dữ liệu demo, đối chiếu giao hàng/tài chính và quy tắc giá trị. Chín nhóm RK01–RK09 đã có phương án cụ thể, chưa có kiểm chứng phần mềm.
-- Giao khách nhiều đợt, trả hàng bán; thanh toán và công nợ khách hàng. Mua/nhận/trả vật tư và nghĩa vụ nhà cung cấp đã có đề xuất cơ sở M01–M03, chưa là hiện trạng xác nhận.
-- Giá thành, kế toán, thuế, ngoại tệ và phạm vi tài chính cụ thể.
+- Xem xét/chỉnh [giao hàng và tài chính cơ sở](delivery-finance-workflows.md), gồm giao từng đợt, cọc/thu/phân bổ/công nợ, trả/hoàn tiền, giá thành/giá vốn và báo cáo quản trị; chưa được kiểm chứng phần mềm.
+- Hoàn thiện tài chính chi tiết: nguồn lương/giờ công và phân bổ, kế toán, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay và ngân sách. Các nội dung chưa rõ không tự trở thành phạm vi đã loại bỏ.
 - Phân bổ nhân sự, ca/chấm công/nghỉ phép/lương; kiêm nhiệm và quyền/phê duyệt.
 - Tình huống thực tế và số liệu thể hiện mức độ ảnh hưởng của khó khăn; các chỉ số để đánh giá chuyển đổi số.
 - Bộ dữ liệu demo, mức sử dụng đồng thời, cách đối tác dùng thử, mốc trình diễn và chi phí vận hành.
