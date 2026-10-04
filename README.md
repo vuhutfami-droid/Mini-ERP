@@ -541,6 +541,18 @@ Các câu hỏi này chưa bao quát mọi chi tiết triển khai. Sau câu tr�
 
 **Trạng thái:** Đã hệ thống hóa câu trả lời và đề xuất để anh xem xét; tiếp tục khảo sát nghiệp vụ, chưa thiết kế tính năng hoặc triển khai ứng dụng. Không phát sinh build/test trong vòng này.
 
+### 04/10/2026 — Xác nhận cách gọi CEO và giám đốc
+
+**Anh:**
+
+> ceo và "giám đốc" là cùng một người nhé, khi nào anh viết giám đốc + chức năng ở sau, ví dụ: giám đốc sản xuất, thì mới là người khác
+
+**Quyết định đã xác nhận:** CEO và giám đốc đứng riêng là cùng một người. Giám đốc kèm chức năng chỉ người khác; không tự tạo thêm chức danh hoặc đồng nhất quản lý sản xuất với giám đốc sản xuất.
+
+**Em — cập nhật:** Đã bổ sung B18 và quy ước cách gọi vào [hồ sơ nghiệp vụ](docs/business-context.md), cập nhật B16 và loại quan hệ CEO/giám đốc khỏi các điểm còn mở. Trong các luồng đã khảo sát, giá/chốt đơn và quyết định ưu tiên có sự tham gia của cùng một người CEO/giám đốc, không phải hai người duyệt riêng. Nội dung “chưa rõ” trong nhật ký trước đây được giữ lại như lịch sử và được xác nhận bởi mục này. Quy ước không đồng nghĩa anh đã duyệt đề xuất đổi/hủy đơn.
+
+**Trạng thái:** Chỉ cập nhật tài liệu nghiệp vụ; kho chưa có lịch sử build/test, vòng này không chạy build/test ứng dụng.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.

@@ -39,12 +39,15 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B13 | Chiết khấu tùy đơn và trường hợp; chính sách có thể thay đổi theo tham số. Giám đốc quyết định giá và giảm giá. | Chưa xác nhận bảng giá gốc, tham số cụ thể, công thức, ngưỡng hoặc thời hạn báo giá. |
 | B14 | Giám đốc thường quyết định việc chốt đơn. | Không suy ra mọi đơn đều phải duyệt hoặc đã xác định điều kiện cọc/ký và người bàn giao. |
 | B15 | Quản lý sản xuất kiểm tra hàng có sẵn và khả năng sản xuất trước khi cam kết ngày giao. | Anh xác nhận; cách kiểm tra, thời gian vận chuyển và cách xác nhận ngày giao còn mở. |
-| B16 | Quản lý sản xuất và CEO quyết định ưu tiên khi nhiều đơn cùng cần hàng mà không đủ. | Chưa chốt tiêu chí ưu tiên hoặc xác nhận CEO và giám đốc là cùng người. |
+| B16 | Quản lý sản xuất và CEO (giám đốc) quyết định ưu tiên khi nhiều đơn cùng cần hàng mà không đủ. | Chưa chốt tiêu chí ưu tiên; cách gọi CEO/giám đốc đã xác nhận tại B18. |
 | B17 | Có làm mẫu cho khách duyệt trước khi sản xuất hàng loạt đối với màu/quy cách riêng. | Anh xác nhận; hình thức duyệt và tiêu chuẩn so sánh với mẫu chưa rõ. |
+| B18 | “CEO” và “giám đốc” không kèm chức năng là cùng một người. Khi ghi “giám đốc” kèm chức năng, như “giám đốc sản xuất”, đó là người khác. | Anh xác nhận quy ước cách gọi; không tự suy ra các chức danh chức năng đều đã tồn tại hoặc có quyền cụ thể. |
 
-Các mã B01–B17 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B18 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
+
+**Quy ước đã xác nhận (B18):** “CEO” và “giám đốc” đứng riêng chỉ cùng một người, không tách thành hai người phê duyệt trong cùng quy trình. “Giám đốc” kèm chức năng, ví dụ “giám đốc sản xuất”, chỉ người khác. Chưa có căn cứ đồng nhất “quản lý sản xuất” với “giám đốc sản xuất”; cũng chưa xác nhận doanh nghiệp có đủ các chức danh giám đốc chức năng. Quy ước này không tự bổ sung thẩm quyền hoặc xác nhận các quy trình đang ở trạng thái đề xuất.
 
 Quy mô demo một kho thay thế đề xuất trước đây về kho vật tư và kho thành phẩm riêng. Không tạo thêm kho dưới danh nghĩa diễn giải đề xuất cũ.
 
@@ -107,7 +110,7 @@ Các điểm bàn giao còn cần làm rõ:
 - Khi tính số viên từ diện tích, cần thông số sản phẩm, điều kiện công trình, phụ kiện và phần dự phòng nào; ai kiểm tra, ai xác nhận kết quả.
 - Bảng giá gốc và tham số điều chỉnh; thuế, vận chuyển, thời hạn báo giá và cách giữ giá đã được khách chấp nhận khi chính sách mới thay đổi.
 - Điều kiện để đơn được chấp nhận và được phép mua vật tư/sản xuất: xác nhận khách, duyệt giám đốc, cọc hoặc điều kiện tín dụng; chưa tự đặt mức cọc hay yêu cầu chữ ký.
-- Người bàn giao đơn; nội dung bàn giao; tiêu chí ưu tiên và cách xử lý thay đổi ngày giao. CEO và giám đốc có phải cùng một người không.
+- Người bàn giao đơn; nội dung bàn giao; tiêu chí ưu tiên và cách xử lý thay đổi ngày giao. CEO và giám đốc đứng riêng đã được xác nhận là cùng người (B18), không còn là câu hỏi mở.
 - Hình thức duyệt mẫu, dung sai/tiêu chuẩn đối chiếu và cách xử lý khi sản phẩm không đúng mẫu đã duyệt.
 
 ## Đề xuất xử lý đổi hoặc hủy đơn đặt riêng
@@ -157,7 +160,7 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 ## Các điểm còn mở
 
 - Mẫu, màu, kích thước và quan hệ biến thể; mã chuẩn của sản phẩm có nhiều cách viết.
-- Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên; quan hệ CEO/giám đốc.
+- Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên.
 - Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
 - Công đoạn, định mức và đơn vị vật tư; cách tính nhu cầu, hao hụt, năng lực và ưu tiên sản xuất.
 - Chất lượng, xử lý hàng lỗi, truy lô; quy tắc giữ hàng và bố trí một kho.
