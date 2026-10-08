@@ -20,6 +20,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Nhân sự, ca làm, chấm công và lương cho demo ERP Nasaki](docs/hr-workflows.md) lưu cơ cấu 50 người đề xuất, hồ sơ/vòng đời, lịch, công, phép, lương/ứng/thực trả và giờ công nối với sản xuất. Đọc khi thao tác nhân sự hoặc nguồn nhân công; chưa đào sâu kế toán theo yêu cầu mới của anh, không coi chính sách giả lập là chính sách pháp lý thật.
 
+[Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Bản ngày 08/10/2026 chờ anh duyệt; chưa tự thay quy trình đã xác nhận hoặc yêu cầu xây ứng dụng.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -697,6 +699,30 @@ Các phần nên giữ gọn: một đầu mối hồ sơ/công, vai trò hành 
 Khuyến nghị chưa bổ sung HR chuyên sâu như 360 độ, KPI/OKR nhiều tầng, kế nhiệm, lộ trình chức danh, cổng tuyển dụng, đào tạo trực tuyến, phúc lợi phức tạp hoặc tối ưu ca/sinh trắc học. Không bỏ nghĩa vụ an toàn/quyền lợi lao động vì quy mô nhỏ. Chưa đào sâu kế toán như yêu cầu trước. Hướng dẫn viết tài liệu giúp tách rõ phát hiện rà soát, đề xuất và quyết định đã xác nhận.
 
 **Trạng thái:** Đã rà soát, lưu kết quả và kiểm tra tính nhất quán ví dụ trên tài liệu; chưa triển khai hoặc chạy build/test, chưa xác minh chính sách HR thực tế của Nasaki. Các điểm mới chưa được duyệt từng chi tiết; không chuyển sang nghiệp vụ khác trong vòng này.
+
+### 08/10/2026 — Lập đề xuất trách nhiệm phê duyệt và bàn giao
+
+**Anh:**
+
+> hoạt động tiếp theo sẽ là gì nhỉ?
+
+**Em — hướng đã trình bày:** Nối trách nhiệm/quyền quyết định và bàn giao; rà soát chất lượng xuyên quy trình; chuẩn bị kịch bản từ nhận đơn đến thu tiền/công nhân sự trước tính năng. Các điểm nhân sự cơ sở được nối trong các bước này; kế toán chuyên sâu vẫn để sau.
+
+**Anh:**
+
+> đồng ý, em tự tạo đề xuất đi sau đó anh sẽ duyệt
+
+**Điều đã xác nhận:** Giao Codex lập phương án để anh duyệt sau, ghi B23; không coi là đã duyệt bảng quyền hoặc giao lập trình.
+
+**Em — kết quả:** Tạo [bản đề xuất](docs/responsibilities-approvals-handoffs.md) trong Git theo hướng dẫn viết tài liệu đã áp dụng. Một người giữ việc theo đơn/lệnh/nguồn; tách lập, kiểm tra, duyệt và thực hiện. Giám đốc/CEO cùng người, một vòng quyết định khi cần; kho/giao/tổ trưởng xác nhận thường ngày đúng nguồn không xin duyệt lại mỗi thao tác. Giữ mô hình một công ty/xưởng/kho, 50 người và đủ bảy nhóm, không tăng phòng ban hay cấp duyệt.
+
+Có bảng trách nhiệm/thẩm quyền, bàn giao có phiên bản/tiếp nhận/phần thiếu, thay đổi và ủy quyền có hạn/phạm vi, quyền xem lương/chi phí tách nhiệm vụ. Không tự duyệt việc nhạy cảm của mình, không coi im lặng là đồng ý. Chất lượng khóa ngay và chỉ giải phóng sau đạt/đủ điều kiện; quyết định thương mại không bỏ kiểm tra. Làm rõ phân biệt quản lý sản xuất điều phối P05 với giám đốc duyệt phương án xử lý kho, ở trạng thái đề xuất.
+
+Kịch bản nối P06/M03: đơn 10.000 ngói, tám lô bắt đầu 8.000, 7.840 đạt/160 lỗi; mua 1.200 kg xi măng, cấp 2.400 còn 300 đã dành; giao 6.000 rồi 4.000 tồn đạt 840; cọc/thu 60/30/90 triệu, các mốc phải thu 48/18/90/0 triệu. Nguồn chi phí 47,04 triệu và nhân công 12 triệu không cộng trùng, giá vốn 60, tồn 5,04, lãi gộp 120 triệu trước chi phí khác. Nhánh Terrazzo độc lập giả lập 500 bắt đầu, 485 đạt/15 lỗi, chưa suy ra lợi nhuận hoặc năng lực. Số liệu còn cần bộ chứng từ/lịch/tiêu chí mẫu, không là dữ kiện Nasaki hay kết quả phần mềm.
+
+**Chờ anh duyệt:** Bốn nhóm quyết định trình trong tài liệu: ít cấp duyệt/đầu mối nguồn; kiêm nhiệm và ủy quyền có kiểm soát; quyền khóa/giải phóng chất lượng; cách bàn giao và kịch bản chuẩn bị dữ liệu. Mục tiêu phản hồi trong một ngày làm việc với việc thường là đề xuất, không tự duyệt quá hạn. Chưa gửi thông báo hoặc liên hệ bên ngoài.
+
+**Trạng thái:** Đã lưu đề xuất, đối chiếu tài liệu và phép tính; chưa thiết kế/lập trình hoặc chạy build/test, kho chưa có lịch sử build ứng dụng. Tài chính chuyên sâu vẫn để sau; chưa kết luận phân tích toàn ERP hoàn tất.
 
 ## Các nội dung chưa được thống nhất
 

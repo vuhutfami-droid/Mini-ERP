@@ -4,7 +4,7 @@ Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm 
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
-Ngày cập nhật: 04/10/2026, múi giờ Asia/Bangkok.
+Ngày cập nhật: 08/10/2026, múi giờ Asia/Bangkok.
 
 ## Cách phân loại thông tin
 
@@ -46,8 +46,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B20 | Anh đồng ý cụ thể hóa chín nhóm nghiệp vụ kho đã rà soát trước khi chuyển sang phần khác. | “đồng ý, cụ thể hóa đi”; phê duyệt việc xây dựng phương án chi tiết, không tự coi là đã duyệt từng tham số mới hoặc yêu cầu lập trình ngay. |
 | B21 | Tiếp tục nghiệp vụ tiếp theo; các nội dung kế toán chưa cần đào sâu ở thời điểm này. | Yêu cầu ngày 04/10/2026; tạm hoãn đào sâu, không loại tài chính khỏi phạm vi hoặc coi các đề xuất đã được duyệt toàn bộ. |
 | B22 | Rà soát lại nhân sự cho phù hợp Nasaki, không áp dụng toàn bộ nghiệp vụ doanh nghiệp lớn chỉ vì yêu cầu kiểm tra còn thiếu. | Yêu cầu ngày 04/10/2026; giữ tổ chức tinh gọn và mô hình demo, không xác nhận cơ cấu nhân sự thực tế hoặc phê duyệt mọi đề xuất bổ sung. |
+| B23 | Anh giao Codex tự lập đề xuất cho hoạt động tiếp theo rồi anh duyệt. | “đồng ý, em tự tạo đề xuất đi sau đó anh sẽ duyệt”, ngày 08/10/2026; cho phép chuẩn bị phương án trách nhiệm/bàn giao cùng điểm chất lượng và kịch bản, chưa duyệt nội dung hoặc yêu cầu lập trình. |
 
-Các mã B01–B22 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B23 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -340,6 +341,14 @@ Ví dụ giả lập 26 ngày/208 giờ: đi làm 192 giờ, nghỉ có lương 
 Các quy tắc/số liệu trên chưa được duyệt từng chi tiết, chưa có bộ chứng từ hoặc kiểm chứng ứng dụng. Chính sách lao động, phép, bảo hiểm/thuế và điều kiện làm thêm cần căn cứ trước vận hành thật; dữ liệu cá nhân thật không lưu Git. Tiếp tục quản trị trách nhiệm/phê duyệt và rà soát chất lượng/toàn luồng trước tính năng.
 
 Theo B22, đã [rà soát mức phù hợp của nhân sự](hr-workflows.md#rà-soát-mức-phù-hợp-với-mô-hình-nasaki). Khung cơ sở đã có; cần làm rõ công nhân không có tài khoản, công theo tổ/người thay, ngừng việc, bộ chính sách mẫu, bàn giao bảo hộ và người duyệt thay/đối chiếu công lương. Các bổ sung là đề xuất, không tự triển khai. Khuyến nghị không tạo phòng ban/cấp duyệt mới, không yêu cầu ghi từng phút, không thêm HR chuyên sâu; bảng 50 người chưa bị thay đổi. Nghĩa vụ an toàn/quyền lợi lao động vẫn giữ điểm kiểm tra, chưa đào sâu kế toán. Chưa có khảo sát nhân sự Nasaki độc lập hoặc kiểm chứng phần mềm.
+
+## Trách nhiệm phê duyệt và bàn giao chờ duyệt
+
+Theo B23, đã tạo [đề xuất xuyên bộ phận](responsibilities-approvals-handoffs.md), ngày 08/10/2026. Bản này nối người giữ việc, việc cần quyết định và việc chỉ xác nhận thực tế; bảng thẩm quyền/bàn giao, ủy quyền, quyền dữ liệu, điểm kiểm soát chất lượng và kịch bản ngói P06/M03 cùng nhánh Terrazzo giả lập. Chưa tự chuyển các nội dung thành quy trình đã duyệt.
+
+Bốn nhóm chờ anh duyệt: ít cấp quyết định và một đầu mối theo nguồn; kiêm nhiệm/nhập thay có kiểm soát và ủy quyền giới hạn; chất lượng khóa ngay/giải phóng có căn cứ; bàn giao đúng phiên bản/tiếp nhận từng phần và dùng kịch bản chuẩn bị dữ liệu. Không đặt thêm hạn mức tiền, phòng ban hoặc giám đốc chức năng; không cho giám đốc thay kết luận chất lượng để giao hàng khóa. Bản đề xuất làm rõ quản lý sản xuất điều phối xử lý P05, giám đốc duyệt phương án chính thức theo quy trình kho, nhưng chưa tự thay thẩm quyền hiện hành đã xác nhận.
+
+Chưa có tiêu chí kỹ thuật/lấy mẫu thật hoặc đủ dữ liệu/chứng từ demo. Giữ tài chính chuyên sâu để sau, chưa thiết kế tính năng/lập trình hoặc chạy build/test; không kết luận phân tích toàn ERP đã hoàn tất. Codex cần đọc bản đề xuất khi thao tác các điểm liên quan và kiểm tra trạng thái duyệt trước dùng làm yêu cầu triển khai.
 
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
