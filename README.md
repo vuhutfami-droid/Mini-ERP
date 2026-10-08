@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27; chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27 và tên tiếng Việt/rà soát nguồn B28; chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -26,7 +26,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Yêu cầu chức năng](docs/functional-requirements.md) gồm 33 yêu cầu, [thiết kế màn hình](docs/screen-design.md) gồm 22 loại màn hình, có [ma trận truy vết](docs/design/traceability.csv) tới 56 tiêu chí nghiệm thu. [Bản mẫu giao diện](docs/design/prototype.html) dùng để xem bố cục, lọc dòng và biểu mẫu, không ghi giao dịch hoặc thay nghiệm thu ERP.
 
-[Thiết kế cơ sở dữ liệu](docs/database-design.md) giải thích phân nhiệm, nguồn số liệu, phiên bản, giao dịch và quyền. [Từ điển dữ liệu](docs/database/data-dictionary.md), [quan hệ](docs/database/relationships.csv) và [đối chiếu yêu cầu](docs/database/coverage.csv) là đặc tả logic, không SQL hoặc DB đã triển khai.
+[Thiết kế cơ sở dữ liệu](docs/database-design.md) giải thích phân nhiệm, nguồn số liệu, phiên bản, giao dịch và quyền. [Từ điển dữ liệu](docs/database/data-dictionary.md), [toàn bộ trường](docs/database/fields.csv), [quan hệ](docs/database/relationships.csv) và [đối chiếu yêu cầu](docs/database/coverage.csv) là đặc tả logic, không SQL hoặc DB đã triển khai. [Rà soát nguồn](docs/database/source-review.md) và [kiểm kê từng trường mẫu](docs/database/source-review.csv) phân biệt dữ kiện/giả định/kết quả, chặn nạp trực tiếp bộ kiểm cũ.
 
 ## Cách duy trì nhật ký
 
@@ -799,6 +799,20 @@ Kho sở hữu sổ lượng, QC kết luận/khóa/giải phóng, sản xuất 
 **Kiểm tra:** Rà cấu trúc từ điển/quan hệ/ma trận bằng công cụ tạm; mọi bảng có FR, FK đến bảng tồn tại, đủ tiêu chí/màn hình theo ma trận gốc; kiểm liên kết Markdown và định dạng Git. [Lịch sử kiểm tra](docs/build-history.md) ghi rõ phạm vi. Chưa tạo DB, chưa thử SQL/FK thật, quyền/transaction/đồng thời/backup và chưa lập trình ERP; bao phủ tài liệu không bảo đảm nghiệp vụ chưa khảo sát sẽ không phát sinh yêu cầu mới.
 
 **Đề xuất dễ hiểu:** Dùng chung thông tin bằng mã liên kết; mỗi bộ phận xác nhận phần thuộc nhiệm vụ của mình. Đặt đơn không tự xuất, xuất không tự ghi bán, cọc không tự là doanh thu, duyệt lương không tự chi. Thiết kế công nghệ/backup là đề xuất chưa triển khai. Ràng buộc chưa lập trình tiếp tục hiệu lực tới khi anh giao bước tiếp theo.
+
+## Trao đổi ngày 08/10/2026 — tiếng Việt và dữ liệu nguồn
+
+**Anh yêu cầu:** “yêu cầu tất cả bảng, trường cơ sở dữ liệu chuyển hết sang tiếng Việt và đều có mô tả rõ ràng, các dữ liệu rà soát lại một lượt, phải thực sự là dữ liệu nguồn chứ không phải là dữ liệu dạng tự động cài cắm để hỗ trợ một chức năng hay ra quyết định nhanh”.
+
+**Quyết định B28:** Tên hiện hành của nhóm/bảng/trường dùng tiếng Việt không dấu để máy xử lý, nhãn và mô tả có dấu để anh đọc. Mọi trường có ý nghĩa, kiểu, nguồn, phụ trách, điều kiện ghi và quan hệ; tham số/duyệt/kết luận phải có căn cứ, không đặt mặc định để quyết thay người.
+
+**Kết quả:** Cập nhật [thiết kế tổng thể](docs/database-design.md), [từ điển](docs/database/data-dictionary.md), [danh sách trường](docs/database/fields.csv), [quan hệ](docs/database/relationships.csv) và [ma trận](docs/database/coverage.csv). 91 bảng/11 nhóm, 1.139 trường gồm trường chung liệt kê đầy đủ, 487 liên kết. [Tên cũ](docs/database/name-mapping.csv) chỉ để đối chiếu lịch sử. [21 trường đã bỏ](docs/database/derived-fields.csv) có nguồn/cách tính thay thế; tổng tồn/thiếu/nợ/thu nhập/giá thành và tiến độ dựng từ chứng từ/sự kiện. Không làm mất đơn giá thỏa thuận, kết quả kiểm thực, quyết định và bản phép tính có căn cứ cần lưu.
+
+**Rà soát dữ liệu:** [Bản giải thích](docs/database/source-review.md) và [kiểm kê](docs/database/source-review.csv) rà 481 đường dẫn/cột của cả năm tệp giả lập. [Chính sách](docs/demo-data/source-policy.json) chặn nạp trực tiếp, ghi mã kiểm toàn vẹn đúng tệp đã rà. Phát hiện OTHER-001 thiếu hồ sơ nguồn/duyệt, công được sinh theo lịch, nhiều tổng tính trước và mã chứng cứ/xác nhận chưa có hồ sơ đầy đủ. Giữ bộ kiểm cũ để đọc/đối chiếu; không coi là nguồn khởi tạo hoặc tự bổ sung nguồn giả để số cuối khớp.
+
+**Kiểm tra:** Đối chiếu tên/mô tả/quan hệ/ma trận, kiểm kê nguồn độc lập và mã toàn vẹn năm tệp; kiểm liên kết và định dạng Git đạt. Không thay số trong bộ kiểm hoặc coi kết quả kiểm tài liệu là phần mềm vận hành.
+
+**Giới hạn:** Chưa có chứng từ nội bộ Nasaki đủ để xác nhận dữ liệu thật, chưa tạo bộ khởi tạo nguồn mới; không có bộ nạp/DB hay lập trình ERP. Chính sách chặn là thiết kế, chưa được cưỡng chế bằng phần mềm. Cấu trúc JSON cũng có [khóa tiếng Việt đóng](docs/database/structured-fields.md). [Lịch sử kiểm tra](docs/build-history.md) ghi kết quả kiểm thiết kế hiện hành, không gọi là kiểm thử ERP.
 
 ## Các nội dung chưa được thống nhất
 

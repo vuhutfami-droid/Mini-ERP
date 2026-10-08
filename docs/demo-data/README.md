@@ -1,6 +1,6 @@
 # Dữ liệu nghiệp vụ giả lập Nasaki Demo V1
 
-Bộ này là ảnh chụp giao dịch được xác nhận **trong mô phỏng**, phục vụ phân tích và chuẩn bị dữ liệu khởi tạo sau này. Không có giao dịch thật với Nasaki/ngân hàng/nhân viên. Tham số mới chờ chủ dự án duyệt; chưa phải định dạng nhập của một ERP đã xây dựng.
+Bộ này là ảnh chụp giả lập để kiểm phép tính và đọc lịch sử. Theo B28, bộ này có cả kết quả tính và xác nhận giả định chưa đủ hồ sơ nguồn; **không được nạp nguyên bộ thành giao dịch khởi tạo**. Không có giao dịch thật với Nasaki/ngân hàng/nhân viên. Tham số mới chờ chủ dự án duyệt; chưa phải định dạng nhập của một ERP đã xây dựng.
 
 Đọc [quy tắc](../demo-business-rules.md), [kịch bản](../demo-scenarios.md) và [tiêu chí nghiệm thu](../demo-acceptance.md) trước dùng. Quy mô cố định: một công ty, một xưởng, một kho, 50 người. Mọi tên, lương, ca và chứng từ là giả lập; không có mật khẩu hoặc số tài khoản thật.
 
@@ -14,7 +14,7 @@ Bộ này là ảnh chụp giao dịch được xác nhận **trong mô phỏng*
 
 CSV dùng UTF-8, dấu phẩy, có tên cột; đơn vị phút và VND nằm trong tên cột. JSON lưu lượng/tiền chính xác của chứng từ; `expected` là chuẩn kiểm tra, **không phải số mà ứng dụng được phép lấy làm báo cáo cố định**. Mốc cuối là 05/10/2026 sau một khoản chi lương mẫu. Tệp thể hiện kết quả xác nhận; các hồ sơ nháp/duyệt/nhận chờ QC phải được dựng thành hành động khi lập trình theo tài liệu.
 
-Các nhánh S03–S10 trong tài liệu là tình huống thử độc lập; đầu vào/kết quả kiểm có trong scenario-cases.json, chưa là sổ giao dịch đã thực hiện cho từng nhánh. Tạo bản sao tại mốc mô tả trước thao tác; kết quả chưa đủ chi phí phải giữ tạm tính, không lấy nguồn bộ chính bù sang nhánh. Trước lập trình sẽ ánh xạ cấu trúc này thành dữ liệu ứng dụng và bổ sung chứng từ theo chính sách được duyệt.
+Các nhánh S03–S10 trong tài liệu là tình huống thử độc lập; đầu vào/kết quả kiểm có trong scenario-cases.json, chưa là sổ giao dịch đã thực hiện cho từng nhánh. Tạo bản sao tại mốc mô tả trước thao tác; kết quả chưa đủ chi phí phải giữ tạm tính, không lấy nguồn bộ chính bù sang nhánh. Trước lập trình cần chuẩn bị bộ nguồn riêng theo chứng từ/người ghi/người xác nhận/mốc/bản. Không ánh xạ nguyên trạng các tổng, trạng thái và mã xác nhận giả định thành nguồn hợp lệ.
 
 ## Kiểm tra bộ mẫu
 
@@ -27,3 +27,9 @@ python scripts/verify-demo-data.py
 Công cụ chỉ dùng thư viện Python chuẩn. Có thể truyền `--directory` tới bản sao của thư mục này để kiểm tra bộ thay đổi; không cần truy cập mạng hoặc bí mật. Nó tính lại công/lương, nguồn chi phí lô, lịch người/máy/chỗ giữ, lượng và giá trị theo từng biến động/lô, nghĩa vụ/thu/phân bổ/chi và số cuối, cùng phép tính ở các nhánh ngoại lệ có số lượng/tiền; dữ liệu không hợp lệ trả lỗi và mã thoát khác 0.
 
 [Lịch sử kiểm tra](../build-history.md) ghi phiên bản được kiểm và giới hạn. Kiểm tra này không thay kiểm thử ERP về lưu dữ liệu, phân quyền, thao tác đồng thời hoặc tích hợp. Chưa có ứng dụng để chạy build/test phần mềm.
+
+## Kết quả rà soát nguồn B28
+
+[Rà soát nguồn](../database/source-review.md) giải thích các điểm thiếu, gồm nhu cầu OTHER-001, công sinh theo lịch, giá thành/thu nhập tính sẵn và mã duyệt/chứng cứ chưa có hồ sơ đầy đủ. [Kiểm kê từng trường](../database/source-review.csv) rà 481 đường dẫn/cột ở cả năm tệp. [Chính sách nạp](source-policy.json) ghi mã kiểm toàn vẹn và chặn nạp trực tiếp toàn bộ năm tệp; đây là đặc tả, chưa có bộ nạp thực thi.
+
+Tên cột tiếng Anh trong các tệp cũ được giữ để không thay lịch sử/bộ kiểm. Chúng không còn là tên bảng/trường cơ sở dữ liệu; thiết kế hiện hành dùng tiếng Việt ở [từ điển](../database/data-dictionary.md). Bộ nguồn khởi tạo mới chưa được tạo. Không có dữ liệu người hoặc giao dịch Nasaki thực đã xác minh.

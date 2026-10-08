@@ -1,6 +1,6 @@
 # Hồ sơ nghiệp vụ demo ERP Nasaki
 
-Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng/màn hình B26 và thiết kế dữ liệu logic B27; PostgreSQL là đề xuất, chưa tạo DB hoặc lập trình ERP.
+Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng/màn hình B26 và thiết kế dữ liệu logic B27, cập nhật tên tiếng Việt và rà soát nguồn B28; PostgreSQL là đề xuất, chưa tạo DB hoặc lập trình ERP.
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
@@ -52,7 +52,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B26 | Chuyển bộ nghiệp vụ đã chuẩn bị thành yêu cầu chức năng và thiết kế màn hình. | “chuyển thành yêu cầu chức năng và thiết kế màn hình.” ngày 08/10/2026; giao đặc tả và bản mẫu giao diện, không tự duyệt mọi tham số giả lập hoặc yêu cầu ERP đã vận hành. |
 | B27 | Thiết kế cơ sở dữ liệu đáp ứng yêu cầu, phân nhiệm rõ, đầy đủ và gọn; chưa lập trình. | Yêu cầu ngày 08/10/2026; giao thiết kế logic/quan hệ/quy tắc, không tạo DB/SQL/migration hoặc tự triển khai. |
 
-Các mã B01–B27 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+| B28 | Tất cả bảng/trường dùng tiếng Việt và mô tả rõ; rà dữ liệu phải có nguồn, không cài để hỗ trợ chức năng hoặc dẫn quyết định. | Yêu cầu ngày 08/10/2026; đổi thiết kế, tách kết quả tổng hợp, rà/cô lập bộ kiểm giả lập. Không giao lập trình, không xác nhận bộ mẫu là nguồn thật Nasaki. |
+
+Các mã B01–B28 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -407,3 +409,9 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 Khi có câu trả lời mới, cập nhật phần hiện hành của hồ sơ và ghi lại trao đổi trong README. Quyết định mới thay thế đề xuất cũ phải được chỉ rõ, không xóa lịch sử để che mất thay đổi. Chỉ bổ sung quy tắc và kết quả nghiệp vụ có nguồn; các đề xuất giữ nhãn đề xuất đến khi được xác nhận.
 
 Khi đi vào thiết kế và phát triển, dùng các quyết định và quy trình đã xác nhận để lập yêu cầu, tiêu chí nghiệm thu và kiểm tra kết quả. Không coi việc có hồ sơ này là đã hoàn thành phân tích hoặc đủ điều kiện triển khai toàn bộ ERP.
+
+### Điều chỉnh tên và nguồn theo B28
+
+Thiết kế hiện hành dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sách trường](database/fields.csv) liệt kê đầy đủ ý nghĩa/kiểu/nguồn/phụ trách/điều kiện ghi và giá trị phân loại. 487 liên kết gồm phần người ghi chung được liệt kê tường minh; 394 tại B27 là số lịch sử trước điều chỉnh. Bỏ 21 trường kết quả hoặc trạng thái tổng hợp; giữ bản kết quả chính thức khi có nguồn/phiên bản cần đối chiếu. Tham số và quyết định có căn cứ/người khai báo/hiệu lực/duyệt, không tự sinh từ mục tiêu số.
+
+[Rà soát nguồn](database/source-review.md) phân loại 481 đường dẫn/cột ở năm tệp mẫu và chặn nạp trực tiếp. OTHER-001 chưa đủ hồ sơ nhu cầu/duyệt; công/QC/lương/tiền giả lập không thành thực tế chỉ từ trạng thái hoặc mã chứng cứ. Bộ cũ giữ làm đề bài/kiểm phép tính, chưa tạo bộ nguồn khởi tạo mới và chưa có chứng từ Nasaki thật. Chưa lập trình hoặc tạo DB.

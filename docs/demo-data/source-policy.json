@@ -1,0 +1,43 @@
+{
+  "phien_ban": "B28",
+  "du_lieu_nasaki_that": false,
+  "cho_phep_nap_nguyen_bo": false,
+  "quy_tac": "Không tự nạp quyết định, trạng thái, kết quả tính hoặc chứng cứ giả. Bộ khởi tạo nguồn chưa được lập; cần chứng từ theo thiết kế và xác nhận riêng. Đây là chính sách thiết kế, chưa có công cụ nạp để cưỡng chế.",
+  "cac_tep": [
+    {
+      "tep": "baseline.json",
+      "ma_kiem_toan_ven_sha256": "d6d27eace45aeae923ffe68f1517e00a33a8e7e6f2c03b52df2383c113e64c4b",
+      "duoc_nap_truc_tiep": false,
+      "vai_tro": "Bộ kiểm giả lập đã cô lập, giữ để đọc lịch sử và đối chiếu phép tính",
+      "so_duong_dan_da_ra_soat": 278
+    },
+    {
+      "tep": "scenario-cases.json",
+      "ma_kiem_toan_ven_sha256": "9e9baed0b205db0242634da65e224595d3501f5fdfe1d75ef765368ce6ebde63",
+      "duoc_nap_truc_tiep": false,
+      "vai_tro": "Bộ kiểm giả lập đã cô lập, giữ để đọc lịch sử và đối chiếu phép tính",
+      "so_duong_dan_da_ra_soat": 167
+    },
+    {
+      "tep": "employees.csv",
+      "ma_kiem_toan_ven_sha256": "d5e3bd74acf55c8e8122b4bef2124e8eebbcf0889fc934e3a3f1bff621ca162e",
+      "duoc_nap_truc_tiep": false,
+      "vai_tro": "Bộ kiểm giả lập đã cô lập, giữ để đọc lịch sử và đối chiếu phép tính",
+      "so_duong_dan_da_ra_soat": 12
+    },
+    {
+      "tep": "attendance.csv",
+      "ma_kiem_toan_ven_sha256": "1e60dd2627f21f1a8be6e73d1885510a054178758177fbd6af9e7754b2cb5a96",
+      "duoc_nap_truc_tiep": false,
+      "vai_tro": "Bộ kiểm giả lập đã cô lập, giữ để đọc lịch sử và đối chiếu phép tính",
+      "so_duong_dan_da_ra_soat": 12
+    },
+    {
+      "tep": "labor-intervals.csv",
+      "ma_kiem_toan_ven_sha256": "6fc8296718bd54991f4f1fbf8eca4a2978cd81f8ffeb5b2164637c19219ed04e",
+      "duoc_nap_truc_tiep": false,
+      "vai_tro": "Bộ kiểm giả lập đã cô lập, giữ để đọc lịch sử và đối chiếu phép tính",
+      "so_duong_dan_da_ra_soat": 12
+    }
+  ]
+}

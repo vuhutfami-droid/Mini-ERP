@@ -2,7 +2,7 @@
 
 Bộ này cụ thể hóa cách vận hành demo một công ty, một xưởng, một kho, 50 nhân sự, có ngói và Terrazzo. Mỗi giao dịch phải có nguồn, người chịu trách nhiệm, điều kiện thực hiện và kết quả đối chiếu. Anh giao xây dựng kỹ bộ này ngày 08/10/2026 theo B25; phương án trách nhiệm đã được duyệt ở B24. **Các tham số mới dưới đây là đề xuất giả lập để anh duyệt, không phải dữ liệu hoặc quy trình thực tế Nasaki.** Đây là nền yêu cầu nghiệp vụ, chưa là ứng dụng đã chạy.
 
-Đọc cùng [hồ sơ nghiệp vụ](business-context.md), [trách nhiệm đã duyệt](responsibilities-approvals-handoffs.md), [kho](warehouse-workflows.md), [giao hàng và tài chính](delivery-finance-workflows.md), [nhân sự](hr-workflows.md). [Kịch bản và kết quả](demo-scenarios.md) xác định thứ tự và số đối chiếu; [tiêu chí nghiệm thu](demo-acceptance.md) xác định điều kiện đạt. Tài liệu này giữ quy tắc; các giá trị cụ thể có nguồn duy nhất trong [dữ liệu mẫu](demo-data/baseline.json) và ba bảng CSV cùng thư mục.
+Đọc cùng [hồ sơ nghiệp vụ](business-context.md), [trách nhiệm đã duyệt](responsibilities-approvals-handoffs.md), [kho](warehouse-workflows.md), [giao hàng và tài chính](delivery-finance-workflows.md), [nhân sự](hr-workflows.md). [Kịch bản và kết quả](demo-scenarios.md) xác định thứ tự và số đối chiếu; [tiêu chí nghiệm thu](demo-acceptance.md) xác định điều kiện đạt. Tài liệu này giữ quy tắc; các giá trị của bộ kiểm cũ nằm trong [dữ liệu mẫu](demo-data/baseline.json) và ba bảng CSV cùng thư mục. Theo B28, đây là mẫu đối chiếu giả lập có cả kết quả tính và xác nhận giả định, không là bộ nguồn khởi tạo. [Rà soát nguồn](database/source-review.md) và [chính sách nạp](demo-data/source-policy.json) chặn nạp trực tiếp; nguồn nghiệp vụ tương lai phải theo chứng từ/bản/người/mốc của thiết kế dữ liệu.
 
 ## Phạm vi và trạng thái quyết định
 
@@ -126,7 +126,7 @@ Bảng 50 người giữ cơ cấu đã đề xuất: 1 giám đốc, 5 kinh doa
 
 E016–E019 đủ kỹ năng tạo hình/hoàn thiện ngói; E020–E022 đủ kỹ năng Terrazzo; E023–E040 đóng gói/hỗ trợ. Ghi đào tạo an toàn giả lập có hiệu lực; không tự điều E023 thay người vận hành khi chưa có kỹ năng. Nhập thay lưu người nhập; xác nhận do quản lý khác người có công. Công E001 có HR kiểm tra độc lập; các khoản tự hưởng/chưa đủ thẩm quyền giữ chờ theo B24, không tự duyệt vì chức danh.
 
-Mỗi người/ngày có loại công và phút thực làm; ngoại lệ E023 nghỉ hưởng lương 22/09 và không lương 23/09 đã có nguồn riêng. E023 có 192 giờ làm, 8 phép hưởng lương, 8 không lương; người còn lại có 208 giờ làm giả lập. Lịch không tự trở thành công; 1.300 dòng là kết quả xác nhận mô phỏng có nguồn, khi trình diễn phải có bước ghi/xác nhận.
+Mỗi người/ngày có loại công và phút thực làm; ngoại lệ E023 nghỉ hưởng lương 22/09 và không lương 23/09 đã có nguồn riêng. E023 có 192 giờ làm, 8 phép hưởng lương, 8 không lương; người còn lại có 208 giờ làm giả lập. Lịch không tự trở thành công; 1.300 dòng được sinh cho bộ kiểm theo lịch/tình huống; mã người xác nhận chưa kèm chứng cứ công độc lập. Không dùng các dòng này để tự xác nhận đủ công. Khi chuẩn bị nguồn trình diễn phải có dữ kiện công và hồ sơ ghi/xác nhận riêng.
 
 Phép đầu demo mỗi người 4.800 phút = 10 ngày tại mốc; không phát sinh thêm quyền phép trong tháng mô phỏng, không hết hạn/chuyển phép trong bộ này. Đây là số dư mô phỏng riêng, không khẳng định quyền phép năm pháp lý. Duyệt nghỉ giữ 480 phút; thực nghỉ/chốt công chuyển sang đã dùng 480; E023 còn 4.320 phút = 9 ngày, không trừ hai lần. Không lương không trừ phép. Xin/hủy phần chưa nghỉ giải phóng đúng giữ; không xếp người vào giờ nghỉ. Làm thêm không có trong cơ sở; cần chính sách/căn cứ riêng trước tính thu nhập làm thêm.
 
@@ -134,7 +134,7 @@ Lương cơ sở/phụ cấp có trong employees.csv, hiệu lực 01/09. Công 
 
 Tổng thu nhập trước khoản bắt buộc của 50 người là 493.360.000 đồng. Dòng E001 giữ chờ kiểm tra/quyết định độc lập do chính là giám đốc; chưa tự kết luận bảng tổng đã được duyệt toàn bộ. Các dòng khác có trạng thái duyệt giả lập. Chỉ trả E023 ở kịch bản chính; còn 485.360.000 đồng thu nhập trước khoản bắt buộc chưa trả, trong đó dòng E001 vẫn chờ quyết định. Tách tổng đã tính, đã duyệt và thực trả; không đánh dấu cả 50 người đã trả.
 
-Nguồn nhân công của bảy người E016–E022 là 72,8 triệu thu nhập đã đối chiếu; 1.456 giờ hưởng lương. Ngói 240 giờ = 12 triệu; Terrazzo 30 giờ = 1,5 triệu; 1.186 giờ còn lại = 59,3 triệu là hỗ trợ/việc khác của nhóm, không tự dồn vào hai lệnh. Người khác và phụ cấp không thuộc nguồn trực tiếp này; không suy ra lãi ròng toàn doanh nghiệp chỉ từ lãi gộp hai đơn. Khi kỳ chưa chốt, giá thành còn tạm tính. Nguồn giả lập đã chốt cho bảy người cho phép số đối chiếu giá thành; không cần chi lương xong mới có chi phí, và chi lương không cộng lại vào lệnh.
+Nguồn nhân công của bảy người E016–E022 là 72,8 triệu thu nhập đã đối chiếu; 1.456 giờ hưởng lương. Ngói 240 giờ = 12 triệu; Terrazzo 30 giờ = 1,5 triệu; 1.186 giờ còn lại = 59,3 triệu là hỗ trợ/việc khác của nhóm, không tự dồn vào hai lệnh. Người khác và phụ cấp không thuộc nguồn trực tiếp này; không suy ra lãi ròng toàn doanh nghiệp chỉ từ lãi gộp hai đơn. Khi kỳ chưa chốt, giá thành còn tạm tính. Bộ kiểm giả định nguồn bảy người đã chốt để đối chiếu giá thành; giả định này chưa có đủ hồ sơ chốt để nạp như nguồn hợp lệ; không cần chi lương xong mới có chi phí, và chi lương không cộng lại vào lệnh.
 
 ## Quyền thao tác theo người và phạm vi
 
