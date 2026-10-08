@@ -826,6 +826,18 @@ Kho sở hữu sổ lượng, QC kết luận/khóa/giải phóng, sản xuất 
 
 **Trạng thái:** Đã giải thích và đối chiếu bảng/mã với từ điển; không thay 91 bảng/1.139 trường hoặc dữ liệu mẫu, không lập trình. Phân loại diễn giải thiết kế hiện hành, không là yêu cầu nghiệp vụ mới đã được anh duyệt. Lịch sử kiểm tra lưu kết quả rà tài liệu; chưa kiểm các biểu mẫu/quyền trên ERP thật.
 
+## Trao đổi ngày 08/10/2026 — 91 bảng có quá nhiều với 50 người không?
+
+**Anh hỏi:** “với một doanh nghiệp 50 người thì 91 bảng có là quá nhiều không?”
+
+**Em đánh giá:** 50 nhân viên không quyết định số bảng. Số bảng phản ánh các loại thông tin, quan hệ, phiên bản và lịch sử cần lưu; hiệu năng phụ thuộc lượng giao dịch, truy vấn/chỉ mục, số truy cập đồng thời và cách ghi. 91 bảng không tự gây chậm, nhưng cũng không chứng minh mô hình đã tối ưu. Chưa có DB/truy vấn thực để kết luận hiệu năng.
+
+Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao nhiều đợt, QC theo phần lô, công/lương và giá thành, nhiều bảng đầu/dòng/sự kiện là có lý do. Tuy nhiên thiết kế hiện tại ưu tiên bao phủ và kiểm soát đầy đủ; các lớp chứng từ/dòng/liên kết chung, quản lý bản/bộ mô phỏng/định danh và chuỗi nguồn/phân bổ/chốt giá thành cần được rà mức cần thiết cho demo tinh gọn. Có căn cứ để kiểm tra độ phức tạp, chưa có căn cứ để coi tất cả 91 bảng là tối thiểu hoặc khẳng định bảng cụ thể có thể bỏ an toàn.
+
+**Khuyến nghị của em, chưa là quyết định thay thiết kế:** Rà từng bảng theo giữ/gộp/chuyển sang truy vấn hoặc cấu trúc phù hợp/để giai đoạn sau; chỉ gộp khi cùng nguồn, vòng đời, quyền, quan hệ và không mất lịch sử/ràng buộc. Không gộp tiền với công nợ, kế hoạch với thực tế, hoặc kết quả QC với lượng kho chỉ để giảm số bảng. Nếu một cấu trúc giữ đủ nghiệp vụ với ít lớp hơn thì ưu tiên cấu trúc đó; không đặt trước chỉ tiêu 40/60/70 bảng rồi cắt cho đủ.
+
+**Trạng thái:** Đã đánh giá từ thiết kế hiện hành và lưu trao đổi; chưa thực hiện rà soát tinh gọn từng bảng, không đổi 91 bảng/1.139 trường, phạm vi hoặc dữ liệu. Đây là tư vấn theo câu hỏi, không phải anh đã duyệt gộp/bỏ/hoãn tính năng. Chưa lập trình hoặc kiểm hiệu năng ERP.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.
