@@ -22,6 +22,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Phương án ngày 08/10/2026 đã được anh duyệt cho demo (B24); còn cần cụ thể hóa dữ liệu/quy tắc mẫu trước yêu cầu chức năng và xây ứng dụng.
 
+[Bộ dữ liệu và quy tắc nghiệp vụ demo](docs/demo-business-rules.md), [kịch bản và kết quả đối chiếu](docs/demo-scenarios.md), [tiêu chí nghiệm thu](docs/demo-acceptance.md) cụ thể hóa mô hình trước thiết kế tính năng. [Dữ liệu giả lập V1](docs/demo-data/README.md) có danh mục, 50 nhân sự, công/lương, lịch/lô, giao dịch kho và tiền với nguồn kiểm chứng; tham số mới chờ anh duyệt, không là dữ liệu Nasaki thật. [Lịch sử kiểm tra](docs/build-history.md) hiện chỉ ghi kiểm tra bộ dữ liệu/tài liệu, chưa có build hoặc test ứng dụng ERP.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -38,7 +40,7 @@ Anh chia sẻ ý tưởng và yêu cầu bằng ngôn ngữ nghiệp vụ, khôn
 
 Trước khi chỉnh sửa, chạy build/test hoặc thực hiện thao tác làm thay đổi dự án, Codex phải đọc README này và tham khảo lịch sử thay đổi, lịch sử build/test hiện có để hiểu logic nghiệp vụ, quyết định đã thống nhất và ngữ cảnh công việc. Hướng dẫn thực hiện nằm trong [AGENTS.md](AGENTS.md).
 
-Lịch sử commit không thay thế lịch sử build: một commit không chứng minh mã đã build hoặc test thành công. Hiện kho chỉ có tài liệu, chưa có kết quả build/test được ghi nhận trong kho. Khi có build/test thực tế, ghi kết quả tóm tắt trong `docs/build-history.md`, kèm phiên bản mã được kiểm tra, lệnh chạy và liên kết CI nếu có; không lưu tệp build hoặc log thô vào Git.
+Lịch sử commit không thay thế lịch sử build: một commit không chứng minh mã đã build hoặc test thành công. Hiện kho có tài liệu, dữ liệu giả lập và công cụ đối chiếu bộ mẫu; chưa có ứng dụng ERP hoặc kết quả build/test ứng dụng. Kiểm tra bộ mẫu được ghi riêng trong lịch sử kiểm tra, không thay bằng chứng ứng dụng hoạt động. Khi có build/test thực tế, ghi kết quả tóm tắt trong `docs/build-history.md`, kèm phiên bản mã được kiểm tra, lệnh chạy và liên kết CI nếu có; không lưu tệp build hoặc log thô vào Git.
 
 ## Nhật ký trao đổi
 
@@ -735,6 +737,24 @@ Kịch bản nối P06/M03: đơn 10.000 ngói, tám lô bắt đầu 8.000, 7.8
 **Em — bước tiếp theo đề xuất:** Cụ thể hóa bộ nghiệp vụ và dữ liệu demo: danh mục sản phẩm/biến thể/vật tư, khách/nhà cung cấp, 50 nhân sự giả lập và người dùng/quyền; lịch và chính sách mẫu tinh gọn, tiêu chí chất lượng giả lập; giao dịch liên hoàn có nguồn chứng từ cho ngói và Terrazzo; kết quả mong đợi và tình huống ngoại lệ để nghiệm thu. Mục tiêu là mỗi tình huống xác định được ai làm, nhập gì, điều kiện chuyển bước và kết quả đúng. Sau đó chuyển thành danh sách chức năng và màn hình rồi mới lập trình; kế toán chuyên sâu vẫn để sau.
 
 **Trạng thái lần này:** Ghi nhận phê duyệt và hướng tiếp theo trong tài liệu; chưa tạo bộ dữ liệu mới hoặc xây ứng dụng. Kiểm tra thay đổi tài liệu và tính nhất quán trạng thái duyệt; kho chưa có mã ứng dụng hay lịch sử build/test.
+
+### 08/10/2026 — Cụ thể hóa kỹ bộ dữ liệu và quy tắc demo
+
+**Anh:**
+
+> đồng ý, làm kĩ phần này cho anh, cấm làm qua loa vì phần này quan trọng
+
+**Yêu cầu đã xác nhận:** B25: thực hiện kỹ bước chuẩn bị bộ dữ liệu, quy tắc và tình huống trước chuyển sang chức năng/màn hình. Giữ mô hình tinh gọn, giả lập để tư vấn, không yêu cầu anh cung cấp chuyên môn Nasaki; không tự coi mọi chính sách mới là đã duyệt hoặc bắt đầu lập trình ERP.
+
+**Em — kết quả:** Tạo bộ quy tắc, kịch bản và tiêu chí nghiệm thu, kèm hai tệp JSON và ba CSV có nguồn cụ thể. Đủ 50 người đúng cơ cấu, 17 vai trò tài khoản; lịch tháng 09/2026 giả lập 26 ngày/208 giờ, 1.300 dòng người/ngày, 76 khoảng công trực tiếp; tám lô ngói và một Terrazzo, lịch người/máy/chỗ giữ, QC và thực tiêu hủy, 61 biến động kho. Nối giá/chiết khấu/cọc, ba bên mua/trả/nhận, tư vấn diện tích, nguồn vật tư/công/chi phí chung, thu/phân bổ/chi, công/phép/thu nhập/ứng mẫu; không thêm phòng ban hoặc kế toán chuyên sâu.
+
+Giữ kết quả ngói 840 viên tồn/5,04 triệu, lãi gộp 120 triệu. Terrazzo làm sẵn 500 bắt đầu → 485 đạt/15 lỗi thực xử lý, bán 400 còn 85. Giờ trực tiếp được dựng theo người/khoảng: N 240 giờ/12 triệu, T 30 giờ/1,5 triệu; không dùng giờ người thành giờ máy hoặc cộng trùng nguồn lương. T có giá thành nguồn 4.354.167, giá vốn 3.591.066, tồn 763.101. Hai đơn doanh thu 196 triệu, giá vốn 63.591.066, lãi gộp 132.408.934 trước chi phí khác; kho cuối giá trị 6.403.101, ngân hàng 686,7 triệu, còn nợ xi măng 1,4 triệu và nguồn xưởng chưa trả 6 triệu riêng.
+
+Lương 50 người tính được 493,36 triệu trước khoản bắt buộc chưa mô phỏng; chỉ E023 thực ứng/chi minh họa 8 triệu, còn 485,36 triệu thu nhập chưa trả, dòng CEO giữ chờ kiểm tra độc lập. Không gọi là lương pháp lý/đã trả đủ hoặc lấy lãi gộp thành lãi ròng. Ngưỡng, lịch, dung sai QC/đơn giá/chính sách mới đều có nhãn đề xuất. Có mười kịch bản S01–S10 và 56 tiêu chí A01–A32/X01–X24, gồm mẫu/đổi hủy, khóa lô/truy đã giao, trả bán/chờ hoàn, sửa công, vật tư thiếu/lỗi/thừa, thiếu người/chờ máy, ủy quyền và khách xuất khẩu chưa đủ điều kiện.
+
+**Kiểm tra:** Công cụ Python chuẩn tính lại dữ liệu nguồn, công/lương, lịch, lượng/giá trị từng biến động/lô, phân bổ và số cuối; 7.020 điều kiện đối chiếu đạt. Bảy bản sao cố ý làm sai đều bị phát hiện; dữ liệu gốc giữ nguyên. Kiểm tra liên kết tài liệu và định dạng Git. [Lịch sử kiểm tra](docs/build-history.md) ghi phạm vi và giới hạn: đây là kiểm tra bộ mẫu, chưa có ERP/build/test ứng dụng, chưa thử quyền/đồng thời/lưu dữ liệu trong ứng dụng.
+
+**Trạng thái:** Hoàn thành bộ đề xuất cụ thể để anh xem và chỉnh; S01/S02 có dữ liệu tệp đầy đủ ở mức ảnh chụp xác nhận, S03–S10 là nhánh có mốc/đầu vào/kết quả trong tài liệu và 24 trường hợp dạng JSON, cần ánh xạ thành hồ sơ ứng dụng khi phát triển. Bước kế tiếp sau duyệt bộ mẫu là yêu cầu chức năng và thiết kế màn hình; vòng này chưa thực hiện bước đó.
 
 ## Các nội dung chưa được thống nhất
 

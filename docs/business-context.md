@@ -48,8 +48,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B22 | Rà soát lại nhân sự cho phù hợp Nasaki, không áp dụng toàn bộ nghiệp vụ doanh nghiệp lớn chỉ vì yêu cầu kiểm tra còn thiếu. | Yêu cầu ngày 04/10/2026; giữ tổ chức tinh gọn và mô hình demo, không xác nhận cơ cấu nhân sự thực tế hoặc phê duyệt mọi đề xuất bổ sung. |
 | B23 | Anh giao Codex tự lập đề xuất cho hoạt động tiếp theo rồi anh duyệt. | “đồng ý, em tự tạo đề xuất đi sau đó anh sẽ duyệt”, ngày 08/10/2026; cho phép chuẩn bị phương án trách nhiệm/bàn giao cùng điểm chất lượng và kịch bản, chưa duyệt nội dung hoặc yêu cầu lập trình. |
 | B24 | Anh duyệt phương án trách nhiệm, phê duyệt, bàn giao, điểm kiểm soát chất lượng và kịch bản liên hoàn trong tài liệu ngày 08/10/2026. | “duyệt, bước tiếp theo là gì?”, ngày 08/10/2026; áp dụng cho demo, không xác nhận quy trình thực tế Nasaki, mọi đề xuất cũ hoặc giao lập trình. |
+| B25 | Anh đồng ý thực hiện kỹ bộ dữ liệu, quy tắc và tình huống demo trước chức năng/màn hình; nhấn mạnh không làm qua loa. | “đồng ý, làm kĩ phần này cho anh, cấm làm qua loa vì phần này quan trọng”, ngày 08/10/2026; giao chuẩn bị và đối chiếu kỹ, tham số mới vẫn là đề xuất cho demo, không giao lập trình ERP ngay. |
 
-Các mã B01–B24 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B25 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -205,7 +206,7 @@ Thông số lập kế hoạch giả lập: mỗi luồng tạo hình tối đa 
 
 Tỷ lệ lỗi dùng để dự kiến: ngói 2%, Terrazzo 3%; tỷ lệ đạt tương ứng 98% và 97%. Đây là tham số giả lập, không phải tỷ lệ lỗi Nasaki hoặc kết quả chắc chắn. Lượng thực tế phải nhập từ kết quả sản xuất/kiểm tra, không tự sinh thành phẩm đạt theo tỷ lệ kế hoạch.
 
-Người kiểm tra chất lượng ghi kết quả; quản lý sản xuất quyết định phương án làm lại hoặc loại bỏ dựa trên đánh giá chất lượng; kho chỉ nhập lượng được xác nhận đạt. Hàng chờ xử lý/hàng lỗi nằm ở trạng thái hoặc khu vực riêng trong cùng một kho. Làm lại tạo bản ghi riêng, tiêu thụ thêm vật tư/công nếu có và kiểm tra lại; không cộng hàng làm lại hai lần. Đề xuất chưa bán hạ loại trong tình huống cơ sở, nhưng giữ tình huống đó trong danh sách có thể bổ sung.
+Người kiểm tra chất lượng ghi kết quả; quản lý sản xuất đánh giá và điều phối phương án làm lại hoặc loại bỏ; theo B24, giám đốc duyệt phương án xử lý chính thức có biến động hàng/lô, chi phí hoặc ảnh hưởng cam kết. Kho chỉ nhập lượng được xác nhận đạt. Hàng chờ xử lý/hàng lỗi nằm ở trạng thái hoặc khu vực riêng trong cùng một kho. Làm lại tạo bản ghi riêng, tiêu thụ thêm vật tư/công nếu có và kiểm tra lại; không cộng hàng làm lại hai lần. Đề xuất chưa bán hạ loại trong tình huống cơ sở, nhưng giữ tình huống đó trong danh sách có thể bổ sung.
 
 Giá thành demo sẽ tập hợp vật tư thực dùng, nhân công và chi phí chung được phân bổ theo quy tắc riêng. Với tình huống lỗi thông thường không thu hồi, đề xuất phân bổ chi phí lô cho lượng đạt; chi phí làm lại bổ sung có chứng cứ, không cộng cùng một chi phí hai lần. Các trường hợp lỗi bất thường, giá trị phế liệu hoặc bán hạ loại cần quy tắc riêng khi phân tích tài chính; không dùng mô hình này làm kết luận kế toán pháp định.
 
@@ -349,7 +350,7 @@ Theo B23, Codex lập [phương án xuyên bộ phận](responsibilities-approva
 
 Bốn nhóm đã duyệt: ít cấp quyết định và một đầu mối theo nguồn; kiêm nhiệm/nhập thay có kiểm soát và ủy quyền giới hạn; chất lượng khóa ngay/giải phóng có căn cứ; bàn giao đúng phiên bản/tiếp nhận từng phần và dùng kịch bản chuẩn bị dữ liệu. Không đặt thêm hạn mức tiền, phòng ban hoặc giám đốc chức năng; không cho giám đốc thay kết luận chất lượng để giao hàng khóa. Quản lý sản xuất điều phối xử lý P05, giám đốc duyệt phương án xử lý chính thức theo quy trình kho. Đây là quy tắc cho demo, không xác nhận thẩm quyền thực tế Nasaki hoặc mọi đề xuất cũ.
 
-Bước tiếp theo được Codex đề xuất: cụ thể hóa danh mục và dữ liệu mẫu, người/tài khoản/quyền, lịch/chính sách mẫu, tiêu chí chất lượng giả lập và bộ giao dịch ngói/Terrazzo có kết quả mong đợi, trước khi chuyển sang yêu cầu chức năng và màn hình. Chưa tạo bộ dữ liệu này trong lần ghi nhận phê duyệt. Giữ kế toán chuyên sâu để sau; chưa thiết kế/lập trình hoặc chạy build/test, chưa kết luận phân tích toàn ERP đã hoàn tất.
+Theo B25, đã cụ thể hóa [bộ dữ liệu và quy tắc](demo-business-rules.md), [kịch bản và kết quả](demo-scenarios.md), [tiêu chí nghiệm thu](demo-acceptance.md) cùng [tệp dữ liệu giả lập](demo-data/README.md). Mốc tháng 09/2026 giả lập: đủ 50 người, 17 vai trò tài khoản, 1.300 dòng công, 76 khoảng trực tiếp, chín lô và 61 biến động kho. Ngói giữ nguồn/kết quả trước; Terrazzo bổ sung đến bán/thu, 30 giờ trực tiếp có nguồn 1,5 triệu. Các tham số cụ thể mới chờ anh duyệt; không là quy trình Nasaki thật. Đã kiểm tra dữ liệu, chưa kiểm chứng ERP. Giữ kế toán chuyên sâu để sau; chưa thiết kế màn hình/lập trình ứng dụng, chưa kết luận phân tích toàn ERP đã hoàn tất.
 
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
@@ -380,16 +381,16 @@ Anh có thể trả lời riêng cho ngói và Terrazzo, theo cách thực tế 
 
 ## Các điểm còn mở
 
-- Mẫu, màu, kích thước và quan hệ biến thể; mã chuẩn của sản phẩm có nhiều cách viết.
+- Duyệt/điều chỉnh danh mục biến thể, mã chuẩn và tiêu chí QC giả lập đã cụ thể hóa trong bộ V1; thông số thật Nasaki chưa được xác minh.
 - Điều kiện nhận đơn và cho phép thực hiện, người bàn giao, tham số giá, cam kết ngày giao và tiêu chí ưu tiên.
-- Người đại diện khách, cách duyệt mẫu và tiêu chuẩn đối chiếu; duyệt hoặc chỉnh đề xuất đổi/hủy đơn đặt riêng, điều kiện cọc và quyết toán.
+- Duyệt/điều chỉnh quy tắc đại diện khách, mẫu, cọc, đổi/hủy và quyết toán cụ thể trong bộ V1; không tự xem quy tắc minh họa là hợp đồng thực tế.
 - Xem xét/chỉnh mô hình sản xuất giả lập P01–P06; số liệu thực tế chưa có không chặn phân tích demo. Thông số từng nguồn lực và bộ dữ liệu sẽ được Codex đề xuất cụ thể khi phát triển yêu cầu, không yêu cầu anh cung cấp công thức sản xuất thật.
 - Xem xét/chỉnh [quy trình kho chi tiết](warehouse-workflows.md) và mô hình mua hàng M01–M03; hoàn thiện danh mục/bộ dữ liệu demo, đối chiếu giao hàng/tài chính và quy tắc giá trị. Chín nhóm RK01–RK09 đã có phương án cụ thể, chưa có kiểm chứng phần mềm.
 - Xem xét/chỉnh [giao hàng và tài chính cơ sở](delivery-finance-workflows.md), gồm giao từng đợt, cọc/thu/phân bổ/công nợ, trả/hoàn tiền, giá thành/giá vốn và báo cáo quản trị; chưa được kiểm chứng phần mềm.
 - Tài chính chi tiết, kế toán, thuế/hóa đơn, ngoại tệ/xuất khẩu, tài sản, vay và ngân sách giữ để phân tích sau theo B21, không tự loại khỏi phạm vi. Nguồn giờ/chi phí nhân công đã có phương án cơ sở trong nhân sự, cần bộ dữ liệu để đối chiếu.
 - Xem xét/chỉnh [nghiệp vụ nhân sự](hr-workflows.md), cụ thể hóa chính sách và dữ liệu mẫu, kiêm nhiệm, quyền/phê duyệt và bàn giao xuyên bộ phận; chưa có kiểm chứng ứng dụng.
 - Tình huống thực tế và số liệu thể hiện mức độ ảnh hưởng của khó khăn; các chỉ số để đánh giá chuyển đổi số.
-- Bộ dữ liệu demo, mức sử dụng đồng thời, cách đối tác dùng thử, mốc trình diễn và chi phí vận hành.
+- Duyệt hoặc điều chỉnh các tham số trong bộ demo V1 đã cụ thể hóa; tạo hồ sơ dạng dữ liệu cho các nhánh ngoại lệ khi ánh xạ sang ứng dụng. Mức sử dụng đồng thời, cách đối tác dùng thử, mốc trình diễn và chi phí vận hành còn cần xác định.
 
 ## Quy tắc duy trì hồ sơ
 

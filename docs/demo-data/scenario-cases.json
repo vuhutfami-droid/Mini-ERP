@@ -1,0 +1,452 @@
+{
+  "dataset_id": "NASAKI-DEMO-CASES-V1",
+  "fictional": true,
+  "cases": [
+    {
+      "case_id": "X01",
+      "scenario": "S03",
+      "reset_to": "custom order approved; sample not yet approved; no mass issue",
+      "action": "start_mass_production",
+      "inputs": {
+        "required_deposit_vnd": 600000,
+        "received_deposit_vnd": 500000,
+        "customer_sample_approved": false
+      },
+      "expected": {
+        "allowed": false,
+        "missing_deposit_vnd": 100000,
+        "state": "waiting_for_sample_and_deposit",
+        "mass_stock_issue_qty": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X02",
+      "scenario": "S03",
+      "reset_to": "independent custom job after 120 completed and QC",
+      "action": "complete_custom_sale",
+      "inputs": {
+        "start_qty": 120,
+        "good_qty": 116,
+        "reject_qty": 4,
+        "order_qty": 100,
+        "price_vnd": 22000,
+        "deposit_vnd": 600000,
+        "cost_sources_complete": false
+      },
+      "expected": {
+        "remaining_custom_good_qty": 16,
+        "revenue_vnd": 2200000,
+        "receivable_vnd": 1600000,
+        "cost_status": "provisional",
+        "auto_convert_to_standard": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X03",
+      "scenario": "S04",
+      "reset_to": "custom sample V1 approved, no mass production issue",
+      "action": "request_change",
+      "inputs": {
+        "old_version": "V1",
+        "requested_version": "V2",
+        "deposit_vnd": 600000
+      },
+      "expected": {
+        "affected_work_state": "waiting_for_reapproval",
+        "keep_old_version": true,
+        "automatic_cancel_fee_vnd": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X04",
+      "scenario": "S04",
+      "reset_to": "independent custom order 100, started 30, delivered 0",
+      "action": "request_cancel",
+      "inputs": {
+        "order_qty": 100,
+        "started_qty": 30,
+        "accepted_delivery_qty": 0,
+        "deposit_vnd": 600000
+      },
+      "expected": {
+        "not_started_qty": 70,
+        "not_delivered_qty": 100,
+        "deposit_state": "awaiting_settlement",
+        "automatic_reversal_of_consumed_material": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X05",
+      "scenario": "S05",
+      "reset_to": "S01 after DEL-N-01 accepted, before DEL-N-02",
+      "action": "lock_lot",
+      "inputs": {
+        "warehouse_qty": 4840,
+        "good_qty": 4840,
+        "order_reserved_qty": 4000,
+        "locked_qty": 920,
+        "locked_reserved_qty": 920,
+        "already_delivered_from_lot_qty": 60
+      },
+      "expected": {
+        "warehouse_qty": 4840,
+        "usable_qty": 3920,
+        "valid_reserved_qty": 3080,
+        "available_qty": 840,
+        "order_shortfall_qty": 920,
+        "trace_delivered_qty": 60
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X06",
+      "scenario": "S05",
+      "reset_to": "X05 locked N-04",
+      "action": "ceo_approve_ordinary_shipment",
+      "inputs": {
+        "actor_id": "E001",
+        "lot_locked": true,
+        "qc_release_evidence": false
+      },
+      "expected": {
+        "allowed": false,
+        "lock_remains": true,
+        "return_to_warehouse_qty": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X07",
+      "scenario": "S06",
+      "reset_to": "base complete, no prior returns",
+      "action": "receive_return_before_qc",
+      "inputs": {
+        "good_qty": 840,
+        "returned_qty": 500,
+        "qc_done": false
+      },
+      "expected": {
+        "physical_qty": 1340,
+        "usable_qty": 840,
+        "automatic_refund_vnd": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X08",
+      "scenario": "S06",
+      "reset_to": "X07; 500 returned good; commercial credit approved",
+      "action": "credit_then_refund",
+      "inputs": {
+        "base_bank_vnd": 686700000,
+        "base_tile_revenue_vnd": 180000000,
+        "base_tile_cogs_vnd": 60000000,
+        "base_tile_qty": 840,
+        "returned_qty": 500,
+        "sale_unit_price_vnd": 18000,
+        "original_unit_cogs_vnd": 6000
+      },
+      "expected": {
+        "tile_revenue_vnd": 171000000,
+        "tile_cogs_vnd": 57000000,
+        "tile_gross_margin_vnd": 114000000,
+        "tile_inventory_qty": 1340,
+        "tile_inventory_value_vnd": 8040000,
+        "refund_due_vnd_before_payment": 9000000,
+        "bank_before_refund_vnd": 686700000,
+        "bank_after_refund_vnd": 677700000
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X09",
+      "scenario": "S06",
+      "reset_to": "independent original shipment 200; prior legitimate return 20",
+      "action": "receive_excess_return",
+      "inputs": {
+        "original_shipment_qty": 200,
+        "prior_return_qty": 20,
+        "new_return_qty": 190
+      },
+      "expected": {
+        "allowed_legitimate_return": false,
+        "remaining_returnable_qty": 180,
+        "excess_qty": 10,
+        "physical_receipt_state": "quarantine_if_actually_received"
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X10",
+      "scenario": "S07",
+      "reset_to": "E023 closed payroll; 8 million paid in simple model",
+      "action": "change_unpaid_day_to_paid_leave",
+      "inputs": {
+        "base_salary_vnd": 7800000,
+        "scheduled_minutes": 12480,
+        "changed_minutes": 480,
+        "old_income_vnd": 8000000,
+        "already_paid_vnd": 8000000,
+        "leave_remaining_minutes": 4320
+      },
+      "expected": {
+        "extra_income_vnd": 300000,
+        "new_income_vnd": 8300000,
+        "extra_remaining_before_mandatory_deductions_vnd": 300000,
+        "leave_remaining_minutes": 3840,
+        "automatic_bank_change_vnd": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X11",
+      "scenario": "S08",
+      "reset_to": "base opening only; first PO-N receipt",
+      "action": "receive_partial_defective",
+      "inputs": {
+        "opening_cement_qty": 1500,
+        "reserved_other_qty": 300,
+        "received_qty": 700,
+        "reject_qty": 100,
+        "required_for_n_qty": 2400
+      },
+      "expected": {
+        "physical_cement_qty": 2200,
+        "usable_cement_qty": 2100,
+        "available_for_n_qty": 1800,
+        "n_shortfall_qty": 600,
+        "auto_accept_rejected_payable": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X12",
+      "scenario": "S08",
+      "reset_to": "separate branch first receipt only or PO already complete",
+      "action": "receive_excess_or_late",
+      "inputs": {
+        "excess_cement_qty": 50,
+        "received_usable_for_n_if_late_qty": 1900,
+        "cement_per_full_lot_qty": 300
+      },
+      "expected": {
+        "excess_state": "awaiting_decision",
+        "max_full_lots_by_cement_only": 6,
+        "full_job_material_ready": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X13",
+      "scenario": "S09",
+      "reset_to": "before 07/09 form; worker E016 on approved leave",
+      "action": "assign_or_record_missing_worker",
+      "inputs": {
+        "remaining_qualified_workers": 3,
+        "direct_minutes_each": 450,
+        "replacement_id": "E023",
+        "replacement_skill": "packing_support"
+      },
+      "expected": {
+        "actual_team_direct_minutes": 1350,
+        "unqualified_replacement_allowed": false,
+        "allow_planned_time_as_actual": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X14",
+      "scenario": "S09",
+      "reset_to": "delegation E045 only PO-N, 04 through 05/09",
+      "action": "approve_on_06_september",
+      "inputs": {
+        "actor_id": "E045",
+        "scope": "PO-CEM-N",
+        "amount_limit_vnd": 2400000,
+        "valid_to": "2026-09-05",
+        "action_date": "2026-09-06"
+      },
+      "expected": {
+        "allowed": false,
+        "prior_valid_approvals_preserved": true,
+        "automatic_payroll_access": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X15",
+      "scenario": "S10",
+      "reset_to": "new export inquiry, no confirmed terms",
+      "action": "complete_export",
+      "inputs": {
+        "customer_id": "CUSTOMER-X",
+        "fx_terms_confirmed": false,
+        "tax_terms_confirmed": false
+      },
+      "expected": {
+        "can_save_inquiry": true,
+        "can_complete_export": false,
+        "state": "needs_clarification",
+        "automatic_fx_rate": null
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X16",
+      "scenario": "warehouse",
+      "reset_to": "independent variant; 400 available no pending holds",
+      "action": "two_holds_of_300",
+      "inputs": {
+        "available_qty": 400,
+        "first_request_qty": 300,
+        "second_request_qty": 300
+      },
+      "expected": {
+        "first_success_qty": 300,
+        "second_full_request_allowed": false,
+        "available_after_first_qty": 100,
+        "second_shortfall_qty": 200
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X17",
+      "scenario": "finance",
+      "reset_to": "60 million unused deposit and sufficient sale debt",
+      "action": "two_allocations_of_60_million",
+      "inputs": {
+        "receipt_vnd": 60000000,
+        "first_request_vnd": 60000000,
+        "second_request_vnd": 60000000
+      },
+      "expected": {
+        "total_allocated_vnd": 60000000,
+        "second_request_allowed": false,
+        "receipt_cash_change_vnd": 0
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X18",
+      "scenario": "shared",
+      "reset_to": "one previously confirmed source event",
+      "action": "confirm_same_source_again",
+      "inputs": {
+        "same_source_key": true,
+        "prior_confirmed": true
+      },
+      "expected": {
+        "new_ledger_entries": 0,
+        "return_prior_result": true
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X19",
+      "scenario": "warehouse",
+      "reset_to": "independent material with expiry or wrong color",
+      "action": "ordinary_issue",
+      "inputs": {
+        "requested_variant": "FP04-GREY-D1",
+        "offered_variant": "FP04-BROWN-D1",
+        "locked_or_expired": true
+      },
+      "expected": {
+        "allowed": false,
+        "automatic_substitute": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X20",
+      "scenario": "shared",
+      "reset_to": "confirmed input has downstream issue; period closed",
+      "action": "reverse_or_edit",
+      "inputs": {
+        "downstream_dependencies_resolved": false,
+        "period_closed": true,
+        "reopen_approved": false
+      },
+      "expected": {
+        "allowed": false,
+        "history_preserved": true
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X21",
+      "scenario": "permissions",
+      "reset_to": "base roles",
+      "action": "read_payroll_or_self_grant",
+      "inputs": {
+        "actor_ids": [
+          "E014",
+          "E009",
+          "E048"
+        ],
+        "requested_data": "other_employee_payroll",
+        "self_grant_request": true
+      },
+      "expected": {
+        "allowed": false,
+        "export_allowed": false,
+        "sensitive_values_in_public_logs": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X22",
+      "scenario": "permissions",
+      "reset_to": "own sensitive payment request",
+      "action": "self_approve",
+      "inputs": {
+        "preparer_employee_id": "E044",
+        "beneficiary_employee_id": "E044",
+        "approver_employee_id": "E044"
+      },
+      "expected": {
+        "allowed": false,
+        "second_account_same_person_allowed": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X23",
+      "scenario": "finance",
+      "reset_to": "independent bank/customer snapshot",
+      "action": "overspend_or_cross_customer_allocate",
+      "inputs": {
+        "bank_balance_vnd": 1000000,
+        "payment_request_vnd": 1000001,
+        "payer_customer": "CUSTOMER-T",
+        "target_customer": "CUSTOMER-N"
+      },
+      "expected": {
+        "payment_allowed": false,
+        "cross_customer_allocation_allowed": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    },
+    {
+      "case_id": "X24",
+      "scenario": "shared",
+      "reset_to": "confirmation reply lost; persisted event exists",
+      "action": "retry_after_connection_loss",
+      "inputs": {
+        "reply_lost": true,
+        "same_source_key": true,
+        "persisted_event_exists": true
+      },
+      "expected": {
+        "new_ledger_entries": 0,
+        "reconcile_before_retry": true,
+        "partial_update_allowed": false
+      },
+      "status": "proposed_acceptance_case_not_application_tested"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+# Lịch sử kiểm tra dự án Mini ERP
+
+Kho chưa có ứng dụng ERP, cấu hình build hoặc CI ứng dụng. Các bản ghi dưới đây chỉ kiểm tra tài liệu và bộ dữ liệu nghiệp vụ giả lập; không chứng minh phần mềm chạy, dữ liệu được lưu trong ứng dụng hoặc phân quyền/đồng thời đã hoạt động.
+
+## Ngày 08 tháng 10 năm 2026 kiểm tra bộ dữ liệu demo V1
+
+- Thời điểm ghi nhận: 09:45 ngày 08/10/2026, Asia/Bangkok; ngày mô phỏng nghiệp vụ trong bộ là tháng 09/2026, không phải thời điểm chạy kiểm tra.
+- Nền Git: `6b5c0ef` trên `main`; kiểm tra các tệp mới/chỉnh sửa chưa commit của vòng B25. Commit chứa bản ghi này sẽ định danh phiên bản tài liệu và dữ liệu đã kiểm; không lấy commit cũ làm bằng chứng cho tệp mới.
+- Lệnh đối chiếu: `python scripts/verify-demo-data.py`.
+- Kết quả cuối: mã thoát 0; 7.020 điều kiện dữ liệu đạt. Có 50 người, 1.300 dòng công, 76 khoảng trực tiếp, 61 biến động kho và 24 nhánh ngoại lệ có đầu vào/kết quả. Đối chiếu kho cuối 6.403.101 VND, ngân hàng 686.700.000, doanh thu 196.000.000 và giá vốn 63.591.066.
+- Phạm vi: danh mục/nguồn; cơ cấu/quản lý/công và nguồn lương; trùng giờ người/máy, lịch chờ/chỗ giữ; vật tư/BOM/QC/xử lý; cấp và lấy theo lô; giá trị bình quân/làm tròn/bảo toàn nguồn; bán/thu/phân bổ/chi; kết quả cuối và phép tính ngoại lệ. Điều kiện trong fixture không thay thử nghiệm hành động trên ứng dụng.
+- Kiểm tra khả năng phát hiện sai: tạo bảy bản sao tạm, lần lượt thêm phiếu kho trùng; phân bổ cọc vượt 1 đồng; sửa số ngân hàng mong đợi 1 đồng; sửa QC vượt lượng đầu 1 viên; bỏ một nhân sự; thêm khoảng công trùng; sửa lương E023 1 đồng. Cả bảy đều bị từ chối ở điều kiện tương ứng; tệp gốc không thay đổi. Đây là kiểm tra công cụ đối chiếu và tính nhất quán dữ liệu, không phải bảy test ERP.
+- Kiểm tra tài liệu: `git diff --check` và đối chiếu đường dẫn Markdown cục bộ, tiêu chí có mã đủ A01–A32/X01–X24; rà soát số trong các bảng với tệp nguồn.
+- Giới hạn: chưa build/test ERP; chưa kiểm quyền, đồng thời, mất kết nối, lưu/mở lại trong ứng dụng; chưa có sổ giao dịch thực hiện toàn bộ các nhánh riêng, các nhánh có dữ liệu đầu vào/kết quả để dựng khi phát triển. Chính sách/dung sai/giá/lịch mới là đề xuất demo; không xác minh nội bộ Nasaki hoặc kế toán/thuế/lương pháp lý.
+
+Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng thái mã, lệnh thực chạy, kết quả và lỗi còn tồn tại. Không đổi các kiểm tra dữ liệu trên thành kết luận build ứng dụng thành công.
