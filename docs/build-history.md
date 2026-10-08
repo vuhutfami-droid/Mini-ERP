@@ -14,3 +14,12 @@ Kho chưa có ứng dụng ERP, cấu hình build hoặc CI ứng dụng. Các b
 - Giới hạn: chưa build/test ERP; chưa kiểm quyền, đồng thời, mất kết nối, lưu/mở lại trong ứng dụng; chưa có sổ giao dịch thực hiện toàn bộ các nhánh riêng, các nhánh có dữ liệu đầu vào/kết quả để dựng khi phát triển. Chính sách/dung sai/giá/lịch mới là đề xuất demo; không xác minh nội bộ Nasaki hoặc kế toán/thuế/lương pháp lý.
 
 Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng thái mã, lệnh thực chạy, kết quả và lỗi còn tồn tại. Không đổi các kiểm tra dữ liệu trên thành kết luận build ứng dụng thành công.
+
+## Ngày 08 tháng 10 năm 2026 kiểm tra yêu cầu và prototype màn hình
+
+- Thời điểm: 10:03 ngày 08/10/2026, Asia/Bangkok. Nền Git `96b34ea` trên `main`, gồm các tệp chưa commit của B26; commit chứa bản ghi định danh phiên bản được kiểm tra.
+- Đối chiếu bằng Python: 33 FR, 22 SC và đủ A01–A32/X01–X24 trong `docs/design/traceability.csv`; kiểm tra liên kết Markdown cục bộ. Không thay dữ liệu nghiệp vụ V1; không lặp kiểm tra dữ liệu cũ để gọi là kiểm thử ứng dụng mới.
+- Cú pháp: trích JavaScript của prototype vào tệp tạm và chạy `node --check /tmp/nasaki-prototype.js`, mã thoát 0.
+- Trình duyệt: chạy `python /tmp/check_nasaki_design.py` với Playwright và Chromium cục bộ. Kiểm 22 trang ở 1440×1000 và 390×844; tìm dòng/không kết quả; 18 biểu mẫu nhập/xem điều kiện/đóng Escape/phục hồi focus; ba mốc đơn ngói; chọn góc nhìn; mã trang không có; menu điện thoại. Kết quả mã thoát 0, không lỗi JavaScript hoặc cuộn ngang toàn trang. Xem ảnh tổng quan máy tính và danh sách đơn điện thoại để kiểm bố cục.
+- Giới hạn môi trường: Chromium ban đầu không khởi động trong sandbox; chạy kiểm tra cục bộ với quyền bổ sung. Chính sách trình duyệt chặn URL `file://`, nên nạp nội dung HTML trong bộ nhớ bằng `set_content`, không tắt chính sách hoặc truy cập ngoài. Chờ cập nhật menu sau đổi trang trong công cụ kiểm tra trước khi kết luận. Lần kiểm cuối đạt; chưa xác minh cách mở file trên thiết bị của người dùng.
+- `git diff --check` kiểm định dạng, gồm các tệp mới sau khi thêm vào index. Không có CI/build ERP, backend hoặc đăng nhập thật. Kiểm prototype chỉ chứng minh bố cục/điều hướng mẫu; chưa chứng minh quyền, tính tiền, lưu chống trùng, đồng thời, giao dịch nguyên tử, sao lưu hay 56 tiêu chí trong ERP thật.

@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Tiếp tục phân tích nghiệp vụ trước khi thiết kế tính năng. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem, chưa có ERP xử lý/lưu giao dịch. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -20,9 +20,11 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Nhân sự, ca làm, chấm công và lương cho demo ERP Nasaki](docs/hr-workflows.md) lưu cơ cấu 50 người đề xuất, hồ sơ/vòng đời, lịch, công, phép, lương/ứng/thực trả và giờ công nối với sản xuất. Đọc khi thao tác nhân sự hoặc nguồn nhân công; chưa đào sâu kế toán theo yêu cầu mới của anh, không coi chính sách giả lập là chính sách pháp lý thật.
 
-[Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Phương án ngày 08/10/2026 đã được anh duyệt cho demo (B24); còn cần cụ thể hóa dữ liệu/quy tắc mẫu trước yêu cầu chức năng và xây ứng dụng.
+[Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Phương án ngày 08/10/2026 đã được anh duyệt cho demo (B24); đã có bộ dữ liệu/quy tắc mẫu và đặc tả chức năng/màn hình; còn cần thiết kế kỹ thuật và xây ứng dụng.
 
-[Bộ dữ liệu và quy tắc nghiệp vụ demo](docs/demo-business-rules.md), [kịch bản và kết quả đối chiếu](docs/demo-scenarios.md), [tiêu chí nghiệm thu](docs/demo-acceptance.md) cụ thể hóa mô hình trước thiết kế tính năng. [Dữ liệu giả lập V1](docs/demo-data/README.md) có danh mục, 50 nhân sự, công/lương, lịch/lô, giao dịch kho và tiền với nguồn kiểm chứng; tham số mới chờ anh duyệt, không là dữ liệu Nasaki thật. [Lịch sử kiểm tra](docs/build-history.md) hiện chỉ ghi kiểm tra bộ dữ liệu/tài liệu, chưa có build hoặc test ứng dụng ERP.
+[Bộ dữ liệu và quy tắc nghiệp vụ demo](docs/demo-business-rules.md), [kịch bản và kết quả đối chiếu](docs/demo-scenarios.md), [tiêu chí nghiệm thu](docs/demo-acceptance.md) cụ thể hóa mô hình trước thiết kế tính năng. [Dữ liệu giả lập V1](docs/demo-data/README.md) có danh mục, 50 nhân sự, công/lương, lịch/lô, giao dịch kho và tiền với nguồn kiểm chứng; tham số mới chờ anh duyệt, không là dữ liệu Nasaki thật. [Lịch sử kiểm tra](docs/build-history.md) ghi kiểm tra bộ dữ liệu/tài liệu và bản mẫu giao diện, chưa có build hoặc test ứng dụng ERP.
+
+[Yêu cầu chức năng](docs/functional-requirements.md) gồm 33 yêu cầu, [thiết kế màn hình](docs/screen-design.md) gồm 22 loại màn hình, có [ma trận truy vết](docs/design/traceability.csv) tới 56 tiêu chí nghiệm thu. [Bản mẫu giao diện](docs/design/prototype.html) dùng để xem bố cục, lọc dòng và biểu mẫu, không ghi giao dịch hoặc thay nghiệm thu ERP.
 
 ## Cách duy trì nhật ký
 
@@ -755,6 +757,22 @@ Lương 50 người tính được 493,36 triệu trước khoản bắt buộc 
 **Kiểm tra:** Công cụ Python chuẩn tính lại dữ liệu nguồn, công/lương, lịch, lượng/giá trị từng biến động/lô, phân bổ và số cuối; 7.020 điều kiện đối chiếu đạt. Bảy bản sao cố ý làm sai đều bị phát hiện; dữ liệu gốc giữ nguyên. Kiểm tra liên kết tài liệu và định dạng Git. [Lịch sử kiểm tra](docs/build-history.md) ghi phạm vi và giới hạn: đây là kiểm tra bộ mẫu, chưa có ERP/build/test ứng dụng, chưa thử quyền/đồng thời/lưu dữ liệu trong ứng dụng.
 
 **Trạng thái:** Hoàn thành bộ đề xuất cụ thể để anh xem và chỉnh; S01/S02 có dữ liệu tệp đầy đủ ở mức ảnh chụp xác nhận, S03–S10 là nhánh có mốc/đầu vào/kết quả trong tài liệu và 24 trường hợp dạng JSON, cần ánh xạ thành hồ sơ ứng dụng khi phát triển. Bước kế tiếp sau duyệt bộ mẫu là yêu cầu chức năng và thiết kế màn hình; vòng này chưa thực hiện bước đó.
+
+### 08/10/2026 — Chuyển thành yêu cầu chức năng và thiết kế màn hình
+
+**Anh:**
+
+> chuyển thành yêu cầu chức năng và thiết kế màn hình.
+
+**Yêu cầu đã xác nhận:** B26: thực hiện bước đặc tả chức năng và màn hình từ bộ nghiệp vụ đã chuẩn bị. Giữ đủ bảy phân hệ và quy mô tinh gọn. Tham số giả lập vẫn có thể chỉnh; yêu cầu chuyển bước không tự biến mọi chính sách đề xuất thành thực tế Nasaki.
+
+**Em — kết quả:** Tạo 33 yêu cầu có người dùng, đầu vào, điều kiện, kết quả, màn hình và tiêu chí nghiệm thu; 22 loại màn hình và 13 nhóm biểu mẫu dùng chung. Thiết kế điều hướng từ đơn sang mẫu/kho/lệnh/QC/giao/tiền, liên kết công/lương tới giá thành; phân biệt duyệt, thực hiện, khách chấp nhận, ghi bán và thực thu/chi. Bao gồm đổi/hủy, khóa/truy lô, trả/hoàn, điều chỉnh kỳ, phân quyền và lưu chống trùng, chưa đào sâu kế toán hay thêm bộ máy doanh nghiệp lớn.
+
+Có prototype HTML ngoại tuyến để anh xem bố cục, chuyển trang, lọc dòng và mở biểu mẫu. Chi tiết minh họa đơn ngói có ba mốc: cuối cơ sở, sau đợt giao đầu/thu thêm 30 triệu và nhánh khóa lô. Mẫu/đổi yêu cầu và truy lô ghi nhãn nhánh riêng. Biểu mẫu chỉ xem điều kiện, không thực hiện duyệt hoặc ghi dữ liệu; chọn góc nhìn chỉ minh họa bố cục, chưa thực thi quyền.
+
+**Kiểm tra:** Đối chiếu đủ 33 FR/22 SC/56 tiêu chí trong ma trận; kiểm tra trình duyệt bản mẫu, liên kết tài liệu và định dạng Git. Phạm vi/kết quả cụ thể ghi tại [lịch sử kiểm tra](docs/build-history.md). Chưa có backend, đăng nhập thật, giao dịch lưu hoặc kiểm thử ERP; các yêu cầu về quyền/đồng thời/giao dịch an toàn còn phải xây và nghiệm thu trong ứng dụng.
+
+**Bước tiếp theo:** Anh xem cách tổ chức công việc và màn hình; sau đó thiết kế kỹ thuật (dữ liệu, trạng thái, quyền, giao dịch, sao lưu) và lập kế hoạch xây bảy phân hệ theo luồng liên hoàn. Chưa tự thêm tích hợp ngoài hoặc triển khai vận hành.
 
 ## Các nội dung chưa được thống nhất
 

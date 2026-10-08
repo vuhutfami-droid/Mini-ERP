@@ -1,6 +1,6 @@
 # Hồ sơ nghiệp vụ demo ERP Nasaki
 
-Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, chưa thiết kế tính năng hoặc chọn công nghệ.
+Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng và màn hình đề xuất theo B26; chưa chọn công nghệ hoặc xây ERP.
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
@@ -50,7 +50,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B24 | Anh duyệt phương án trách nhiệm, phê duyệt, bàn giao, điểm kiểm soát chất lượng và kịch bản liên hoàn trong tài liệu ngày 08/10/2026. | “duyệt, bước tiếp theo là gì?”, ngày 08/10/2026; áp dụng cho demo, không xác nhận quy trình thực tế Nasaki, mọi đề xuất cũ hoặc giao lập trình. |
 | B25 | Anh đồng ý thực hiện kỹ bộ dữ liệu, quy tắc và tình huống demo trước chức năng/màn hình; nhấn mạnh không làm qua loa. | “đồng ý, làm kĩ phần này cho anh, cấm làm qua loa vì phần này quan trọng”, ngày 08/10/2026; giao chuẩn bị và đối chiếu kỹ, tham số mới vẫn là đề xuất cho demo, không giao lập trình ERP ngay. |
 
-Các mã B01–B25 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+| B26 | Chuyển bộ nghiệp vụ đã chuẩn bị thành yêu cầu chức năng và thiết kế màn hình. | “chuyển thành yêu cầu chức năng và thiết kế màn hình.” ngày 08/10/2026; giao đặc tả và bản mẫu giao diện, không tự duyệt mọi tham số giả lập hoặc yêu cầu ERP đã vận hành. |
+
+Các mã B01–B26 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -350,7 +352,11 @@ Theo B23, Codex lập [phương án xuyên bộ phận](responsibilities-approva
 
 Bốn nhóm đã duyệt: ít cấp quyết định và một đầu mối theo nguồn; kiêm nhiệm/nhập thay có kiểm soát và ủy quyền giới hạn; chất lượng khóa ngay/giải phóng có căn cứ; bàn giao đúng phiên bản/tiếp nhận từng phần và dùng kịch bản chuẩn bị dữ liệu. Không đặt thêm hạn mức tiền, phòng ban hoặc giám đốc chức năng; không cho giám đốc thay kết luận chất lượng để giao hàng khóa. Quản lý sản xuất điều phối xử lý P05, giám đốc duyệt phương án xử lý chính thức theo quy trình kho. Đây là quy tắc cho demo, không xác nhận thẩm quyền thực tế Nasaki hoặc mọi đề xuất cũ.
 
-Theo B25, đã cụ thể hóa [bộ dữ liệu và quy tắc](demo-business-rules.md), [kịch bản và kết quả](demo-scenarios.md), [tiêu chí nghiệm thu](demo-acceptance.md) cùng [tệp dữ liệu giả lập](demo-data/README.md). Mốc tháng 09/2026 giả lập: đủ 50 người, 17 vai trò tài khoản, 1.300 dòng công, 76 khoảng trực tiếp, chín lô và 61 biến động kho. Ngói giữ nguồn/kết quả trước; Terrazzo bổ sung đến bán/thu, 30 giờ trực tiếp có nguồn 1,5 triệu. Các tham số cụ thể mới chờ anh duyệt; không là quy trình Nasaki thật. Đã kiểm tra dữ liệu, chưa kiểm chứng ERP. Giữ kế toán chuyên sâu để sau; chưa thiết kế màn hình/lập trình ứng dụng, chưa kết luận phân tích toàn ERP đã hoàn tất.
+Theo B25, đã cụ thể hóa [bộ dữ liệu và quy tắc](demo-business-rules.md), [kịch bản và kết quả](demo-scenarios.md), [tiêu chí nghiệm thu](demo-acceptance.md) cùng [tệp dữ liệu giả lập](demo-data/README.md). Mốc tháng 09/2026 giả lập: đủ 50 người, 17 vai trò tài khoản, 1.300 dòng công, 76 khoảng trực tiếp, chín lô và 61 biến động kho. Ngói giữ nguồn/kết quả trước; Terrazzo bổ sung đến bán/thu, 30 giờ trực tiếp có nguồn 1,5 triệu. Các tham số cụ thể mới chờ anh duyệt; không là quy trình Nasaki thật. Đã kiểm tra dữ liệu, chưa kiểm chứng ERP. Giữ kế toán chuyên sâu để sau; bước B25 chưa thiết kế màn hình/lập trình ERP, chưa kết luận phân tích toàn ERP đã hoàn tất.
+
+## Yêu cầu chức năng và màn hình hiện hành
+
+Theo B26, tạo [33 yêu cầu chức năng](functional-requirements.md), [22 loại màn hình](screen-design.md) và [ma trận truy vết](design/traceability.csv) đủ 56 tiêu chí nghiệm thu. [Prototype](design/prototype.html) giúp xem bố cục và biểu mẫu, không có backend/đăng nhập/quyền thật hoặc lưu giao dịch. Bộ nghiệp vụ V1 là cơ sở đề xuất có thể điều chỉnh; phần thiết kế kỹ thuật, xây và nghiệm thu ứng dụng còn ở bước tiếp theo. Giữ một đầu mối giám đốc/CEO, mô hình nhỏ và đủ bảy phân hệ; kế toán chi tiết vẫn để sau.
 
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 
