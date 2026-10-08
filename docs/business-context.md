@@ -1,6 +1,6 @@
 # Hồ sơ nghiệp vụ demo ERP Nasaki
 
-Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng/màn hình B26 và thiết kế dữ liệu logic B27, cập nhật tên tiếng Việt và rà soát nguồn B28; PostgreSQL là đề xuất, chưa tạo DB hoặc lập trình ERP.
+Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng/màn hình B26 và thiết kế dữ liệu logic B27, cập nhật tên tiếng Việt/rà soát nguồn B28 và tinh gọn dữ liệu B29; PostgreSQL là đề xuất, chưa tạo DB hoặc lập trình ERP.
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
@@ -53,8 +53,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B27 | Thiết kế cơ sở dữ liệu đáp ứng yêu cầu, phân nhiệm rõ, đầy đủ và gọn; chưa lập trình. | Yêu cầu ngày 08/10/2026; giao thiết kế logic/quan hệ/quy tắc, không tạo DB/SQL/migration hoặc tự triển khai. |
 
 | B28 | Tất cả bảng/trường dùng tiếng Việt và mô tả rõ; rà dữ liệu phải có nguồn, không cài để hỗ trợ chức năng hoặc dẫn quyết định. | Yêu cầu ngày 08/10/2026; đổi thiết kế, tách kết quả tổng hợp, rà/cô lập bộ kiểm giả lập. Không giao lập trình, không xác nhận bộ mẫu là nguồn thật Nasaki. |
+| B29 | Rà toàn bộ và tối ưu dữ liệu cho ít người vận hành, đủ công việc Nasaki giả lập. | Yêu cầu ngày 08/10/2026; phương án kỹ thuật 74 bảng/931 trường/402 quan hệ, giảm nhập lại; giữ bảy phân hệ, nguồn, quyền và lịch sử. Chưa lập trình. |
 
-Các mã B01–B28 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B29 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -412,6 +413,10 @@ Khi đi vào thiết kế và phát triển, dùng các quyết định và quy 
 
 ### Điều chỉnh tên và nguồn theo B28
 
-Thiết kế hiện hành dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sách trường](database/fields.csv) liệt kê đầy đủ ý nghĩa/kiểu/nguồn/phụ trách/điều kiện ghi và giá trị phân loại. 487 liên kết gồm phần người ghi chung được liệt kê tường minh; 394 tại B27 là số lịch sử trước điều chỉnh. Bỏ 21 trường kết quả hoặc trạng thái tổng hợp; giữ bản kết quả chính thức khi có nguồn/phiên bản cần đối chiếu. Tham số và quyết định có căn cứ/người khai báo/hiệu lực/duyệt, không tự sinh từ mục tiêu số.
+Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sách trường](database/fields.csv) liệt kê đầy đủ ý nghĩa/kiểu/nguồn/phụ trách/điều kiện ghi và giá trị phân loại. 487 liên kết gồm phần người ghi chung được liệt kê tường minh; 394 tại B27 là số lịch sử trước điều chỉnh. Bỏ 21 trường kết quả hoặc trạng thái tổng hợp; giữ bản kết quả chính thức khi có nguồn/phiên bản cần đối chiếu. Tham số và quyết định có căn cứ/người khai báo/hiệu lực/duyệt, không tự sinh từ mục tiêu số.
 
 [Rà soát nguồn](database/source-review.md) phân loại 481 đường dẫn/cột ở năm tệp mẫu và chặn nạp trực tiếp. OTHER-001 chưa đủ hồ sơ nhu cầu/duyệt; công/QC/lương/tiền giả lập không thành thực tế chỉ từ trạng thái hoặc mã chứng cứ. Bộ cũ giữ làm đề bài/kiểm phép tính, chưa tạo bộ nguồn khởi tạo mới và chưa có chứng từ Nasaki thật. Chưa lập trình hoặc tạo DB.
+
+### Tinh gọn theo B29
+
+[Phương án rà toàn bộ](database/optimization-review.md) hiện hành có 74 bảng/931 trường/402 quan hệ, thay mô hình 91 bảng của B28. Đã đối chiếu cả 91 bảng và 1.139 trường cũ, gộp 17 bảng và thông tin chung trùng. Bảy phân hệ/33 yêu cầu/22 màn hình/56 tiêu chí giữ phạm vi. Người dùng nhập theo công việc, dữ kiện có nguồn tái sử dụng; nguồn thực, quyết định, tiền và nợ vẫn phân nhiệm. Sáu đầu mối công việc kiêm nhiệm là đề xuất demo, không nhân sự Nasaki đã khảo sát. Chưa lập trình/tạo DB; chưa đo thời gian hoặc hiệu năng thực.

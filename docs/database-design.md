@@ -1,6 +1,6 @@
 # Thiết kế cơ sở dữ liệu ERP demo Nasaki V1
 
-Theo B27/B28 ngày 08/10/2026: thiết kế phân nhiệm rõ, giữ gọn, tên bảng/trường bằng tiếng Việt và dữ liệu có nguồn. Đây là thiết kế logic; chưa tạo SQL, cơ sở dữ liệu, bộ nạp hoặc lập trình ERP. Căn cứ: [yêu cầu chức năng](functional-requirements.md), [màn hình](screen-design.md), [quy tắc](demo-business-rules.md), [nghiệm thu](demo-acceptance.md) và phương án B24. Các tham số mô phỏng không là quy trình đã xác minh của Nasaki.
+Theo B29 (thay cấu trúc B27/B28) ngày 08/10/2026: thiết kế phân nhiệm rõ, giữ gọn, tên bảng/trường bằng tiếng Việt và dữ liệu có nguồn. Đây là thiết kế logic; chưa tạo SQL, cơ sở dữ liệu, bộ nạp hoặc lập trình ERP. Căn cứ: [yêu cầu chức năng](functional-requirements.md), [màn hình](screen-design.md), [quy tắc](demo-business-rules.md), [nghiệm thu](demo-acceptance.md) và phương án B24. Các tham số mô phỏng không là quy trình đã xác minh của Nasaki.
 
 ## Giải thích để anh đọc
 
@@ -28,7 +28,7 @@ Có ba lớp nghiệp vụ: danh mục, hồ sơ công việc có phiên bản/q
 | `tai_chinh` | Tiền thực, nghĩa vụ, sử dụng tiền, ghi bán, đối chiếu, chi phí/phân bổ/giá trị/giá thành | Người được cấp xem kết quả; không lộ lương qua giá thành |
 | `nhan_su` | Hồ sơ theo hiệu lực, kỹ năng/an toàn, lịch, công/phép và thu nhập có căn cứ | Sản xuất đọc người/kỹ năng/lịch; tài chính ứng/trả theo nguồn |
 
-[Từ điển](database/data-dictionary.md) có 91 bảng logic; [CSV trường](database/fields.csv) liệt kê 1.139 trường gồm trường chung. [Quan hệ](database/relationships.csv) có 487 liên kết, gồm người ghi chung liệt kê tường minh và căn cứ bổ sung B28; 394 tại B27 là số lịch sử trước điều chỉnh. [Ma trận](database/coverage.csv) đối chiếu đủ 33 yêu cầu, 22 màn hình và 56 tiêu chí. Tên tiếng Việt không dấu dành cho máy, nhãn/mô tả có dấu dành cho người đọc; UUID/JSON/VND là ký hiệu kỹ thuật/đơn vị.
+[Từ điển](database/data-dictionary.md) có 74 bảng, [trường](database/fields.csv) có 931 trường và [quan hệ](database/relationships.csv) có 402 liên kết trực tiếp. B28 có 91/1.139/487 là lịch sử trước tinh gọn. [Rà soát toàn bộ](database/optimization-review.md) và [ánh xạ](database/name-mapping.csv) giải thích thay đổi. [Ma trận](database/coverage.csv) giữ đủ 33 yêu cầu/22 màn hình/56 tiêu chí. Tên máy tiếng Việt không dấu, nhãn/mô tả có dấu.
 
 Giữ 1 công ty, 1 xưởng, 1 kho và 50 nhân viên. Vị trí trong kho không thành kho thứ hai; không bắt mỗi người có tài khoản. Dòng chi tiết/sự kiện/quan hệ phục vụ nhiều mặt hàng, nhiều đợt và lịch sử, không phải mỗi bảng là một tính năng. Không tạo bảng riêng theo khách/tháng/sản phẩm, máy chủ theo bộ phận hoặc kho báo cáo riêng. Chưa thiết kế kế toán pháp định, thuế/hóa đơn/ngoại tệ, tài sản/khấu hao, nhân sự chuyên sâu hoặc tích hợp chưa giao.
 
@@ -36,31 +36,25 @@ Giữ 1 công ty, 1 xưởng, 1 kho và 50 nhân viên. Vị trí trong kho khô
 
 ```mermaid
 erDiagram
-  SAN_PHAM ||--o{ MAT_HANG : "biến thể"
-  DOI_TAC ||--o{ DON_HANG : "bên mua"
-  DON_HANG ||--|{ DONG_DON_HANG : "cam kết"
-  DONG_DON_HANG ||--o{ MAU_KHACH_DUYET : "mẫu có bản"
-  DONG_DON_HANG ||--o{ YEU_CAU_HANG : "nhu cầu"
-  YEU_CAU_HANG ||--o{ SU_KIEN_GIU_HANG : "giữ và dùng"
-  DONG_DON_MUA ||--o{ PHAN_BO_HANG_DANG_VE : "đang về đúng nguồn"
-  YEU_CAU_HANG ||--o{ PHAN_BO_HANG_DANG_VE : "phần được đáp ứng"
-  MAT_HANG ||--o{ LO_HANG : "lô nguồn"
-  LO_HANG ||--o{ PHAN_LO_HANG : "phần chất lượng và sở hữu"
-  PHAN_LO_HANG ||--o{ DONG_VAN_DONG : "lượng thực"
-  LENH_SAN_XUAT ||--|{ LO_SAN_XUAT : "lô thực hiện"
-  LO_SAN_XUAT ||--o{ CONG_DOAN : "công đoạn"
-  CONG_DOAN ||--o{ VAT_TU_THUC_DUNG : "thực dùng"
-  CONG_DOAN ||--o{ KHOANG_CONG_THUC : "công người"
-  NHAN_VIEN ||--o{ BAN_CONG : "người ngày ca"
-  BAN_CONG ||--o{ KHOANG_CONG_THUC : "khoảng thực"
-  NHAN_VIEN ||--o{ DONG_THU_NHAP : "thu nhập từng kỳ"
-  DONG_DON_HANG ||--o{ DONG_GIAO_HANG : "giao nhiều đợt"
-  DONG_GIAO_HANG ||--o{ XAC_NHAN_KHACH_NHAN : "khách nhận"
-  XAC_NHAN_KHACH_NHAN ||--o{ DONG_GHI_NHAN_BAN : "ghi bán đúng phần"
-  BIEN_DONG_TIEN_THUC ||--o{ SU_KIEN_SU_DUNG_TIEN : "tiền dùng đúng nguồn"
-  NGHIA_VU_THANH_TOAN ||--o{ SU_KIEN_SU_DUNG_TIEN : "nghĩa vụ được thanh toán"
-  NGUON_CHI_PHI ||--o{ PHAN_BO_CHI_PHI : "nguồn chi phí"
-  PHAN_BO_CHI_PHI ||--o{ CAN_CU_PHAN_BO : "giờ và vật tư có căn cứ"
+  MAT_HANG ||--o{ MAT_HANG : "nhóm mẫu và biến thể"
+  CHUNG_TU ||--o{ DONG_CHUNG_TU : "mã dòng theo bản"
+  DON_HANG ||--o{ DONG_THUONG_MAI : "tư vấn báo giá đơn theo loại"
+  DONG_THUONG_MAI ||--o{ YEU_CAU_HANG : "nguồn nhu cầu"
+  YEU_CAU_HANG ||--o{ SU_KIEN_HANG : "giữ tồn hoặc đang về"
+  LO_HANG ||--o{ PHAN_LO : "phần riêng theo chất lượng"
+  PHAN_LO ||--o{ DONG_VAN_DONG : "thực nhận xuất dùng"
+  PHAN_LO ||--o{ SU_KIEN_HANG : "khóa chất lượng theo loại"
+  CONG_DOAN ||--o{ DONG_VAN_DONG : "thực dùng có nguồn cấp"
+  PHIEU_QC ||--o{ KET_QUA_TIEU_CHI : "số đo thực"
+  DONG_GIAO_NHAN ||--o{ DONG_GIAO_NHAN : "giao dự kiến và nhận thực"
+  DONG_GIAO_NHAN ||--o{ DONG_GHI_BAN : "phần thực chấp nhận"
+  NGHIA_VU ||--o{ NGHIA_VU : "gốc và điều chỉnh"
+  TIEN_THUC ||--o{ SU_DUNG_TIEN : "nguồn tiền đã ghi"
+  NGHIA_VU ||--o{ SU_DUNG_TIEN : "thanh toán đúng gốc"
+  NHAN_VIEN ||--o{ KHOANG_CONG : "thực công theo đầu chứng từ"
+  NHAN_VIEN ||--o{ THU_NHAP : "đúng kỳ nguồn"
+  THU_NHAP ||--o{ KHOAN_THU_NHAP : "căn cứ khoản"
+  NGUON_CHI_PHI ||--o{ PHAN_BO_CHI_PHI : "nguồn độc lập với tiền"
 ```
 
 Nhãn sơ đồ là tên Việt rút gọn; tên chính xác và toàn bộ quan hệ ở từ điển/CSV. Chứng từ và dòng có mã/bản riêng để phê duyệt, bàn giao và truy nguồn đúng phần. Mã nguồn phải trỏ bản ghi tồn tại, không dùng chuỗi tùy ý thay khóa ngoại.
@@ -89,7 +83,7 @@ Không ghi vận động mới lùi trước tồn đầu hoặc biến động 
 
 ## Tiền, nghĩa vụ và giá thành
 
-`tai_chinh.bien_dong_tien_thuc` giữ tiền thực, `tai_chinh.nghia_vu_thanh_toan` giữ khoản phải thu/trả/hoàn, `tai_chinh.su_kien_su_dung_nguon_tien` giữ sử dụng nguồn tiền đúng khoản. Đơn/báo giá/đơn mua/duyệt lương chưa tự tạo tiền. Đối chiếu mua chỉ lập nghĩa vụ từ phần nhận đủ điều kiện và chứng từ; không tự phải trả toàn đơn mua.
+`tai_chinh.bien_dong_tien_thuc` giữ tiền thực, `tai_chinh.nghia_vu_va_dieu_chinh` giữ khoản phải thu/trả/hoàn, `tai_chinh.su_kien_su_dung_nguon_tien` giữ sử dụng nguồn tiền đúng khoản. Đơn/báo giá/đơn mua/duyệt lương chưa tự tạo tiền. Đối chiếu mua chỉ lập nghĩa vụ từ phần nhận đủ điều kiện và chứng từ; không tự phải trả toàn đơn mua.
 
 - Thu cọc tăng tiền thực và nguồn chưa dùng đúng chủ; ghi bán phần khách chấp nhận tạo doanh thu/phải thu. Sử dụng cọc thanh toán giảm nợ, không tăng tiền hoặc doanh thu lần nữa. Bên trả khác bên mua cần căn cứ đại diện đúng đơn/phạm vi; không cấn khách khác.
 - Ứng người/nhà cung cấp có chủ/mục đích riêng; chỉ đối trừ khi có nghĩa vụ đủ điều kiện. Ứng đã áp dụng và khoản đã trả đọc từ tiền thực/phân bổ, không tính ứng thành chi phí lần hai. Tiền chưa xác định chủ không phân bổ trước đối chiếu.
@@ -160,10 +154,20 @@ Vòng hiện tại chỉ kiểm tài liệu/tên/quan hệ/bao phủ/kiểm kê 
 
 ## B28 — tên tiếng Việt và dữ liệu gốc
 
-Toàn bộ tên nhóm/bảng/trường hiện hành là tiếng Việt không dấu, có nhãn và mô tả có dấu. [Danh sách trường](database/fields.csv) liệt kê cả trường chung: ý nghĩa, kiểu, giá trị phân loại cho phép, nguồn, người phụ trách, điều kiện ghi, quan hệ và ràng buộc. [Đối chiếu tên cũ](database/name-mapping.csv) chỉ phục vụ đọc lịch sử; tên tiếng Anh cũ không còn là tên hiện hành. Các khóa/phiên/mốc ghi/bản băm là dữ liệu kỹ thuật cần thiết để bảo toàn nguồn, không tạo kết quả nghiệp vụ.
+Toàn bộ tên nhóm/bảng/trường hiện hành là tiếng Việt không dấu, có nhãn và mô tả có dấu. [Danh sách trường](database/fields.csv) liệt kê cả trường chung: ý nghĩa, kiểu, giá trị phân loại cho phép, nguồn, người phụ trách, điều kiện ghi, quan hệ và ràng buộc. [Ánh xạ trường trước/sau B29](database/name-mapping.csv) đối chiếu tên tiếng Việt của B28 với cấu trúc tinh gọn; tên tiếng Anh trước B28 nằm trong lịch sử Git. Các khóa/phiên/mốc ghi/bản băm là dữ liệu kỹ thuật cần thiết để bảo toàn nguồn, không tạo kết quả nghiệp vụ.
 
 Đã bỏ 21 trường trùng kết quả hoặc trạng thái tổng hợp khỏi nguồn hiện hành; [danh sách](database/derived-fields.csv) giải thích nguồn thay thế. Tổng giá thành, tổng thu nhập, còn trả, tồn khả dụng, phần thiếu, tiến độ lô/giao/xử lý và tình trạng chi/thu tính từ dòng hoặc sự kiện có căn cứ. Các bản chính thức như đơn giá đã thỏa thuận, phân bổ chi phí, công thức tính đã chốt và giá trị ghi nhận vẫn lưu khi cần đối chiếu, nhưng phải khóa đúng nguồn/phiên bản, không được coi là đầu vào độc lập. Căn cứ quyết định chốt lệnh và khai báo chính sách được bổ sung bằng liên kết chứng từ/người khai báo; không mất thông tin do loại cột tổng.
 
 Nguồn nghiệp vụ là quan sát/thỏa thuận/quyết định thực được ghi nhận, không bắt buộc tất cả là số đo vật lý. Bảng danh mục và tham số vẫn cần thiết, nhưng ngưỡng tồn, năng lực máy, tỷ lệ dự kiến, chính sách giá/lương/QC chỉ có hiệu lực theo bản được khai báo và duyệt. Thuật toán được tính/đề xuất để người có quyền xem; không tự ghi quyết định ưu tiên, mua, sản xuất, đạt QC hoặc trả tiền.
 
 Chưa có dữ liệu nội bộ Nasaki đủ chứng từ để xác nhận là nguồn thật. Dữ liệu trên website là công bố doanh nghiệp; các mẫu nhân viên/giao dịch/công/lương hiện có đều giả lập. Rà soát này làm rõ đường truy nguồn và cô lập dữ liệu kiểm tra, không biến dữ liệu giả lập thành dữ liệu thật.
+
+## B29 — giảm cấu trúc và thao tác cho ít người vận hành
+
+[Rà soát](database/optimization-review.md) là quyết định kỹ thuật hiện hành: 74 bảng/931 trường/402 quan hệ trực tiếp, thay 91 bảng của B28. Đầu kho/kiểm kê/bán/công/chốt giá thành dùng Chứng từ chung; các đầu chuyên biệt còn lại dùng khóa chung, không nhập hoặc lưu lại người lập/bản ở đầu thứ hai. Thực dùng vật tư là dòng kho có công đoạn và cấp gốc; không sao lượng vào bảng khác. Quyền, QC và khoản thu nhập vẫn là bảng con có khóa ngoại, không thêm JSON để che số lượng.
+
+Mọi phân loại và tham chiếu sau gộp kiểm [loại nguồn](database/source-contracts.csv), các trường không áp dụng trống, phiên bản/phạm vi/đồng thời giữ nguyên. Phân quyền phải theo loại và cột qua view/API cho phép, không cấp cả bảng chung cho một vai bộ phận. Chứng từ chung có cả dữ kiện riêng từng loại nên không còn hoàn toàn tự ghi; người nhập tại biểu mẫu nghiệp vụ, thông tin kỹ thuật tự ghi.
+
+[Trách nhiệm nhập](database/input-responsibility.md) thay danh sách B28; [đối chiếu luồng](database/workflow-coverage.md) rà nguồn và hành vi từng phân hệ. Một dữ kiện nhập một lần, phiếu kế tiếp lấy nguồn và chỉ thêm dữ kiện mới. Không đổi xác nhận thực thành tự động, không thêm duyệt mỗi bước thông thường. Số đầu mối vận hành và tham số còn là đề xuất demo. Chưa thử SQL, đo hiệu năng, hành vi biểu mẫu hoặc chạy ERP.
+
+Chứng từ thông thường không cần phê duyệt theo B24 dùng trạng thái `khong_yeu_cau`; đây không là “đã duyệt”. Kho/xưởng/người thu tiền vẫn xác nhận thực đúng quyền trước ghi sổ, không phát sinh yêu cầu duyệt giám đốc hoặc quyết định giả.

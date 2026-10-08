@@ -256,3 +256,7 @@ Cọc có thể được ghi SC14 trước sản xuất/giao theo điều kiện
 Prototype thể hiện bố cục một cột nội dung và các liên kết điều hướng; tab chi tiết, lọc nâng cao, phân trang, căn số và quyền thật là yêu cầu cho UI ứng dụng, chưa dựng đầy đủ trong bản mẫu. Mở prototype.html bằng trình duyệt; dùng thanh bên, tìm dòng, chọn vai trò xem bố cục, mở chi tiết và biểu mẫu. Nút trong biểu mẫu chỉ minh họa bước, không thực duyệt/giao/thu/chi. Các màn hình chứa dữ liệu bộ cơ sở hoặc nhánh có nhãn mốc riêng; danh sách việc mẫu bổ sung được ghi là tình huống minh họa. Không có đăng nhập thật hoặc kết nối ngoài. Bản thiết kế có thể mở ngoại tuyến, không cần thư viện hoặc phông chữ từ Internet.
 
 Bản này cụ thể hóa thiết kế đủ để anh góp ý về cách làm và bố cục. Khi chuyển xây dựng còn phải thiết kế dữ liệu/giao dịch/quyền/sao lưu, dựng UI thật và kiểm 56 tiêu chí; một prototype đẹp không thay nghiệm thu ERP hoạt động.
+
+## Căn cứ dữ liệu tinh gọn B29
+
+[Thiết kế hiện hành](database-design.md) và [rà soát vận hành](database/optimization-review.md) thay cấu trúc 91 bảng bằng 74 bảng, giữ phạm vi B26. Biểu mẫu nguồn nối phiếu kế tiếp và chỉ yêu cầu dữ kiện mới; dòng/đầu/liên kết ghi trong cùng thao tác, không mở bảng để nhập lại. Nhập hoặc nhập khẩu công theo nhóm có nguồn/xác nhận, ngoại lệ cần xử lý rõ; không mặc định đủ công. Quyền theo loại/cột của bảng gộp; trạng thái nháp/chờ nguồn/đã xác nhận phải phân biệt. Bản mẫu HTML hiện có vẫn minh họa, chưa thực hiện các hành vi ghi/đọc này.

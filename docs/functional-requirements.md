@@ -295,3 +295,7 @@ Từ chối/đề nghị sửa cần lý do; rút bản chưa thực hiện gi�
 Bốn phần triển khai theo phụ thuộc, không giảm phạm vi phiên bản đầu: (1) danh mục, người/quyền, chứng từ/nhật ký và số dư; (2) đơn–mua–kho–lệnh–QC–giao–tiền chạy xuyên hai nhóm; (3) nhân sự/công/phép/lương và đối chiếu nguồn chi phí trong luồng; (4) ngoại lệ, báo cáo/chốt/điều chỉnh và thử nghiệm ghi trùng/đồng thời/mất kết nối. Ngoại lệ ngăn âm/sai quyền/bỏ QC là điều kiện ngay từ khi xây giao dịch, không chờ phần cuối mới bảo vệ.
 
 Chưa ấn định ngày triển khai, công nghệ, số người đồng thời, thời gian đáp ứng hoặc chi phí hosting. Đề xuất đầu tiên tối ưu máy tính cho dữ liệu nhiều cột, điện thoại dùng ghi nhận/xem việc theo phạm vi; điều kiện vận hành và sao lưu/khôi phục sẽ được cụ thể hóa ở thiết kế kỹ thuật. Không tự chọn thêm tích hợp ngân hàng, hóa đơn thật, Zalo hoặc máy chấm công.
+
+## Căn cứ dữ liệu tinh gọn B29
+
+[Thiết kế hiện hành](database-design.md) và [rà soát vận hành](database/optimization-review.md) thay cấu trúc 91 bảng bằng 74 bảng, giữ phạm vi B26. Biểu mẫu nguồn nối phiếu kế tiếp và chỉ yêu cầu dữ kiện mới; dòng/đầu/liên kết ghi trong cùng thao tác, không mở bảng để nhập lại. Nhập hoặc nhập khẩu công theo nhóm có nguồn/xác nhận, ngoại lệ cần xử lý rõ; không mặc định đủ công. Quyền theo loại/cột của bảng gộp; trạng thái nháp/chờ nguồn/đã xác nhận phải phân biệt. Bản mẫu HTML hiện có vẫn minh họa, chưa thực hiện các hành vi ghi/đọc này.

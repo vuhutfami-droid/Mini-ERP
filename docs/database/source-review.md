@@ -8,6 +8,8 @@ Dữ liệu nguồn là **điều đã được ghi nhận với căn cứ**: kh
 
 Hiện chưa có bộ chứng từ nội bộ Nasaki đủ để xác nhận là nguồn thực. Website cung cấp thông tin công bố về doanh nghiệp/sản phẩm; 50 nhân viên, công, lương, giao dịch, định mức và kết quả kiểm mẫu đều giả lập. Không đổi nhãn để biến giả lập thành thực tế. Bộ mẫu cũ được giữ cho lịch sử và kiểm phép tính, **chặn nạp trực tiếp** theo [chính sách](../demo-data/source-policy.json).
 
+B29 đã tinh gọn còn 74 bảng/931 trường; kết luận nguồn của B28 tiếp tục áp dụng. [Rà soát toàn bộ](optimization-review.md) và [ánh xạ trường B28→B29](name-mapping.csv) ghi cách giữ dữ kiện.
+
 Thiết kế đã tách dữ kiện, quyết định/tham số, kết quả tính và thông tin kỹ thuật. [Từ điển](data-dictionary.md) và [danh sách từng trường](fields.csv) là nguồn tên hiện hành; [kiểm kê mẫu](source-review.csv) rà 481 đường dẫn/cột của cả năm tệp cũ. Các tên tiếng Anh chỉ còn trong cột chỉ vị trí cũ để anh đối chiếu, không là tên cơ sở dữ liệu hiện hành.
 
 ## Rà soát theo từng bộ
@@ -32,7 +34,7 @@ Không sửa số mẫu chỉ để số cuối đẹp hơn. Mã kiểm toàn v�
 6. **Giá thành:** bỏ cột tổng, lượng đạt sao chép và tiền sao lần hai ở dòng bản chốt. Bản chốt giữ danh sách nguồn/phân bổ đúng bản; tổng tính khi đọc, thiếu căn cứ giữ tạm tính. Biến động giá trị chính thức vẫn được giữ để truy nguồn định giá, không thay lượng thực.
 7. **Duyệt/giao/xử lý:** tiến độ tổng hợp không là cột sửa tay. Phê duyệt có quyết định; giao/nhận/tiêu hủy có sự kiện thực riêng. Không lấy “hoàn thành” cài sẵn để vượt thiếu nguồn.
 
-[21 trường đã bỏ](derived-fields.csv) ghi nguồn và cách tính thay thế. Không bỏ thông tin cần thiết: thỏa thuận đã chốt, kết quả kiểm thực, quyết định xử lý, phân bổ được xác nhận, công thức đã ghi nhận và giá trị chính thức đều được lưu cùng nguồn/bản/mốc.
+[21 trường đã bỏ tại B28](derived-fields.csv) ghi nguồn và cách tính thay thế. Không bỏ thông tin cần thiết: thỏa thuận đã chốt, kết quả kiểm thực, quyết định xử lý, phân bổ được xác nhận, công thức đã ghi nhận và giá trị chính thức đều được lưu cùng nguồn/bản/mốc.
 
 ## Bốn loại dữ liệu được phân nhiệm
 
@@ -57,3 +59,7 @@ Bộ dữ liệu giả lập khi dựng sau này vẫn có thể dùng làm đ�
 ## Giới hạn
 
 Đã rà tên, mô tả, quan hệ, độ bao phủ yêu cầu và các trường trong bộ kiểm. Chưa xác minh chứng từ Nasaki, chưa tạo bộ khởi tạo nguồn mới, chưa có bộ nạp/SQL/DB hay thử giao dịch thật. [Lịch sử kiểm tra](../build-history.md) ghi phiên bản, lệnh và phạm vi thực đã kiểm.
+
+## Quan hệ với B29
+
+Kiểm kê 481 vị trí và 21 trường bỏ thuộc lần rà B28. Cột tên bảng trong hồ sơ kiểm kê/loại bỏ là tên tại B28 để giữ đối chiếu lịch sử, không thêm bảng vào thiết kế hiện hành. Dùng ánh xạ B28→B29 cho tên hiện hành. Năm tệp mẫu và chính sách chặn nạp không thay; không tự bổ sung nguồn phê duyệt/công/QC để làm bảng mới có dữ liệu.

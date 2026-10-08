@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27 và tên tiếng Việt/rà soát nguồn B28; chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27, tên tiếng Việt/rà soát nguồn B28 và tinh gọn dữ liệu B29 (74 bảng/931 trường); chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -27,6 +27,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 [Yêu cầu chức năng](docs/functional-requirements.md) gồm 33 yêu cầu, [thiết kế màn hình](docs/screen-design.md) gồm 22 loại màn hình, có [ma trận truy vết](docs/design/traceability.csv) tới 56 tiêu chí nghiệm thu. [Bản mẫu giao diện](docs/design/prototype.html) dùng để xem bố cục, lọc dòng và biểu mẫu, không ghi giao dịch hoặc thay nghiệm thu ERP.
 
 [Thiết kế cơ sở dữ liệu](docs/database-design.md) giải thích phân nhiệm, nguồn số liệu, phiên bản, giao dịch và quyền. [Từ điển dữ liệu](docs/database/data-dictionary.md), [toàn bộ trường](docs/database/fields.csv), [quan hệ](docs/database/relationships.csv) và [đối chiếu yêu cầu](docs/database/coverage.csv) là đặc tả logic, không SQL hoặc DB đã triển khai. [Rà soát nguồn](docs/database/source-review.md) và [kiểm kê từng trường mẫu](docs/database/source-review.csv) phân biệt dữ kiện/giả định/kết quả, chặn nạp trực tiếp bộ kiểm cũ.
+
+[Rà soát tinh gọn B29](docs/database/optimization-review.md) giải thích từng phần gộp/giữ, cách vận hành ít người và đối chiếu đủ 91 bảng cũ. Thiết kế hiện hành có 74 bảng/931 trường/402 quan hệ, vẫn đủ 33 yêu cầu/22 màn hình/56 tiêu chí; [trách nhiệm nhập](docs/database/input-responsibility.md) và [đối chiếu luồng](docs/database/workflow-coverage.md) giúp triển khai mà không bắt người dùng nhập từng bảng.
 
 ## Cách duy trì nhật ký
 
@@ -846,3 +848,21 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 - Quy trình và mức độ chi tiết của bảy nhóm nghiệp vụ đã chọn cho phiên bản đầu; mẫu/màu/quy cách, định mức, nhân sự, tài chính và tiêu chí nghiệm thu.
 - Công nghệ, dữ liệu, phân quyền và tích hợp.
 - Kế hoạch thực hiện, tiêu chí nghiệm thu và môi trường triển khai.
+
+### 08/10/2026 — Rà toàn bộ và tinh gọn cơ sở dữ liệu cho ít người vận hành (B29)
+
+**Anh:**
+
+> đánh giá lại toàn bộ và tối ưu lại cơ sở dữ liệu cho anh, với một doanh nghiệp như nasaki, không có nhiều người vận hành hệ thống thì khối lượng trên anh đang cho là quá nhiều, rà soát lại một lượt cho anh, đảm bảo không bị quá phức tạp nhưng cũng phải đủ tối ưu để có thể thực hiện được công việc
+
+**Em — kết quả rà soát và phương án kỹ thuật:**
+
+- Đọc README, hồ sơ, lịch sử kiểm tra và trạng thái Git trước thao tác. Rà cả 91 bảng/1.139 trường của B28; giảm còn 74 bảng/931 trường/402 quan hệ, gộp 17 bảng và thông tin chung trùng. Có quyết định từng bảng và ánh xạ toàn bộ trường trước/sau, không bỏ dữ kiện thực chỉ để giảm số lượng.
+- Dùng đầu chứng từ/mã phiên bản chung; gộp nhóm mẫu/mặt hàng, tư vấn/dòng thương mại, lịch người/nguồn lực, giao/nhận theo loại, nghĩa vụ/điều chỉnh, giữ/khóa/đang về và hồ sơ xử lý theo trách nhiệm. Thực dùng vật tư nằm ở dòng kho có nguồn cấp/công đoạn. Giữ riêng tiền thực, nợ, sử dụng tiền, công thực, QC, chi phí/giá trị và định danh/quyền/lịch sử.
+- Không bổ sung JSON để giấu các bảng khoản thu nhập/tiêu chí QC/quyền. Các dòng con nhập ngay trong biểu mẫu cha. Một dữ kiện ghi tại nguồn rồi dùng lại; không thêm duyệt giám đốc ở bước thông thường hoặc tự tạo nguồn/đã duyệt/đạt QC/đủ công.
+- Đề xuất sáu đầu mối công việc kiêm nhiệm, không là số người vận hành Nasaki đã xác minh, không bắt sáu tài khoản hoặc 50 nhân viên đăng nhập. Công có thể nhập khẩu theo nhóm từ nguồn thật/giả lập có căn cứ, thiếu giữ chờ; bảo toàn chống tự duyệt cùng định danh.
+- Cập nhật thiết kế/từ điển/trường/quan hệ/ma trận/trách nhiệm nhập, bổ sung rà bảng/ánh xạ/43 hợp đồng loại nguồn và đối chiếu 11 luồng. Giữ bảy phân hệ, 33 FR, 22 SC và 56 tiêu chí. Chính sách chặn nạp và năm tệp mẫu không thay.
+
+**Kiểm tra:** `python scripts/verify-database-design.py` đạt: tên/trường/kiểu/nguồn/FK/loại đích, ánh xạ so với Git B28, phạm vi và liên kết; `git diff --check` kiểm định dạng. [Lịch sử kiểm tra](docs/build-history.md) ghi bằng chứng và giới hạn. Đây là rà thiết kế, chưa tạo DB/lập trình, chưa kiểm SQL/quyền/đồng thời/hiệu năng/khôi phục thực. 74 không là con số tối ưu tuyệt đối; hiệu quả thao tác cần đo khi có phần mềm.
+
+**Lưu trữ:** Các tệp được đưa vào commit B29 trên `main` và đồng bộ GitHub; trạng thái đồng bộ được kiểm bằng đối chiếu mã commit từ xa với HEAD trước khi báo anh.
