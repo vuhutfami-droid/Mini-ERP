@@ -1,6 +1,6 @@
 # Hồ sơ nghiệp vụ demo ERP Nasaki
 
-Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng và màn hình đề xuất theo B26; chưa chọn công nghệ hoặc xây ERP.
+Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm cần khảo sát để xây dựng demo ERP phục vụ tư vấn cho Nasaki. Demo phải chạy được, lưu các giao dịch và tạo kết quả kiểm chứng được. Hiện đã xác định phạm vi tổng quát và mô hình doanh nghiệp; chưa hoàn thành khảo sát quy trình, đã có đặc tả chức năng/màn hình B26 và thiết kế dữ liệu logic B27; PostgreSQL là đề xuất, chưa tạo DB hoặc lập trình ERP.
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
@@ -49,10 +49,10 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B23 | Anh giao Codex tự lập đề xuất cho hoạt động tiếp theo rồi anh duyệt. | “đồng ý, em tự tạo đề xuất đi sau đó anh sẽ duyệt”, ngày 08/10/2026; cho phép chuẩn bị phương án trách nhiệm/bàn giao cùng điểm chất lượng và kịch bản, chưa duyệt nội dung hoặc yêu cầu lập trình. |
 | B24 | Anh duyệt phương án trách nhiệm, phê duyệt, bàn giao, điểm kiểm soát chất lượng và kịch bản liên hoàn trong tài liệu ngày 08/10/2026. | “duyệt, bước tiếp theo là gì?”, ngày 08/10/2026; áp dụng cho demo, không xác nhận quy trình thực tế Nasaki, mọi đề xuất cũ hoặc giao lập trình. |
 | B25 | Anh đồng ý thực hiện kỹ bộ dữ liệu, quy tắc và tình huống demo trước chức năng/màn hình; nhấn mạnh không làm qua loa. | “đồng ý, làm kĩ phần này cho anh, cấm làm qua loa vì phần này quan trọng”, ngày 08/10/2026; giao chuẩn bị và đối chiếu kỹ, tham số mới vẫn là đề xuất cho demo, không giao lập trình ERP ngay. |
-
 | B26 | Chuyển bộ nghiệp vụ đã chuẩn bị thành yêu cầu chức năng và thiết kế màn hình. | “chuyển thành yêu cầu chức năng và thiết kế màn hình.” ngày 08/10/2026; giao đặc tả và bản mẫu giao diện, không tự duyệt mọi tham số giả lập hoặc yêu cầu ERP đã vận hành. |
+| B27 | Thiết kế cơ sở dữ liệu đáp ứng yêu cầu, phân nhiệm rõ, đầy đủ và gọn; chưa lập trình. | Yêu cầu ngày 08/10/2026; giao thiết kế logic/quan hệ/quy tắc, không tạo DB/SQL/migration hoặc tự triển khai. |
 
-Các mã B01–B26 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B27 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -357,6 +357,10 @@ Theo B25, đã cụ thể hóa [bộ dữ liệu và quy tắc](demo-business-ru
 ## Yêu cầu chức năng và màn hình hiện hành
 
 Theo B26, tạo [33 yêu cầu chức năng](functional-requirements.md), [22 loại màn hình](screen-design.md) và [ma trận truy vết](design/traceability.csv) đủ 56 tiêu chí nghiệm thu. [Prototype](design/prototype.html) giúp xem bố cục và biểu mẫu, không có backend/đăng nhập/quyền thật hoặc lưu giao dịch. Bộ nghiệp vụ V1 là cơ sở đề xuất có thể điều chỉnh; phần thiết kế kỹ thuật, xây và nghiệm thu ứng dụng còn ở bước tiếp theo. Giữ một đầu mối giám đốc/CEO, mô hình nhỏ và đủ bảy phân hệ; kế toán chi tiết vẫn để sau.
+
+## Thiết kế dữ liệu hiện hành, chưa lập trình
+
+Theo B27, đã tạo [thiết kế tổng thể](database-design.md), [từ điển dữ liệu](database/data-dictionary.md), [quan hệ FK](database/relationships.csv) và [ma trận dữ liệu–yêu cầu](database/coverage.csv). Một DB quan hệ đề xuất, phân nhiệm theo bảy phân hệ và phần dùng chung; 91 bảng logic/394 FK phục vụ đầu, dòng, nguồn và lịch sử, không thêm phòng ban/nhân sự. Mọi số tồn/tiền/nợ/giờ/phép/chi phí có sổ nguồn và mốc; có quy tắc transaction/quyền/điều chỉnh/nhánh/khôi phục. PostgreSQL/chỉ mục/cách backup là thiết kế đề xuất, chưa triển khai. Không tạo DB hoặc lập trình ERP theo ràng buộc anh đã nói. Đã đối chiếu bao phủ tài liệu, chưa kiểm chứng SQL/giao dịch/RLS/đồng thời hoặc phục hồi thực.
 
 ## Các câu hỏi sản xuất trước đây — chuyển sang đề xuất demo
 

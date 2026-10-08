@@ -6,7 +6,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem, chưa có ERP xử lý/lưu giao dịch. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27; chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
 
@@ -25,6 +25,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 [Bộ dữ liệu và quy tắc nghiệp vụ demo](docs/demo-business-rules.md), [kịch bản và kết quả đối chiếu](docs/demo-scenarios.md), [tiêu chí nghiệm thu](docs/demo-acceptance.md) cụ thể hóa mô hình trước thiết kế tính năng. [Dữ liệu giả lập V1](docs/demo-data/README.md) có danh mục, 50 nhân sự, công/lương, lịch/lô, giao dịch kho và tiền với nguồn kiểm chứng; tham số mới chờ anh duyệt, không là dữ liệu Nasaki thật. [Lịch sử kiểm tra](docs/build-history.md) ghi kiểm tra bộ dữ liệu/tài liệu và bản mẫu giao diện, chưa có build hoặc test ứng dụng ERP.
 
 [Yêu cầu chức năng](docs/functional-requirements.md) gồm 33 yêu cầu, [thiết kế màn hình](docs/screen-design.md) gồm 22 loại màn hình, có [ma trận truy vết](docs/design/traceability.csv) tới 56 tiêu chí nghiệm thu. [Bản mẫu giao diện](docs/design/prototype.html) dùng để xem bố cục, lọc dòng và biểu mẫu, không ghi giao dịch hoặc thay nghiệm thu ERP.
+
+[Thiết kế cơ sở dữ liệu](docs/database-design.md) giải thích phân nhiệm, nguồn số liệu, phiên bản, giao dịch và quyền. [Từ điển dữ liệu](docs/database/data-dictionary.md), [quan hệ](docs/database/relationships.csv) và [đối chiếu yêu cầu](docs/database/coverage.csv) là đặc tả logic, không SQL hoặc DB đã triển khai.
 
 ## Cách duy trì nhật ký
 
@@ -773,6 +775,30 @@ Có prototype HTML ngoại tuyến để anh xem bố cục, chuyển trang, l�
 **Kiểm tra:** Đối chiếu đủ 33 FR/22 SC/56 tiêu chí trong ma trận; kiểm tra trình duyệt bản mẫu, liên kết tài liệu và định dạng Git. Phạm vi/kết quả cụ thể ghi tại [lịch sử kiểm tra](docs/build-history.md). Chưa có backend, đăng nhập thật, giao dịch lưu hoặc kiểm thử ERP; các yêu cầu về quyền/đồng thời/giao dịch an toàn còn phải xây và nghiệm thu trong ứng dụng.
 
 **Bước tiếp theo:** Anh xem cách tổ chức công việc và màn hình; sau đó thiết kế kỹ thuật (dữ liệu, trạng thái, quyền, giao dịch, sao lưu) và lập kế hoạch xây bảy phân hệ theo luồng liên hoàn. Chưa tự thêm tích hợp ngoài hoặc triển khai vận hành.
+
+### 08/10/2026 — Giải thích thiết kế bằng ngôn ngữ dễ hiểu
+
+**Anh:**
+
+> mô tả sao cho dễ hiểu hơn
+
+**Em:** Yêu cầu chức năng là phần mềm cần làm gì; màn hình là nơi từng người thực hiện công việc. Ví dụ đơn ngói nối kinh doanh → duyệt giá → kiểm hàng/làm thiếu → kho → QC → giao → ghi tiền/nợ. Màn hình chi tiết giúp thấy lượng đặt/đang làm/đã giao/còn giao, đã trả/còn nợ và người làm bước tiếp theo. Bản mẫu hiện chỉ để xem cách tổ chức, chưa xử lý/lưu giao dịch. Anh góp ý về dễ hiểu/dễ dùng, Codex phụ trách kỹ thuật.
+
+### 08/10/2026 — Thiết kế cơ sở dữ liệu và chưa lập trình
+
+**Anh:**
+
+> chưa lập trình vội, thiết kế hệ thống cơ sở dữ liệu tương ứng để đáp ứng được yêu cầu, lưu ý, hệ thống cơ sở dữ liệu phải được phân nhiệm rõ ràng, có đầy đủ tính năng, không thừa, không thiếu
+
+**Yêu cầu đã xác nhận:** B27: thiết kế DB tương ứng chức năng/màn hình, phân nhiệm rõ, đủ phạm vi đã thống nhất và giữ gọn; chưa lập trình. Không tự coi việc giao thiết kế là yêu cầu tạo máy chủ/SQL/migration hoặc duyệt mọi chính sách giả lập trước đó.
+
+**Em — kết quả:** Lập thiết kế logic một DB quan hệ, đề xuất PostgreSQL; 11 nhóm tên là bảy phân hệ và dữ liệu dùng chung. Có 91 bảng logic gồm đầu/dòng/lịch sử cần thiết, 394 quan hệ FK và ma trận đủ 33 FR/22 SC/56 tiêu chí; mỗi bảng có người phụ trách, trường, quan hệ, ràng buộc và căn cứ yêu cầu. Không tạo thêm hệ thống doanh nghiệp lớn hoặc lấy số bảng làm mục tiêu cố định.
+
+Kho sở hữu sổ lượng, QC kết luận/khóa/giải phóng, sản xuất lệnh/công đoạn/thực dùng, HR công/phép/thu nhập, giao hàng kết quả khách nhận, tài chính tiền/nghĩa vụ/phân bổ/giá trị. Số dư/báo cáo đọc từ sổ có nguồn và mốc; không nhập tay mỗi bộ phận một số. Thiết kế riêng duyệt và thực hiện, người mua/trả/nhận, mẫu/bản đơn, hàng đang giao, nghĩa vụ hoàn, nguồn giờ người/giờ máy/chi phí, lịch sử điều chỉnh và quyền lương. Có quy tắc chống ghi trùng/đồng thời, transaction nhiều bảng, phân vùng bộ demo và IAM ổn định qua nhánh, chỉ mục và kế hoạch backup/khôi phục.
+
+**Kiểm tra:** Rà cấu trúc từ điển/quan hệ/ma trận bằng công cụ tạm; mọi bảng có FR, FK đến bảng tồn tại, đủ tiêu chí/màn hình theo ma trận gốc; kiểm liên kết Markdown và định dạng Git. [Lịch sử kiểm tra](docs/build-history.md) ghi rõ phạm vi. Chưa tạo DB, chưa thử SQL/FK thật, quyền/transaction/đồng thời/backup và chưa lập trình ERP; bao phủ tài liệu không bảo đảm nghiệp vụ chưa khảo sát sẽ không phát sinh yêu cầu mới.
+
+**Đề xuất dễ hiểu:** Dùng chung thông tin bằng mã liên kết; mỗi bộ phận xác nhận phần thuộc nhiệm vụ của mình. Đặt đơn không tự xuất, xuất không tự ghi bán, cọc không tự là doanh thu, duyệt lương không tự chi. Thiết kế công nghệ/backup là đề xuất chưa triển khai. Ràng buộc chưa lập trình tiếp tục hiệu lực tới khi anh giao bước tiếp theo.
 
 ## Các nội dung chưa được thống nhất
 
