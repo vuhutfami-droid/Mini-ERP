@@ -1,6 +1,6 @@
 # Từ điển cơ sở dữ liệu tiếng Việt
 
-Theo B28, toàn bộ tên nhóm, bảng, trường và giá trị phân loại trong thiết kế hiện hành dùng tiếng Việt. Tên máy tính dùng tiếng Việt không dấu, nối bằng dấu gạch dưới; nhãn/mô tả có dấu. Đây là thiết kế, chưa tạo DB hoặc lập trình. [Thiết kế tổng thể](../database-design.md), [rà soát nguồn](source-review.md), [danh sách trường](fields.csv).
+Theo B28, toàn bộ tên nhóm, bảng, trường và giá trị phân loại trong thiết kế hiện hành dùng tiếng Việt. Tên máy tính dùng tiếng Việt không dấu, nối bằng dấu gạch dưới; nhãn/mô tả có dấu. Đây là thiết kế, chưa tạo DB hoặc lập trình. [Thiết kế tổng thể](../database-design.md), [rà soát nguồn](source-review.md), [danh sách trường](fields.csv), [bảng nào cần nhập liệu](input-responsibility.md).
 
 ## Quy tắc đọc
 

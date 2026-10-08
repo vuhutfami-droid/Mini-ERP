@@ -39,3 +39,9 @@ Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng th�
 - Nguồn mẫu: liệt kê độc lập mọi đường dẫn JSON có giá trị và cột CSV, khớp 481 vị trí trên năm tệp và số lần xuất hiện. Tất cả bị chặn nạp trực tiếp trong chính sách thiết kế; số mong đợi thuộc bộ kiểm, công sinh theo lịch không được coi công thực. Kiểm mã SHA-256 của năm tệp khớp nội dung trên HEAD trước sửa, chứng minh không thay số mẫu để khớp kết quả.
 - Kiểm đường dẫn Markdown cục bộ và `git diff --check`, gồm các tệp mới khi stage. Không chạy lại bộ kiểm phép tính V1 vì năm tệp không đổi; kết quả 7.020 của vòng cũ không được dùng làm bằng chứng nguồn thật hoặc DB vận hành.
 - Giới hạn: chỉ kiểm thiết kế/tính nhất quán tài liệu, không build/test ERP hoặc thử SQL/FK/CHECK/RLS/giao dịch/đồng thời/hiệu năng/khôi phục. Chưa có dữ liệu nội bộ Nasaki đủ chứng từ hoặc bộ nguồn khởi tạo mới; chính sách chặn nạp chưa được cưỡng chế bởi bộ nạp phần mềm. Giả lập/đề xuất không trở thành thực tế chỉ từ mã người duyệt hoặc trạng thái cài sẵn.
+
+## Ngày 08 tháng 10 năm 2026 đối chiếu trách nhiệm nhập liệu
+
+- Thời điểm: 12:25 ngày 08/10/2026, Asia/Ho_Chi_Minh. Nền Git `88f3583`, tài liệu giải thích mới chưa commit; commit chứa bản ghi định danh phiên bản được rà.
+- Đối chiếu Python đọc CSV/Markdown qua đầu vào chuẩn: mã thoát 0; 91 mã/tên bảng không thiếu hoặc trùng, khớp từ điển và fields.csv; bốn nhóm 26 khai báo nền/46 có đầu vào nghiệp vụ/10 dựng từ nguồn cần kiểm hoặc xác nhận/9 tự ghi. Mỗi bảng có người phụ trách, đầu vào/thao tác và điều kiện phát sinh; CSV và bản đọc khớp; liên kết Markdown cục bộ hợp lệ.
+- `git diff --check` và kiểm tệp mới trong index. Chỉ thêm tài liệu diễn giải, liên kết và nhật ký; không thay bảng/trường hoặc năm tệp mẫu. Không chạy build/test ERP, bộ kiểm phép tính hoặc tạo DB; chưa kiểm biểu mẫu, xác nhận, phân quyền và tự ghi trên phần mềm thật.

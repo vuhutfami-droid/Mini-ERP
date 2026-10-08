@@ -814,6 +814,18 @@ Kho sở hữu sổ lượng, QC kết luận/khóa/giải phóng, sản xuất 
 
 **Giới hạn:** Chưa có chứng từ nội bộ Nasaki đủ để xác nhận dữ liệu thật, chưa tạo bộ khởi tạo nguồn mới; không có bộ nạp/DB hay lập trình ERP. Chính sách chặn là thiết kế, chưa được cưỡng chế bằng phần mềm. Cấu trúc JSON cũng có [khóa tiếng Việt đóng](docs/database/structured-fields.md). [Lịch sử kiểm tra](docs/build-history.md) ghi kết quả kiểm thiết kế hiện hành, không gọi là kiểm thử ERP.
 
+## Trao đổi ngày 08/10/2026 — bảng nào cần nhập liệu
+
+**Anh hỏi:** “91 bảng trên thì có những bảng nào là không cần nhập dữ liệu, những bảng nào là bắt buộc người dùng phải nhập liệu?”
+
+**Em giải thích theo thiết kế hiện hành:** Người dùng thao tác qua biểu mẫu/công việc, không nhập trực tiếp 91 bảng. Phân loại [đủ 91 bảng](docs/database/input-responsibility.md) và [CSV lọc](docs/database/input-responsibility.csv): 26 bảng khai báo nền hoặc khi thay đổi; 46 bảng có dữ kiện/căn cứ/quyết định nghiệp vụ người dùng cần cung cấp; 10 bảng dựng từ nguồn nhưng cần người có quyền chọn/kiểm/xác nhận; 9 bảng tự ghi từ thao tác/nguồn hợp lệ. Một bảng có thể có cả trường người cung cấp và trường lấy từ nguồn/tính tự động; dòng chi tiết nhập ngay trong biểu mẫu chứng từ, không thêm màn hình nhập riêng.
+
+**Làm rõ “bắt buộc”:** Cần dữ kiện/xác nhận khi thiết lập hoặc thực phát sinh nghiệp vụ tương ứng, không buộc điền mọi bảng. Chưa có ủy quyền/đổi trả/khách trả thay không cần tạo các hồ sơ đó. Hệ thống tự ghi chứng từ chung, dòng/liên kết, phần lô, sổ giá trị và dữ liệu kỹ thuật không có nghĩa tự kết luận QC, tự tạo nguồn chi phí, duyệt/chốt công/lương hoặc tiền thực. Chi phí chung/thưởng/điều chỉnh phải có đầu vào/căn cứ riêng; không nhập lại tồn cuối/nợ còn/tổng giá thành/tổng thu nhập.
+
+**Ví dụ:** Nhập một đơn tạo bảng đơn/dòng đơn và các chứng từ chung, liên kết, nhật ký liên quan; không yêu cầu kinh doanh nhập lại ở từng bảng. Hệ thống tính thu nhập từ nguồn đã xác nhận, nhân sự kiểm và người có quyền duyệt; đã trả/còn trả từ tiền thực.
+
+**Trạng thái:** Đã giải thích và đối chiếu bảng/mã với từ điển; không thay 91 bảng/1.139 trường hoặc dữ liệu mẫu, không lập trình. Phân loại diễn giải thiết kế hiện hành, không là yêu cầu nghiệp vụ mới đã được anh duyệt. Lịch sử kiểm tra lưu kết quả rà tài liệu; chưa kiểm các biểu mẫu/quyền trên ERP thật.
+
 ## Các nội dung chưa được thống nhất
 
 - Kết quả chuyển đổi số có thể đo/kiểm chứng; cách dùng thử và mức sử dụng đồng thời. Đối tượng demo là tất cả các bộ phận; quy mô mô phỏng đã chốt 1 công ty, 1 xưởng, 1 kho, 50 nhân sự.
