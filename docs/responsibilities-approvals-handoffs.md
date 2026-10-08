@@ -1,6 +1,6 @@
 # Đề xuất trách nhiệm phê duyệt và bàn giao cho demo ERP Nasaki
 
-**Bản đề xuất ngày 08/10/2026, chờ anh duyệt.** Anh giao Codex tự lập phương án sau khi thống nhất hướng tiếp theo là nối trách nhiệm, rà soát chất lượng và chuẩn bị kịch bản liên hoàn. Tài liệu này xác định ai giữ việc, ai quyết định và dữ liệu nào phải bàn giao; bổ sung các điểm kiểm soát chất lượng và kịch bản để đánh giá phương án. Chưa phải yêu cầu lập trình, chưa là quy trình thực tế Nasaki hoặc xác nhận mọi đề xuất cũ đã được duyệt.
+**Phương án được anh duyệt ngày 08/10/2026; bản đề xuất lập cùng ngày.** Anh giao Codex tự lập phương án sau khi thống nhất hướng tiếp theo là nối trách nhiệm, rà soát chất lượng và chuẩn bị kịch bản liên hoàn. Tài liệu này xác định ai giữ việc, ai quyết định và dữ liệu nào phải bàn giao; bổ sung các điểm kiểm soát chất lượng và kịch bản để đánh giá phương án. Chưa phải yêu cầu lập trình, chưa là quy trình thực tế Nasaki hoặc xác nhận mọi đề xuất cũ đã được duyệt.
 
 Giữ một công ty, một xưởng, một kho, 50 người, ngói và Terrazzo, đủ bảy nhóm nghiệp vụ. Không tạo thêm phòng ban, hội đồng hoặc giám đốc chức năng. CEO/giám đốc là một người. Kế toán chuyên sâu giữ để sau. Đọc cùng [hồ sơ nghiệp vụ](business-context.md), [kho](warehouse-workflows.md), [giao hàng và tài chính](delivery-finance-workflows.md), [nhân sự](hr-workflows.md) và [README](../README.md).
 
@@ -14,7 +14,7 @@ Một người được kiêm nhiệm nhiều vai trò, nhưng không tự duy�
 
 ## Bảng phân công và thẩm quyền đề xuất
 
-Tất cả thẩm quyền bổ sung trong bảng là đề xuất cho demo. Thẩm quyền giá và kiểm tra khả năng giao đã có căn cứ B13–B16; việc đưa một vòng duyệt giám đốc cho mọi đơn trong demo cơ sở là lựa chọn đề xuất, không suy ra từ chữ “thường” trong B14.
+Các thẩm quyền bổ sung trong bảng đã được anh duyệt cho demo theo B24. Thẩm quyền giá và kiểm tra khả năng giao đã có căn cứ B13–B16; việc đưa một vòng duyệt giám đốc cho mọi đơn trong demo cơ sở là lựa chọn đề xuất, không suy ra từ chữ “thường” trong B14.
 
 | Việc | Người lập hoặc giữ việc | Người kiểm tra | Người quyết định hoặc xác nhận |
 | --- | --- | --- | --- |
@@ -35,7 +35,7 @@ Tất cả thẩm quyền bổ sung trong bảng là đề xuất cho demo. Th�
 | Điều chỉnh tồn, kiểm kê, đảo chứng từ hoặc sửa kỳ đã chốt | Bộ phận giữ chứng từ lập | Bộ phận đối chiếu và các nguồn phụ thuộc | Giám đốc duyệt; người có nhiệm vụ xác nhận điều chỉnh sau xử lý phụ thuộc, không sửa đè lịch sử. |
 | Danh mục/quy cách quan trọng, chính sách và quyền truy cập | Người phụ trách nghiệp vụ đề nghị | Bộ phận sử dụng kiểm tra ảnh hưởng | Giám đốc duyệt; người được giao quản trị áp dụng. Quyền quản trị không tự thành quyền xem mọi lương hoặc sửa dữ liệu nghiệp vụ. |
 
-Để thống nhất P05 với quy trình kho, đề xuất quản lý sản xuất là người đánh giá/điều phối làm lại hoặc loại bỏ; phương án xử lý chính thức theo hàng/lô có xuất chuyển, tiêu hủy, chi phí hoặc ảnh hưởng cam kết phải có giám đốc duyệt như bảng. Đây là làm rõ đề xuất chờ duyệt, chưa tự thay thẩm quyền được xác nhận. Không tự đặt hạn mức tiền để ủy quyền mua/chi; khi có nhu cầu mới đề xuất riêng.
+Để thống nhất P05 với quy trình kho, đề xuất quản lý sản xuất là người đánh giá/điều phối làm lại hoặc loại bỏ; phương án xử lý chính thức theo hàng/lô có xuất chuyển, tiêu hủy, chi phí hoặc ảnh hưởng cam kết phải có giám đốc duyệt như bảng. Cách phân công này đã được anh duyệt cho mô hình demo theo B24; không phải xác nhận thẩm quyền thực tế của Nasaki. Không tự đặt hạn mức tiền để ủy quyền mua/chi; khi có nhu cầu mới đề xuất riêng.
 
 ## Bàn giao giữa các bộ phận
 
@@ -94,11 +94,11 @@ Toàn bộ số liệu dưới đây là giả lập kế thừa P06/M03 và tà
 
 Các nhánh ngoại lệ cần giữ để kiểm chứng: khách đổi mẫu sau duyệt; lô bị khóa trong khi đã giữ hàng; người duyệt vắng; tổ thiếu người/chờ máy; nhận trả nhưng chưa quyết hoàn tiền. Mỗi nhánh phải chỉ ra người giữ việc, bước tạm chờ, quyết định cần có và nguồn bị ảnh hưởng; không tự sửa số để làm kịch bản kết thúc đẹp.
 
-## Những nội dung đề nghị anh duyệt
+## Những nội dung đã được anh duyệt
 
 1. Một người giữ việc cho mỗi nguồn, ít cấp duyệt; giám đốc duyệt cam kết thương mại/mua/sản xuất/chi và ngoại lệ, các xác nhận thường ngày thuộc đúng bộ phận như bảng.
 2. Cho phép kiêm nhiệm và người nhập thay, nhưng không tự duyệt việc nhạy cảm của mình; ủy quyền có phạm vi/thời hạn và không tự mở quyền xem lương.
 3. Chất lượng được khóa ngay và là bên xác nhận đủ điều kiện giải phóng; quyết định thương mại không thay kết luận đạt.
 4. Bàn giao cần bên nhận phản hồi, nguồn đúng phiên bản và phần thiếu được theo dõi; dùng kịch bản liên hoàn trên làm cơ sở chuẩn bị dữ liệu/tiêu chí nghiệm thu sau.
 
-Anh có thể duyệt toàn phương án hoặc chỉnh từng mục; sự đồng ý giao lập đề xuất chưa phải duyệt bốn nội dung này. Bộ dữ liệu người/tài khoản/quyền, danh mục/lịch/chính sách mẫu, tiêu chí chất lượng và chứng từ chi phí vẫn phải cụ thể hóa trước xây dựng. Chưa đào sâu kế toán, chưa có build/test ứng dụng; chỉ đối chiếu tài liệu và phép tính. Lịch sử build chưa tồn tại vì kho chưa có mã ứng dụng. Bản này không kết luận phân tích toàn ERP hoàn tất hoặc cho phép triển khai thực tế.
+Anh đã duyệt phương án qua phản hồi “duyệt, bước tiếp theo là gì?” ngày 08/10/2026 (B24). Phê duyệt áp dụng cho phương án trong tài liệu này để dùng cho demo, không tự xác nhận mọi đề xuất cũ hoặc giao lập trình. Bộ dữ liệu người/tài khoản/quyền, danh mục/lịch/chính sách mẫu, tiêu chí chất lượng và chứng từ chi phí vẫn phải cụ thể hóa trước xây dựng. Chưa đào sâu kế toán, chưa có build/test ứng dụng; chỉ đối chiếu tài liệu và phép tính. Lịch sử build chưa tồn tại vì kho chưa có mã ứng dụng. Bản này không kết luận phân tích toàn ERP hoàn tất hoặc cho phép triển khai thực tế.

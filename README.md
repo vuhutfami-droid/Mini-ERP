@@ -20,7 +20,7 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Nhân sự, ca làm, chấm công và lương cho demo ERP Nasaki](docs/hr-workflows.md) lưu cơ cấu 50 người đề xuất, hồ sơ/vòng đời, lịch, công, phép, lương/ứng/thực trả và giờ công nối với sản xuất. Đọc khi thao tác nhân sự hoặc nguồn nhân công; chưa đào sâu kế toán theo yêu cầu mới của anh, không coi chính sách giả lập là chính sách pháp lý thật.
 
-[Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Bản ngày 08/10/2026 chờ anh duyệt; chưa tự thay quy trình đã xác nhận hoặc yêu cầu xây ứng dụng.
+[Đề xuất trách nhiệm, phê duyệt và bàn giao cho demo ERP Nasaki](docs/responsibilities-approvals-handoffs.md) nối các bộ phận, quyền quyết định/xác nhận, ủy quyền, kiểm soát chất lượng và kịch bản liên hoàn. Phương án ngày 08/10/2026 đã được anh duyệt cho demo (B24); còn cần cụ thể hóa dữ liệu/quy tắc mẫu trước yêu cầu chức năng và xây ứng dụng.
 
 ## Cách duy trì nhật ký
 
@@ -723,6 +723,18 @@ Kịch bản nối P06/M03: đơn 10.000 ngói, tám lô bắt đầu 8.000, 7.8
 **Chờ anh duyệt:** Bốn nhóm quyết định trình trong tài liệu: ít cấp duyệt/đầu mối nguồn; kiêm nhiệm và ủy quyền có kiểm soát; quyền khóa/giải phóng chất lượng; cách bàn giao và kịch bản chuẩn bị dữ liệu. Mục tiêu phản hồi trong một ngày làm việc với việc thường là đề xuất, không tự duyệt quá hạn. Chưa gửi thông báo hoặc liên hệ bên ngoài.
 
 **Trạng thái:** Đã lưu đề xuất, đối chiếu tài liệu và phép tính; chưa thiết kế/lập trình hoặc chạy build/test, kho chưa có lịch sử build ứng dụng. Tài chính chuyên sâu vẫn để sau; chưa kết luận phân tích toàn ERP hoàn tất.
+
+### 08/10/2026 — Duyệt phương án và xác định bước tiếp theo
+
+**Anh:**
+
+> duyệt, bước tiếp theo là gì?
+
+**Quyết định đã xác nhận:** Anh duyệt phương án trách nhiệm, phê duyệt và bàn giao vừa trình bày, gồm bốn nhóm quyết định, điểm kiểm soát chất lượng và cách dùng kịch bản liên hoàn làm cơ sở chuẩn bị dữ liệu; ghi B24 và cập nhật trạng thái tài liệu. Không coi là xác nhận quy trình thực tế của Nasaki, mọi đề xuất cũ hoặc yêu cầu lập trình.
+
+**Em — bước tiếp theo đề xuất:** Cụ thể hóa bộ nghiệp vụ và dữ liệu demo: danh mục sản phẩm/biến thể/vật tư, khách/nhà cung cấp, 50 nhân sự giả lập và người dùng/quyền; lịch và chính sách mẫu tinh gọn, tiêu chí chất lượng giả lập; giao dịch liên hoàn có nguồn chứng từ cho ngói và Terrazzo; kết quả mong đợi và tình huống ngoại lệ để nghiệm thu. Mục tiêu là mỗi tình huống xác định được ai làm, nhập gì, điều kiện chuyển bước và kết quả đúng. Sau đó chuyển thành danh sách chức năng và màn hình rồi mới lập trình; kế toán chuyên sâu vẫn để sau.
+
+**Trạng thái lần này:** Ghi nhận phê duyệt và hướng tiếp theo trong tài liệu; chưa tạo bộ dữ liệu mới hoặc xây ứng dụng. Kiểm tra thay đổi tài liệu và tính nhất quán trạng thái duyệt; kho chưa có mã ứng dụng hay lịch sử build/test.
 
 ## Các nội dung chưa được thống nhất
 
