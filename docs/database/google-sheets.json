@@ -1,0 +1,869 @@
+{
+  "phien_ban_thiet_ke": "B29",
+  "commit_nguon": "3e6fc6f",
+  "thoi_diem_kiem_tra": "09/10/2026 14:33 Asia/Bangkok",
+  "thu_muc": {
+    "ten": "Mini ERP",
+    "ma": "1z-KakfciWnvpaas1hcN8fNPOYi3aHj5S",
+    "duong_dan": "https://drive.google.com/drive/folders/1z-KakfciWnvpaas1hcN8fNPOYi3aHj5S"
+  },
+  "cac_file": [
+    {
+      "nhom": "overview",
+      "ten": "00 - Mini ERP - Tổng quan cấu trúc B29",
+      "ma_file": "1l32ds-6ReFtPUcZARHTc5Utcb3ediihUi3DI2dr3Lqc",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1l32ds-6ReFtPUcZARHTc5Utcb3ediihUi3DI2dr3Lqc/edit?usp=drivesdk",
+      "so_bang_du_lieu": 0,
+      "so_trang_tinh": 6
+    },
+    {
+      "nhom": "dung_chung",
+      "ten": "01 - Dùng chung - Mini ERP B29",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "so_bang_du_lieu": 17,
+      "so_trang_tinh": 19
+    },
+    {
+      "nhom": "truy_cap",
+      "ten": "02 - Truy cập và phân quyền - Mini ERP B29",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "so_bang_du_lieu": 8,
+      "so_trang_tinh": 10
+    },
+    {
+      "nhom": "danh_muc",
+      "ten": "03 - Danh mục - Mini ERP B29",
+      "ma_file": "167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc/edit?usp=drivesdk",
+      "so_bang_du_lieu": 3,
+      "so_trang_tinh": 5
+    },
+    {
+      "nhom": "kinh_doanh",
+      "ten": "04 - Kinh doanh - Mini ERP B29",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "so_bang_du_lieu": 5,
+      "so_trang_tinh": 7
+    },
+    {
+      "nhom": "mua_hang",
+      "ten": "05 - Mua hàng - Mini ERP B29",
+      "ma_file": "1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw/edit?usp=drivesdk",
+      "so_bang_du_lieu": 2,
+      "so_trang_tinh": 4
+    },
+    {
+      "nhom": "kho",
+      "ten": "06 - Kho - Mini ERP B29",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "so_bang_du_lieu": 6,
+      "so_trang_tinh": 8
+    },
+    {
+      "nhom": "san_xuat",
+      "ten": "07 - Sản xuất - Mini ERP B29",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "so_bang_du_lieu": 7,
+      "so_trang_tinh": 9
+    },
+    {
+      "nhom": "chat_luong",
+      "ten": "08 - Chất lượng - Mini ERP B29",
+      "ma_file": "10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q/edit?usp=drivesdk",
+      "so_bang_du_lieu": 2,
+      "so_trang_tinh": 4
+    },
+    {
+      "nhom": "giao_hang",
+      "ten": "09 - Giao hàng - Mini ERP B29",
+      "ma_file": "1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw/edit?usp=drivesdk",
+      "so_bang_du_lieu": 2,
+      "so_trang_tinh": 4
+    },
+    {
+      "nhom": "tai_chinh",
+      "ten": "10 - Tài chính - Mini ERP B29",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "so_bang_du_lieu": 13,
+      "so_trang_tinh": 15
+    },
+    {
+      "nhom": "nhan_su",
+      "ten": "11 - Nhân sự - Mini ERP B29",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "so_bang_du_lieu": 9,
+      "so_trang_tinh": 11
+    }
+  ],
+  "cac_bang": [
+    {
+      "ten_bang": "dung_chung.doanh_nghiep",
+      "ma_bang": "T001",
+      "nhan": "Doanh nghiệp",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "doanh_nghiep",
+      "ma_trang_tinh": 1001,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "dung_chung.bo_phan",
+      "ma_bang": "T002",
+      "nhan": "Bộ phận",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "bo_phan",
+      "ma_trang_tinh": 1002,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "dung_chung.vi_tri_giu_hang",
+      "ma_bang": "T003",
+      "nhan": "Vị trí giữ hàng",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "vi_tri_giu_hang",
+      "ma_trang_tinh": 1003,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "dung_chung.don_vi_tinh",
+      "ma_bang": "T004",
+      "nhan": "Đơn vị tính",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "don_vi_tinh",
+      "ma_trang_tinh": 1004,
+      "so_truong": 8
+    },
+    {
+      "ten_bang": "dung_chung.chung_tu",
+      "ma_bang": "T005",
+      "nhan": "Chứng từ",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "chung_tu",
+      "ma_trang_tinh": 1005,
+      "so_truong": 41
+    },
+    {
+      "ten_bang": "dung_chung.dong_chung_tu",
+      "ma_bang": "T006",
+      "nhan": "Dòng chứng từ",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "dong_chung_tu",
+      "ma_trang_tinh": 1006,
+      "so_truong": 8
+    },
+    {
+      "ten_bang": "dung_chung.lien_ket_chung_tu",
+      "ma_bang": "T007",
+      "nhan": "Liên kết chứng từ",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "lien_ket_chung_tu",
+      "ma_trang_tinh": 1007,
+      "so_truong": 7
+    },
+    {
+      "ten_bang": "dung_chung.de_nghi_va_quyet_dinh_phe_duyet",
+      "ma_bang": "T008",
+      "nhan": "Đề nghị và quyết định phê duyệt",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "de_nghi_va_quyet_dinh_phe_duyet",
+      "ma_trang_tinh": 1008,
+      "so_truong": 18
+    },
+    {
+      "ten_bang": "dung_chung.trao_doi_va_ban_giao",
+      "ma_bang": "T009",
+      "nhan": "Trao đổi và bàn giao",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "trao_doi_va_ban_giao",
+      "ma_trang_tinh": 1009,
+      "so_truong": 27
+    },
+    {
+      "ten_bang": "dung_chung.chung_cu_dinh_kem",
+      "ma_bang": "T010",
+      "nhan": "Chứng cứ đính kèm",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "chung_cu_dinh_kem",
+      "ma_trang_tinh": 1010,
+      "so_truong": 13
+    },
+    {
+      "ten_bang": "dung_chung.nhat_ky_thao_tac",
+      "ma_bang": "T011",
+      "nhan": "Nhật ký thao tác",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "nhat_ky_thao_tac",
+      "ma_trang_tinh": 1011,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "dung_chung.ky_nghiep_vu",
+      "ma_bang": "T012",
+      "nhan": "Kỳ nghiệp vụ",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "ky_nghiep_vu",
+      "ma_trang_tinh": 1012,
+      "so_truong": 18
+    },
+    {
+      "ten_bang": "dung_chung.phien_ban_chinh_sach",
+      "ma_bang": "T013",
+      "nhan": "Phiên bản chính sách",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "phien_ban_chinh_sach",
+      "ma_trang_tinh": 1013,
+      "so_truong": 16
+    },
+    {
+      "ten_bang": "dung_chung.bo_du_lieu_mo_phong",
+      "ma_bang": "T014",
+      "nhan": "Bộ dữ liệu mô phỏng",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "bo_du_lieu_mo_phong",
+      "ma_trang_tinh": 1014,
+      "so_truong": 12
+    },
+    {
+      "ten_bang": "truy_cap.tai_khoan_dang_nhap",
+      "ma_bang": "T015",
+      "nhan": "Tài khoản đăng nhập",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "tai_khoan_dang_nhap",
+      "ma_trang_tinh": 1015,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "truy_cap.vai_tro_cong_viec",
+      "ma_bang": "T016",
+      "nhan": "Vai trò công việc",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "vai_tro_cong_viec",
+      "ma_trang_tinh": 1016,
+      "so_truong": 6
+    },
+    {
+      "ten_bang": "truy_cap.quyen_thao_tac",
+      "ma_bang": "T017",
+      "nhan": "Quyền thao tác",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "quyen_thao_tac",
+      "ma_trang_tinh": 1017,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "truy_cap.cap_vai_tro",
+      "ma_bang": "T018",
+      "nhan": "Cấp vai trò",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "cap_vai_tro",
+      "ma_trang_tinh": 1018,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "truy_cap.uy_quyen",
+      "ma_bang": "T019",
+      "nhan": "Ủy quyền",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "uy_quyen",
+      "ma_trang_tinh": 1019,
+      "so_truong": 16
+    },
+    {
+      "ten_bang": "truy_cap.bien_nhan_xac_nhan_giao_dich",
+      "ma_bang": "T020",
+      "nhan": "Biên nhận xác nhận giao dịch",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "bien_nhan_xac_nhan_giao_dich",
+      "ma_trang_tinh": 1020,
+      "so_truong": 12
+    },
+    {
+      "ten_bang": "danh_muc.mat_hang",
+      "ma_bang": "T021",
+      "nhan": "Mặt hàng và nhóm mẫu",
+      "ma_file": "167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc/edit?usp=drivesdk",
+      "trang_tinh": "mat_hang",
+      "ma_trang_tinh": 1021,
+      "so_truong": 20
+    },
+    {
+      "ten_bang": "danh_muc.ma_goi_khac",
+      "ma_bang": "T022",
+      "nhan": "Mã gọi khác",
+      "ma_file": "167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc/edit?usp=drivesdk",
+      "trang_tinh": "ma_goi_khac",
+      "ma_trang_tinh": 1022,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "danh_muc.quy_doi_don_vi",
+      "ma_bang": "T023",
+      "nhan": "Quy đổi đơn vị",
+      "ma_file": "167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/167jzG-c2CIC2rMxLkmTkr9QO8HVdoV9WyHrCSLR-DMc/edit?usp=drivesdk",
+      "trang_tinh": "quy_doi_don_vi",
+      "ma_trang_tinh": 1023,
+      "so_truong": 13
+    },
+    {
+      "ten_bang": "dung_chung.doi_tac",
+      "ma_bang": "T024",
+      "nhan": "Đối tác",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "doi_tac",
+      "ma_trang_tinh": 1024,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "dung_chung.lien_he_doi_tac",
+      "ma_bang": "T025",
+      "nhan": "Liên hệ đối tác",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "lien_he_doi_tac",
+      "ma_trang_tinh": 1025,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "dung_chung.can_cu_dai_dien",
+      "ma_bang": "T026",
+      "nhan": "Căn cứ đại diện",
+      "ma_file": "1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1YWeoHhrVMRcXCPI0wN8ig_2YRhxpY_fnedTitmFCRYY/edit?usp=drivesdk",
+      "trang_tinh": "can_cu_dai_dien",
+      "ma_trang_tinh": 1026,
+      "so_truong": 13
+    },
+    {
+      "ten_bang": "kinh_doanh.nhu_cau_khach_hang",
+      "ma_bang": "T027",
+      "nhan": "Nhu cầu khách hàng",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "trang_tinh": "nhu_cau_khach_hang",
+      "ma_trang_tinh": 1027,
+      "so_truong": 7
+    },
+    {
+      "ten_bang": "kinh_doanh.bao_gia_va_don_hang",
+      "ma_bang": "T028",
+      "nhan": "Báo giá và đơn hàng",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "trang_tinh": "bao_gia_va_don_hang",
+      "ma_trang_tinh": 1028,
+      "so_truong": 16
+    },
+    {
+      "ten_bang": "kinh_doanh.dong_tu_van_bao_gia_va_don_hang",
+      "ma_bang": "T029",
+      "nhan": "Dòng tư vấn, báo giá và đơn hàng",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "trang_tinh": "dong_tu_van_bao_gia_va_don_hang",
+      "ma_trang_tinh": 1029,
+      "so_truong": 25
+    },
+    {
+      "ten_bang": "kinh_doanh.mau_khach_duyet",
+      "ma_bang": "T030",
+      "nhan": "Mẫu khách duyệt",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "trang_tinh": "mau_khach_duyet",
+      "ma_trang_tinh": 1030,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "kinh_doanh.ho_so_xu_ly",
+      "ma_bang": "T031",
+      "nhan": "Hồ sơ xử lý thương mại và chất lượng",
+      "ma_file": "1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1y3HQZPXuye-an0MDrQ_JUrkwSEtd95d_fbxzf3u-XPM/edit?usp=drivesdk",
+      "trang_tinh": "ho_so_xu_ly",
+      "ma_trang_tinh": 1031,
+      "so_truong": 19
+    },
+    {
+      "ten_bang": "mua_hang.don_mua_hang",
+      "ma_bang": "T032",
+      "nhan": "Đơn mua hàng",
+      "ma_file": "1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw/edit?usp=drivesdk",
+      "trang_tinh": "don_mua_hang",
+      "ma_trang_tinh": 1032,
+      "so_truong": 7
+    },
+    {
+      "ten_bang": "mua_hang.dong_don_mua_hang",
+      "ma_bang": "T033",
+      "nhan": "Dòng đơn mua hàng",
+      "ma_file": "1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1qRWBg7jnn6hwok-aWz6O9g17LBibQWytUT5Wgjbimmw/edit?usp=drivesdk",
+      "trang_tinh": "dong_don_mua_hang",
+      "ma_trang_tinh": 1033,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "kho.lo_hang",
+      "ma_bang": "T034",
+      "nhan": "Lô hàng",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "lo_hang",
+      "ma_trang_tinh": 1034,
+      "so_truong": 13
+    },
+    {
+      "ten_bang": "kho.phan_lo_hang",
+      "ma_bang": "T035",
+      "nhan": "Phần lô hàng",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "phan_lo_hang",
+      "ma_trang_tinh": 1035,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "kho.dong_van_dong_hang",
+      "ma_bang": "T036",
+      "nhan": "Dòng vận động hàng",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "dong_van_dong_hang",
+      "ma_trang_tinh": 1036,
+      "so_truong": 19
+    },
+    {
+      "ten_bang": "kho.yeu_cau_hang_va_vat_tu",
+      "ma_bang": "T037",
+      "nhan": "Yêu cầu hàng và vật tư",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "yeu_cau_hang_va_vat_tu",
+      "ma_trang_tinh": 1037,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "kho.su_kien_giu_khoa_va_dang_ve",
+      "ma_bang": "T038",
+      "nhan": "Sự kiện giữ, khóa và hàng đang về",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "su_kien_giu_khoa_va_dang_ve",
+      "ma_trang_tinh": 1038,
+      "so_truong": 23
+    },
+    {
+      "ten_bang": "kho.dong_kiem_ke",
+      "ma_bang": "T039",
+      "nhan": "Dòng kiểm kê",
+      "ma_file": "1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1n5-6CGTP9GnETnN8tLEU3bpdIOZiKkt4FgZmQUxo7BQ/edit?usp=drivesdk",
+      "trang_tinh": "dong_kiem_ke",
+      "ma_trang_tinh": 1039,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "san_xuat.phien_ban_dinh_muc_san_xuat",
+      "ma_bang": "T040",
+      "nhan": "Phiên bản định mức sản xuất",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "phien_ban_dinh_muc_san_xuat",
+      "ma_trang_tinh": 1040,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "san_xuat.dong_dinh_muc_vat_tu",
+      "ma_bang": "T041",
+      "nhan": "Dòng định mức vật tư",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "dong_dinh_muc_vat_tu",
+      "ma_trang_tinh": 1041,
+      "so_truong": 8
+    },
+    {
+      "ten_bang": "san_xuat.nguon_luc_san_xuat",
+      "ma_bang": "T042",
+      "nhan": "Nguồn lực sản xuất",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "nguon_luc_san_xuat",
+      "ma_trang_tinh": 1042,
+      "so_truong": 12
+    },
+    {
+      "ten_bang": "san_xuat.lenh_san_xuat",
+      "ma_bang": "T043",
+      "nhan": "Lệnh sản xuất",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "lenh_san_xuat",
+      "ma_trang_tinh": 1043,
+      "so_truong": 13
+    },
+    {
+      "ten_bang": "san_xuat.lo_san_xuat",
+      "ma_bang": "T044",
+      "nhan": "Lô sản xuất",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "lo_san_xuat",
+      "ma_trang_tinh": 1044,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "san_xuat.cong_doan_san_xuat",
+      "ma_bang": "T045",
+      "nhan": "Công đoạn sản xuất",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "cong_doan_san_xuat",
+      "ma_trang_tinh": 1045,
+      "so_truong": 14
+    },
+    {
+      "ten_bang": "san_xuat.lich_nguoi_va_nguon_luc",
+      "ma_bang": "T046",
+      "nhan": "Lịch người và nguồn lực",
+      "ma_file": "11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/11p6j0PrKWbXyEX78GNBVwSOB-RUwVb5VQcEEdcyTC80/edit?usp=drivesdk",
+      "trang_tinh": "lich_nguoi_va_nguon_luc",
+      "ma_trang_tinh": 1046,
+      "so_truong": 18
+    },
+    {
+      "ten_bang": "chat_luong.phieu_kiem_tra_chat_luong",
+      "ma_bang": "T047",
+      "nhan": "Phiếu kiểm tra chất lượng",
+      "ma_file": "10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q/edit?usp=drivesdk",
+      "trang_tinh": "phieu_kiem_tra_chat_luong",
+      "ma_trang_tinh": 1047,
+      "so_truong": 15
+    },
+    {
+      "ten_bang": "chat_luong.ket_qua_tung_tieu_chi_kiem_tra",
+      "ma_bang": "T048",
+      "nhan": "Kết quả từng tiêu chí kiểm tra",
+      "ma_file": "10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/10XNoVERDGW2VvD4ugJJOLPlAzWP8W17JT8PENqbOj7Q/edit?usp=drivesdk",
+      "trang_tinh": "ket_qua_tung_tieu_chi_kiem_tra",
+      "ma_trang_tinh": 1048,
+      "so_truong": 12
+    },
+    {
+      "ten_bang": "giao_hang.dot_giao_hang",
+      "ma_bang": "T049",
+      "nhan": "Đợt giao hàng",
+      "ma_file": "1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw/edit?usp=drivesdk",
+      "trang_tinh": "dot_giao_hang",
+      "ma_trang_tinh": 1049,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "giao_hang.dong_giao_va_nhan_hang",
+      "ma_bang": "T050",
+      "nhan": "Dòng giao và nhận hàng",
+      "ma_file": "1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1CwoK41PDePmZhXYWcThOu4igNFMu1hqn2no2S8D_4aw/edit?usp=drivesdk",
+      "trang_tinh": "dong_giao_va_nhan_hang",
+      "ma_trang_tinh": 1050,
+      "so_truong": 16
+    },
+    {
+      "ten_bang": "tai_chinh.quy_va_tai_khoan_tien",
+      "ma_bang": "T051",
+      "nhan": "Quỹ và tài khoản tiền",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "quy_va_tai_khoan_tien",
+      "ma_trang_tinh": 1051,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "tai_chinh.de_nghi_chi_tien",
+      "ma_bang": "T052",
+      "nhan": "Đề nghị chi tiền",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "de_nghi_chi_tien",
+      "ma_trang_tinh": 1052,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "tai_chinh.bien_dong_tien_thuc",
+      "ma_bang": "T053",
+      "nhan": "Biến động tiền thực",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "bien_dong_tien_thuc",
+      "ma_trang_tinh": 1053,
+      "so_truong": 16
+    },
+    {
+      "ten_bang": "tai_chinh.nghia_vu_va_dieu_chinh",
+      "ma_bang": "T054",
+      "nhan": "Nghĩa vụ và điều chỉnh",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "nghia_vu_va_dieu_chinh",
+      "ma_trang_tinh": 1054,
+      "so_truong": 22
+    },
+    {
+      "ten_bang": "tai_chinh.su_kien_su_dung_nguon_tien",
+      "ma_bang": "T055",
+      "nhan": "Sự kiện sử dụng nguồn tiền",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "su_kien_su_dung_nguon_tien",
+      "ma_trang_tinh": 1055,
+      "so_truong": 12
+    },
+    {
+      "ten_bang": "tai_chinh.dong_ghi_nhan_ban",
+      "ma_bang": "T056",
+      "nhan": "Dòng ghi nhận bán",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "dong_ghi_nhan_ban",
+      "ma_trang_tinh": 1056,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "tai_chinh.doi_chieu_nghia_vu_mua",
+      "ma_bang": "T057",
+      "nhan": "Đối chiếu nghĩa vụ mua",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "doi_chieu_nghia_vu_mua",
+      "ma_trang_tinh": 1057,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "tai_chinh.dong_doi_chieu_quy_ngan_hang",
+      "ma_bang": "T058",
+      "nhan": "Dòng đối chiếu quỹ ngân hàng",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "dong_doi_chieu_quy_ngan_hang",
+      "ma_trang_tinh": 1058,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "tai_chinh.nguon_chi_phi",
+      "ma_bang": "T059",
+      "nhan": "Nguồn chi phí",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "nguon_chi_phi",
+      "ma_trang_tinh": 1059,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "tai_chinh.phan_bo_chi_phi",
+      "ma_bang": "T060",
+      "nhan": "Phân bổ chi phí",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "phan_bo_chi_phi",
+      "ma_trang_tinh": 1060,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "tai_chinh.can_cu_phan_bo_chi_phi",
+      "ma_bang": "T061",
+      "nhan": "Căn cứ phân bổ chi phí",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "can_cu_phan_bo_chi_phi",
+      "ma_trang_tinh": 1061,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "tai_chinh.bien_dong_gia_tri",
+      "ma_bang": "T062",
+      "nhan": "Biến động giá trị",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "bien_dong_gia_tri",
+      "ma_trang_tinh": 1062,
+      "so_truong": 14
+    },
+    {
+      "ten_bang": "nhan_su.nhan_vien",
+      "ma_bang": "T063",
+      "nhan": "Nhân viên",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "nhan_vien",
+      "ma_trang_tinh": 1063,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "nhan_su.ho_so_lam_viec_theo_hieu_luc",
+      "ma_bang": "T064",
+      "nhan": "Hồ sơ làm việc theo hiệu lực",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "ho_so_lam_viec_theo_hieu_luc",
+      "ma_trang_tinh": 1064,
+      "so_truong": 15
+    },
+    {
+      "ten_bang": "nhan_su.ho_so_ky_nang_va_an_toan",
+      "ma_bang": "T065",
+      "nhan": "Hồ sơ kỹ năng và an toàn",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "ho_so_ky_nang_va_an_toan",
+      "ma_trang_tinh": 1065,
+      "so_truong": 9
+    },
+    {
+      "ten_bang": "nhan_su.ngay_va_ca_lam_viec",
+      "ma_bang": "T066",
+      "nhan": "Ngày và ca làm việc",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "ngay_va_ca_lam_viec",
+      "ma_trang_tinh": 1066,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "nhan_su.khoang_cong_thuc_te",
+      "ma_bang": "T067",
+      "nhan": "Khoảng công thực tế",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "khoang_cong_thuc_te",
+      "ma_trang_tinh": 1067,
+      "so_truong": 14
+    },
+    {
+      "ten_bang": "nhan_su.de_nghi_nghi",
+      "ma_bang": "T068",
+      "nhan": "Đề nghị nghỉ",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "de_nghi_nghi",
+      "ma_trang_tinh": 1068,
+      "so_truong": 11
+    },
+    {
+      "ten_bang": "nhan_su.su_kien_phep",
+      "ma_bang": "T069",
+      "nhan": "Sự kiện phép",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "su_kien_phep",
+      "ma_trang_tinh": 1069,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "nhan_su.thu_nhap_nhan_vien",
+      "ma_bang": "T070",
+      "nhan": "Thu nhập nhân viên",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "thu_nhap_nhan_vien",
+      "ma_trang_tinh": 1070,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "nhan_su.khoan_thu_nhap_co_can_cu",
+      "ma_bang": "T071",
+      "nhan": "Khoản thu nhập có căn cứ",
+      "ma_file": "13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/13kgfQtiMFrBQ0Jd4Rd3oobP1KhR8WrKZ9U5T6d6NW2o/edit?usp=drivesdk",
+      "trang_tinh": "khoan_thu_nhap_co_can_cu",
+      "ma_trang_tinh": 1071,
+      "so_truong": 14
+    },
+    {
+      "ten_bang": "truy_cap.phien_dang_nhap",
+      "ma_bang": "T072",
+      "nhan": "Phiên đăng nhập",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "phien_dang_nhap",
+      "ma_trang_tinh": 1072,
+      "so_truong": 10
+    },
+    {
+      "ten_bang": "tai_chinh.nguon_cua_ban_chot_gia_thanh",
+      "ma_bang": "T073",
+      "nhan": "Nguồn của bản chốt giá thành",
+      "ma_file": "12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/12ad4EFhIo1enOJuNQhHMoVkDSrLVFslDEgoskA-NpMw/edit?usp=drivesdk",
+      "trang_tinh": "nguon_cua_ban_chot_gia_thanh",
+      "ma_trang_tinh": 1073,
+      "so_truong": 4
+    },
+    {
+      "ten_bang": "truy_cap.dinh_danh_nguoi",
+      "ma_bang": "T074",
+      "nhan": "Định danh người",
+      "ma_file": "1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0",
+      "duong_dan_file": "https://docs.google.com/spreadsheets/d/1lXsxcC3y9tEE2KRSCHXgjFAlP244ieTJYL7_F_aITf0/edit?usp=drivesdk",
+      "trang_tinh": "dinh_danh_nguoi",
+      "ma_trang_tinh": 1074,
+      "so_truong": 8
+    }
+  ],
+  "ma_kiem_toan_ven_nguon": {
+    "fields.csv": "4c918b97d5c428686085a8591999270c7516a86061cc3ef4a58dfbb623e5c4e1",
+    "relationships.csv": "4a379258260c38ea0b95bde4b953d8b89126f2b7a625b65e52637663c0c714bb",
+    "source-contracts.csv": "91439c3315bac9de2b7b8a3cb31269767061d19464afb09987194b6170036e8e",
+    "input-responsibility.csv": "202f9bde23bef048637d5ccd99f9dfa4bbe9560aa8d8a73f2d471027dc708e90"
+  },
+  "ket_qua_doi_chieu": {
+    "so_file": 12,
+    "so_trang_tinh": 102,
+    "so_bang_du_lieu": 74,
+    "so_truong": 931,
+    "so_mo_ta_truong": 931,
+    "so_lien_ket": 402,
+    "so_dieu_kien_loai_nguon": 43,
+    "so_cot_danh_sach_chon": 111,
+    "so_cot_ngay": 25,
+    "so_dong_giao_dich_gia_lap": 0
+  },
+  "gioi_han": "Mẫu cấu trúc và tài liệu, chưa là DB hoặc ERP. Chưa thực thi FK, giao dịch, tự ghi hay quyền theo dòng/cột. Số chính xác và mốc có múi giờ giữ dạng văn bản; ngày dùng DATE và lựa chọn đóng dùng DROPDOWN. Không có render trình duyệt; kiểm kiểu/định dạng qua API."
+}

@@ -54,8 +54,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 
 | B28 | Tất cả bảng/trường dùng tiếng Việt và mô tả rõ; rà dữ liệu phải có nguồn, không cài để hỗ trợ chức năng hoặc dẫn quyết định. | Yêu cầu ngày 08/10/2026; đổi thiết kế, tách kết quả tổng hợp, rà/cô lập bộ kiểm giả lập. Không giao lập trình, không xác nhận bộ mẫu là nguồn thật Nasaki. |
 | B29 | Rà toàn bộ và tối ưu dữ liệu cho ít người vận hành, đủ công việc Nasaki giả lập. | Yêu cầu ngày 08/10/2026; phương án kỹ thuật 74 bảng/931 trường/402 quan hệ, giảm nhập lại; giữ bảy phân hệ, nguồn, quyền và lịch sử. Chưa lập trình. |
+| B30 | Tạo thư mục Mini ERP và Google Sheets đúng cấu trúc đã duyệt B29. | Yêu cầu ngày 09/10/2026; 12 file/74 bảng/931 trường, mẫu trống kèm tài liệu; không triển khai DB/ERP. |
 
-Các mã B01–B29 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B30 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -420,3 +421,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Tinh gọn theo B29
 
 [Phương án rà toàn bộ](database/optimization-review.md) hiện hành có 74 bảng/931 trường/402 quan hệ, thay mô hình 91 bảng của B28. Đã đối chiếu cả 91 bảng và 1.139 trường cũ, gộp 17 bảng và thông tin chung trùng. Bảy phân hệ/33 yêu cầu/22 màn hình/56 tiêu chí giữ phạm vi. Người dùng nhập theo công việc, dữ kiện có nguồn tái sử dụng; nguồn thực, quyết định, tiền và nợ vẫn phân nhiệm. Sáu đầu mối công việc kiêm nhiệm là đề xuất demo, không nhân sự Nasaki đã khảo sát. Chưa lập trình/tạo DB; chưa đo thời gian hoặc hiệu năng thực.
+
+### Bộ Sheets theo B30
+
+[Google Sheets](database/google-sheets.md) thể hiện nguyên cấu trúc B29 đã được anh yêu cầu sử dụng như thiết kế đã duyệt. Có 12 file/74 trang dữ liệu/931 cột, nguồn và mô tả đầy đủ, giao dịch trống; các trang tài liệu không thêm bảng nghiệp vụ. Vẫn phân biệt đề xuất chính sách/đầu mối demo với dữ kiện Nasaki. Tạo Sheets không thực thi FK/quyền/ERP hoặc thay đổi nguồn Git.

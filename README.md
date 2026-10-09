@@ -30,6 +30,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Rà soát tinh gọn B29](docs/database/optimization-review.md) giải thích từng phần gộp/giữ, cách vận hành ít người và đối chiếu đủ 91 bảng cũ. Thiết kế hiện hành có 74 bảng/931 trường/402 quan hệ, vẫn đủ 33 yêu cầu/22 màn hình/56 tiêu chí; [trách nhiệm nhập](docs/database/input-responsibility.md) và [đối chiếu luồng](docs/database/workflow-coverage.md) giúp triển khai mà không bắt người dùng nhập từng bảng.
 
+[Bộ Google Sheets theo B29](docs/database/google-sheets.md) đã được tạo tại [thư mục Mini ERP](https://drive.google.com/drive/folders/1z-KakfciWnvpaas1hcN8fNPOYi3aHj5S); anh bắt đầu từ [file tổng quan](https://docs.google.com/spreadsheets/d/1l32ds-6ReFtPUcZARHTc5Utcb3ediihUi3DI2dr3Lqc/edit?usp=drivesdk). Có 12 file, 74 trang dữ liệu và tài liệu tương ứng, chưa là DB/ERP vận hành.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -866,3 +868,17 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Kiểm tra:** `python scripts/verify-database-design.py` đạt: tên/trường/kiểu/nguồn/FK/loại đích, ánh xạ so với Git B28, phạm vi và liên kết; `git diff --check` kiểm định dạng. [Lịch sử kiểm tra](docs/build-history.md) ghi bằng chứng và giới hạn. Đây là rà thiết kế, chưa tạo DB/lập trình, chưa kiểm SQL/quyền/đồng thời/hiệu năng/khôi phục thực. 74 không là con số tối ưu tuyệt đối; hiệu quả thao tác cần đo khi có phần mềm.
 
 **Lưu trữ:** Các tệp được đưa vào commit B29 trên `main` và đồng bộ GitHub; trạng thái đồng bộ được kiểm bằng đối chiếu mã commit từ xa với HEAD trước khi báo anh.
+
+### 09/10/2026 — Tạo thư mục và Google Sheets theo cấu trúc đã duyệt (B30)
+
+**Anh:**
+
+> tiếp theo, sử dụng google driver của anh, tạo một folder với tên là "Mini ERP", sau đó, tạo các file google sheet sao cho đảm bảo với đúng cấu trúc cơ sở dữ liệu đã được duyệt
+
+**Yêu cầu và kết quả:** Dùng B29 làm cấu trúc đã duyệt để tạo bộ Sheets; không giao lập trình hoặc triển khai DB. Đã dùng Google Drive/Google Sheets, tìm trước để tránh trùng, tạo thư mục Mini ERP ở Drive của anh, tạo 12 file Sheets gốc và chuyển vào đúng thư mục. Không thay thiết lập chia sẻ. 11 file theo nhóm dữ liệu chứa 74 trang tương ứng đúng bảng; file tổng quan có danh mục/liên kết/loại nguồn/cấu trúc đóng/bao phủ. Tổng 102 trang gồm 28 trang tài liệu, không thêm 28 bảng nghiệp vụ.
+
+Đúng 931 tên cột và thứ tự nguồn, đầy đủ mô tả/kiểu/căn cứ/trách nhiệm/điều kiện và quy tắc bảng. Có ghi chú ở tiêu đề, hàng cố định/cảnh báo sửa, 111 cột lựa chọn đóng và 25 cột ngày DATE. Các bảng là mẫu trống; không nạp giao dịch giả lập hoặc tạo người duyệt/nguồn để đạt số mong đợi. Số chính xác/mốc có múi giờ giữ văn bản; kiểu DB trong từ điển, không thêm công thức nghiệp vụ hoặc tự ghi ERP.
+
+**Kiểm:** Đọc lại toàn bộ nội dung đã ghi và metadata từ connector, đối chiếu bảng/trường/từ điển/quan hệ/loại nguồn/native tables/lựa chọn/ngày, đọc metadata vị trí của cả 12 file. Kiểm đạt; định dạng kiểm qua API, chưa có render trình duyệt. Không kiểm SQL/ERP, FK/quyền/giao dịch/đồng thời. Nguồn B29 và năm tệp mẫu giữ nguyên.
+
+**Lưu:** [Hướng dẫn và đường dẫn từng file](docs/database/google-sheets.md), [ánh xạ máy đọc](docs/database/google-sheets.json); lịch sử kiểm tra ghi bằng chứng. Nhật ký và hồ sơ được lưu trong Git và đồng bộ GitHub, trạng thái đồng bộ kiểm bằng commit từ xa trước khi báo anh.
