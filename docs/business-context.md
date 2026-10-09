@@ -451,3 +451,8 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Duyệt website B36 và trao đổi lưu trữ B37
 
 B36 duyệt W01–W20, thay trạng thái chờ duyệt trước đây. B37 đang hỏi khả năng dùng Sheets trực tiếp. Có thể thiết kế website với Sheets API làm kho chính, nhưng phải xử lý lại quyền, tính nhất quán và nguồn; không đồng nhất file mẫu với DB ERP. Khuyến nghị hiện tại giữ PostgreSQL phía sau website (anh không thao tác SQL), Sheets chuẩn bị/nhập danh mục có kiểm và xuất báo cáo theo quyền; chưa duyệt tích hợp hoặc thay nền. Dữ liệu nguồn đã xác nhận không sửa tự do trong Sheets, không đồng bộ mọi bảng thành hai sổ chính.
+
+
+### B38 — Chốt phương án và lập trình D01
+
+Anh đã giao thực hiện nền website với Django/PostgreSQL là nơi lưu chính; Codex xử lý kỹ thuật, anh không cài SQL/DB. Sheets vẫn là vùng tham chiếu/chuẩn bị/đối chiếu theo quyền, không sửa mọi nguồn đã ghi. [Bản nền D01](implementation/foundation.md) ghi tính năng, khác biệt cấu trúc, kết quả PostgreSQL/trình duyệt/khôi phục và giới hạn. Chưa công khai hosting/HTTPS hoặc hoàn tất bảy phân hệ. Mô hình và dữ liệu thử tiếp tục là giả lập, không nội bộ Nasaki.

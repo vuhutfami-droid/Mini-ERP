@@ -1,0 +1,16 @@
+COMMENT ON TABLE nen_tang.phien_ban_cau_truc IS 'Lịch sử áp dụng migration; chỉ công cụ bảo trì ghi, không nguồn nghiệp vụ.';
+COMMENT ON COLUMN nen_tang.phien_ban_cau_truc.ma_phien_ban IS 'Tên tệp migration đã áp dụng, khóa duy nhất.';
+COMMENT ON COLUMN nen_tang.phien_ban_cau_truc.ma_kiem_toan_ven IS 'SHA-256 của mã migration, phát hiện sửa tệp đã chạy.';
+COMMENT ON COLUMN nen_tang.phien_ban_cau_truc.thoi_diem_ap_dung IS 'Thời điểm máy chủ áp dụng cấu trúc.';
+COMMENT ON TABLE nen_tang.ban_nhap_bieu_mau IS 'Nháp biểu mẫu chưa xác nhận, riêng chủ tài khoản và bộ, không vào sổ nghiệp vụ.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.ma_dinh_danh IS 'Mã nháp ngẫu nhiên, không khóa hồ sơ nghiệp vụ.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.ma_bo_du_lieu IS 'Bộ chứa nháp; quyền vẫn kiểm lại khi mở/lưu.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.ma_tai_khoan IS 'Chủ nháp duy nhất, không chia sẻ giữa người dùng máy chung.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.loai_bieu_mau IS 'Biểu mẫu nền trong danh sách đóng của ứng dụng.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.noi_dung_nhap IS 'Giá trị chưa xác nhận; chỉ các trường của biểu mẫu, không quyết định, lượng/tiền đã ghi sổ.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.so_phien_ban IS 'Số phiên bản để phát hiện hai tab sửa nháp cùng lúc.';
+COMMENT ON COLUMN nen_tang.ban_nhap_bieu_mau.thoi_diem_cap_nhat IS 'Mốc lưu máy chủ; nháp chỉ mở lại trong bảy ngày.';
+COMMENT ON TABLE nen_tang.gioi_han_dang_nhap IS 'Giới hạn lần thử đăng nhập theo tên đã băm, không lưu mật khẩu hoặc danh sách tài khoản rõ.';
+COMMENT ON COLUMN nen_tang.gioi_han_dang_nhap.khoa_da_bam IS 'SHA-256 của tên đăng nhập chuẩn hóa.';
+COMMENT ON COLUMN nen_tang.gioi_han_dang_nhap.so_lan_sai IS 'Số lần sai trong cửa sổ, chặn từ năm lần.';
+COMMENT ON COLUMN nen_tang.gioi_han_dang_nhap.thoi_diem_bat_dau IS 'Mốc cửa sổ giới hạn mười lăm phút.';

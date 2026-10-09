@@ -1,16 +1,16 @@
 # Kế hoạch xây dựng Mini-ERP cho demo Nasaki
 
-Ngày: 09/10/2026, Asia/Bangkok. **Trạng thái: đề xuất B31, chưa bắt đầu lập trình.** Anh giao lập kế hoạch xây dần tính năng; thứ tự, công nghệ và mốc dưới đây là phương án của Codex, chưa phải lịch triển khai đã duyệt.
+Ngày: 09/10/2026, Asia/Bangkok. **Kế hoạch gốc B31; B38 đã chốt kiến trúc và giao triển khai D01.** Anh giao lập kế hoạch xây dần tính năng; thứ tự, công nghệ và mốc dưới đây là phương án của Codex, các đợt tiếp theo chưa được coi là đã triển khai. [Bản nền và kết quả kiểm D01](implementation/foundation.md) ghi trạng thái hiện hành.
 
 ## Mục tiêu và điểm xuất phát
 
 Xây một ứng dụng chạy trên trình duyệt, xử lý và lưu giao dịch thật trong môi trường demo. Dữ liệu nghiệp vụ giả lập phải có nguồn và thao tác xác nhận rõ; không coi là dữ liệu nội bộ Nasaki. Giữ mô hình một công ty, một xưởng, một kho, 50 nhân sự và cả ngói/Terrazzo. Phiên bản đầu hoàn chỉnh có đủ kinh doanh, mua hàng, kho, sản xuất, chất lượng, tài chính quản trị và nhân sự.
 
-Đã có thiết kế 74 bảng/931 trường/402 quan hệ, 33 yêu cầu chức năng, 22 loại màn hình và 56 tiêu chí nghiệm thu. Google Sheets đã có cấu trúc trống. Chưa có cơ sở dữ liệu chạy, máy chủ ứng dụng hoặc kiểm thử ERP. Bản HTML chỉ là mẫu bố cục. Vì vậy đợt đầu phải xây nền chạy thật trước khi làm các quy trình.
+Đã có thiết kế 74 bảng/931 trường/402 quan hệ, 33 yêu cầu chức năng, 22 loại màn hình và 56 tiêu chí nghiệm thu. Google Sheets đã có cấu trúc trống. Tại lúc đề xuất B31 chưa có cơ sở dữ liệu chạy, máy chủ ứng dụng hoặc kiểm thử ERP; B38 đã tạo/kiểm nền riêng, chưa hoàn tất ERP. Bản HTML chỉ là mẫu bố cục. Vì vậy đợt đầu phải xây nền chạy thật trước khi làm các quy trình.
 
 Không biến 74 bảng thành 74 màn hình nhập liệu. Người dùng làm công việc qua các biểu mẫu đã thiết kế; một lần xác nhận có thể ghi nhiều bảng liên quan. Chỉ lấy lại dữ kiện từ nguồn, không tự duyệt, tự kết luận chất lượng hoặc tự ghi công thực tế.
 
-[Phân tích chi tiết D01 — nền hệ thống](foundation-plan.md) cụ thể hóa cấu trúc, bảy bước triển khai, yêu cầu kỹ thuật, sản phẩm và 14 điều kiện nghiệm thu nền. Đây là đề xuất B32, chưa lập trình.
+[Phân tích chi tiết D01 — nền hệ thống](foundation-plan.md) cụ thể hóa cấu trúc, bảy bước triển khai, yêu cầu kỹ thuật, sản phẩm và 14 điều kiện nghiệm thu nền. B32 là hồ sơ gốc; kết quả D01 triển khai tại B38 được ghi riêng.
 
 ## Phương án kỹ thuật đề xuất
 

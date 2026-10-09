@@ -1,0 +1,42 @@
+name: Foundation PostgreSQL and browser
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  foundation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install locked development dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements-dev.txt
+          .venv/bin/python -m playwright install --with-deps chromium
+      - name: Initialize isolated PostgreSQL and verify foundation
+        run: |
+          .venv/bin/python scripts/local_setup.py
+          .venv/bin/python tests/run.py
+          .venv/bin/python tests/performance_check.py
+          python scripts/verify-database-design.py
+          .venv/bin/python scripts/run_local.py check
+      - name: Verify browser workflow
+        run: |
+          .venv/bin/python scripts/run_local.py runserver 127.0.0.1:8000 --noreload > .runtime/web.log 2>&1 &
+          .venv/bin/python - <<'PY'
+          import time,urllib.request
+          for attempt in range(30):
+              try:
+                  urllib.request.urlopen('http://127.0.0.1:8000/dang-nhap/');break
+              except OSError:
+                  time.sleep(1)
+          else:
+              raise RuntimeError('Web process did not start')
+          PY
+          .venv/bin/python tests/browser_check.py
+      - name: Verify repository formatting
+        run: git diff --check

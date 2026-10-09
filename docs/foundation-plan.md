@@ -1,8 +1,8 @@
 # Đợt 1 — Phân tích và kế hoạch xây nền Mini-ERP
 
-Ngày 09/10/2026, Asia/Bangkok. **Đề xuất B32, chưa lập trình.** Cụ thể hóa D01 của [kế hoạch tổng thể](development-plan.md), theo thiết kế B29 và trách nhiệm B24. Các mục dưới đây là công việc/đầu ra cần xây và kiểm trong tương lai, không phải tính năng đã hoạt động.
+Ngày 09/10/2026, Asia/Bangkok. **Hồ sơ đề xuất gốc B32; đã được anh chốt triển khai tại B38.** Cụ thể hóa D01 của [kế hoạch tổng thể](development-plan.md), theo thiết kế B29 và trách nhiệm B24. Các mục dưới đây là công việc/đầu ra cần xây và kiểm trong tương lai, không thay bằng chứng triển khai. Bản chạy, kiểm đạt và giới hạn hiện tại xem [báo cáo D01](implementation/foundation.md).
 
-[B34/B35 — sử dụng website](website-use-proposal.md): anh đã chốt mở bằng trình duyệt, không cài ứng dụng máy tính. Anh đã đồng ý phương án thiết bị/truy cập/nháp/nhiều tab/đăng nhập chi tiết tại B36; chưa triển khai hoặc đo kết quả.
+[B34/B35 — sử dụng website](website-use-proposal.md): anh đã chốt mở bằng trình duyệt, không cài ứng dụng máy tính. Anh đã đồng ý phương án thiết bị/truy cập/nháp/nhiều tab/đăng nhập chi tiết tại B36; kết quả triển khai/đo tại B38 được ghi riêng trong báo cáo D01.
 
 ## 1. Mục tiêu bàn giao
 

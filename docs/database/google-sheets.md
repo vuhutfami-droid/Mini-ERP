@@ -37,3 +37,8 @@ Yêu cầu ngày 09/10/2026: tạo thư mục **Mini ERP** và các Google Sheet
 Đã đọc lại metadata Drive, tên/ID trang tính, tất cả ô tài liệu đã ghi, hàng tên trường/ghi chú và metadata native table. Đối chiếu đủ 12 file/74 bảng/931 trường và mô tả, 402 liên kết/43 điều kiện, các lựa chọn đúng nguồn, 25 định dạng ngày và không có dòng giao dịch cài sẵn. Kiểm tra định dạng/kiểu qua API; chưa xem render trong trình duyệt vì chưa có công cụ hiển thị Google Sheets được xác thực.
 
 Các Sheets là mẫu lưu trữ cấu trúc và tài liệu. Google Sheets chưa thực thi khóa ngoại, quyền theo dòng/cột, bất biến sau duyệt, giao dịch nguyên tử, chống ghi lặp/đồng thời hoặc logic tính toán ERP. Không coi tạo các file này là xây xong cơ sở dữ liệu vận hành. Git tiếp tục là nguồn thiết kế có phiên bản; sửa cấu trúc Sheets cần đối chiếu lại thiết kế, không tự đồng bộ hoặc tự đổi DB.
+
+
+## Cập nhật triển khai D01 (B38)
+
+Bộ này giữ ảnh chụp B29 tại thời điểm tạo. Khi chạy PostgreSQL phát hiện T006 thiếu hai loại dòng kế thừa tiền/giá trị; fields.csv và migration 006 đã bổ sung `dong_tien_thuc`, `dong_gia_tri`, không tăng bảng/trường nghiệp vụ. Các dropdown/từ điển trên Sheets **chưa cập nhật hai lựa chọn**. Website D01 không nạp 74 trang này hoặc dùng chúng làm sổ; nhập Excel chỉ cho danh mục mới có xem trước/xác nhận. Xem [phạm vi và kiểm nền](../implementation/foundation.md).

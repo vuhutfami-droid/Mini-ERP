@@ -1,0 +1,1 @@
+{% extends 'foundation/base.html' %}{% block content %}<h1>{{ title }}</h1><section class='panel'>{% for label,value in values %}<p><strong>{{ label }}</strong>: {{ value|default_if_none:'Chưa khai báo' }}</p>{% endfor %}</section>{% endblock %}

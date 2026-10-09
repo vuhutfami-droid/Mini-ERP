@@ -2,7 +2,7 @@
   "phien_ban": "B28",
   "du_lieu_nasaki_that": false,
   "cho_phep_nap_nguyen_bo": false,
-  "quy_tac": "Không tự nạp quyết định, trạng thái, kết quả tính hoặc chứng cứ giả. Bộ khởi tạo nguồn chưa được lập; cần chứng từ theo thiết kế và xác nhận riêng. Đây là chính sách thiết kế, chưa có công cụ nạp để cưỡng chế.",
+  "quy_tac": "Không nạp năm tệp mẫu kiểm cũ làm nguồn nghiệp vụ. D01 foundation/imports.py chặn theo tên và SHA-256 trước xem trước/ghi; chỉ mẫu Excel danh mục mới có căn cứ được xem trước và xác nhận riêng. Bootstrap mới chỉ khai báo nền, không tự tạo QC, công, lương, doanh thu hoặc số dư.",
   "cac_tep": [
     {
       "tep": "baseline.json",

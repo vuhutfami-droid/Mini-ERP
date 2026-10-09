@@ -6,9 +6,11 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 - Kho mã nguồn: https://github.com/vuhutfami-droid/Mini-ERP
 - Thư mục làm việc hiện tại: `/workspace/Mini-ERP`
-- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27, tên tiếng Việt/rà soát nguồn B28 và tinh gọn dữ liệu B29 (74 bảng/931 trường); chưa tạo DB hoặc lập trình ERP. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
+- Trạng thái: Đã xác nhận thông tin nền, bổ sung khảo sát bán hàng và đề xuất mô hình sản xuất, kho, mua hàng, giao hàng/tài chính quản trị và nhân sự giả lập theo yêu cầu của anh. Chưa đào sâu kế toán ở thời điểm này. Đề xuất đổi/hủy và các chi tiết mô hình vẫn có thể được anh chỉnh sửa; không coi là quy trình thật của Nasaki. Đã chuyển bộ nghiệp vụ V1 thành yêu cầu chức năng và thiết kế màn hình theo B26; có bản mẫu giao diện để xem và thiết kế cơ sở dữ liệu phân nhiệm theo B27, tên tiếng Việt/rà soát nguồn B28 và tinh gọn dữ liệu B29 (74 bảng/931 trường); đã lập trình bản nền D01 chạy Django/PostgreSQL tại B38, có kiểm PostgreSQL/trình duyệt/khôi phục; chưa có URL Internet hoặc ERP đầy đủ. Mô hình demo: 1 công ty, 1 xưởng, 1 kho, 50 nhân sự; có ngói và Terrazzo, sản xuất kết hợp và nhận yêu cầu riêng.
 - Mục đích đã xác nhận: Demo phục vụ tư vấn, có xử lý và lưu dữ liệu để tạo kết quả thực tế; chưa phải yêu cầu triển khai vào hoạt động chính thức của Nasaki.
 - Ngày bắt đầu nhật ký: 04/10/2026 (Asia/Bangkok).
+
+[Bản nền D01 và kết quả kiểm](docs/implementation/foundation.md) · [Ảnh giao diện](docs/implementation/foundation-desktop.png) · [Lịch sử build](docs/build-history.md).
 
 ## Hồ sơ nghiệp vụ hiện hành
 
@@ -962,3 +964,24 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Em — giải thích và khuyến nghị B37:** Có thể nhập/sửa trực tiếp Sheets hoặc xây website đọc/ghi Sheets qua API, không cần PostgreSQL nếu chọn Sheets làm kho chính. Khi đó phải thiết kế lại cách bảo vệ nguồn/quyền/ghi đồng thời/phục hồi; Sheets không cung cấp ràng buộc quan hệ và giao dịch nhiều bảng như DB quan hệ. Quyền chỉnh trực tiếp file có thể bỏ qua kiểm quyền/duyệt/lượng/tiền của website; batch API không tự giải quyết người sửa trực tiếp hoặc các lần xác nhận đồng thời. 74 bảng mẫu/931 trường hiện là cấu trúc trống, chưa là kho giao dịch ERP hoạt động.
 
 Anh không cần dùng SQL/phần mềm quản trị DB kể cả khi chọn PostgreSQL: chỉ dùng website, em phụ trách kỹ thuật. Khuyến nghị giữ DB quan hệ cho kho/tiền/sản xuất/công-lương, cho Sheets làm nơi chuẩn bị danh mục/nguồn nhập theo mẫu; xem trước/kiểm/xác nhận qua website rồi nạp có lịch sử, không sửa tự do nguồn đã ghi. Báo cáo có thể xuất Sheets theo quyền, không đồng bộ hai chiều mọi bảng hoặc có hai nguồn chính. Đây là đề xuất mới, chưa chọn kiến trúc Sheets hoặc giao tích hợp. Không sửa các file Drive, DB hoặc mẫu trong lần tư vấn này.
+
+
+### 09/10/2026 — Chốt kiến trúc và thực hiện nền D01 (B38)
+
+**Anh — hỏi trước khi chốt:**
+
+> vậy anh có cần cài đặt PostgreSQL không hay codex sẽ tự xử lý? anh chỉ cần quan tâm đến các file sheet thôi?
+
+**Em:** Codex xử lý cài đặt, cơ sở dữ liệu và vận hành kỹ thuật. Anh dùng website để nhập/xác nhận/xem công việc; Sheets chuẩn bị/đối chiếu danh mục hoặc xuất dữ liệu theo quyền. Không phải chỉ chỉnh mọi giao dịch trong Sheets; dữ liệu đã xác nhận nằm PostgreSQL và đi qua kiểm quyền/nguồn của website. Anh không cần SQL hoặc cài PostgreSQL trên máy.
+
+**Anh — quyết định thực hiện:**
+
+> chốt phương án, giờ bắt đầu thực hiện code phần 1. nền tảng với các scope đã chốt, đọc toàn bộ các scope, kỹ thuật, cách thức đã chốt để làm cho anh
+
+**Đã chốt:** Website W01–W20, Django/PostgreSQL chính và Sheets tham chiếu/nhập/xuất có kiểm; triển khai D01 theo B32/B29/B24 và hồ sơ FR/SC. Không tự mở rộng D02–D08 hoặc mua/đưa website ra Internet.
+
+**Đã thực hiện:** Bản web đăng nhập/quyền, 17 biểu mẫu nền, chứng từ/duyệt/bàn giao/tệp/lịch sử, nháp/kiểm bản/chống gửi lặp, nguồn tồn–QC–giá trị–tiền đầu có căn cứ, công cụ khởi tạo/sao lưu/khôi phục nền. Tạo cấu trúc 74 bảng/931 trường/402 FK và ba bảng kỹ thuật đã công bố. Sửa thiếu hai loại dòng T006 cho nguồn tiền/giá trị, không thêm bảng/trường nghiệp vụ. Mẫu Sheets B30 chưa sửa hai lựa chọn này và không làm sổ giao dịch.
+
+**Kiểm thực:** 17 nhóm kiểm trên PostgreSQL thật đạt; Chromium kiểm danh mục/biểu mẫu, nhập/lưu/tìm lại, nháp mở lại, mất mạng/kết nối lại, hai tab xung đột, sai quyền và điện thoại 390 px đạt. DB/tệp được khôi phục vào môi trường kiểm, quyền thu hồi không phục hồi từ backup; app/DB khởi động lại giữ dữ liệu. Đo 5/10 phiên ở bộ tải riêng, kết quả và giới hạn xem [hồ sơ D01](docs/implementation/foundation.md). Không lấy kiểm thiết kế/mẫu cũ làm bằng chứng ứng dụng.
+
+**Trạng thái bàn giao:** Mã và hồ sơ được lưu lên GitHub sau kiểm. Bản chạy trong môi trường phát triển của Codex, chưa có URL Internet để anh đăng nhập từ máy riêng. Chưa có luồng bán/sản xuất/lương đầy đủ, chưa đồng bộ giao dịch Sheets, chưa triển khai hosting/HTTPS. Bí mật/DB/tệp/backup giữ ngoài Git; anh không phải chạy lệnh kỹ thuật.

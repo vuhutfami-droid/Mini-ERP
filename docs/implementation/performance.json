@@ -1,0 +1,51 @@
+{
+  "pham_vi": "Django request + template + PostgreSQL; chưa gồm độ trễ Internet hoặc trình duyệt",
+  "du_lieu": {
+    "nhan_su": 50,
+    "mat_hang": 100,
+    "doi_tac": 1000,
+    "dong_moi_trang": 50
+  },
+  "may": {
+    "cpu_logic": 5,
+    "nen_tang": "Linux",
+    "python": "3.12.14"
+  },
+  "ket_qua": [
+    {
+      "phien_dong_thoi": 5,
+      "so_mau": 50,
+      "p50_ms": 95.67,
+      "p95_ms": 145.56,
+      "max_ms": 178.14,
+      "dat_muc_tieu_server_2s": true
+    },
+    {
+      "phien_dong_thoi": 10,
+      "so_mau": 100,
+      "p50_ms": 152.37,
+      "p95_ms": 215.09,
+      "max_ms": 252.56,
+      "dat_muc_tieu_server_2s": true
+    }
+  ],
+  "trinh_duyet": {
+    "pham_vi": "Chromium cùng máy, HTTP localhost, đến sự kiện load; không gồm mạng Internet/hosting thật",
+    "ket_qua": [
+      {
+        "phien": 5,
+        "so_mau": 15,
+        "p95_tai_trang_ms": 265.12,
+        "max_ms": 278.24,
+        "dat_2s": true
+      },
+      {
+        "phien": 10,
+        "so_mau": 30,
+        "p95_tai_trang_ms": 532.05,
+        "max_ms": 550.09,
+        "dat_2s": true
+      }
+    ]
+  }
+}
