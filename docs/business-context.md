@@ -57,8 +57,10 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B31 | Lập kế hoạch xây dần tính năng trên cấu trúc đã duyệt. | Yêu cầu ngày 09/10/2026; đề xuất tám đợt giữ đủ bảy phân hệ, có ma trận truy vết. Chưa giao lập trình, duyệt công nghệ hoặc triển khai hosting. |
 | B32 | Phân tích D01: cấu trúc, kế hoạch/phương pháp, sản phẩm bàn giao và yêu cầu kỹ thuật. | Yêu cầu ngày 09/10/2026; hồ sơ chi tiết đề xuất, 14 điều kiện kiểm nền. Chưa giao lập trình, chọn hosting hoặc xác nhận mục tiêu hiệu năng đã đạt. |
 | B33 | Lập câu hỏi để lấy ý tưởng toàn hệ thống. | Yêu cầu ngày 09/10/2026; 60 câu theo 12 nhóm đang chờ trả lời, không là 60 yêu cầu mới hoặc giao lập trình. |
+| B34 | Ứng dụng chạy trên website, không cài đặt trên máy tính. | Anh xác nhận trực tiếp; thiết bị, cách truy cập, hosting và đăng nhập cụ thể chưa tự chốt theo lời giải thích của Codex. |
+| B35 | Giao Codex đề xuất cho 20 câu mở rộng việc sử dụng website. | W01–W20 là phương án mới chưa được anh duyệt; không giao triển khai hosting/DB/ứng dụng. |
 
-Các mã B01–B33 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B35 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -439,3 +441,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Bộ câu hỏi ý tưởng B33
 
 [Bộ 60 câu hỏi](product-idea-questions.md) lấy mong muốn về sản phẩm/cách dùng và các phân hệ, giữ các quyết định cũ. Đề xuất trả lời Q01–Q20 trước cho nền D01; các mục tích hợp/AI/quét mã/offline là thăm dò tương lai, cần phân tích phạm vi/chi phí trước khi thêm. Chưa có câu trả lời trong lần lập bộ này.
+
+### Website B34 và phương án sử dụng B35
+
+[Phương án W01–W20](website-use-proposal.md) đề xuất web có đăng nhập/HTTPS, máy tính chính/điện thoại ghi nhanh, tài khoản cá nhân cấp theo quyền, nhiều tab/nháp có kiểm, cập nhật nhẹ và bộ thử riêng. Mất mạng dừng xác nhận nghiệp vụ, không tự thêm offline; chưa đăng ký tự do/cổng khách hoặc sản phẩm đa doanh nghiệp. Tải nền 5 phiên và thử 10 là mục tiêu đo, không dữ kiện Nasaki; ngoài giờ không là SLA 24/7. B34 đã chốt website, các lựa chọn B35 vẫn đề xuất. Không thay cấu trúc DB/phạm vi hoặc triển khai trong lần này.

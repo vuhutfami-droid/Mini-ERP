@@ -84,3 +84,8 @@ Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng th�
 
 - 09/10/2026 15:09 Asia/Bangkok; nền Git `41357f9`, gồm hồ sơ câu hỏi/nhật ký chưa commit. Python đọc Markdown qua đầu vào chuẩn kiểm đúng Q01–Q60 duy nhất/liên tục và liên kết cục bộ đạt; `git diff --check`/index kiểm tệp mới.
 - Chỉ kiểm tài liệu. Không thay thiết kế DB hoặc mẫu, không build/test ERP; các câu hỏi chưa được trả lời và không tự thành phạm vi mới.
+
+## Ngày 09 tháng 10 năm 2026 kiểm phương án website B34/B35
+
+- 09/10/2026 15:16 Asia/Bangkok; nền Git `f5127f9`, hồ sơ/nhật ký thay đổi được lưu trong commit chứa bản ghi. Python đọc Markdown qua đầu vào chuẩn đạt W01–W20 liên tục/duy nhất và liên kết cục bộ; `git diff --cached --check` đạt gồm tệp mới.
+- Chỉ kiểm tài liệu, không thay thiết kế DB hoặc năm tệp mẫu, không build/test ERP/SQL/hosting/mạng/hiệu năng. Website không cài đặt là yêu cầu B34 đã chốt; lựa chọn B35 mới đề xuất. Chưa kiểm thực nháp/cập nhật/đồng thời hoặc truy cập từ xa.

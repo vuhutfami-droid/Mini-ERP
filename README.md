@@ -924,3 +924,29 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Em:** Lập [60 câu hỏi theo 12 nhóm](docs/product-idea-questions.md), gồm tầm nhìn/bản sắc, trải nghiệm, người/quyền, dữ liệu nền, kinh doanh, mua, kho/giao, sản xuất, chất lượng, tài chính/báo cáo, nhân sự và trình diễn/vận hành/mở rộng. Giữ mô hình và quyết định đã chốt; hỏi mong muốn của anh, không yêu cầu kiến thức kỹ thuật hoặc sự thật nội bộ chưa biết. Có thể trả lời theo mã/từng nhóm hoặc giao em đề xuất; khuyến nghị Q01–Q20 trước để định hướng nền. Chưa có câu trả lời, không tự coi các lựa chọn mới là yêu cầu đã duyệt. Câu hỏi có thể bổ sung theo tình huống, không khẳng định 60 câu là mọi câu hỏi có thể phát sinh.
 
 **Trạng thái:** Chỉ lưu bộ câu hỏi/nhật ký, không lập trình hoặc đổi cấu trúc DB/phạm vi V1. Kiểm đủ mã Q01–Q60, liên kết và định dạng; đồng bộ GitHub xác minh trước khi báo anh.
+
+### 09/10/2026 — Website, không cài ứng dụng (B34)
+
+**Anh:**
+
+> bắt đầu với việc chạy ứng dụng: chạy trên website chứ không phải ứng dụng cài đặt trên máy tính
+
+**Đã xác nhận:** Sản phẩm chạy trên website, mở bằng trình duyệt; không cần cài ứng dụng máy tính. Em đã giải thích hướng giao diện máy tính/điện thoại, lưu tập trung và cập nhật ở máy chủ; các chi tiết đó là định hướng triển khai, không mở rộng điều anh chốt trực tiếp sang toàn bộ lựa chọn truy cập/thiết bị.
+
+### 09/10/2026 — Khai thác và đề xuất cách sử dụng website (B35)
+
+**Anh:**
+
+> đặt thêm các câu hỏi khai thác để mở rộng thêm ý đầu tiên
+
+**Em:** Đặt 20 câu về nơi/thiết bị/số người truy cập, đường dẫn/đăng nhập, trang đầu/nhiều tab/cập nhật/tệp/in, mất mạng/nháp/ngoài giờ và người thử/bộ demo. Các chủ đề/đề xuất theo từng câu được lưu ở [phương án website](docs/website-use-proposal.md), mã W01–W20.
+
+**Anh:**
+
+> đề xuất luôn cho anh
+
+**Em — phương án đề xuất:** Website có HTTPS/đăng nhập, truy cập trong và ngoài công ty; máy tính làm chính, điện thoại xem/duyệt/ghi nhanh; máy chung có tài khoản cá nhân, tổ trưởng ghi nhóm theo quyền. Người quản trị cấp tài khoản, không đăng ký tự do; tên đăng nhập/mật khẩu, khôi phục có xác minh. Trang công việc theo vai trò, nhiều tab có kiểm bản/quyền; cập nhật nhẹ 15–30 giây phần đang xem, không ghi đè biểu mẫu. Nháp máy chủ khi có mạng, trạng thái đã/chưa lưu, xác nhận dừng khi mất mạng; phần chưa gửi không bảo đảm còn sau đóng tab. Tệp/nhập Excel/xuất PDF/Excel theo nguồn và đúng đợt; không tự duyệt qua nhập khẩu/nháp.
+
+Đề xuất kiểm nền 5 phiên như B32 và thử thêm 10 phiên khi có bản chạy, chưa là tải thực tế. Tên miền theo thương hiệu anh/Nasaki là bộ demo; chưa mua tên miền. Nội bộ vận hành V1, đối tác tự thử trên bộ giả lập/tài khoản có hạn/quyền riêng; một công ty mỗi bộ, không tự mở cổng khách hoặc ERP đa doanh nghiệp. Truy cập ngoài giờ khi dịch vụ hoạt động, không hứa SLA/hỗ trợ 24/7. Chưa cần offline, OTP/SMS, ứng dụng cài đặt hoặc hạ tầng cập nhật thời gian thực riêng.
+
+**Trạng thái:** B34 đã chốt; W01–W20 mới đề xuất, chưa coi anh đã duyệt. Lần này chỉ lưu phân tích/nhật ký, không lập trình/tạo DB/mua hosting hoặc tên miền/đổi Sheets. Kiểm mã câu/liên kết và định dạng; đồng bộ GitHub xác minh trước báo.

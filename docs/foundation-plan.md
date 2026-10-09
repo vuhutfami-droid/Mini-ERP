@@ -2,6 +2,8 @@
 
 Ngày 09/10/2026, Asia/Bangkok. **Đề xuất B32, chưa lập trình.** Cụ thể hóa D01 của [kế hoạch tổng thể](development-plan.md), theo thiết kế B29 và trách nhiệm B24. Các mục dưới đây là công việc/đầu ra cần xây và kiểm trong tương lai, không phải tính năng đã hoạt động.
 
+[B34/B35 — sử dụng website](website-use-proposal.md): anh đã chốt mở bằng trình duyệt, không cài ứng dụng máy tính. Các đề xuất thiết bị/truy cập/nháp/nhiều tab/đăng nhập chi tiết còn chờ góp ý, không tự là yêu cầu đã duyệt.
+
 ## 1. Mục tiêu bàn giao
 
 Một ứng dụng trình duyệt đăng nhập được, khai báo và đọc lại dữ liệu thật trong PostgreSQL, kiểm đúng quyền và có lịch sử. Nền này nhận các phân hệ sau mà không phải dựng lại tài khoản, danh mục, chứng từ hoặc cách lưu dữ liệu. Anh mở ứng dụng và đánh giá nghiệp vụ; Codex thực hiện cài đặt, chạy, kiểm tra và xử lý lỗi.
