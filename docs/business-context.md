@@ -56,8 +56,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B30 | Tạo thư mục Mini ERP và Google Sheets đúng cấu trúc đã duyệt B29. | Yêu cầu ngày 09/10/2026; 12 file/74 bảng/931 trường, mẫu trống kèm tài liệu; không triển khai DB/ERP. |
 | B31 | Lập kế hoạch xây dần tính năng trên cấu trúc đã duyệt. | Yêu cầu ngày 09/10/2026; đề xuất tám đợt giữ đủ bảy phân hệ, có ma trận truy vết. Chưa giao lập trình, duyệt công nghệ hoặc triển khai hosting. |
 | B32 | Phân tích D01: cấu trúc, kế hoạch/phương pháp, sản phẩm bàn giao và yêu cầu kỹ thuật. | Yêu cầu ngày 09/10/2026; hồ sơ chi tiết đề xuất, 14 điều kiện kiểm nền. Chưa giao lập trình, chọn hosting hoặc xác nhận mục tiêu hiệu năng đã đạt. |
+| B33 | Lập câu hỏi để lấy ý tưởng toàn hệ thống. | Yêu cầu ngày 09/10/2026; 60 câu theo 12 nhóm đang chờ trả lời, không là 60 yêu cầu mới hoặc giao lập trình. |
 
-Các mã B01–B32 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B33 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -434,3 +435,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Phân tích nền D01 theo B32
 
 [Hồ sơ nền](foundation-plan.md) xác định sáu khối dùng chung, phạm vi dữ liệu/màn hình từng phần, bảy bước làm theo lát cắt chạy thật, yêu cầu nguồn/quyền/giao dịch/khôi phục và 14 điều kiện bàn giao. Mục tiêu là khai báo/lưu/đọc có quyền và nguồn mở đầu, chưa là luồng bán/sản xuất/lương đầy đủ. Cấu trúc đích FK có thể tạo sớm đúng B29 và để trống, không dùng dòng giả hoặc bỏ liên kết; bảng kỹ thuật có danh sách/ánh xạ tên riêng. Nguồn mẫu cũ vẫn chặn nạp trực tiếp. Các mục tiêu tải/cấu hình là đề xuất cần đo, không suy 50 nhân sự thành 50 phiên đồng thời. Không tạo mã hoặc DB trong lần phân tích này.
+
+### Bộ câu hỏi ý tưởng B33
+
+[Bộ 60 câu hỏi](product-idea-questions.md) lấy mong muốn về sản phẩm/cách dùng và các phân hệ, giữ các quyết định cũ. Đề xuất trả lời Q01–Q20 trước cho nền D01; các mục tích hợp/AI/quét mã/offline là thăm dò tương lai, cần phân tích phạm vi/chi phí trước khi thêm. Chưa có câu trả lời trong lần lập bộ này.

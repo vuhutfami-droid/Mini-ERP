@@ -79,3 +79,8 @@ Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng th�
 - Python đọc CSV/Markdown qua đầu vào chuẩn, mã thoát 0: 14 mã N01–N14 duy nhất/đủ; mọi mã/khoảng bảng thuộc B29, các mã màn hình thuộc B26; liên kết cục bộ README/hồ sơ nền/kế hoạch/hồ sơ nghiệp vụ hợp lệ. Rà phụ thuộc nguồn mở đầu, quyền, khôi phục và phạm vi D01/D02, không đánh dấu FR đã hoàn thành.
 - `git diff --check`/kiểm index gồm tệp mới đạt sau stage; chỉ bổ sung hồ sơ/liên kết/nhật ký.
 - Giới hạn: chỉ kiểm đặc tả, không tạo DB/mã ERP, không chạy 14 ca nghiệm thu nền/SQL/build/CI, kiểm quyền/giao dịch/backup/hiệu năng thật. Mục tiêu dưới 2 giây/5 phiên và cấu hình thử là đề xuất chưa đo; chưa chọn hosting hoặc cam kết thời gian xây.
+
+## Ngày 09 tháng 10 năm 2026 kiểm bộ câu hỏi B33
+
+- 09/10/2026 15:09 Asia/Bangkok; nền Git `41357f9`, gồm hồ sơ câu hỏi/nhật ký chưa commit. Python đọc Markdown qua đầu vào chuẩn kiểm đúng Q01–Q60 duy nhất/liên tục và liên kết cục bộ đạt; `git diff --check`/index kiểm tệp mới.
+- Chỉ kiểm tài liệu. Không thay thiết kế DB hoặc mẫu, không build/test ERP; các câu hỏi chưa được trả lời và không tự thành phạm vi mới.

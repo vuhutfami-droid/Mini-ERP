@@ -914,3 +914,13 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Kỹ thuật đề xuất:** Django/PostgreSQL thống nhất; tên Việt, số chính xác, thời gian có múi giờ, FK đúng bộ/bản/loại, nguồn bất biến, quyền mặc định từ chối, giao dịch nguyên tử/biên nhận, tệp riêng và khôi phục bảo toàn quyền hiện hành. Cấu trúc đích FK chưa dùng để trống, không tạo nguồn giả. Mục tiêu tải nền/cấu hình máy chỉ là đề xuất đo, không phải kết quả. Không triển khai hosting hoặc cam kết ngày hoàn thành.
 
 **Trạng thái:** Đã lưu hồ sơ phân tích/kế hoạch và liên kết, chưa viết mã ứng dụng/tạo DB. Kiểm thiết kế và tài liệu, không gọi là nghiệm thu 14 điều kiện hoặc kiểm thử ERP. Kết quả/giới hạn tại lịch sử kiểm tra; đồng bộ GitHub được xác minh theo commit trước khi báo anh.
+
+### 09/10/2026 — Lấy ý tưởng toàn hệ thống bằng câu hỏi (B33)
+
+**Anh:**
+
+> đặt cho anh các câu hỏi để lấy được ý tưởng của anh cho hệ thống này nhé, tất cả các câu hỏi có thể có về hệ thống
+
+**Em:** Lập [60 câu hỏi theo 12 nhóm](docs/product-idea-questions.md), gồm tầm nhìn/bản sắc, trải nghiệm, người/quyền, dữ liệu nền, kinh doanh, mua, kho/giao, sản xuất, chất lượng, tài chính/báo cáo, nhân sự và trình diễn/vận hành/mở rộng. Giữ mô hình và quyết định đã chốt; hỏi mong muốn của anh, không yêu cầu kiến thức kỹ thuật hoặc sự thật nội bộ chưa biết. Có thể trả lời theo mã/từng nhóm hoặc giao em đề xuất; khuyến nghị Q01–Q20 trước để định hướng nền. Chưa có câu trả lời, không tự coi các lựa chọn mới là yêu cầu đã duyệt. Câu hỏi có thể bổ sung theo tình huống, không khẳng định 60 câu là mọi câu hỏi có thể phát sinh.
+
+**Trạng thái:** Chỉ lưu bộ câu hỏi/nhật ký, không lập trình hoặc đổi cấu trúc DB/phạm vi V1. Kiểm đủ mã Q01–Q60, liên kết và định dạng; đồng bộ GitHub xác minh trước khi báo anh.
