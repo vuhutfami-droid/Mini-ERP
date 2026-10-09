@@ -71,3 +71,11 @@ Khi có mã ứng dụng, thêm lần kiểm tra riêng với commit/trạng th�
 - Đối chiếu Python đọc CSV/Markdown qua đầu vào chuẩn, mã thoát 0: đúng 33 FR duy nhất, 22 SC và 56 tiêu chí; màn hình/tiêu chí của từng FR khớp chính xác traceability.csv; đợt bắt đầu không sau đợt hoàn thiện dự kiến, nằm D01–D08; tất cả còn đề xuất/chưa bắt đầu. Liên kết cục bộ của kế hoạch/README/hồ sơ/FR hợp lệ.
 - Rà kế hoạch theo phụ thuộc nguồn: QC tồn/nhận trước sử dụng, tiền từ D02, hồ sơ/lịch từ D01 và công thực D04 trước nguồn sản xuất, lương D05 trước chốt giá thành D06; kiểm giao dịch an toàn ngay từng đợt, ngoại lệ liên hoàn D07. Lần kiểm index đầu phát hiện CSV mới dùng CRLF; đã đổi sang LF và kiểm lại `git diff --check`/index đạt.
 - Giới hạn: chỉ kiểm kế hoạch/thiết kế/tài liệu; chưa lập trình, SQL/DB/build/test ERP/CI/hosting hoặc đo tiến độ/hiệu năng. Tám đợt và Django/PostgreSQL là đề xuất; không báo đã triển khai hoặc cam kết ngày hoàn thành.
+
+## Ngày 09 tháng 10 năm 2026 kiểm hồ sơ nền B32
+
+- Thời điểm: 09/10/2026 14:58 Asia/Bangkok; nền Git `8413c03`, gồm hồ sơ/phụ lục nhật ký chưa commit. Commit chứa bản ghi định danh tài liệu được kiểm.
+- `python scripts/verify-database-design.py`, mã thoát 0: 74 bảng/931 trường/402 FK; mã toàn vẹn nguồn mẫu, ánh xạ và phạm vi B29/B26 giữ nguyên.
+- Python đọc CSV/Markdown qua đầu vào chuẩn, mã thoát 0: 14 mã N01–N14 duy nhất/đủ; mọi mã/khoảng bảng thuộc B29, các mã màn hình thuộc B26; liên kết cục bộ README/hồ sơ nền/kế hoạch/hồ sơ nghiệp vụ hợp lệ. Rà phụ thuộc nguồn mở đầu, quyền, khôi phục và phạm vi D01/D02, không đánh dấu FR đã hoàn thành.
+- `git diff --check`/kiểm index gồm tệp mới đạt sau stage; chỉ bổ sung hồ sơ/liên kết/nhật ký.
+- Giới hạn: chỉ kiểm đặc tả, không tạo DB/mã ERP, không chạy 14 ca nghiệm thu nền/SQL/build/CI, kiểm quyền/giao dịch/backup/hiệu năng thật. Mục tiêu dưới 2 giây/5 phiên và cấu hình thử là đề xuất chưa đo; chưa chọn hosting hoặc cam kết thời gian xây.

@@ -34,6 +34,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Kế hoạch xây dựng B31](docs/development-plan.md) đề xuất tám đợt có bản chạy tăng dần, giữ đủ bảy phân hệ; [ma trận triển khai](docs/design/development-roadmap.csv) nối 33 yêu cầu với đợt và tiêu chí. Chưa bắt đầu lập trình.
 
+[Phân tích nền D01 (B32)](docs/foundation-plan.md) trình bày cấu trúc, phạm vi, phương pháp triển khai, đầu ra và điều kiện kỹ thuật/kiểm bàn giao. Chưa lập trình.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -898,3 +900,17 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Trạng thái:** Đã lập và lưu kế hoạch/ma trận. Thứ tự và công nghệ là đề xuất, chưa được anh duyệt triển khai; lần này không tạo DB/mã ERP/hosting. Không cam kết ngày hoàn thành khi chưa đo; đề xuất dự báo lại sau D01. Bước tiếp theo đề xuất xây D01, sau đó D02 có vòng bán–giao–thu hoàn chỉnh.
 
 **Kiểm:** Đối chiếu ma trận kế hoạch với ma trận gốc, kiểm thiết kế DB và liên kết/định dạng tài liệu; kết quả và giới hạn tại lịch sử kiểm tra. Đây là kiểm tài liệu, chưa build/test ERP. Nhật ký và kế hoạch được đồng bộ GitHub khi mã commit từ xa khớp HEAD.
+
+### 09/10/2026 — Phân tích chi tiết đợt 1, nền hệ thống (B32)
+
+**Anh:**
+
+> phân tích cấu trúc của đợt 1. nền hệ thống, cho anh biết kế hoạch triển khai và phương pháp triển khai, sản phẩm cuối cùng cùng các yêu cầu kỹ thuật
+
+**Em — kết quả phân tích:** Sáu khối: truy cập/quyền; danh mục; người/lịch nền; chứng từ/nguồn; lưu an toàn; mở đầu/vận hành demo. Tách rõ phần người dùng thấy và phần kiểm soát phía máy chủ/DB; không biến 74 bảng thành màn hình. Có phạm vi theo mã bảng B29 và phần các màn hình hiện hành, bảy bước triển khai từ thiết kế vật lý đến bàn giao. Phương pháp làm lát cắt đăng nhập–nhập–lưu–đọc–lịch sử, kiểm ngay quyền/nguồn/chống lặp/đồng thời trước nhân rộng.
+
+**Sản phẩm đề xuất cuối D01:** Bản nền trình duyệt lưu được và tồn tại sau khởi động lại, nguồn demo mới/mở đầu có căn cứ; mã/migration/cấu hình mẫu, bản đồ quyền, kiểm DB/trình duyệt và sao lưu/khôi phục nền đã thử, hướng dẫn/nghiệm thu 14 điều kiện. Chưa bán–giao–thu hoàn chỉnh, sản xuất/lương/giá thành đầy đủ. Hồ sơ/lịch 50 người không tự thành công hoặc 50 tài khoản; không tự mở quyền lương cho quản trị kỹ thuật.
+
+**Kỹ thuật đề xuất:** Django/PostgreSQL thống nhất; tên Việt, số chính xác, thời gian có múi giờ, FK đúng bộ/bản/loại, nguồn bất biến, quyền mặc định từ chối, giao dịch nguyên tử/biên nhận, tệp riêng và khôi phục bảo toàn quyền hiện hành. Cấu trúc đích FK chưa dùng để trống, không tạo nguồn giả. Mục tiêu tải nền/cấu hình máy chỉ là đề xuất đo, không phải kết quả. Không triển khai hosting hoặc cam kết ngày hoàn thành.
+
+**Trạng thái:** Đã lưu hồ sơ phân tích/kế hoạch và liên kết, chưa viết mã ứng dụng/tạo DB. Kiểm thiết kế và tài liệu, không gọi là nghiệm thu 14 điều kiện hoặc kiểm thử ERP. Kết quả/giới hạn tại lịch sử kiểm tra; đồng bộ GitHub được xác minh theo commit trước khi báo anh.

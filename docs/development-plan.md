@@ -10,6 +10,8 @@ Xây một ứng dụng chạy trên trình duyệt, xử lý và lưu giao dị
 
 Không biến 74 bảng thành 74 màn hình nhập liệu. Người dùng làm công việc qua các biểu mẫu đã thiết kế; một lần xác nhận có thể ghi nhiều bảng liên quan. Chỉ lấy lại dữ kiện từ nguồn, không tự duyệt, tự kết luận chất lượng hoặc tự ghi công thực tế.
 
+[Phân tích chi tiết D01 — nền hệ thống](foundation-plan.md) cụ thể hóa cấu trúc, bảy bước triển khai, yêu cầu kỹ thuật, sản phẩm và 14 điều kiện nghiệm thu nền. Đây là đề xuất B32, chưa lập trình.
+
 ## Phương án kỹ thuật đề xuất
 
 - Một kho Git, một ứng dụng thống nhất, một cơ sở dữ liệu quan hệ PostgreSQL. Đề xuất Python/Django, giao diện theo mẫu máy chủ và JavaScript ở những thao tác cần thiết; tránh phải vận hành riêng hai ứng dụng giao diện và API ở giai đoạn này. Tách mã theo nghiệp vụ, dùng chung thành phần quyền, chứng từ, lịch sử và tệp đính kèm. Ưu tiên quy ước framework, không dựng thêm nhiều tầng thư mục.

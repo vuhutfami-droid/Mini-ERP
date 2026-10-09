@@ -55,8 +55,9 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B29 | Rà toàn bộ và tối ưu dữ liệu cho ít người vận hành, đủ công việc Nasaki giả lập. | Yêu cầu ngày 08/10/2026; phương án kỹ thuật 74 bảng/931 trường/402 quan hệ, giảm nhập lại; giữ bảy phân hệ, nguồn, quyền và lịch sử. Chưa lập trình. |
 | B30 | Tạo thư mục Mini ERP và Google Sheets đúng cấu trúc đã duyệt B29. | Yêu cầu ngày 09/10/2026; 12 file/74 bảng/931 trường, mẫu trống kèm tài liệu; không triển khai DB/ERP. |
 | B31 | Lập kế hoạch xây dần tính năng trên cấu trúc đã duyệt. | Yêu cầu ngày 09/10/2026; đề xuất tám đợt giữ đủ bảy phân hệ, có ma trận truy vết. Chưa giao lập trình, duyệt công nghệ hoặc triển khai hosting. |
+| B32 | Phân tích D01: cấu trúc, kế hoạch/phương pháp, sản phẩm bàn giao và yêu cầu kỹ thuật. | Yêu cầu ngày 09/10/2026; hồ sơ chi tiết đề xuất, 14 điều kiện kiểm nền. Chưa giao lập trình, chọn hosting hoặc xác nhận mục tiêu hiệu năng đã đạt. |
 
-Các mã B01–B31 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B32 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -429,3 +430,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ## Kế hoạch phát triển B31
 
 [Phương án tám đợt](development-plan.md) và [ma trận 33 yêu cầu](design/development-roadmap.csv) đề xuất xây theo luồng chạy được, có điều kiện chuyển đợt. Google Sheets là mẫu cấu trúc; DB và ứng dụng vẫn chưa triển khai. Đề xuất nền ứng dụng thống nhất Django/PostgreSQL; công nghệ và thứ tự là phương án của Codex, chưa là quyết định triển khai. Nhân sự cơ bản/công thực, QC và tiền được đặt đúng phụ thuộc của sản xuất; giá thành chỉ chốt khi đủ nguồn. Quyền/giao dịch an toàn có ngay từng đợt; kiểm đủ 56 tiêu chí trên ERP ở cuối, không dùng kết quả bộ kiểm cũ thay bằng chứng. Chưa cam kết ngày hoàn thành hoặc chi phí; dự báo lại sau nền chạy thật. Bước tiếp theo đề xuất D01, mục tiêu trình diễn liên hoàn đầu tiên D02.
+
+### Phân tích nền D01 theo B32
+
+[Hồ sơ nền](foundation-plan.md) xác định sáu khối dùng chung, phạm vi dữ liệu/màn hình từng phần, bảy bước làm theo lát cắt chạy thật, yêu cầu nguồn/quyền/giao dịch/khôi phục và 14 điều kiện bàn giao. Mục tiêu là khai báo/lưu/đọc có quyền và nguồn mở đầu, chưa là luồng bán/sản xuất/lương đầy đủ. Cấu trúc đích FK có thể tạo sớm đúng B29 và để trống, không dùng dòng giả hoặc bỏ liên kết; bảng kỹ thuật có danh sách/ánh xạ tên riêng. Nguồn mẫu cũ vẫn chặn nạp trực tiếp. Các mục tiêu tải/cấu hình là đề xuất cần đo, không suy 50 nhân sự thành 50 phiên đồng thời. Không tạo mã hoặc DB trong lần phân tích này.
