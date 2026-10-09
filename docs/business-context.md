@@ -4,7 +4,7 @@ Hồ sơ này lưu bối cảnh, quyết định nghiệp vụ và các điểm 
 
 Chủ dự án cung cấp nhu cầu và xác nhận nghiệp vụ; Codex phụ trách phân tích, hệ thống hóa và thực hiện phần kỹ thuật được giao. Lịch sử trao đổi và nguồn website đã tiếp nhận nằm trong [README](../README.md). Hồ sơ này là bản tổng hợp hiện hành, không thay thế nhật ký.
 
-Ngày cập nhật: 08/10/2026, múi giờ Asia/Bangkok.
+Ngày cập nhật: 09/10/2026, múi giờ Asia/Bangkok.
 
 ## Cách phân loại thông tin
 
@@ -51,12 +51,12 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B25 | Anh đồng ý thực hiện kỹ bộ dữ liệu, quy tắc và tình huống demo trước chức năng/màn hình; nhấn mạnh không làm qua loa. | “đồng ý, làm kĩ phần này cho anh, cấm làm qua loa vì phần này quan trọng”, ngày 08/10/2026; giao chuẩn bị và đối chiếu kỹ, tham số mới vẫn là đề xuất cho demo, không giao lập trình ERP ngay. |
 | B26 | Chuyển bộ nghiệp vụ đã chuẩn bị thành yêu cầu chức năng và thiết kế màn hình. | “chuyển thành yêu cầu chức năng và thiết kế màn hình.” ngày 08/10/2026; giao đặc tả và bản mẫu giao diện, không tự duyệt mọi tham số giả lập hoặc yêu cầu ERP đã vận hành. |
 | B27 | Thiết kế cơ sở dữ liệu đáp ứng yêu cầu, phân nhiệm rõ, đầy đủ và gọn; chưa lập trình. | Yêu cầu ngày 08/10/2026; giao thiết kế logic/quan hệ/quy tắc, không tạo DB/SQL/migration hoặc tự triển khai. |
-
 | B28 | Tất cả bảng/trường dùng tiếng Việt và mô tả rõ; rà dữ liệu phải có nguồn, không cài để hỗ trợ chức năng hoặc dẫn quyết định. | Yêu cầu ngày 08/10/2026; đổi thiết kế, tách kết quả tổng hợp, rà/cô lập bộ kiểm giả lập. Không giao lập trình, không xác nhận bộ mẫu là nguồn thật Nasaki. |
 | B29 | Rà toàn bộ và tối ưu dữ liệu cho ít người vận hành, đủ công việc Nasaki giả lập. | Yêu cầu ngày 08/10/2026; phương án kỹ thuật 74 bảng/931 trường/402 quan hệ, giảm nhập lại; giữ bảy phân hệ, nguồn, quyền và lịch sử. Chưa lập trình. |
 | B30 | Tạo thư mục Mini ERP và Google Sheets đúng cấu trúc đã duyệt B29. | Yêu cầu ngày 09/10/2026; 12 file/74 bảng/931 trường, mẫu trống kèm tài liệu; không triển khai DB/ERP. |
+| B31 | Lập kế hoạch xây dần tính năng trên cấu trúc đã duyệt. | Yêu cầu ngày 09/10/2026; đề xuất tám đợt giữ đủ bảy phân hệ, có ma trận truy vết. Chưa giao lập trình, duyệt công nghệ hoặc triển khai hosting. |
 
-Các mã B01–B30 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B31 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -425,3 +425,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Bộ Sheets theo B30
 
 [Google Sheets](database/google-sheets.md) thể hiện nguyên cấu trúc B29 đã được anh yêu cầu sử dụng như thiết kế đã duyệt. Có 12 file/74 trang dữ liệu/931 cột, nguồn và mô tả đầy đủ, giao dịch trống; các trang tài liệu không thêm bảng nghiệp vụ. Vẫn phân biệt đề xuất chính sách/đầu mối demo với dữ kiện Nasaki. Tạo Sheets không thực thi FK/quyền/ERP hoặc thay đổi nguồn Git.
+
+## Kế hoạch phát triển B31
+
+[Phương án tám đợt](development-plan.md) và [ma trận 33 yêu cầu](design/development-roadmap.csv) đề xuất xây theo luồng chạy được, có điều kiện chuyển đợt. Google Sheets là mẫu cấu trúc; DB và ứng dụng vẫn chưa triển khai. Đề xuất nền ứng dụng thống nhất Django/PostgreSQL; công nghệ và thứ tự là phương án của Codex, chưa là quyết định triển khai. Nhân sự cơ bản/công thực, QC và tiền được đặt đúng phụ thuộc của sản xuất; giá thành chỉ chốt khi đủ nguồn. Quyền/giao dịch an toàn có ngay từng đợt; kiểm đủ 56 tiêu chí trên ERP ở cuối, không dùng kết quả bộ kiểm cũ thay bằng chứng. Chưa cam kết ngày hoàn thành hoặc chi phí; dự báo lại sau nền chạy thật. Bước tiếp theo đề xuất D01, mục tiêu trình diễn liên hoàn đầu tiên D02.

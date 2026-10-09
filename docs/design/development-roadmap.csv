@@ -1,0 +1,34 @@
+yeu_cau,ten_yeu_cau,dot_bat_dau,dot_hoan_thien_du_kien,man_hinh,tieu_chi_goc,trang_thai,luu_y_phu_thuoc
+FR01,Danh mục và số dư đầu,D01,D06,SC03 SC04 SC17 SC22,A01 A02 A04,"Đề xuất, chưa bắt đầu",Nguồn mở đầu và danh mục theo từng luồng; giá trị hoàn thiện D06.
+FR02,Phiên làm việc và quyền,D01,D08,SC01 SC22,X21 X22,"Đề xuất, chưa bắt đầu",Kiểm quyền ngay mỗi đợt; D08 kiểm tổng thể và khôi phục.
+FR03,Phê duyệt và ủy quyền,D01,D07,SC02 SC22,A30 X14 X22,"Đề xuất, chưa bắt đầu","Áp dụng B24 từng nghiệp vụ, không thêm duyệt thông thường."
+FR04,Bàn giao và việc cần xử lý,D01,D07,SC02 SC06 SC10,A03 X03,"Đề xuất, chưa bắt đầu",Bàn giao từng luồng; đổi trả/điều chỉnh hoàn thiện D07.
+FR05,Lưu và xác nhận an toàn,D01,D08,SC02 SC09 SC11 SC14 SC18,A02 A03 X16 X17 X18 X24,"Đề xuất, chưa bắt đầu",Giao dịch/chống trùng/đồng thời có ngay khi xây thao tác ghi.
+FR06,Điều chỉnh và khóa kỳ,D01,D07,SC02 SC09 SC14 SC19,X10 X20,"Đề xuất, chưa bắt đầu","Khung điều chỉnh D01; khóa kỳ D06, ngoại lệ sau khóa D07."
+FR07,Tiếp nhận và tư vấn,D02,D02,SC04 SC05,A05 X15,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR08,Báo giá và đơn,D02,D04,SC05 SC06,A06 X01,"Đề xuất, chưa bắt đầu",Hàng sẵn D02; cam kết hàng cần sản xuất chỉ khi D04 đủ điều kiện.
+FR09,Mẫu hàng riêng,D02,D04,SC07 SC10 SC12,X01 X02,"Đề xuất, chưa bắt đầu",D02 tiếp nhận/chờ; mẫu sản xuất và khách duyệt thực ở D04.
+FR10,Đổi hủy và quyết toán,D02,D07,SC06 SC07 SC16,X03 X04,"Đề xuất, chưa bắt đầu","Ghi nhận yêu cầu đổi/hủy, giữ chờ; quyết toán và xử lý liên hoàn D07."
+FR11,Thiếu hụt và giữ hàng,D02,D04,SC06 SC08 SC10,A08 A11 X05 X16 X19,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR12,Kế hoạch nguồn lực,D01,D05,SC10 SC18,A11 A12 A13 A22 X13,"Đề xuất, chưa bắt đầu",D01 hồ sơ/lịch; D04 kế hoạch sản xuất; D05 đủ nguồn phép/công.
+FR13,Thực hiện lệnh và công đoạn,D04,D06,SC10 SC11,A14 A15 A22 X01 X13,"Đề xuất, chưa bắt đầu",Thực hiện và ghi nguồn D04; chốt chi phí/đóng D06.
+FR14,Mua và theo dõi từng đợt,D03,D03,SC08 SC09,A08 A09 A10 A22 X11 X12,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR15,Nhận và hoàn trả kho,D03,D07,SC09 SC11 SC12 SC16,A09 A17 X07 X09 X11 X12,"Đề xuất, chưa bắt đầu","Nhận mua D03, thành phẩm D04, nhận trả khách D07."
+FR16,Cấp và đối chiếu vật tư,D03,D04,SC08 SC09 SC11,A04 A14 X19,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR17,QC và khóa giải phóng,D03,D07,SC12 SC13,A15 X05 X06,"Đề xuất, chưa bắt đầu","QC vật tư D03, thành phẩm D04, hàng trả/thu hồi D07."
+FR18,Xử lý lỗi tiêu hủy làm lại,D04,D06,SC11 SC12 SC13,A15 A16 A24 X02,"Đề xuất, chưa bắt đầu",Xử lý lượng có quyền D04; đối chiếu chi phí nguồn D06.
+FR19,Truy lô và thu hồi,D04,D07,SC13 SC16,X05 X06,"Đề xuất, chưa bắt đầu",Truy lô D04; thu hồi phần đã giao D07.
+FR20,Kiểm kê xuất khác và cảnh báo,D02,D07,SC02 SC08 SC09,A03 A16 X16 X20,"Đề xuất, chưa bắt đầu",Tồn/cảnh báo và chặn lượng D02; kiểm kê/xuất khác D07.
+FR21,Đợt giao và khách nhận,D02,D07,SC06 SC09 SC16,A18 A20 A23 X19,"Đề xuất, chưa bắt đầu",Giao thường D02; giao bù/nhận trả D07.
+FR22,Ghi nhận bán và giá vốn,D02,D06,SC14 SC15 SC16,A19 A20 A23 A24,"Đề xuất, chưa bắt đầu",Giá vốn tồn mở đầu D02; hàng sản xuất tạm tính đến đối chiếu D06.
+FR23,Thu cọc và phân bổ,D02,D02,SC06 SC14,A07 A19 A21 X17 X23,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR24,Chi và nghĩa vụ mua,D03,D05,SC09 SC14 SC19,A10 A29 A31 A32 X22 X23,"Đề xuất, chưa bắt đầu",Mua/chi D03; nghĩa vụ và tiền lương D05.
+FR25,Công nợ và quỹ theo mốc,D02,D07,SC01 SC14 SC21,A03 A31 A32,"Đề xuất, chưa bắt đầu",Sổ tiền/nợ D02; đủ mua/lương/đổi trả ở D07.
+FR26,Giá thành và lãi gộp,D04,D06,SC11 SC15 SC21,A24 A25 A28 X02,"Đề xuất, chưa bắt đầu","Nguồn sản xuất D04, công/lương D05, chốt và đối chiếu D06."
+FR27,Trả bán giảm hoàn giao bù,D07,D07,SC12 SC14 SC16,X07 X08 X09,"Đề xuất, chưa bắt đầu","Kiểm nguồn, quyền và ngoại lệ ngay cùng luồng; nghiệm thu tổng thể D08."
+FR28,Hồ sơ và vòng đời người,D01,D05,SC17 SC18 SC22,A01 X13 X21,"Đề xuất, chưa bắt đầu",Hồ sơ hiệu lực/định danh D01; vòng đời nhân sự đầy đủ D05.
+FR29,Lịch và công thực tế,D01,D05,SC11 SC18,A13 A26 A28 X13 X18,"Đề xuất, chưa bắt đầu",Lịch D01; công thực theo sản xuất D04; xác nhận/chốt D05.
+FR30,Phép và phản hồi công,D04,D07,SC02 SC18 SC19,A27 X10 X13,"Đề xuất, chưa bắt đầu","Vắng/phép phục vụ xếp người D04; đầy đủ D05, điều chỉnh sau khóa D07."
+FR31,Lương ứng và thực trả,D05,D07,SC14 SC19 SC20,A28 A29 A30 X10 X21 X22,"Đề xuất, chưa bắt đầu",Lương/ứng/thực trả D05; điều chỉnh kỳ đã khóa D07.
+FR32,Báo cáo theo nguồn và mốc,D02,D07,SC01 SC21,A03 A25 A31 A32 X21,"Đề xuất, chưa bắt đầu",Báo cáo từng luồng từ D02; nối nguồn D06 và điều chỉnh D07.
+FR33,Bộ demo và phản hồi giao diện,D01,D08,SC01 SC22,A02 A03 X18 X24,"Đề xuất, chưa bắt đầu",Bộ nguồn mới và cô lập từ D01; kiểm reset/quyền/UI toàn hệ D08.

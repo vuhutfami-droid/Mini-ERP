@@ -292,9 +292,7 @@ Từ chối/đề nghị sửa cần lý do; rút bản chưa thực hiện gi�
 
 ## Thứ tự phát triển đề xuất
 
-Bốn phần triển khai theo phụ thuộc, không giảm phạm vi phiên bản đầu: (1) danh mục, người/quyền, chứng từ/nhật ký và số dư; (2) đơn–mua–kho–lệnh–QC–giao–tiền chạy xuyên hai nhóm; (3) nhân sự/công/phép/lương và đối chiếu nguồn chi phí trong luồng; (4) ngoại lệ, báo cáo/chốt/điều chỉnh và thử nghiệm ghi trùng/đồng thời/mất kết nối. Ngoại lệ ngăn âm/sai quyền/bỏ QC là điều kiện ngay từ khi xây giao dịch, không chờ phần cuối mới bảo vệ.
-
-Chưa ấn định ngày triển khai, công nghệ, số người đồng thời, thời gian đáp ứng hoặc chi phí hosting. Đề xuất đầu tiên tối ưu máy tính cho dữ liệu nhiều cột, điện thoại dùng ghi nhận/xem việc theo phạm vi; điều kiện vận hành và sao lưu/khôi phục sẽ được cụ thể hóa ở thiết kế kỹ thuật. Không tự chọn thêm tích hợp ngân hàng, hóa đơn thật, Zalo hoặc máy chấm công.
+Kế hoạch B31 cụ thể hóa thành [tám đợt xây dựng](development-plan.md): nền chạy thật → bán hàng sẵn/giao/thu → mua/nhận vật tư → sản xuất/QC → nhân sự/công/lương → giá thành/báo cáo → ngoại lệ liên hoàn → nghiệm thu/trình diễn. [Ma trận triển khai](design/development-roadmap.csv) giữ đủ 33 FR/22 SC/56 tiêu chí và chỉ rõ phụ thuộc xuyên đợt. Đây là đề xuất, chưa bắt đầu lập trình hoặc cam kết lịch/hosting; cả bảy phân hệ thuộc V1. Kiểm quyền/nguồn/chống ghi trùng và chặn sai lượng/tiền có ngay khi xây giao dịch, không hoãn tới đợt cuối.
 
 ## Căn cứ dữ liệu tinh gọn B29
 

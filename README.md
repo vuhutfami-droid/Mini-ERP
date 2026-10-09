@@ -32,6 +32,8 @@ File này lưu các trao đổi giữa anh (chủ dự án) và em (Codex) về 
 
 [Bộ Google Sheets theo B29](docs/database/google-sheets.md) đã được tạo tại [thư mục Mini ERP](https://drive.google.com/drive/folders/1z-KakfciWnvpaas1hcN8fNPOYi3aHj5S); anh bắt đầu từ [file tổng quan](https://docs.google.com/spreadsheets/d/1l32ds-6ReFtPUcZARHTc5Utcb3ediihUi3DI2dr3Lqc/edit?usp=drivesdk). Có 12 file, 74 trang dữ liệu và tài liệu tương ứng, chưa là DB/ERP vận hành.
 
+[Kế hoạch xây dựng B31](docs/development-plan.md) đề xuất tám đợt có bản chạy tăng dần, giữ đủ bảy phân hệ; [ma trận triển khai](docs/design/development-roadmap.csv) nối 33 yêu cầu với đợt và tiêu chí. Chưa bắt đầu lập trình.
+
 ## Cách duy trì nhật ký
 
 - Bổ sung các trao đổi tiếp theo theo thứ tự thời gian trong file này, giữ lại nội dung đã ghi.
@@ -882,3 +884,17 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 **Kiểm:** Đọc lại toàn bộ nội dung đã ghi và metadata từ connector, đối chiếu bảng/trường/từ điển/quan hệ/loại nguồn/native tables/lựa chọn/ngày, đọc metadata vị trí của cả 12 file. Kiểm đạt; định dạng kiểm qua API, chưa có render trình duyệt. Không kiểm SQL/ERP, FK/quyền/giao dịch/đồng thời. Nguồn B29 và năm tệp mẫu giữ nguyên.
 
 **Lưu:** [Hướng dẫn và đường dẫn từng file](docs/database/google-sheets.md), [ánh xạ máy đọc](docs/database/google-sheets.json); lịch sử kiểm tra ghi bằng chứng. Nhật ký và hồ sơ được lưu trong Git và đồng bộ GitHub, trạng thái đồng bộ kiểm bằng commit từ xa trước khi báo anh.
+
+### 09/10/2026 — Lập kế hoạch xây dần tính năng (B31)
+
+**Anh:**
+
+> đầy đủ cơ sở dữ liệu rồi, giờ cần xây dần các tính năng, lên kế hoạch xây dựng cho anh và đề xuất xem sao
+
+**Em — đề xuất:** Tám đợt: nền chạy thật; bán hàng sẵn/giao/thu; mua/nhận vật tư; sản xuất/QC; nhân sự/công/lương; giá thành/báo cáo; ngoại lệ liên hoàn; nghiệm thu/trình diễn. Mỗi đợt có đầu ra anh xem được và điều kiện hoàn thành. Có ma trận theo đủ 33 FR/22 SC/56 tiêu chí, không chuyển tài chính/nhân sự ra ngoài V1 hoặc tạo 74 màn hình nhập bảng.
+
+Đề xuất một ứng dụng trình duyệt Django/PostgreSQL, phân nhiệm theo nghiệp vụ; Sheets là mẫu cấu trúc/tham chiếu, không là sổ giao dịch thứ hai. Nền phải có quyền, nguồn, phiên bản và ghi an toàn từ đầu; tiền/QC/hồ sơ-lịch-công xuất hiện trước bước sản xuất cần dùng. Chi phí thiếu nguồn giữ tạm tính, nguồn mẫu cũ bị chặn nạp trực tiếp; không tự dựng duyệt/QC/công để khớp số mong đợi. Không thêm người duyệt giám đốc cho giao dịch thông thường trái B24.
+
+**Trạng thái:** Đã lập và lưu kế hoạch/ma trận. Thứ tự và công nghệ là đề xuất, chưa được anh duyệt triển khai; lần này không tạo DB/mã ERP/hosting. Không cam kết ngày hoàn thành khi chưa đo; đề xuất dự báo lại sau D01. Bước tiếp theo đề xuất xây D01, sau đó D02 có vòng bán–giao–thu hoàn chỉnh.
+
+**Kiểm:** Đối chiếu ma trận kế hoạch với ma trận gốc, kiểm thiết kế DB và liên kết/định dạng tài liệu; kết quả và giới hạn tại lịch sử kiểm tra. Đây là kiểm tài liệu, chưa build/test ERP. Nhật ký và kế hoạch được đồng bộ GitHub khi mã commit từ xa khớp HEAD.
