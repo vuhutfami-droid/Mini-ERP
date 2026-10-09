@@ -59,8 +59,10 @@ Theo thông tin anh cung cấp, hoạt động hiện tại chủ yếu quản l
 | B33 | Lập câu hỏi để lấy ý tưởng toàn hệ thống. | Yêu cầu ngày 09/10/2026; 60 câu theo 12 nhóm đang chờ trả lời, không là 60 yêu cầu mới hoặc giao lập trình. |
 | B34 | Ứng dụng chạy trên website, không cài đặt trên máy tính. | Anh xác nhận trực tiếp; thiết bị, cách truy cập, hosting và đăng nhập cụ thể chưa tự chốt theo lời giải thích của Codex. |
 | B35 | Giao Codex đề xuất cho 20 câu mở rộng việc sử dụng website. | W01–W20 là phương án mới chưa được anh duyệt; không giao triển khai hosting/DB/ứng dụng. |
+| B36 | Anh đồng ý phương án website W01–W20. | Lượt trao đổi dữ liệu tiếp theo; phương án thiết kế demo đã duyệt, chưa triển khai/mua hosting hoặc đo tải. |
+| B37 | Hỏi khả năng thao tác Google Sheets không qua SQL/phần mềm quản trị DB. | Đang thảo luận kiến trúc dữ liệu, chưa chọn Sheets làm kho chính hoặc giao chuyển đổi/tích hợp. |
 
-Các mã B01–B35 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
+Các mã B01–B37 giúp tham chiếu quyết định khi bổ sung quy trình và tiêu chí nghiệm thu; không phải mã tính năng hoặc danh sách công việc lập trình.
 
 ## Quy mô và tổ chức
 
@@ -445,3 +447,7 @@ Tại B28, thiết kế dùng 91 bảng trong 11 nhóm tiếng Việt; [danh sá
 ### Website B34 và phương án sử dụng B35
 
 [Phương án W01–W20](website-use-proposal.md) đề xuất web có đăng nhập/HTTPS, máy tính chính/điện thoại ghi nhanh, tài khoản cá nhân cấp theo quyền, nhiều tab/nháp có kiểm, cập nhật nhẹ và bộ thử riêng. Mất mạng dừng xác nhận nghiệp vụ, không tự thêm offline; chưa đăng ký tự do/cổng khách hoặc sản phẩm đa doanh nghiệp. Tải nền 5 phiên và thử 10 là mục tiêu đo, không dữ kiện Nasaki; ngoài giờ không là SLA 24/7. B34 đã chốt website, các lựa chọn B35 vẫn đề xuất. Không thay cấu trúc DB/phạm vi hoặc triển khai trong lần này.
+
+### Duyệt website B36 và trao đổi lưu trữ B37
+
+B36 duyệt W01–W20, thay trạng thái chờ duyệt trước đây. B37 đang hỏi khả năng dùng Sheets trực tiếp. Có thể thiết kế website với Sheets API làm kho chính, nhưng phải xử lý lại quyền, tính nhất quán và nguồn; không đồng nhất file mẫu với DB ERP. Khuyến nghị hiện tại giữ PostgreSQL phía sau website (anh không thao tác SQL), Sheets chuẩn bị/nhập danh mục có kiểm và xuất báo cáo theo quyền; chưa duyệt tích hợp hoặc thay nền. Dữ liệu nguồn đã xác nhận không sửa tự do trong Sheets, không đồng bộ mọi bảng thành hai sổ chính.

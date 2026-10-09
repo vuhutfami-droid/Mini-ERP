@@ -950,3 +950,15 @@ Với bảy phân hệ liên thông và yêu cầu truy nguồn, duyệt, giao n
 Đề xuất kiểm nền 5 phiên như B32 và thử thêm 10 phiên khi có bản chạy, chưa là tải thực tế. Tên miền theo thương hiệu anh/Nasaki là bộ demo; chưa mua tên miền. Nội bộ vận hành V1, đối tác tự thử trên bộ giả lập/tài khoản có hạn/quyền riêng; một công ty mỗi bộ, không tự mở cổng khách hoặc ERP đa doanh nghiệp. Truy cập ngoài giờ khi dịch vụ hoạt động, không hứa SLA/hỗ trợ 24/7. Chưa cần offline, OTP/SMS, ứng dụng cài đặt hoặc hạ tầng cập nhật thời gian thực riêng.
 
 **Trạng thái:** B34 đã chốt; W01–W20 mới đề xuất, chưa coi anh đã duyệt. Lần này chỉ lưu phân tích/nhật ký, không lập trình/tạo DB/mua hosting hoặc tên miền/đổi Sheets. Kiểm mã câu/liên kết và định dạng; đồng bộ GitHub xác minh trước báo.
+
+### 09/10/2026 — Duyệt phương án website, trao đổi dữ liệu Google Sheets (B36/B37)
+
+**Anh:**
+
+> đồng ý, bàn tiếp đến dữ liệu, có thể thao tác trực tiếp với các file google sheet mà không phải qua SQL hay các phần mèm quản trị cơ sở dữ liệu khác chứ?
+
+**Đã xác nhận B36:** Anh đồng ý phương án website W01–W20. Không coi là yêu cầu mua hosting/tên miền hoặc số liệu tải đã kiểm.
+
+**Em — giải thích và khuyến nghị B37:** Có thể nhập/sửa trực tiếp Sheets hoặc xây website đọc/ghi Sheets qua API, không cần PostgreSQL nếu chọn Sheets làm kho chính. Khi đó phải thiết kế lại cách bảo vệ nguồn/quyền/ghi đồng thời/phục hồi; Sheets không cung cấp ràng buộc quan hệ và giao dịch nhiều bảng như DB quan hệ. Quyền chỉnh trực tiếp file có thể bỏ qua kiểm quyền/duyệt/lượng/tiền của website; batch API không tự giải quyết người sửa trực tiếp hoặc các lần xác nhận đồng thời. 74 bảng mẫu/931 trường hiện là cấu trúc trống, chưa là kho giao dịch ERP hoạt động.
+
+Anh không cần dùng SQL/phần mềm quản trị DB kể cả khi chọn PostgreSQL: chỉ dùng website, em phụ trách kỹ thuật. Khuyến nghị giữ DB quan hệ cho kho/tiền/sản xuất/công-lương, cho Sheets làm nơi chuẩn bị danh mục/nguồn nhập theo mẫu; xem trước/kiểm/xác nhận qua website rồi nạp có lịch sử, không sửa tự do nguồn đã ghi. Báo cáo có thể xuất Sheets theo quyền, không đồng bộ hai chiều mọi bảng hoặc có hai nguồn chính. Đây là đề xuất mới, chưa chọn kiến trúc Sheets hoặc giao tích hợp. Không sửa các file Drive, DB hoặc mẫu trong lần tư vấn này.

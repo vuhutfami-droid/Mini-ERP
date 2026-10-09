@@ -1,6 +1,6 @@
 # Phương án sử dụng Mini-ERP trên website
 
-Ngày 09/10/2026, Asia/Bangkok. B34: anh xác nhận chạy trên website, không cài ứng dụng trên máy tính. B35: anh giao Codex đề xuất cho 20 câu khai thác tiếp theo. **Chỉ B34 đã chốt; các lựa chọn dưới đây là đề xuất, chưa triển khai hoặc tự coi đã được anh duyệt.**
+Ngày 09/10/2026, Asia/Bangkok. B34: anh xác nhận chạy trên website, không cài ứng dụng trên máy tính. B35: anh giao Codex đề xuất cho 20 câu khai thác tiếp theo. **B36: anh đã đồng ý phương án W01–W20 ở lượt tiếp theo. Nội dung là phương án đã duyệt để thiết kế demo, chưa triển khai; không phải số liệu hiệu năng đã đo hoặc yêu cầu mua hosting/tên miền.**
 
 ## Phương án theo từng câu hỏi
 
@@ -33,7 +33,7 @@ Ngày 09/10/2026, Asia/Bangkok. B34: anh xác nhận chạy trên website, khôn
 - D02–D07: áp dụng khung cho đơn/giao/tiền, mua/kho, sản xuất/QC và công/lương; thêm mẫu in/xuất, nhập theo nguồn phù hợp. Không tự đưa phiếu bán hoặc lương vào D01 chỉ vì muốn xuất PDF.
 - Tự làm mới dùng truy vấn nhẹ theo quyền; dừng/giảm khi tab ẩn, giữ dữ liệu nhập. Chống gửi lặp/khóa lượng/phiên bản ở máy chủ là điều kiện nghiệp vụ độc lập với tốc độ tự làm mới.
 - Môi trường phát triển và thử riêng trước, sau đó chuẩn bị URL demo có HTTPS/tài khoản. Hosting, tên miền, sao lưu tự động và chi phí sẽ được đề xuất cụ thể khi có bản chạy; chưa mua hoặc đưa hệ thống ra Internet trong lần này. Bản nền D01 có cách mở trong môi trường hiện có, URL công khai không là điều kiện ngầm đã triển khai.
-- Những khả năng trợ lý đã mô tả trước đây (truy cập trên điện thoại, lưu tập trung, cập nhật tại máy chủ) là định hướng đề xuất phù hợp web; lời anh chốt trực tiếp ở B34 chỉ là chạy website, không cài máy tính. Các câu W01–W20 cần giữ rõ trạng thái đề xuất trước khi biến thành yêu cầu nghiệm thu.
+- Những khả năng trợ lý đã mô tả trước đây (truy cập trên điện thoại, lưu tập trung, cập nhật tại máy chủ) là định hướng đề xuất phù hợp web; lời anh chốt trực tiếp ở B34 chỉ là chạy website, không cài máy tính. W01–W20 đã được anh đồng ý tại B36; khi xây cần cụ thể hóa thành tiêu chí nghiệm thu, không coi mục tiêu tải là kết quả đã đạt.
 
 ## Thử nghiệm cần bổ sung khi xây
 
